@@ -1,0 +1,5 @@
+<http://phenopackets.org/patient/pat1> <http://hl7.org/fhir/Patient.birthdate> "1998-01-01T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://phenopackets.org/patient/pat1> <http://hl7.org/fhir/Patient.gender> "MALE" .
+<http://phenopackets.org/patient/pat1> <http://phenopackets.org/taxonomy> <http://purl.obolibrary.org/obo/NCBITaxon_75857> .
+<http://phenopackets.org/patient/pat1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://phenopackets.org/individual> .
+<http://purl.obolibrary.org/obo/NCBITaxon_75857> <http://www.w3.org/2004/02/skos/core#preflabel> "American black duck" .

@@ -1,0 +1,30 @@
+{
+    "id": "sample2",
+    "individualId": "patient:0",
+    "sampledTissue": {
+        "id": "UBERON:0002367",
+        "label": "prostate gland"
+    },
+    "ageOfIndividualAtCollection": {
+        "age": "P52Y2M"
+    },
+    "histologicalDiagnosis": {
+        "id": "NCIT:C5596",
+        "label": "Prostate Acinar Adenocarcinoma"
+    },
+    "tumorProgression": {
+        "id": "NCIT:C95606",
+        "label": "Second Primary Malignant Neoplasm"
+    },
+    "tumorGrade": {
+        "id": "NCIT:C28091",
+        "label": "Gleason Score 7"
+    },
+    "procedure": {
+        "code": {
+            "id": "NCIT:C15189",
+            "label": "Biopsy"
+        }
+    },
+    "isControlSample": false
+}

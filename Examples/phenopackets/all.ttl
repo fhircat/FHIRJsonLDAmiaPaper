@@ -1,0 +1,36 @@
+@prefix : <http://phenopackets.org/> .
+@prefix NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://phenopackets.org/patient/pat1> a :individual ;
+    fhir:Patient.birthdate "1998-01-01T00:00:00+00:00"^^xsd:dateTime ;
+    fhir:Patient.gender "MALE" ;
+    :taxonomy <http://purl.obolibrary.org/obo/NCBITaxon_75857> .
+
+<http://phenopackets.org/phenopacket/sample2> a :phenopacket ;
+    :ageOfIndividualAtCollection [ :age "P52Y2M" ] ;
+    :histologicalDiagnosis <http://purl.obolibrary.org/obo/NCIT_C5596> ;
+    :individual <http://phenopackets.org/patient/0> ;
+    :isControlSample false ;
+    :procedure <http://purl.obolibrary.org/obo/NCIT_C15189> ;
+    :sampledTissue <http://purl.obolibrary.org/obo/UBERON_0002367> ;
+    :tumorGrade <http://purl.obolibrary.org/obo/NCIT_C28091> ;
+    :tumorProgression <http://purl.obolibrary.org/obo/NCIT_C95606> .
+
+<http://purl.obolibrary.org/obo/NCBITaxon_75857> skos:preflabel "American black duck" .
+
+<http://purl.obolibrary.org/obo/NCIT_C15189> skos:prefLabel "Biopsy" .
+
+<http://purl.obolibrary.org/obo/NCIT_C28091> skos:prefLabel "Gleason Score 7" .
+
+<http://purl.obolibrary.org/obo/NCIT_C5596> skos:prefLabel "Prostate Acinar Adenocarcinoma" .
+
+<http://purl.obolibrary.org/obo/NCIT_C95606> skos:prefLabel "Second Primary Malignant Neoplasm" .
+
+<http://purl.obolibrary.org/obo/UBERON_0002367> skos:prefLabel "prostate gland" .
+

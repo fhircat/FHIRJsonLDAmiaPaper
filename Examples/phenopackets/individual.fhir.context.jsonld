@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "FHIR": "http://hl7.org/fhir/",
+    "PHENO": "http://phenopackets.org/",
+    "XSD": "http://www.w3.org/2001/XMLSchema#",
+    "NCBITaxon": {"@id": "http://purl.obolibrary.org/obo/NCBITaxon_", "@prefix": true},
+    "SKOS": "http://www.w3.org/2004/02/skos/core#",
+    "NCIT": "http://purl.obolibrary.org/obo/NCIT_",
+    "patient": "PHENO:patient/",
+
+    "id": "@id",
+    "sex": "FHIR:Patient.gender",
+    "dateOfBirth": {
+      "@id": "FHIR:Patient.birthdate",
+      "@type": "XSD:dateTime"
+    },
+    "taxonomy": {"@id": "PHENO:taxonomy", "@context": {"label": "SKOS:preflabel"}}
+  },
+  "@type": "PHENO:individual"
+}

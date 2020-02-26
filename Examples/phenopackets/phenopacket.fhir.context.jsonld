@@ -1,0 +1,19 @@
+{
+    "@context": [
+        "https://raw.githubusercontent.com/fhircat/FHIRJsonLDAmiaPaper/master/Examples/phenopackets/phenopackets_namespaces.context.jsonld",
+        {
+          "id": "@id",
+          "patient": "PHENO:patient/",
+          "@base": "http://phenopackets.org/phenopacket/",
+          "individualId": {"@id": "PHENO:individual", "@type": "@id"},
+          "label": "SKOS:prefLabel",
+          "procedure": {
+            "@context": {
+              "code": "@nest"
+            }
+           },
+          "@vocab": "PHENO"
+        }
+    ],
+  	"@type": "PHENO:phenopacket"
+}

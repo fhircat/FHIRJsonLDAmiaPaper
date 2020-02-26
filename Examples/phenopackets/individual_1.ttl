@@ -1,0 +1,16 @@
+@prefix : <http://phenopackets.org/> .
+@prefix NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://phenopackets.org/patient/pat1> a :individual ;
+    fhir:Patient.birthdate "1998-01-01T00:00:00+00:00"^^xsd:dateTime ;
+    fhir:Patient.gender "MALE" ;
+    :taxonomy <http://purl.obolibrary.org/obo/NCBITaxon_75857> .
+
+<http://purl.obolibrary.org/obo/NCBITaxon_75857> skos:preflabel "American black duck" .
+

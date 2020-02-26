@@ -1,0 +1,64 @@
+{
+  "resourceType": "Patient",
+  "id": "pat2",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>Patient Daisy DUCK @ Acme Healthcare, Inc. MR = 654317</p>\n    \n    </div>"
+  },
+  "identifier": [
+    {
+      "use": "usual",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          }
+        ]
+      },
+      "system": "urn:oid:0.1.2.3.4.5.6.7",
+      "value": "654317"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Daisy",
+      "given": [
+        "Duck"
+      ]
+    }
+  ],
+  "gender": "female",
+  "contact": [
+    {
+      "relationship": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+              "code": "E"
+            }
+          ]
+        }
+      ],
+      "organization": {
+        "reference": "Organization/1",
+        "display": "Walt Disney Corporation"
+      }
+    }
+  ],
+  "managingOrganization": {
+    "reference": "Organization/1",
+    "display": "ACME Healthcare, Inc"
+  },
+  "link": [
+    {
+      "other": {
+        "reference": "Patient/pat1"
+      },
+      "type": "seealso"
+    }
+  ]
+}
