@@ -1,4 +1,7 @@
+# See original source code at https://github.com/fhircat/fhir_rdf_validator/blob/master/fhir_rdf_validator/json_to_r4.py
+
 import os
+import urllib
 from argparse import Namespace, ArgumentParser
 from copy import deepcopy
 from typing import Any, List, Optional, Union, Set
@@ -19,6 +22,8 @@ CODE_SYSTEM_MAP = {
 }
 
 VALUE_TAG = "value"
+
+MAX_JSON = 100000
 
 
 def to_r4(o: JsonObj, server: Optional[str], add_context: bool) -> JsonObj:
@@ -44,7 +49,7 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool) -> JsonObj:
         if hasattr(n, 'system') and hasattr(n, 'code'):
             # Note: This is another reason we hate the value work
             system = from_value(n.system)
-            code = from_value(n.code)
+            code = urllib.parse.quote(from_value(n.code), safe='')
             system_root = system[:-1] if system[-1] in '/#' else system
             if system_root in CODE_SYSTEM_MAP:
                 base = CODE_SYSTEM_MAP[system_root] + ':'
@@ -119,7 +124,7 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool) -> JsonObj:
         for k in [k for k in as_dict(d).keys() if k.startswith('_')]:
             base_k = k[1:]
             if not hasattr(d, base_k) or not isinstance(d[base_k], JsonObj):
-                print(f"Badly formed extension element: {k}", file=sys.stderr)
+                d[base_k] = JsonObj()
             else:
                 for kp, vp in as_dict(d[k]).items():
                     if kp in d[base_k]:
@@ -241,11 +246,15 @@ def check_json(ifn: str, ifdir: str, opts: Namespace) -> bool:
         if not resp.ok:
             print(f"Error {resp.status_code}: {ifn} {resp.reason}")
             return False
-        in_json = loads(resp.text)
+        intext = resp.text
     else:
         infilename = os.path.join(ifdir, ifn)
         with open(infilename) as infile:
-            in_json = loads(infile.read())
+            intext = infile.read()
+    if len(intext) > MAX_JSON:
+        print(f"{infilename} is too big {len(intext)}", file=sys.stderr)
+        return False
+    in_json = loads(intext)
     if not (hasattr(in_json, 'resourceType') or hasattr(in_json, 'id')):
         print(f"{infilename} is not a FHIR resource - processing skipped", file=sys.stderr)
         return False
@@ -257,6 +266,7 @@ def addargs(parser: ArgumentParser) -> None:
     parser.add_argument("-c", "--addcontext", help="Add JSON-LD context reference", action="store_true")
     parser.add_argument("-fs", "--fhirserver", help="FHIR server base")
     parser.add_argument("-ed", "--expdir", help="Expand directory")
+    parser.add_argument("-cp", "--compare", help="Expand directory", action="store_true")
 
 
 def main(argv: Optional[Union[str, List[str]]] = None) -> object:
@@ -279,8 +289,9 @@ def main(argv: Optional[Union[str, List[str]]] = None) -> object:
     nfiles, nsuccess = dlp.run(convert_file, file_filter_2=check_json)
     print(f"Total={nfiles} Successful={nsuccess}")
 
-    # Expand files
-    dlp.run(expand_file, file_filter_2=check_json)
+    # Expand files TODO: Change to single javascript command
+    if dlp.opts.expdir:
+        dlp.run(expand_file, file_filter_2=check_json)
 
     return 0 if nfiles == nsuccess else 1
 

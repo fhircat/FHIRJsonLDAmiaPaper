@@ -1,6 +1,7 @@
 import jsonld from 'jsonld'
 import fs from 'fs'
 import optimist from 'optimist'
+import path from 'path'
 
 const opts = optimist.usage('$0: A command line JSONLD script')
     .describe('i', 'JSON file to process')
@@ -13,24 +14,53 @@ const opts = optimist.usage('$0: A command line JSONLD script')
     .alias('x', 'context')
     .describe('f', 'frame file')
     .alias('f', 'frame')
-    .demand(['c', 'i'])
+    .describe('n', 'Input directory')
+    .alias('n', 'indir')
+    .describe('m', 'Output directory')
+    .alias('m', 'outdir')
+    .demand(['c'])
 
-const argv = opts.argv
+let invalidUrls = new Set()
 
-const content = fs.readFileSync(argv.input).toString()
-let options = {}
+const runCommand = (command, input, output=null, options={}) => {
+    const content = fs.readFileSync(input).toString()
+    if (command in jsonld && typeof jsonld[command] === 'function') {
+        jsonld[command](JSON.parse(content), options).then(val => {
+            if (output) {
+                fs.writeFileSync(output, JSON.stringify(val, null, 2))
+            } else {
+                console.log(JSON.stringify(val, null, 2))
+            }
+        }).catch(error => {
+            if (error.name === 'jsonld.InvalidUrl') {
+                invalidUrls.add(error.details.url)
+                console.log(invalidUrls)
+            }
+            //console.log(error, error.message)
+        })
+    }
+};
+
+const argv = opts.argv;
+let options = {};
 if (argv.context) {
     options['expandContext'] = argv.context
 } else if (argv.frame) {
     options = JSON.parse(fs.readFileSync(argv.frame).toString())
 }
-const command = argv.command
-if (command in jsonld && typeof jsonld[command] === 'function') {
-    jsonld[command](JSON.parse(content), options).then(val => {
-        if (argv.output) {
-            fs.writeFileSync(argv.output, JSON.stringify(val, null, 2))
-        } else {
-            console.log(JSON.stringify(val, null, 2))
-        }
-    }).catch(error => console.log(error, error.message))
+if (argv.indir && argv.outdir) {
+    let indir = path.resolve(process.cwd(), argv.indir);
+    let outdir = path.resolve(process.cwd(), argv.outdir);
+    fs.readdirSync(indir)
+        .filter(file => (file.indexOf('.') !== 0))
+        .forEach(file => {
+            let inputFile = path.join(indir, file);
+            let outputFile = path.join(outdir, file);
+            runCommand(argv.command, inputFile, outputFile, options);
+        });
+    console.log(invalidUrls);
+} else {
+    runCommand(argv.command, argv.input, argv.output, options)
 }
+
+
