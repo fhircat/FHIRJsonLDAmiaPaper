@@ -7,6 +7,9 @@ verify_ssl = true
 
 [packages]
 rdflib = "*"
+dirlistproc = "*"
+requests = "*"
+jsonasobj = "*"
 rdflib-jsonld = "*"
 
 [requires]

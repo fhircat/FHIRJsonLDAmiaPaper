@@ -1,0 +1,56 @@
+{
+  "name": "fhir_jsonld_js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "build": "babel src -d dist",
+    "generate": "babel-node src/createContext",
+    "jsonld": "babel-node jsonld-command.js",
+    "clean": "rm -fr logs/* jsonld-context/contexts/r5/*",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fhircat/fhir_to_jsonld_context.git"
+  },
+  "keywords": [
+    "Shape",
+    "Expression",
+    "JSON",
+    "Linked",
+    "Data",
+    "ShEx",
+    "JSON-LD",
+    "JSON-LD",
+    "Context"
+  ],
+  "author": [
+    "Dazhi Jiao",
+    "Deepak Sharma",
+    "Eric Prud'hommeaux"
+  ],
+  "bugs": {
+    "url": "https://github.com/fhircat/fhir_to_jsonld_context/issues"
+  },
+  "homepage": "https://github.com/fhircat/fhir_to_jsonld_context#readme",
+  "dependencies": {
+    "@shexjs/core": "^1.0.0-alpha.6",
+    "jsonld": "github:jiaola/jsonld.js.git",
+    "log4js": "^6.1.0",
+    "node-stream-zip": "^1.8.2",
+    "optimist": "^0.6.1",
+    "parse-json": "^5.0.0",
+    "path": "^0.12.7",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.5",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  }
+}
