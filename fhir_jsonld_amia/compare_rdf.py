@@ -9,7 +9,7 @@ from typing import Union, Optional, List
 from os import path
 
 import dirlistproc
-from rdflib import Graph, RDF
+from rdflib import Graph, RDF, URIRef
 from rdflib.compare import to_isomorphic, IsomorphicGraph, graph_diff
 
 
@@ -59,6 +59,11 @@ def compare_rdf(expected: Union[Graph, str], actual: Union[Graph, str], fmt: Opt
     actual_graph = to_graph(actual, fmt)
     actual_isomorphic = rem_metadata(actual_graph)
 
+    # TODO: Get the URLs into FHIR R5
+    for s, o in list(actual_isomorphic.subject_objects(RDF.type)):
+        if "http://terminology.hl7.org/CodeSystem/" in str(o):
+            actual_isomorphic.remove((s, RDF.type, o))
+
     # Graph compare takes a Looong time
     in_both, in_old, in_new = graph_diff(expected_isomorphic, actual_isomorphic)
     # if old_iso != new_iso:
@@ -97,9 +102,13 @@ def compare_files(ifn: str, ofn: str, opts: Namespace) -> bool:
         r4_str = file.read()
     with open(ttl_file, 'r') as file:
         ttl_str = file.read()
+    # TODO: A monkey patch (kludge) to fix the issue in comparing when jsonld has ^^xsd:string and ^^xsd:anyURI
+    r4_str = r4_str.replace('"@type": "http://www.w3.org/2001/XMLSchema#string",', '').replace('"@type": "http://www.w3.org/2001/XMLSchema#anyURI",', '')
     r4_graph = to_graph(r4_str, 'json-ld')
+    # TODO: Address fhir date/dateTime context sensitive issue
+    ttl_str = ttl_str.replace("^^xsd:date ", "^^xsd:dateTime ")
     ttl_graph = to_graph(ttl_str, 'turtle')
-    result = compare_rdf(r4_graph, ttl_graph)
+    result = compare_rdf(ttl_graph, r4_graph)
     with open(report_file, 'w') as file:
         file.write(result)
     return True
