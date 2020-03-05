@@ -86,7 +86,7 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool) -> JsonObj:
                     typ = do.type
                 else:
                     typ = do.reference.split('/', 1)[0]
-                link = '../' + do.reference
+                link = ('' if server else '../') + do.reference
             else:
                 link = do.reference
                 typ = getattr(do, 'type', None)
