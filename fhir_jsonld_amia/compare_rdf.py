@@ -7,6 +7,7 @@ from contextlib import redirect_stdout
 from io import StringIO
 from typing import Union, Optional, List
 from os import path
+import json
 
 import dirlistproc
 from rdflib import Graph, RDF, URIRef
@@ -93,24 +94,34 @@ def compare_files(ifn: str, ofn: str, opts: Namespace) -> bool:
     :return: True if conversion is successful
     """
     print(f'Processing {ifn}')
-    r4_file = ifn
+    jsonld_file = ifn
     ttl_file = ifn.replace(opts.indir, opts.turtledir).replace('.json', '.ttl')
     if not path.exists(ttl_file):
         return False
     report_file = ifn.replace(opts.indir, opts.outdir).replace('.json', '.txt')
-    with open(r4_file, 'r') as file:
-        r4_str = file.read()
+    with open(jsonld_file, 'r') as file:
+        jsonld_str = file.read()
+    if 'UNKNOWN' in jsonld_str:
+        print(f'Not completely mapped {ifn}')
+        return False
     with open(ttl_file, 'r') as file:
         ttl_str = file.read()
     # TODO: A monkey patch (kludge) to fix the issue in comparing when jsonld has ^^xsd:string and ^^xsd:anyURI
-    r4_str = r4_str.replace('"@type": "http://www.w3.org/2001/XMLSchema#string",', '').replace('"@type": "http://www.w3.org/2001/XMLSchema#anyURI",', '')
-    r4_graph = to_graph(r4_str, 'json-ld')
+    jsonld_str = jsonld_str.replace('"@type": "http://www.w3.org/2001/XMLSchema#string",', '')\
+        .replace('"@type": "http://www.w3.org/2001/XMLSchema#anyURI",', '')
+    # TODO: File a report to FHIR that meta is missing in FHIR RDF Turtle
+    jsonld_json = json.loads(jsonld_str)
+    jsonld_json[0].pop('http://hl7.org/fhir/Resource.meta', None)
+    jsonld_graph = Graph().parse(data=json.dumps(jsonld_json), format='json-ld')
+    # jsonld_graph = to_graph(json.dumps(jsonld_json), 'json-ld')
     # TODO: Address fhir date/dateTime context sensitive issue
-    ttl_str = ttl_str.replace("^^xsd:date ", "^^xsd:dateTime ")
+    ttl_str = ttl_str.replace("^^xsd:date ", "^^xsd:dateTime ").replace("^^xsd:gYear ", "^^xsd:dateTime ")\
+        .replace("^^xsd:gYearMonth ", "^^xsd:dateTime ")
     ttl_graph = to_graph(ttl_str, 'turtle')
-    result = compare_rdf(ttl_graph, r4_graph)
-    with open(report_file, 'w') as file:
-        file.write(result)
+    result = compare_rdf(ttl_graph, jsonld_graph)
+    if result:
+        with open(report_file, 'w') as file:
+            file.write(result)
     return True
 
 

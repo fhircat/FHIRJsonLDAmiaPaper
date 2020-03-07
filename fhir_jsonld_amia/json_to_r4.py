@@ -27,13 +27,14 @@ VALUE_TAG = "value"
 MAX_JSON = 100000
 
 
-def to_r4(o: JsonObj, server: Optional[str], add_context: bool) -> JsonObj:
+def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace) -> JsonObj:
     """
     Convert the FHIR Resource in "o" into the R4 value notation
 
     :param o: FHIR resource
     :param server: Server root - if absent, use the file location
     :param add_context: True means add @context
+    :param opts: command line parser arguments
     :return: reference to "o" with changes applied.  Warning: object is NOT copied before change
     """
     def to_value(v: Any) -> JsonObj:
@@ -187,7 +188,7 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool) -> JsonObj:
     # Add the "ontology header"
     hdr = JsonObj()
     hdr["@id"] = o['@id'] + ".ttl"
-    hdr["owl:versionIRI"] = hdr["@id"]
+    hdr["owl:versionIRI"] = (opts.versionbase + ('' if opts.versionbase[-1] == '/' else '') + hdr['@id']) if opts.versionbase else hdr["@id"]
     hdr["owl:imports"] = "fhir:fhir.ttl"
     hdr["@type"] = 'owl:Ontology'
     # TODO: replace this with included once we get the bug fixed.
@@ -237,7 +238,7 @@ def convert_file(ifn: str, ofn: str, opts: Namespace) -> bool:
     :return: True if conversion is successful
     """
     if ifn not in opts.converted_files:
-        out_json = to_r4(opts.in_json, opts.fhirserver, opts.addcontext)
+        out_json = to_r4(opts.in_json, opts.fhirserver, opts.addcontext, opts)
         with open(ofn, "w") as outf:
             outf.write(as_json(out_json))
         opts.converted_files.append(ifn)
@@ -279,6 +280,7 @@ def addargs(parser: ArgumentParser) -> None:
     parser.add_argument("-fs", "--fhirserver", help="FHIR server base")
     parser.add_argument("-ed", "--expdir", help="Expand directory")
     parser.add_argument("-cp", "--compare", help="Expand directory", action="store_true")
+    parser.add_argument("-vb", "--versionbase", help="Base URI for OWL version. Default: fhirserver")
 
 
 def main(argv: Optional[Union[str, List[str]]] = None) -> object:

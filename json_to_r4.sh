@@ -4,7 +4,7 @@ rm data/jsonld-pre/*
 rm data/jsonld-r4/*
 rm data/compare-report/*
 
-pipenv run python fhir_jsonld_amia/json_to_r4.py -id data/examples-json -od data/jsonld-pre -c -fs http://hl7.org/fhir/
+pipenv run python fhir_jsonld_amia/json_to_r4.py -id data/examples-json -od data/jsonld-pre -c -fs http://hl7.org/fhir/ -vb http://build.fhir.org/
 cd fhir_jsonld_js
 yarn jsonld -c expand -n ../data/jsonld-pre -m ../data/jsonld-r4
 cd ..
