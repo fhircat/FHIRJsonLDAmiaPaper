@@ -24,7 +24,7 @@ CODE_SYSTEM_MAP = {
 
 VALUE_TAG = "value"
 
-MAX_JSON = 100000
+MAX_JSON = 500000
 
 
 def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace) -> JsonObj:
