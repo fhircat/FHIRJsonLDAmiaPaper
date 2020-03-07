@@ -2,6 +2,18 @@
 
 Source for FHIR JSON-LD AMIA submission
 
+## Setup
+
+Install pipenv and packages
+```
+pipenv install  
+```
+
+Install yarn and node packages
+```
+cd fhir_jsonld_js; yarn install 
+```
+
 ## Data
 
 Downloaded from https://build.fhir.org on 3/4/2020. 
