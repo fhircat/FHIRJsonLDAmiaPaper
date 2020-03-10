@@ -80,8 +80,8 @@ def compare_rdf(expected: Union[Graph, str], actual: Union[Graph, str], fmt: Opt
             print("----- Added Triples -----")
             if new_len:
                 print_triples(in_new)
-        return txt.getvalue()
-    return None
+        return txt.getvalue(), len(in_both), len(in_old), len(in_new)
+    return None, len(in_both), len(in_old), len(in_new)
 
 
 def compare_files(ifn: str, ofn: str, opts: Namespace) -> bool:
@@ -118,10 +118,12 @@ def compare_files(ifn: str, ofn: str, opts: Namespace) -> bool:
     ttl_str = ttl_str.replace("^^xsd:date ", "^^xsd:dateTime ").replace("^^xsd:gYear ", "^^xsd:dateTime ")\
         .replace("^^xsd:gYearMonth ", "^^xsd:dateTime ")
     ttl_graph = to_graph(ttl_str, 'turtle')
-    result = compare_rdf(ttl_graph, jsonld_graph)
+    result, len_in_both, len_in_new, len_in_old = compare_rdf(ttl_graph, jsonld_graph)
+
     if result:
         with open(report_file, 'w') as file:
             file.write(result)
+    print('[COUNT] ', ifn, len_in_both, len_in_new, len_in_old)
     return True
 
 
