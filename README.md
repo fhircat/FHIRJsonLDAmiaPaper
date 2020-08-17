@@ -6,10 +6,15 @@ Source for FHIR JSON-LD AMIA submission
 
 Install pipenv and packages
 ```
-pipenv install  
+> pipenv install  
 ```
 
-Upgrade nodejs to 13.*
+Upgrade nodejs to > 13.*
+```
+> brew update
+> brew upgrade node
+> npm install -g npm
+```
 
 Install yarn and node packages
 ```
