@@ -23,11 +23,19 @@ const opts = optimist.usage('$0: A command line JSONLD script')
 let invalidUrls = new Set()
 
 const runCommand = (command, input, output=null, options={}) => {
+    if (command == 'toRDF') {
+        options = {...options, format: 'application/n-quads'}
+    }
     const content = fs.readFileSync(input).toString()
     if (command in jsonld && typeof jsonld[command] === 'function') {
         jsonld[command](JSON.parse(content), options).then(val => {
             if (output) {
-                fs.writeFileSync(output, JSON.stringify(val, null, 2))
+                if (command == 'toRDF') {
+                    fs.writeFileSync(output, val)
+                } else {
+                    fs.writeFileSync(output, JSON.stringify(val, null, 2))
+                }
+
             } else {
                 console.log(JSON.stringify(val, null, 2))
             }
@@ -42,7 +50,7 @@ const runCommand = (command, input, output=null, options={}) => {
 };
 
 const argv = opts.argv;
-let options = {};
+let options = {}
 if (argv.context) {
     options['expandContext'] = argv.context
 } else if (argv.frame) {
