@@ -27,20 +27,20 @@ data/fhir-r5
 
 Downloaded from https://build.fhir.org on 8/17/2020. 
 
-`data/examples-json`: Decompressed from https://build.fhir.org/examples-json.zip
-`data/examples-ttl`: Decompressed from https://build.fhir.org/examples-ttl.zip
+* `data/examples-json.zip`
+* `data/examples-ttl.zip`
 
 data/fhir-r4
 
 Downloaded from https://hl7.org/fhir/ on 8/17/2020. 
 
-`data/examples-json`: Decompressed from https://hl7.org/fhir/examples-json.zip
-`data/examples-ttl`: Decompressed from https://hl7.org/fhir/examples-ttl.zip
+* `data/examples-json.zip`
+* `data/examples-ttl.zip`
 
 Unzip the appropriate zip files:
 
 ```
-./expand.sh [fhir-r5 or fhir-r4]  (default is fhir-r5)
+./expand.sh ['fhir-r5' or 'fhir-r4']  (default is 'fhir-r5')
 ```
 
 
