@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-rdflib = "*"
+rdflib = ">=5.0.0"
 dirlistproc = "*"
 requests = "*"
 jsonasobj = "*"

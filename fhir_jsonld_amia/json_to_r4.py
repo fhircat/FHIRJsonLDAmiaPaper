@@ -15,7 +15,7 @@ import json
 
 # CONTEXT_SERVER = "https://raw.githubusercontent.com/fhircat/jsonld_context_files/master/contextFiles/"
 # CONTEXT_SERVER = "https://fhircat.org/fhir/contexts/r5/"
-CONTEXT_SERVER = "https://fhircat.org/fhir-r5/rdf-r4/contexts/"
+CONTEXT_SERVER = "https://fhircat.org/fhir-r5/original/contexts/"
 
 CODE_SYSTEM_MAP = {
     "http://snomed.info/sct": "sct",
