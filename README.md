@@ -18,38 +18,52 @@ Upgrade nodejs to > 13.*
 
 Install yarn and node packages
 ```
-cd fhir_jsonld_js; yarn install 
+> cd fhir_jsonld_js; yarn install 
+> cd ..
+```
+Unzip appropriate FHIR examples
+```
+> ./expand.sh ['fhir-r5' or 'fhir-r4']  (default: 'fhir-r5')
 ```
 
-## Data
+## Directories
+**fhir-r4**   - Image of current HL7 R4 content
+* compare-report - transformation reports on a per file basis
+    * 
+* examples-json - Vanilla HL7 R4 example JSON files
+* examples-ttl  - HL7 R4 RDF output as transformed by current build process
+    * account-example.ttl
+    *   ...
+* jsonld-pre    - example-json preprocessed by fhir_jsonld_amia/json_to_r4.py
+    * account-example.json
+    *   ...
+* jsonld-r4 - jsonld-pre files as processed by `fhir_jsonld_js/yarn jsonld`
+    * account-example.nq 
+    *   ...
+* examples-json.zip - Downloaded from https://build.fhir.org on 8/17/2020. 
+* examples-ttl.zip - Downloaded from https://build.fhir.org on 8/17/2020. 
 
-data/fhir-r5
-
-Downloaded from https://build.fhir.org on 8/17/2020. 
-
-* `data/examples-json.zip`
-* `data/examples-ttl.zip`
-
-data/fhir-r4
-
-Downloaded from https://hl7.org/fhir/ on 8/17/2020. 
-
-* `data/examples-json.zip`
-* `data/examples-ttl.zip`
-
-Unzip the appropriate zip files:
-
-```
-./expand.sh ['fhir-r5' or 'fhir-r4']  (default is 'fhir-r5')
-```
-
+**fhir-r5**   - Image of current HL7 R5 content
+* compare-report - transformation reports on a per file basis
+  * 
+* examples-json - Vanilla HL7 R4 example JSON files
+* examples-ttl  - HL7 R4 RDF output as transformed by current build process
+  * account-example.ttl
+  *   ...
+* jsonld-pre    - example-json preprocessed by fhir_jsonld_amia/json_to_r4.py
+  * account-example.json
+  *   ...
+* jsonld-r4 - jsonld-pre files as processed by `fhir_jsonld_js/yarn jsonld`
+   * account-example.nq 
+* examples-json.zip - Downloaded from https://hl7.org/fhir/ on 8/17/2020. 
+* examples-ttl.zip - Downloaded from https://hl7.org/fhir/ on 8/17/2020. 
 
 ## Steps
 
 
 The three scripts that are used to convert all files and compare the results are: 
 
-1. Preprocess JSON file to insert @context and transform fields to JSONLD
+1. Preprocess JSON file to insert @context, OWL header and structural changes
 
 ```shell script
 pipenv run python fhir_jsonld_amia/json_to_r4.py -id <input_directory> -od <output_directory> -c -fs http://hl7.org/fhir/

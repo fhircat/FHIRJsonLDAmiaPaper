@@ -192,8 +192,8 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace)
     hdr["owl:imports"] = "fhir:fhir.ttl"
     hdr["@type"] = 'owl:Ontology'
     # TODO: replace this with included once we get the bug fixed.
-    o = JsonObj(**{"@graph": [deepcopy(o), hdr]})
-    # o["@included"] = hdr
+    # o = JsonObj(**{"@graph": [deepcopy(o), hdr]})
+    o["@included"] = hdr
 
     # Fill out the rest of the context
     if add_context:
@@ -211,7 +211,7 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace)
 
 def expand_file(ifn: str, ofn: str, opts: Namespace) -> bool:
     """
-    Convert ifn to ofn
+    Convert actual_file_name to expected_file_name
 
     :param ifn: Name of file to convert
     :param ofn: Target file to convert to
@@ -230,7 +230,7 @@ def expand_file(ifn: str, ofn: str, opts: Namespace) -> bool:
 
 def convert_file(ifn: str, ofn: str, opts: Namespace) -> bool:
     """
-    Convert ifn to ofn
+    Convert actual_file_name to expected_file_name
 
     :param ifn: Name of file to convert
     :param ofn: Target file to convert to
@@ -247,7 +247,7 @@ def convert_file(ifn: str, ofn: str, opts: Namespace) -> bool:
 
 def check_json(ifn: str, ifdir: str, opts: Namespace) -> bool:
     """
-    Check whether ifn is a valid FHIR file
+    Check whether actual_file_name is a valid FHIR file
     :param ifn: file name
     :param ifdir: file directory
     :param opts: options - we add in_json to it if the file passes

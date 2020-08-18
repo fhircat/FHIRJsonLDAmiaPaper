@@ -63,7 +63,7 @@ if (argv.indir && argv.outdir) {
         .filter(file => (file.indexOf('.') !== 0))
         .forEach(file => {
             let inputFile = path.join(indir, file);
-            let outputFile = path.join(outdir, file);
+            let outputFile = path.join(outdir, file.replace('.json', '.nq'));
             runCommand(argv.command, inputFile, outputFile, options);
         });
     console.log(invalidUrls);

@@ -1,18 +1,17 @@
 # See original source code at https://github.com/fhircat/fhir_rdf_validator/blob/master/fhir_rdf_validator/compare_rdf.py
+import json
 import os
 import re
 import sys
 from argparse import Namespace, ArgumentParser
 from contextlib import redirect_stdout
 from io import StringIO
-from typing import Union, Optional, List
 from os import path
-import json
+from typing import Union, Optional, List, Tuple
 
 import dirlistproc
-from rdflib import Graph, RDF, URIRef
-from rdflib.compare import to_isomorphic, IsomorphicGraph, graph_diff
-
+from rdflib import Graph, RDF, URIRef, BNode
+from rdflib.compare import graph_diff, similar
 
 def to_graph(inp: Union[Graph, str], fmt: Optional[str] = "turtle") -> Graph:
     """
@@ -36,7 +35,9 @@ def print_triples(g: Graph) -> None:
     Print the contents of g into stdout
     :param g: graph to print
     """
-    g_text = re.sub(r'@prefix.*\n', '', g.serialize(format="turtle").decode())
+    # Prefixes appear to be useful
+    # g_text = re.sub(r'@prefix.*\n', '', g.serialize(format="turtle").decode())
+    g_text = g.serialize(format="turtle").decode()
     print(g_text)
 
 
@@ -62,36 +63,54 @@ def subj_diff(expected: Graph, actual: Graph) -> Optional[str]:
         return exp_str + '\n' + act_str
     return None
 
+def remove_subgraph(pred: URIRef, g: Graph) -> None:
+    """ Remove the subgraph that is the target of pred """
 
-def compare_rdf(expected: Union[Graph, str], actual: Union[Graph, str], fmt: Optional[str] = "turtle") -> Optional[str]:
+    def rem_obj(subj: BNode) -> None:
+        for p, o in g.predicate_objects(subj):
+            if isinstance(o, BNode):
+                rem_obj(o)
+            g.remove((subj, p, o))
+
+    for s, o in g.subject_objects(pred):
+        if isinstance(o, BNode):
+            rem_obj(o)
+        g.remove((s, pred, o))
+
+def compare_rdf(expected: Union[Graph, str], actual: Union[Graph, str], fmt: Optional[str] = "turtle",
+                detailed: bool=True) \
+        -> Tuple[Optional[str], int, int, int]:
     """
     Compare expected to actual, returning a string if there is a difference
     :param expected: expected RDF. Can be Graph, file name, uri or text
     :param actual: actual RDF. Can be Graph, file name, uri or text
     :param fmt: RDF format
-    :return: None if they match else summary of difference
+    :param detailed: True means do an in depth compare, False means just report if mismatch
+    :return: String describing difference, # in both, # in expected only, # in actual only
     """
-    def rem_metadata(g: Graph) -> IsomorphicGraph:
+
+    def rem_metadata(g: Graph) -> Graph:
         # Remove list declarations from target
         for s in g.subjects(RDF.type, RDF.List):
             g.remove((s, RDF.type, RDF.List))
-        g_iso = to_isomorphic(g)
-        return g_iso
+        return g
 
-    expected_graph = to_graph(expected, fmt)
-    expected_isomorphic = rem_metadata(expected_graph)
-    actual_graph = to_graph(actual, fmt)
-    actual_isomorphic = rem_metadata(actual_graph)
+    expected_graph = rem_metadata(to_graph(expected, fmt))
+    actual_graph = rem_metadata(to_graph(actual, fmt))
 
     # TODO: Get the URLs into FHIR R5
-    for s, o in list(actual_isomorphic.subject_objects(RDF.type)):
+    for s, o in list(actual_graph.subject_objects(RDF.type)):
         if "http://terminology.hl7.org/CodeSystem/" in str(o):
-            actual_isomorphic.remove((s, RDF.type, o))
+            actual_graph.remove((s, RDF.type, o))
 
-    # Graph compare takes a Looong time
-    in_both, in_old, in_new = graph_diff(expected_isomorphic, actual_isomorphic)
-    # if old_iso != new_iso:
-    #     in_both, in_old, in_new = graph_diff(old_iso, new_iso)
+    # We assume that similar may give false negatives, but is pretty good on the positive side
+    if similar(expected_graph, actual_graph):
+        return None, len(expected_graph), 0, 0
+    if not detailed:
+        return "Files do not match", len(expected_graph), 0, 0
+
+    in_both, in_old, in_new = graph_diff(expected_graph, actual_graph)
+
     old_len = len(list(in_old))
     new_len = len(list(in_new))
     if old_len or new_len:
@@ -111,42 +130,43 @@ def compare_rdf(expected: Union[Graph, str], actual: Union[Graph, str], fmt: Opt
     return None, len(in_both), len(in_old), len(in_new)
 
 
-def compare_files(ifn: str, ofn: str, opts: Namespace) -> bool:
+def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespace) -> bool:
     """
-    Convert ifn to ofn
+    Compare
 
-    :param ifn: Name of rdf file
-    :param ofn: Name of jsonld file
+    :param actual_file_name: Name of generated RDF file -- assumed to be ntriples (nt) format
+    :param expected_file_name: Name of expected RDF file if specific else ".ttl" form of actual_file_name
     :param opts: Parameters
     :return: True if conversion is successful
     """
-    print(f'Processing {ifn}')
-    jsonld_file = ifn
-    ttl_file = ofn if opts.outfile else ifn.replace(opts.indir, opts.turtledir).replace('.json', '.ttl')
-    if not path.exists(ttl_file):
-        print(f'{os.path.join(os.path.dirname(__file__), ttl_file)} not found')
+    print(f'Processing {actual_file_name}')
+    actual_file = actual_file_name
+    expected_file = expected_file_name if opts.outfile else \
+                    actual_file_name.replace(opts.indir, opts.turtledir).replace('.nt', '.ttl')
+    if not path.exists(expected_file):
+        print(f'{os.path.join(os.path.dirname(__file__), expected_file)} not found')
         return False
-    report_file = ifn.replace(opts.indir, opts.outdir).replace('.json', '.txt') if not opts.outfile else None
-    with open(jsonld_file, 'r') as file:
-        jsonld_str = file.read()
-    if 'UNKNOWN' in jsonld_str:
-        print(f'Not completely mapped {ifn}')
+    report_file = actual_file_name.replace(opts.indir, opts.outdir).replace('.nt', '.txt') if not opts.outfile else None
+    with open(actual_file, 'r') as f:
+        actual_str = f.read()
+    if 'UNKNOWN' in actual_str:
+        print(f'{actual_file_name} is not completely mapped')
         return False
-    with open(ttl_file, 'r') as file:
-        ttl_str = file.read()
+    with open(expected_file, 'r') as file:
+        expected_str = file.read()
     # TODO: A monkey patch (kludge) to fix the issue in comparing when jsonld has ^^xsd:string and ^^xsd:anyURI
-    jsonld_str = jsonld_str.replace('"@type": "http://www.w3.org/2001/XMLSchema#string",', '')\
-        .replace('"@type": "http://www.w3.org/2001/XMLSchema#anyURI",', '')
+    actual_str = actual_str.replace("^^<http://www.w3.org/2001/XMLSchema#anyURI>", "")
+
+    actual_graph = Graph().parse(data=actual_str, format='nquads')
+
     # TODO: File a report to FHIR that meta is missing in FHIR RDF Turtle
-    jsonld_json = json.loads(jsonld_str)
-    jsonld_json[0].pop('http://hl7.org/fhir/Resource.meta', None)
-    jsonld_graph = Graph().parse(data=json.dumps(jsonld_json), format='json-ld')
-    # jsonld_graph = to_graph(json.dumps(jsonld_json), 'json-ld')
+    remove_subgraph(URIRef('http://hl7.org/fhir/Resource.meta'), actual_graph)
+
     # TODO: Address fhir date/dateTime context sensitive issue
-    ttl_str = ttl_str.replace("^^xsd:date ", "^^xsd:dateTime ").replace("^^xsd:gYear ", "^^xsd:dateTime ")\
+    expected_str = expected_str.replace("^^xsd:date ", "^^xsd:dateTime ").replace("^^xsd:gYear ", "^^xsd:dateTime ")\
         .replace("^^xsd:gYearMonth ", "^^xsd:dateTime ")
-    ttl_graph = to_graph(ttl_str, 'turtle')
-    result, len_in_both, len_in_new, len_in_old = compare_rdf(ttl_graph, jsonld_graph)
+    expected_graph = to_graph(expected_str, 'turtle')
+    result, len_in_both, len_in_new, len_in_old = compare_rdf(expected_graph, actual_graph, detailed=not opts.skipdetailedcompare)
 
     if result:
         if report_file:
@@ -154,12 +174,14 @@ def compare_files(ifn: str, ofn: str, opts: Namespace) -> bool:
                 file.write(result)
         else:
             print(result)
-    print('[COUNT] ', ifn, len_in_both, len_in_new, len_in_old)
+    print('[COUNT] ', actual_file_name, len_in_both, len_in_new, len_in_old)
     return True
 
 
 def addargs(parser: ArgumentParser) -> None:
     parser.add_argument("-td", "--turtledir", help="Turtle directory")
+    parser.add_argument("-sdc", "--skipdetailedcompare", help="Do a detailed comparison", action="store_true")
+
 
 def main(argv: Optional[Union[str, List[str]]] = None) -> object:
     """
@@ -169,7 +191,7 @@ def main(argv: Optional[Union[str, List[str]]] = None) -> object:
     :return: 0 if all RDF files that had valid FHIR in them were successful, 1 otherwise
     """
     def gen_dlp(args: List[str]) -> dirlistproc.DirectoryListProcessor:
-        return dirlistproc.DirectoryListProcessor(args, "Add FHIR R4 edits to JSON file", '.json', '.json', addargs=addargs)
+        return dirlistproc.DirectoryListProcessor(args, "Add FHIR R4 edits to JSON file", '.nt', '.json', addargs=addargs)
 
     dlp = gen_dlp(argv)
     if dlp.opts.infile:

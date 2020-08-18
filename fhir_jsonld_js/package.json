@@ -37,7 +37,7 @@
   "homepage": "https://github.com/fhircat/fhir_to_jsonld_context#readme",
   "dependencies": {
     "@shexjs/core": "^1.0.0-alpha.6",
-    "jsonld": "github:jiaola/jsonld.js.git",
+    "jsonld": "github:digitalbazaar/jsonld.js.git",
     "log4js": "^6.1.0",
     "node-stream-zip": "^1.8.2",
     "optimist": "^0.6.1",

@@ -2765,9 +2765,9 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-"jsonld@github:jiaola/jsonld.js.git":
-  version "2.0.3-0"
-  resolved "https://codeload.github.com/jiaola/jsonld.js/tar.gz/d798af8960b56d70b08a99df8f56d65e5544fed3"
+"jsonld@github:digitalbazaar/jsonld.js.git":
+  version "3.1.2-0"
+  resolved "https://codeload.github.com/digitalbazaar/jsonld.js/tar.gz/983cd849f56180e2ee4552ca25dd52b293174830"
   dependencies:
     canonicalize "^1.0.1"
     lru-cache "^5.1.1"
