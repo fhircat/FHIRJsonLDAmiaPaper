@@ -11,7 +11,6 @@ echo Processing FHIR release $dir
 # 1) Run the preprocessor over the FHIR JSON
 rm data/$dir/jsonld-pre/*
 pipenv run python fhir_jsonld_amia/json_preprocessor.py -id data/$dir/examples-json -od data/$dir/jsonld-pre -c -fs http://hl7.org/fhir/ -vb http://build.fhir.org/ -s
-exit
 
 # 2) Convert the pre-processed JSON into RDF
 rm data/$dir/original/*
