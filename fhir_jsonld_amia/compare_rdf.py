@@ -178,6 +178,11 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
     return True
 
 
+def input_filter(filename: str, dirpath: str, opts: Namespace) -> bool:
+    # Code systems aren't currently converted to RDF
+    return bool(opts.infile) or not filename.startswith('codesystem-')
+
+
 def addargs(parser: ArgumentParser) -> None:
     parser.add_argument("-td", "--turtledir", help="Turtle directory")
     parser.add_argument("-sdc", "--skipdetailedcompare", help="Do a fast non-detailed compare", action="store_true")
@@ -207,7 +212,7 @@ def main(argv: Optional[Union[str, List[str]]] = None) -> object:
 
     dlp.opts.converted_files = []           # If converting inline
 
-    nfiles, nsuccess = dlp.run(compare_files)
+    nfiles, nsuccess = dlp.run(compare_files, file_filter_2=input_filter)
 
     return 0 if nfiles == nsuccess else 1
 
