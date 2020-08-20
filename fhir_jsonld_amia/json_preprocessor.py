@@ -27,7 +27,7 @@ VALUE_TAG = "value"
 MAX_JSON = 50000000
 
 
-def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace) -> JsonObj:
+def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace, ifn: str) -> JsonObj:
     """
     Convert the FHIR Resource in "o" into the R4 value notation
 
@@ -35,6 +35,7 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace)
     :param server: Server root - if absent, use the file location
     :param add_context: True means add @context
     :param opts: command line parser arguments
+    :param ifn: input file name
     :return: reference to "o" with changes applied.  Warning: object is NOT copied before change
     """
     def to_value(v: Any) -> JsonObj:
@@ -187,11 +188,14 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace)
 
     # Add the "ontology header"
     hdr = JsonObj()
-    hdr["@id"] = o['@id'] + ".ttl"
-    hdr["owl:versionIRI"] = (opts.versionbase + ('' if opts.versionbase[-1] == '/' else '') + hdr['@id']) if opts.versionbase else hdr["@id"]
-    hdr["owl:imports"] = "fhir:fhir.ttl"
-    hdr["@type"] = 'owl:Ontology'
-    o["@included"] = hdr
+    if '@id' in o:
+        hdr["@id"] = o['@id'] + ".ttl"
+        hdr["owl:versionIRI"] = (opts.versionbase + ('' if opts.versionbase[-1] == '/' else '') + hdr['@id']) if opts.versionbase else hdr["@id"]
+        hdr["owl:imports"] = "fhir:fhir.ttl"
+        hdr["@type"] = 'owl:Ontology'
+        o["@included"] = hdr
+    else:
+        print(f"{ifn} does not have an identifier")
 
     # Fill out the rest of the context
     if add_context:
@@ -236,7 +240,7 @@ def convert_file(ifn: str, ofn: str, opts: Namespace) -> bool:
     :return: True if conversion is successful
     """
     if ifn not in opts.converted_files:
-        out_json = to_r4(opts.in_json, opts.fhirserver, opts.addcontext, opts)
+        out_json = to_r4(opts.in_json, opts.fhirserver, opts.addcontext, opts, ifn)
         with open(ofn, "w") as outf:
             outf.write(as_json(out_json))
         opts.converted_files.append(ifn)
