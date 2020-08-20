@@ -1,9 +1,0 @@
-{
-    "id": "patient:pat1",
-    "dateOfBirth": "1998-01-01T00:00:00Z",
-    "sex": "MALE",
-    "taxonomy": {
-        "id": "NCBITaxon:75857",
-        "label": "American black duck"
-    }
-}

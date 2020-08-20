@@ -133,3 +133,6 @@ dmypy.json
 
 examples-json/
 examples-ttl/
+compare-report/
+jsonld-pre/
+original/
