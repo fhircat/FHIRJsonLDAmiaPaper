@@ -142,11 +142,11 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
     print(f'Processing {actual_file_name}')
     actual_file = actual_file_name
     expected_file = expected_file_name if opts.outfile else \
-                    actual_file_name.replace(opts.indir, opts.turtledir).replace('.nt', '.ttl')
+                    actual_file_name.replace(opts.indir, opts.turtledir).replace(opts.infilesuffix, '.ttl')
     if not path.exists(expected_file):
         print(f'{os.path.join(os.path.dirname(__file__), expected_file)} not found')
         return False
-    report_file = actual_file_name.replace(opts.indir, opts.outdir).replace('.nt', '.txt') if not opts.outfile else None
+    report_file = actual_file_name.replace(opts.indir, opts.outdir).replace(opts.infilesuffix, '.txt') if not opts.outfile else None
     with open(actual_file, 'r') as f:
         actual_str = f.read()
     if 'UNKNOWN' in actual_str:
@@ -180,7 +180,8 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
 
 def addargs(parser: ArgumentParser) -> None:
     parser.add_argument("-td", "--turtledir", help="Turtle directory")
-    parser.add_argument("-sdc", "--skipdetailedcompare", help="Do a detailed comparison", action="store_true")
+    parser.add_argument("-sdc", "--skipdetailedcompare", help="Do a fast non-detailed compare", action="store_true")
+    parser.add_argument("-ifs", "--infilesuffix", help="Input file suffix (default: .nq", default='.nq')
 
 
 def main(argv: Optional[Union[str, List[str]]] = None) -> object:
@@ -191,11 +192,14 @@ def main(argv: Optional[Union[str, List[str]]] = None) -> object:
     :return: 0 if all RDF files that had valid FHIR in them were successful, 1 otherwise
     """
     def gen_dlp(args: List[str]) -> dirlistproc.DirectoryListProcessor:
-        return dirlistproc.DirectoryListProcessor(args, "Add FHIR R4 edits to JSON file", '.nt', '.json', addargs=addargs)
+        return dirlistproc.DirectoryListProcessor(args, "Add FHIR R4 edits to JSON file", '.nq', '.json',
+                                                  addargs=addargs)
 
     dlp = gen_dlp(argv)
     if dlp.opts.infile:
         dlp.infile_suffix = ''
+    else:
+        dlp.infile_suffix = dlp.opts.infilesuffix
     if dlp.opts.outfile:
         dlp.outfile_suffix = ''
     if not (dlp.opts.infile or dlp.opts.indir):

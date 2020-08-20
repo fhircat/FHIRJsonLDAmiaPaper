@@ -4,7 +4,7 @@ import os
 path = sys.argv[1]
 match_count = 0
 mismatch_count = 0
-files = os.listdir(path + '/jsonld-r4')
+files = os.listdir(path + '/original')
 for file in files:
     if os.path.exists(path + '/examples-ttl/' + file.replace('.json', '.ttl')):
         match_count += 1
