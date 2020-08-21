@@ -10,8 +10,9 @@ from os import path
 from typing import Union, Optional, List, Tuple
 
 import dirlistproc
-from rdflib import Graph, RDF, URIRef, BNode
+from rdflib import Graph, RDF, URIRef, BNode, Literal, XSD
 from rdflib.compare import graph_diff, similar
+
 
 def to_graph(inp: Union[Graph, str], fmt: Optional[str] = "turtle") -> Graph:
     """
@@ -78,7 +79,7 @@ def remove_subgraph(pred: URIRef, g: Graph) -> None:
         g.remove((s, pred, o))
 
 def compare_rdf(expected: Union[Graph, str], actual: Union[Graph, str], fmt: Optional[str] = "turtle",
-                detailed: bool=True) \
+                detailed: bool=True, maxcomparetriples: Optional[int] = 0) \
         -> Tuple[Optional[str], int, int, int]:
     """
     Compare expected to actual, returning a string if there is a difference
@@ -86,6 +87,7 @@ def compare_rdf(expected: Union[Graph, str], actual: Union[Graph, str], fmt: Opt
     :param actual: actual RDF. Can be Graph, file name, uri or text
     :param fmt: RDF format
     :param detailed: True means do an in depth compare, False means just report if mismatch
+    :param maxcomparetriples: Size cutoff for detailed comparison
     :return: String describing difference, # in both, # in expected only, # in actual only
     """
 
@@ -95,8 +97,15 @@ def compare_rdf(expected: Union[Graph, str], actual: Union[Graph, str], fmt: Opt
             g.remove((s, RDF.type, RDF.List))
         return g
 
-    expected_graph = rem_metadata(to_graph(expected, fmt))
-    actual_graph = rem_metadata(to_graph(actual, fmt))
+    def fix_strings(g: Graph) -> Graph:
+        for s, p, o in g:
+            if isinstance(o, Literal) and o.datatype and o.datatype == XSD.string:
+                g.add((s, p, Literal(o.value)))
+                g.remove((s, p, o))
+        return g
+
+    expected_graph = rem_metadata(fix_strings(to_graph(expected, fmt)))
+    actual_graph = rem_metadata(fix_strings(to_graph(actual, fmt)))
 
     # TODO: Get the URLs into FHIR R5
     for s, o in list(actual_graph.subject_objects(RDF.type)):
@@ -106,8 +115,10 @@ def compare_rdf(expected: Union[Graph, str], actual: Union[Graph, str], fmt: Opt
     # We assume that similar may give false negatives, but is pretty good on the positive side
     if similar(expected_graph, actual_graph):
         return None, len(expected_graph), 0, 0
-    if not detailed:
-        return "Files do not match", len(expected_graph), 0, 0
+    exp_len = len(expected_graph)
+
+    if not detailed or maxcomparetriples and exp_len > maxcomparetriples:
+        return "Files do not match", exp_len, exp_len, len(actual_graph)
 
     in_both, in_old, in_new = graph_diff(expected_graph, actual_graph)
 
@@ -166,7 +177,9 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
     expected_str = expected_str.replace("^^xsd:date ", "^^xsd:dateTime ").replace("^^xsd:gYear ", "^^xsd:dateTime ")\
         .replace("^^xsd:gYearMonth ", "^^xsd:dateTime ")
     expected_graph = to_graph(expected_str, 'turtle')
-    result, len_in_both, len_in_new, len_in_old = compare_rdf(expected_graph, actual_graph, detailed=not opts.skipdetailedcompare)
+    result, len_in_both, len_in_new, len_in_old = compare_rdf(expected_graph, actual_graph,
+                                                              detailed=not opts.skipdetailedcompare,
+                                                              maxcomparetriples=opts.maxcomparetriples)
 
     if result:
         if report_file:
@@ -180,13 +193,22 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
 
 def input_filter(filename: str, dirpath: str, opts: Namespace) -> bool:
     # Code systems aren't currently converted to RDF
-    return bool(opts.infile) or not filename.startswith('codesystem-')
-
+    if bool(opts.infile):
+        return True
+    if filename.startswith('codesystem-'):
+        return False
+    if filename.startswith('valueset-') or '-valueset-' in filename:
+        return False
+    if opts.maxtriples and sum(1 for line in open(os.path.join(dirpath, filename))) > opts.maxtriples:
+        return False
+    return True
 
 def addargs(parser: ArgumentParser) -> None:
     parser.add_argument("-td", "--turtledir", help="Turtle directory")
     parser.add_argument("-sdc", "--skipdetailedcompare", help="Do a fast non-detailed compare", action="store_true")
-    parser.add_argument("-ifs", "--infilesuffix", help="Input file suffix (default: .nq", default='.nq')
+    parser.add_argument("-ifs", "--infilesuffix", help="Input file suffix (default: .nq)", default='.nq')
+    parser.add_argument("-maxt", "--maxtriples", help="Number of triples to compare (default: unlimited)", type=int)
+    parser.add_argument("-maxtc", "--maxcomparetriples", help="Detailed compare cutoff (default: unlimited)", type=int)
 
 
 def main(argv: Optional[Union[str, List[str]]] = None) -> object:
