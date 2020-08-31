@@ -130,6 +130,7 @@ dmypy.json
 
 .idea
 */node_modules
+*.iml
 
 examples-json/
 examples-ttl/

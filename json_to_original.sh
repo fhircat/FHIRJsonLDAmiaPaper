@@ -16,6 +16,7 @@ pipenv run python fhir_jsonld_amia/json_preprocessor.py -id data/$dir/examples-j
 rm data/$dir/original/*
 cd fhir_jsonld_js
 yarn jsonld -c toRDF -n ../data/$dir/jsonld-pre -m ../data/$dir/original
+java -jar ../fhir_jsonld_java/jsonld-cli-1.0-SNAPSHOT-jar-with-dependencies.jar -f ttl --input ../data/$dir/jsonld-pre --output ../data/$dir/original-java
 cd ..
 
 # 3) Compare the JSON conversion to what was there to begin with
