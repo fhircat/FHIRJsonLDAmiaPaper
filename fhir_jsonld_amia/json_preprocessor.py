@@ -116,7 +116,7 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace,
             elif isinstance(v, JsonObj):        # Inner object -- process recursively
                 dict_processor(v, resource_type, resource_type_set, getattr(d, 'fullUrl', None))
             elif isinstance(v, list):           # Add ordering to the list
-                d[k] = list_processor(k, v, resource_type_set)
+                d[k] = list_processor(k, v, resource_type_set, ifn)
             elif k == "id":                     # Internal ids are relative to the document
                 if not full_url:
                     d['@id'] = ('#' if not inner_type and not v.startswith('#') else (resource_type + '/')) + v
@@ -146,13 +146,14 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace,
                         d[base_k][kp] = vp
             del(d[k])
 
-    def list_processor(k: str, lo: List, rts: Set[str]) -> List[Any]:
+    def list_processor(k: str, lo: List, rts: Set[str], ifn: str) -> List[Any]:
         """
         Process the elements in the supplied list adding indices and converting the interior nodes
 
         :param k: List key (for error reporting)
         :param lo: List to be processed
         :param rts: Set of referenced resource types. Maybe updated
+        :param ifn: Input file name for error reporting
         :return Ordered list of entries
         """
 
@@ -167,11 +168,11 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace,
             if isinstance(e, JsonObj):
                 dict_processor(e, resource_type, rts, getattr(e, 'fullUrl', None))
                 if getattr(e, 'index', None) is not None:
-                    print(f'Problem: "{k}" element {pos} already has an index')
+                    print(f'{ifn} - problem: "{k}" element {pos} already has an index')
                 else:
                     e.index = pos               # Add positioning
             elif isinstance(e, list):
-                print(f"Problem: {k} has a list in a list", file=sys.stderr)
+                print(f"{ifn} - problem: {k} has a list in a list", file=sys.stderr)
             else:
                 e = to_value(e)
                 e.index = pos
