@@ -1,21 +1,18 @@
 # See original source code at https://github.com/fhircat/fhir_rdf_validator/blob/master/fhir_rdf_validator/json_to_r4.py
 
 import os
-import urllib
+import shlex
+import subprocess
+import sys
+from urllib.parse import quote
 from argparse import Namespace, ArgumentParser
-from copy import deepcopy
 from typing import Any, List, Optional, Union, Set
 
 import dirlistproc
 import requests
-import sys
 from jsonasobj import JsonObj, loads, as_dict, as_json
-import subprocess, shlex
-import json
 
-# CONTEXT_SERVER = "https://raw.githubusercontent.com/fhircat/jsonld_context_files/master/contextFiles/"
-# CONTEXT_SERVER = "https://fhircat.org/fhir/contexts/r5/"
-CONTEXT_SERVER = "https://fhircat.org/fhir-r5/original/contexts/"
+DEFAULT_CONTEXT_SERVER = "https://fhircat.org/fhir-r5/original/contexts/"
 
 CODE_SYSTEM_MAP = {
     "http://snomed.info/sct": "sct",
@@ -52,7 +49,7 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace,
         if hasattr(n, 'system') and hasattr(n, 'code'):
             # Note: This is another reason we hate the value work
             system = from_value(n.system)
-            code = urllib.parse.quote(from_value(n.code), safe='')
+            code = quote(from_value(n.code), safe='')
             system_root = system[:-1] if system[-1] in '/#' else system
             if system_root in CODE_SYSTEM_MAP:
                 base = CODE_SYSTEM_MAP[system_root] + ':'
@@ -191,7 +188,8 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace,
     hdr = JsonObj()
     if '@id' in o:
         hdr["@id"] = o['@id'] + ".ttl"
-        hdr["owl:versionIRI"] = (opts.versionbase + ('' if opts.versionbase[-1] == '/' else '') + hdr['@id']) if opts.versionbase else hdr["@id"]
+        hdr["owl:versionIRI"] = (opts.versionbase + ('' if opts.versionbase[-1] == '/' else '') +
+                                 hdr['@id']) if opts.versionbase else hdr["@id"]
         hdr["owl:imports"] = "fhir:fhir.ttl"
         hdr["@type"] = 'owl:Ontology'
         o["@included"] = hdr
@@ -200,8 +198,8 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace,
 
     # Fill out the rest of the context
     if add_context:
-        o['@context'] = [f"{CONTEXT_SERVER}{rt.lower()}.context.jsonld" for rt in sorted(resource_type_set)]
-        o['@context'].append(f"{CONTEXT_SERVER}root.context.jsonld")
+        o['@context'] = [f"{opts.contextserver}{rt.lower()}.context.jsonld" for rt in sorted(resource_type_set)]
+        o['@context'].append(f"{opts.contextserver}root.context.jsonld")
         local_context = JsonObj()
         local_context["nodeRole"] = JsonObj(**{"@type": "@id", "@id": "fhir:nodeRole"})
         if server:
@@ -212,12 +210,12 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace,
     return o
 
 
-def expand_file(ifn: str, ofn: str, opts: Namespace) -> bool:
+def expand_file(_ifn: str, _ofn: str, opts: Namespace) -> bool:
     """
     Convert actual_file_name to expected_file_name
 
-    :param ifn: Name of file to convert
-    :param ofn: Target file to convert to
+    :param _ifn: Name of file to convert
+    :param _ofn: Target file to convert to
     :param opts: Parameters
     :return: True if conversion is successful
     """
@@ -279,8 +277,10 @@ def check_json(ifn: str, ifdir: str, opts: Namespace) -> bool:
 
 
 def addargs(parser: ArgumentParser) -> None:
-    parser.add_argument("-c", "--addcontext", help="Add JSON-LD context reference", action="store_true")
+    parser.add_argument("-c", "--addcontext", help="Add JSON-LD context references", action="store_true")
     parser.add_argument("-fs", "--fhirserver", help="FHIR server base")
+    parser.add_argument("-cs", "--contextserver", help="Context server base",
+                        default=DEFAULT_CONTEXT_SERVER)
     parser.add_argument("-ed", "--expdir", help="Expand directory")
     parser.add_argument("-cp", "--compare", help="Expand directory", action="store_true")
     parser.add_argument("-vb", "--versionbase", help="Base URI for OWL version. Default: fhirserver")
