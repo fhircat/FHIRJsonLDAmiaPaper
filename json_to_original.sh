@@ -12,16 +12,22 @@ while [ "$#" -gt 0 ]; do
     -3) P3=T; shift 1;;
     -a) P1=T; P2=T; P3=T; shift 1;;
     -all) PROC_JS=T; PROC_JAVA=T; shift 1;;
+    -cs) CONTEXT_SERVER="$2"; shift 2;;
     -*) echo "Usage: json_to_original-sh [-1, -2, -3 or -a] [-java, -js or -all] [directory]";exit 1;;
     *) dir=$1; shift 1;;
   esac
 done
-echo Vals: p1=$P1 p2=$P2 p3=$P3 js=$PROC_JS java=$PROC_JAVA dir=$dir
+echo Vals: p1=$P1 p2=$P2 p3=$P3 js=$PROC_JS java=$PROC_JAVA dir=$dir CONTEXT_SERVER=$CONTEXT_SERVER
 
 if [ $P1 ]; then
         echo Preprocessing examples-json to jsonld-pre
+        if [ $CONTEXT_SERVER ]; then
+          csparam="-cs $CONTEXT_SERVER"
+        else
+          csparam=""
+        fi
  	rm data/$dir/jsonld-pre/*
- 	pipenv run python fhir_jsonld_amia/json_preprocessor.py -id data/$dir/examples-json -od data/$dir/jsonld-pre -c -fs http://hl7.org/fhir/ -vb http://build.fhir.org/ -s
+        pipenv run python fhir_jsonld_amia/json_preprocessor.py -id data/$dir/examples-json -od data/$dir/jsonld-pre -c -fs http://hl7.org/fhir/ -vb http://build.fhir.org/ -s $csparam
 fi 
 if [ $P2 ]; then
         if [ $PROC_JAVA ]; then
