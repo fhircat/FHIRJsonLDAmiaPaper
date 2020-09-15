@@ -17,10 +17,16 @@ while [ "$#" -gt 0 ]; do
     *) dir=$1; shift 1;;
   esac
 done
+if [ $P2 ] ||[ $P3 ]; then
+   if ! ( [ $PROC_JS ] ||  [ $PROC_JAVA ] ); then
+     echo "Need to specify -java or -js"
+     exit 1
+   fi
+fi
 echo Vals: p1=$P1 p2=$P2 p3=$P3 js=$PROC_JS java=$PROC_JAVA dir=$dir CONTEXT_SERVER=$CONTEXT_SERVER
 
 if [ $P1 ]; then
-        echo Preprocessing examples-json to jsonld-pre
+        echo Preprocessing data/$dir/examples-json to data/$dir/jsonld-pre
         if [ $CONTEXT_SERVER ]; then
           csparam="-cs $CONTEXT_SERVER"
         else
@@ -31,12 +37,12 @@ if [ $P1 ]; then
 fi 
 if [ $P2 ]; then
         if [ $PROC_JAVA ]; then
-            echo "Converting jsonld-pre to data/$dir/original-java"
+            echo "Converting data/$dir/jsonld-pre to data/$dir/original-java"
             rm data/$dir/original-java/*
             java -jar fhir_jsonld_java/jsonld-cli-1.0-SNAPSHOT-jar-with-dependencies.jar -f ttl --input data/$dir/jsonld-pre --output data/$dir/original-java
          fi
          if [ $PROC_JS ]; then
-            echo "Converting jsonld-pre to data/$dir/original"
+            echo "Converting data/$dir/jsonld-pre to data/$dir/original"
             rm data/$dir/original/*
             pushd fhir_jsonld_js
             yarn jsonld -c toRDF -n ../data/$dir/jsonld-pre -m ../data/$dir/original

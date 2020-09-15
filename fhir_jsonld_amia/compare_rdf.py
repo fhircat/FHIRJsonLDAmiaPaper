@@ -79,10 +79,11 @@ def remove_subgraph(pred: URIRef, g: Graph) -> None:
 
 
 class Counter:
-    def __init__(self, title: str, progress: bool=False):
+    def __init__(self, title: str, progress: bool=False, sort_order: int=99):
         self.title = title
         self.progress = progress
         self.entries = list()
+        self.sort_order = sort_order
 
     def add(self, filename: str):
         self.entries.append(filename)
@@ -94,27 +95,44 @@ class Counter:
 
 
 @dataclass
-class Summary:
-    nfiles: Counter = field(default_factory=lambda: Counter("Number of files"))
-    nsuccess: Counter = field(default_factory=lambda: Counter("Number of matches"))
-    ntypearcfixes: Counter = field(default_factory=lambda: Counter("Number of matches after type arc fix"))
-    nfailures: Counter = field(default_factory=lambda: Counter("Number of mismatches"))
+class Marker:
+    text: str
+    sort_order: int
 
-    missing_type_arcs: Counter = field(default_factory=lambda: Counter("Type arcs removed"))
-    nincomplete_xform: Counter = field(default_factory=lambda: Counter("Incomplete transforms (UNKNOWN in output)", True))
-    ncodesystems: Counter = field(default_factory=lambda: Counter("Code systems skipped"))
-    nvaluesets: Counter = field(default_factory=lambda: Counter("Value sets skipped"))
-    ntoolarge: Counter = field(default_factory=lambda: Counter("Input file is too large"))
-    nskippeddetail: Counter = field(default_factory=lambda: Counter("Detailed comparisons skipped"))
-    nnotfound: Counter = field(default_factory=lambda: Counter("Expected file not found"))
-    nsubjectmismatch: Counter = field(default_factory=lambda: Counter("Mismatched subjects"))
+    def __str__(self):
+        return f"\n===== {self.text} ====="
+
+@dataclass
+class Summary:
+    summary: Marker = Marker("Summary", sort_order=1)
+    nfiles: Counter = field(default_factory=lambda: Counter("Number of files processed", sort_order=2))
+    nsuccess: Counter = field(default_factory=lambda: Counter("Number of successful matches", sort_order=3))
+    nfail: Counter = field(default_factory=lambda: Counter("Number of unsuccessful matches", sort_order=4))
+    nskip: Counter = field(default_factory=lambda: Counter("Skips", sort_order=5))
+
+    failreasons: Marker = Marker("Fail Reasons", sort_order = 10)
+    nincomplete_xform: Counter = field(default_factory=lambda: Counter("Incomplete transforms (UNKNOWN in output)",
+                                                                       sort_order=11))
+    nnotfound: Counter = field(default_factory=lambda: Counter("Expected file not found", sort_order=12))
+    nsubjectmismatch: Counter = field(default_factory=lambda: Counter("Mismatched subjects", True, sort_order=13))
+    ncontentmismatch: Counter = field(default_factory=lambda: Counter("Mismatched content", True, sort_order=13))
+
+    skipreasons: Marker = Marker("Skip reasons", sort_order=50)
+    missing_type_arcs: Counter = field(default_factory=lambda: Counter("Type arcs removed", sort_order=51))
+    ntypearcfixes: Counter = field(default_factory=lambda: Counter("Number of matches after type arc fix",
+                                                                   sort_order=52))
+    ncodesystems: Counter = field(default_factory=lambda: Counter("Code systems skipped", sort_order=53))
+    nvaluesets: Counter = field(default_factory=lambda: Counter("Value sets skipped", sort_order=54))
+    ntoolarge: Counter = field(default_factory=lambda: Counter("Input file is too large", sort_order=55))
+    nskippeddetail: Counter = field(default_factory=lambda: Counter("Detailed comparisons skipped", sort_order=56))
 
     def __str__(self) -> str:
-        return '\n'.join(str(getattr(self, p)) for p in dir(self) if not p.startswith('_'))
+        rval = sorted([getattr(self, c) for c in dir(self) if isinstance(getattr(self, c), (Counter, Marker))],
+                      key=lambda c: c.sort_order)
+        return '\n'.join(str(r) for r in rval)
 
 
 summary = Summary()
-x = str(summary)
 
 
 def compare_rdf(filename: str, expected: Union[Graph, str], actual: Union[Graph, str], opts: Namespace)\
@@ -154,6 +172,8 @@ def compare_rdf(filename: str, expected: Union[Graph, str], actual: Union[Graph,
 
     if opts.skipdetailedcompare or (opts.maxcomparetriples and expected_graph_length > opts.maxcomparetriples):
         summary.nskippeddetail.add(filename)
+        summary.ncontentmismatch.add(filename)
+        summary.nfail.add(filename)
         return "similar() comparison mismatch", expected_graph_length, expected_graph_length, len(actual_graph)
 
     in_both, in_old, in_new = graph_diff(expected_graph, actual_graph)
@@ -177,6 +197,7 @@ def compare_rdf(filename: str, expected: Union[Graph, str], actual: Union[Graph,
         diffs = subj_diff(in_old, in_new)
         if diffs:
             summary.nsubjectmismatch.add(filename)
+            summary.nfiles.add(filename)
             return diffs, len(in_both), len(in_old), len(in_new)
         txt = StringIO()
         with redirect_stdout(txt):
@@ -212,6 +233,7 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
         if opts.verbose:
             print(f'{os.path.join(os.path.dirname(__file__), expected_file)} not found')
         summary.nnotfound.add(expected_file)
+        summary.nfail.add(expected_file)
         return False
     report_file = actual_file_name.replace(opts.indir, opts.outdir).replace(opts.infilesuffix, '.txt') \
         if not opts.outfile else None
@@ -221,6 +243,7 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
         if opts.verbose:
             print(f'{actual_file_name} has unmapped elements')
         summary.nincomplete_xform.add(actual_file_name)
+        summary.nfail.add(expected_file)
         return False
     with open(expected_file, 'r') as file:
         expected_str = file.read()
@@ -243,7 +266,9 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
         else:
             if opts.verbose:
                 print(result)
-        summary.nfailures.add(actual_file_name)
+        summary.nfail.add(actual_file_name)
+        summary.ncontentmismatch.add(actual_file_name)
+
         return False
     summary.nsuccess.add(actual_file_name)
     return True
