@@ -5,12 +5,27 @@ from contextlib import redirect_stdout
 from dataclasses import dataclass, field
 from io import StringIO
 from os import path
-from typing import Union, Optional, List, Tuple
+from typing import Union, Optional, List, Tuple, Callable
 
 import dirlistproc
 from rdf_postprocessor import post_process
 from rdflib import Graph, RDF, URIRef, BNode, Literal, XSD
 from rdflib.compare import graph_diff, similar
+
+
+def visit_graph(g: Graph, predicate: Callable[[Tuple], bool], replacement: Callable[[Tuple], Optional[Tuple]]) -> bool:
+    """ Visit a copy of g and, for every triple that meets the predicate, replace t with replacement.
+        Return true if any replacements were made
+    """
+    replacements_were_made = False
+    for t in list(g):
+        if predicate(t):
+            g.remove(t)
+            new_t = replacement(t)
+            if new_t is not None:
+                g.add(new_t)
+            replacements_were_made = True
+    return replacements_were_made
 
 
 def to_graph(inp: Union[Graph, str], fmt: Optional[str] = "turtle") -> Graph:
@@ -30,14 +45,15 @@ def to_graph(inp: Union[Graph, str], fmt: Optional[str] = "turtle") -> Graph:
     return g
 
 
-def print_triples(g: Graph) -> None:
+def print_triples(g: Graph, format: str) -> None:
     """
     Print the contents of g into stdout
     :param g: graph to print
+    :param format: format to print the graph in
     """
     # Prefixes appear to be useful
     # g_text = re.sub(r'@prefix.*\n', '', g.serialize(format="turtle").decode())
-    g_text = g.serialize(format="turtle").decode()
+    g_text = g.serialize(format=format).decode()
     print(g_text)
 
 
@@ -79,9 +95,9 @@ def remove_subgraph(pred: URIRef, g: Graph) -> None:
 
 
 class Counter:
-    def __init__(self, title: str, progress: bool=False, sort_order: int=99):
+    def __init__(self, title: str, print_progress: bool=False, sort_order: int=99):
         self.title = title
-        self.progress = progress
+        self.progress = print_progress
         self.entries = list()
         self.sort_order = sort_order
 
@@ -112,15 +128,18 @@ class Summary:
 
     failreasons: Marker = Marker("Fail Reasons", sort_order = 10)
     nincomplete_xform: Counter = field(default_factory=lambda: Counter("Incomplete transforms (UNKNOWN in output)",
-                                                                       sort_order=11))
-    nnotfound: Counter = field(default_factory=lambda: Counter("Expected file not found", sort_order=12))
-    nsubjectmismatch: Counter = field(default_factory=lambda: Counter("Mismatched subjects", True, sort_order=13))
-    ncontentmismatch: Counter = field(default_factory=lambda: Counter("Mismatched content", True, sort_order=13))
+                                                                       sort_order=11, print_progress=True))
+    nnotfound: Counter = field(default_factory=lambda: Counter("Expected file not found", print_progress=True,
+                                                               sort_order=12))
+    nsubjectmismatch: Counter = field(default_factory=lambda: Counter("Mismatched subjects", print_progress=True,
+                                                                      sort_order=13))
+    ncontentmismatch: Counter = field(default_factory=lambda: Counter("Mismatched content", sort_order=13))
 
     skipreasons: Marker = Marker("Skip reasons", sort_order=50)
     missing_type_arcs: Counter = field(default_factory=lambda: Counter("Type arcs removed", sort_order=51))
     ntypearcfixes: Counter = field(default_factory=lambda: Counter("Number of matches after type arc fix",
                                                                    sort_order=52))
+    ndecimalfixes: Counter = field(default_factory=lambda: Counter("Number of decimal corrections", sort_order=52))
     ncodesystems: Counter = field(default_factory=lambda: Counter("Code systems skipped", sort_order=53))
     nvaluesets: Counter = field(default_factory=lambda: Counter("Value sets skipped", sort_order=54))
     ntoolarge: Counter = field(default_factory=lambda: Counter("Input file is too large", sort_order=55))
@@ -154,10 +173,9 @@ def compare_rdf(filename: str, expected: Union[Graph, str], actual: Union[Graph,
 
     def fix_strings(g: Graph) -> Graph:
         """ Remove explicit string datatypes from the graph """
-        for fs, fp, fo in list(g):
-            if isinstance(fo, Literal) and fo.datatype and fo.datatype == XSD.string:
-                g.add((fs, fp, Literal(fo.value)))
-                g.remove((fs, fp, fo))
+        visit_graph(g,
+                    lambda t: isinstance(t[2], Literal) and t[2].datatype and t[2].datatype == XSD.string,
+                    lambda t: (t[0], t[1], Literal(str(t[2]))))
         return g
 
     expected_graph = remove_list_identifiers(fix_strings(to_graph(expected, "turtle")))
@@ -177,41 +195,65 @@ def compare_rdf(filename: str, expected: Union[Graph, str], actual: Union[Graph,
         return "similar() comparison mismatch", expected_graph_length, expected_graph_length, len(actual_graph)
 
     in_both, in_old, in_new = graph_diff(expected_graph, actual_graph)
-
-    # If we're pulling type arcs, iterate over the actual graph removing any type arcs in actual that aren't in
-    # expected
-    if opts.skiptypearcs:
-        for s, p, o in list(in_new):
-            if isinstance(s, BNode) and p == RDF.type:
-                summary.missing_type_arcs.add(o)
-                if opts.verbose:
-                    print(f"Removing type arc to <{o}>")
-                in_new.remove((s, p, o))
-        in_both_2, in_old, in_new = graph_diff(in_old, in_new)
-
     old_len = len(list(in_old))
     new_len = len(list(in_new))
+    recheck = False
+
+    # Now that we know we've got differences, use actual differences as a guide to tweak the originals
+    if new_len:
+        if opts.skiptypearcs:
+            for s, p, o in in_new:
+                if isinstance(s, BNode) and p == RDF.type:
+                    if visit_graph(actual_graph,
+                                   lambda t: isinstance(t[0], BNode) and
+                                             t[1] == RDF.type and 'snomed.info/id/' not in str(t[2]) and 'http://loinc.org/' not in str(t[2]),
+                                   lambda t: None):
+                            recheck = True
+                    break
+    if recheck:
+        summary.ntypearcfixes.add(filename)
+        in_both, in_old, in_new = graph_diff(expected_graph, actual_graph)
+        old_len = len(list(in_old))
+        new_len = len(list(in_new))
+        recheck = False
+
+    if new_len:
+        if opts.adjustdecimals:
+            # It turns out that decimal problems aren't just in JSON -- different rdflib parsers deal with them differently
+            # It looks like the only wan to fix this is to twiddle ALL decimals, both old and new, when there is an issue
+            for s, p, o in in_new:
+                if isinstance(o, Literal) and o.datatype == XSD.decimal:
+                    visit_graph(expected_graph,
+                                lambda t: isinstance(t[2], Literal) and t[2].datatype == XSD.decimal,
+                                lambda t: (t[0], t[1], Literal(float(str(t[2])), datatype=XSD.decimal)))
+                    visit_graph(actual_graph,
+                                lambda t: isinstance(t[2], Literal) and t[2].datatype == XSD.decimal,
+                                lambda t: (t[0], t[1], Literal(float(str(t[2])), datatype=XSD.decimal)))
+                    summary.ndecimalfixes.add(filename)
+                    recheck = True
+                    break
+
+    if recheck:
+        in_both, in_old, in_new = graph_diff(expected_graph, actual_graph)
+        old_len = len(list(in_old))
+        new_len = len(list(in_new))
+        recheck = False
 
     if old_len or new_len:
         # Start by checking the subjects
         diffs = subj_diff(in_old, in_new)
         if diffs:
             summary.nsubjectmismatch.add(filename)
-            summary.nfiles.add(filename)
             return diffs, len(in_both), len(in_old), len(in_new)
         txt = StringIO()
         with redirect_stdout(txt):
             print("----- Missing Triples -----")
             if old_len:
-                print_triples(in_old)
+                print_triples(in_old, format="turtle")
             print("----- Added Triples -----")
             if new_len:
-                print_triples(in_new)
+                print_triples(in_new, format="turtle")
         return txt.getvalue(), len(in_both), len(in_old), len(in_new)
-    if opts.skiptypearcs:
-        if opts.verbose:
-            print("ARC Success!")
-        summary.ntypearcfixes.add(filename)
     return None, len(in_both), len(in_old), len(in_new)
 
 
@@ -251,6 +293,8 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
     # TODO: A monkey patch (kludge) to fix the issue in comparing when jsonld has ^^xsd:string and ^^xsd:anyURI
     actual_str = actual_str.replace("^^<http://www.w3.org/2001/XMLSchema#anyURI>", "")
 
+    # It appears that the nquads parser and turtle parser handle decimals differently -- it looks like we've got to
+    # do a double transform
     actual_graph = post_process(Graph().parse(data=actual_str, format='nquads'))
 
     # TODO: File a report to FHIR that meta is missing in FHIR RDF Turtle
@@ -307,6 +351,7 @@ def addargs(parser: ArgumentParser) -> None:
     parser.add_argument("-maxt", "--maxtriples", help="Number of triples to compare (default: unlimited)", type=int)
     parser.add_argument("-maxtc", "--maxcomparetriples", help="Detailed compare cutoff (default: unlimited)", type=int)
     parser.add_argument("-sta", "--skiptypearcs", help="Ignore missing type arcs in conversion", action="store_true")
+    parser.add_argument("-dec", "--adjustdecimals", help="Fix decimal problems", action="store_true")
     parser.add_argument("-v", "--verbose", help="Emit more detailed output", action="store_true")
 
 

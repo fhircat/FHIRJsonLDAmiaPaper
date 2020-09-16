@@ -1,6 +1,7 @@
 # See original source code at https://github.com/fhircat/fhir_rdf_validator/blob/master/fhir_rdf_validator/json_to_r4.py
 
 import os
+import re
 import shlex
 import subprocess
 import sys
@@ -12,6 +13,8 @@ import dirlistproc
 import requests
 from jsonasobj import JsonObj, loads, as_dict, as_json
 
+from fhir_url_re import R5_FHIR_URI_RE
+
 DEFAULT_CONTEXT_SERVER = "https://fhircat.org/fhir-r5/original/contexts/"
 
 CODE_SYSTEM_MAP = {
@@ -22,7 +25,6 @@ CODE_SYSTEM_MAP = {
 VALUE_TAG = "value"
 
 MAX_JSON = 50000000
-
 
 def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace, ifn: str) -> JsonObj:
     """
@@ -74,25 +76,25 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace,
         :param full_url: official ID of the resource from the containing fullURL
         :return List of resourceTypes referenced by the resource
         """
-        def gen_reference(do: JsonObj) -> JsonObj:
+        def gen_reference(do: JsonObj) -> Optional[JsonObj]:
             """
             Return the object of a fhir:link based on the reference in d
             :param do: object containing the reference
             :return: link and optional type element
             """
-            # TODO: find the official regular expression for the type node.  For the moment we make the (incorrect)
-            #       assumption that the type is everything that preceeds the first slash
+            rval = None
             if "://" not in do.reference and not do.reference.startswith('/'):
                 if hasattr(do, 'type'):
                     typ = do.type
                 else:
-                    typ = do.reference.split('/', 1)[0]
+                    m = R5_FHIR_URI_RE.match(do.reference)
+                    typ = m[4] if m else None
                 link = ('' if server else '../') + do.reference
             else:
                 link = do.reference
                 typ = getattr(do, 'type', None)
-            rval = JsonObj(**{"@id": link})
             if typ:
+                rval = JsonObj(**{"@id": link})
                 rval['@type'] = "fhir:" + typ
             return rval
 
@@ -120,7 +122,9 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace,
                 d[k] = to_value(v)
             elif k == "reference":              # Link to another document
                 if not hasattr(d, 'link'):
-                    d["fhir:link"] = gen_reference(d)
+                    ref = gen_reference(d)
+                    if ref:
+                        d["fhir:link"] = ref
                 d[k] = to_value(v)
             elif k == "resourceType" and not(v.startswith('fhir:')):
                 resource_type_set.add(v)

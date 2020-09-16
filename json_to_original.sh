@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 dir="fhir-r5"
+examples_dir="fhir-r5"
+compareopts="-sta -maxtc 2000 -dec"
 
 echo Processing FHIR release $dir
 while [ "$#" -gt 0 ]; do
@@ -13,7 +15,7 @@ while [ "$#" -gt 0 ]; do
     -a) P1=T; P2=T; P3=T; shift 1;;
     -all) PROC_JS=T; PROC_JAVA=T; shift 1;;
     -cs) CONTEXT_SERVER="$2"; shift 2;;
-    -*) echo "Usage: json_to_original-sh [-1, -2, -3 or -a] [-java, -js or -all] [directory]";exit 1;;
+    -*) echo "Usage: json_to_original-sh [-1, -2, -3 or -a] [-java, -js or -all] [-cs contextsource] [directory]";exit 1;;
     *) dir=$1; shift 1;;
   esac
 done
@@ -34,7 +36,7 @@ if [ $P1 ]; then
         fi
  	rm data/$dir/jsonld-pre/*
         pipenv run python fhir_jsonld_amia/json_preprocessor.py -id data/$dir/examples-json -od data/$dir/jsonld-pre -c -fs http://hl7.org/fhir/ -vb http://build.fhir.org/ -s $csparam
-fi 
+fi
 if [ $P2 ]; then
         if [ $PROC_JAVA ]; then
             echo "Converting data/$dir/jsonld-pre to data/$dir/original-java"
@@ -53,12 +55,12 @@ if [ $P3 ]; then
         if [ $PROC_JAVA ]; then
            echo "Generating data/$dir/compare-report/java from  data/$dir/original-java and data/$dir/examples-ttl"
            rm data/$dir/compare-report/java/*
-           pipenv run python fhir_jsonld_amia/compare_rdf.py -id data/$dir/original-java -od data/$dir/compare-report/java/ -td data/$dir/examples-ttl -sta -maxtc 2000
+           pipenv run python fhir_jsonld_amia/compare_rdf.py -id data/$dir/original-java -od data/$dir/compare-report/java/ -td data/$examples_dir/examples-ttl $compareopts
         fi
         if [ $PROC_JS ]; then
            echo "Generating data/$dir/compare-report/js from  data/$dir/original and data/$dir/examples-ttl"
            rm data/$dir/compare-report/js/*
-           pipenv run python fhir_jsonld_amia/compare_rdf.py -id data/$dir/original-od data/$dir/compare-report/js/ -td data/$dir/examples-ttl -sta -maxtc 2000
+           pipenv run python fhir_jsonld_amia/compare_rdf.py -id data/$dir/original-od data/$dir/compare-report/js/ -td data/$examples_dir/examples-ttl $compareopts
         fi
-fi 
+fi
 echo DONE!

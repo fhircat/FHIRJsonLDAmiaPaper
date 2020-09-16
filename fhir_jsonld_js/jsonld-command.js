@@ -44,7 +44,7 @@ const runCommand = (command, input, output=null, options={}) => {
                 invalidUrls.add(error.details.url)
                 console.log(invalidUrls)
             }
-            //console.log(error, error.message)
+            console.log(error, error.message)
         })
     }
 };
