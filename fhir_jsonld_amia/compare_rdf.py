@@ -2,15 +2,19 @@ import os
 import sys
 from argparse import Namespace, ArgumentParser
 from contextlib import redirect_stdout
-from dataclasses import dataclass, field
 from io import StringIO
 from os import path
-from typing import Union, Optional, List, Tuple, Callable
+from typing import Union, Optional, List, Tuple, Callable, Set
 
 import dirlistproc
-from rdf_postprocessor import post_process
-from rdflib import Graph, RDF, URIRef, BNode, Literal, XSD
+from rdflib import Graph, RDF, URIRef, BNode, Literal, XSD, Namespace as RDFNamespace
 from rdflib.compare import graph_diff, similar
+
+from rdf_postprocessor import post_process
+from summary import Heading, Counter
+
+FHIR = RDFNamespace('http://hl7.org/fhir/')
+FHIR_META = FHIR['Resource.meta']
 
 
 def visit_graph(g: Graph, predicate: Callable[[Tuple], bool], replacement: Callable[[Tuple], Optional[Tuple]]) -> bool:
@@ -45,15 +49,15 @@ def to_graph(inp: Union[Graph, str], fmt: Optional[str] = "turtle") -> Graph:
     return g
 
 
-def print_triples(g: Graph, format: str) -> None:
+def print_triples(g: Graph, fmt: str) -> None:
     """
     Print the contents of g into stdout
     :param g: graph to print
-    :param format: format to print the graph in
+    :param fmt: format to print the graph in
     """
     # Prefixes appear to be useful
     # g_text = re.sub(r'@prefix.*\n', '', g.serialize(format="turtle").decode())
-    g_text = g.serialize(format=format).decode()
+    g_text = g.serialize(format=fmt).decode()
     print(g_text)
 
 
@@ -68,6 +72,7 @@ def subj_diff(expected: Graph, actual: Graph) -> Optional[str]:
     actual_subjs = set([str(s) for s in actual.subjects() if isinstance(s, URIRef)])
     expected_only = sorted(list(expected_subjs.difference(actual_subjs)))
     actual_only = sorted(list(actual_subjs.difference(expected_subjs)))
+
     if expected_only or actual_only:
         exp_str = "----- Missing Subjects -----\n\t"
         act_str = "----- Added Subjects -----\n\t"
@@ -75,6 +80,9 @@ def subj_diff(expected: Graph, actual: Graph) -> Optional[str]:
             exp_str += '\n\t'.join(expected_only)
         if actual_only:
             act_str += '\n\t'.join(actual_only)
+        # TODO: These subjects appear to be legitimately added -- issue in FHIR conversion
+        if len(expected_only) == 0:
+            return None
         return exp_str + '\n' + act_str
     return None
 
@@ -94,65 +102,32 @@ def remove_subgraph(pred: URIRef, g: Graph) -> None:
         g.remove((s, pred, o))
 
 
-class Counter:
-    def __init__(self, title: str, print_progress: bool=False, sort_order: int=99):
-        self.title = title
-        self.progress = print_progress
-        self.entries = list()
-        self.sort_order = sort_order
+summary = Heading("files processed")
+summary.nsuccesses = Counter("successful matches")
 
-    def add(self, filename: str):
-        self.entries.append(filename)
-        if self.progress:
-            print(f"{self.title}: {filename}")
+summary.nfails = Heading("match failures")
+summary.nfails.nincompletes = Counter("incomplete transforms (UNKNOWN in output)", print_progress=True)
+summary.nfails.nmismatches = Counter("content mismatch")
 
-    def __str__(self) -> str:
-        return f"{self.title}: {len(self.entries)}"
+summary.nskips = Heading("files skipped")
+summary.nskips.ncodesystems = Counter("code systems")
+summary.nskips.nvaluesets = Counter("value sets")
+summary.nskips.ntargetmissing = Heading("missing FHIR ttl files")
+summary.nskips.ntargetmissing.nprofiles = Counter("missing profiles")
+summary.nskips.ntargetmissing.nextensions = Counter("missing extensions")
+summary.nskips.ntargetmissing.nmissing = Counter("missing for other reasons")
+summary.nskips.ntoolarge = Counter("files with too many triples")
 
+details = Heading("details")
+details.ntoolarge = Counter("files too big for detailed comparison")
+details.nmissingsourcemetadata = Counter("missing metadata in source")
+details.ntypearcadjustments = Counter("adjusted type arcs")
+details.nadjusteddecimals = Counter("adjusted decimals")
+details.ncontaiment = Counter("expected files with incorrect contained mapping", print_progress=True)
 
-@dataclass
-class Marker:
-    text: str
-    sort_order: int
-
-    def __str__(self):
-        return f"\n===== {self.text} ====="
-
-@dataclass
-class Summary:
-    summary: Marker = Marker("Summary", sort_order=1)
-    nfiles: Counter = field(default_factory=lambda: Counter("Number of files processed", sort_order=2))
-    nsuccess: Counter = field(default_factory=lambda: Counter("Number of successful matches", sort_order=3))
-    nfail: Counter = field(default_factory=lambda: Counter("Number of unsuccessful matches", sort_order=4))
-    nskip: Counter = field(default_factory=lambda: Counter("Skips", sort_order=5))
-
-    failreasons: Marker = Marker("Fail Reasons", sort_order = 10)
-    nincomplete_xform: Counter = field(default_factory=lambda: Counter("Incomplete transforms (UNKNOWN in output)",
-                                                                       sort_order=11, print_progress=True))
-    nnotfound: Counter = field(default_factory=lambda: Counter("Expected file not found", print_progress=True,
-                                                               sort_order=12))
-    nsubjectmismatch: Counter = field(default_factory=lambda: Counter("Mismatched subjects", print_progress=True,
-                                                                      sort_order=13))
-    ncontentmismatch: Counter = field(default_factory=lambda: Counter("Mismatched content", sort_order=13))
-
-    skipreasons: Marker = Marker("Skip reasons", sort_order=50)
-    missing_type_arcs: Counter = field(default_factory=lambda: Counter("Type arcs removed", sort_order=51))
-    ntypearcfixes: Counter = field(default_factory=lambda: Counter("Number of matches after type arc fix",
-                                                                   sort_order=52))
-    ndecimalfixes: Counter = field(default_factory=lambda: Counter("Number of decimal corrections", sort_order=52))
-    ncodesystems: Counter = field(default_factory=lambda: Counter("Code systems skipped", sort_order=53))
-    nvaluesets: Counter = field(default_factory=lambda: Counter("Value sets skipped", sort_order=54))
-    ntoolarge: Counter = field(default_factory=lambda: Counter("Input file is too large", sort_order=55))
-    nskippeddetail: Counter = field(default_factory=lambda: Counter("Detailed comparisons skipped", sort_order=56))
-
-    def __str__(self) -> str:
-        rval = sorted([getattr(self, c) for c in dir(self) if isinstance(getattr(self, c), (Counter, Marker))],
-                      key=lambda c: c.sort_order)
-        return '\n'.join(str(r) for r in rval)
-
-
-summary = Summary()
-
+# TODO: This is temporary
+unknowns: Set[str] = set()
+contains: Set[str] = set()
 
 def compare_rdf(filename: str, expected: Union[Graph, str], actual: Union[Graph, str], opts: Namespace)\
         -> Tuple[Optional[str], int, int, int]:
@@ -189,9 +164,8 @@ def compare_rdf(filename: str, expected: Union[Graph, str], actual: Union[Graph,
     expected_graph_length = len(expected_graph)
 
     if opts.skipdetailedcompare or (opts.maxcomparetriples and expected_graph_length > opts.maxcomparetriples):
-        summary.nskippeddetail.add(filename)
-        summary.ncontentmismatch.add(filename)
-        summary.nfail.add(filename)
+        details.ntoolarge.inc(filename)
+        summary.nfails.nmismatches.inc(filename)
         return "similar() comparison mismatch", expected_graph_length, expected_graph_length, len(actual_graph)
 
     in_both, in_old, in_new = graph_diff(expected_graph, actual_graph)
@@ -206,12 +180,13 @@ def compare_rdf(filename: str, expected: Union[Graph, str], actual: Union[Graph,
                 if isinstance(s, BNode) and p == RDF.type:
                     if visit_graph(actual_graph,
                                    lambda t: isinstance(t[0], BNode) and
-                                             t[1] == RDF.type and 'snomed.info/id/' not in str(t[2]) and 'http://loinc.org/' not in str(t[2]),
+                                             t[1] == RDF.type and 'snomed.info/id/' not in str(t[2]) and
+                                             'http://loinc.org/' not in str(t[2]),
                                    lambda t: None):
                             recheck = True
                     break
     if recheck:
-        summary.ntypearcfixes.add(filename)
+        details.ntypearcadjustments.inc(filename)
         in_both, in_old, in_new = graph_diff(expected_graph, actual_graph)
         old_len = len(list(in_old))
         new_len = len(list(in_new))
@@ -229,7 +204,7 @@ def compare_rdf(filename: str, expected: Union[Graph, str], actual: Union[Graph,
                     visit_graph(actual_graph,
                                 lambda t: isinstance(t[2], Literal) and t[2].datatype == XSD.decimal,
                                 lambda t: (t[0], t[1], Literal(float(str(t[2])), datatype=XSD.decimal)))
-                    summary.ndecimalfixes.add(filename)
+                    details.nadjusteddecimals.inc(filename)
                     recheck = True
                     break
 
@@ -243,16 +218,16 @@ def compare_rdf(filename: str, expected: Union[Graph, str], actual: Union[Graph,
         # Start by checking the subjects
         diffs = subj_diff(in_old, in_new)
         if diffs:
-            summary.nsubjectmismatch.add(filename)
+            summary.nfails.nmismatches.inc(filename)
             return diffs, len(in_both), len(in_old), len(in_new)
         txt = StringIO()
         with redirect_stdout(txt):
             print("----- Missing Triples -----")
             if old_len:
-                print_triples(in_old, format="turtle")
+                print_triples(in_old, fmt="turtle")
             print("----- Added Triples -----")
             if new_len:
-                print_triples(in_new, format="turtle")
+                print_triples(in_new, fmt="turtle")
         return txt.getvalue(), len(in_both), len(in_old), len(in_new)
     return None, len(in_both), len(in_old), len(in_new)
 
@@ -274,8 +249,12 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
     if not path.exists(expected_file):
         if opts.verbose:
             print(f'{os.path.join(os.path.dirname(__file__), expected_file)} not found')
-        summary.nnotfound.add(expected_file)
-        summary.nfail.add(expected_file)
+        if ".profile.ttl" in expected_file:
+            summary.nskips.ntargetmissing.nprofiles.inc(expected_file)
+        elif "extension" in expected_file:
+            summary.nskips.ntargetmissing.nextensions.inc(expected_file)
+        else:
+            summary.nskips.ntargetmissing.nmissing.inc(expected_file)
         return False
     report_file = actual_file_name.replace(opts.indir, opts.outdir).replace(opts.infilesuffix, '.txt') \
         if not opts.outfile else None
@@ -284,8 +263,8 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
     if 'UNKNOWN' in actual_str:
         if opts.verbose:
             print(f'{actual_file_name} has unmapped elements')
-        summary.nincomplete_xform.add(actual_file_name)
-        summary.nfail.add(expected_file)
+        summary.nfails.nincompletes.inc(actual_file_name)
+        unknowns.add(actual_file_name)
         return False
     with open(expected_file, 'r') as file:
         expected_str = file.read()
@@ -296,11 +275,13 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
     # It appears that the nquads parser and turtle parser handle decimals differently -- it looks like we've got to
     # do a double transform
     actual_graph = post_process(Graph().parse(data=actual_str, format='nquads'))
-
-    # TODO: File a report to FHIR that meta is missing in FHIR RDF Turtle
-    remove_subgraph(URIRef('http://hl7.org/fhir/Resource.meta'), actual_graph)
-
     expected_graph = to_graph(expected_str, 'turtle')
+
+    # If we've generated metadata and it isn't in the expected graph, remove it
+    if (None, FHIR_META, None) in actual_graph and (None, FHIR_META, None) not in expected_graph:
+        details.nmissingsourcemetadata.inc(actual_file_name)
+        remove_subgraph(FHIR_META, actual_graph)
+
     result, len_in_both, len_in_new, len_in_old = compare_rdf(actual_file_name, expected_graph, actual_graph, opts)
 
     if result:
@@ -310,36 +291,38 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
         else:
             if opts.verbose:
                 print(result)
-        summary.nfail.add(actual_file_name)
-        summary.ncontentmismatch.add(actual_file_name)
-
+        summary.nfails.nmismatches.inc(actual_file_name)
+        for s, p, o in actual_graph:
+            if isinstance(o, URIRef) and 'contained' in str(p):
+                details.ncontaiment.inc(actual_file_name)
+                contains.add(actual_file_name)
+                break
         return False
-    summary.nsuccess.add(actual_file_name)
+    summary.nsuccesses.inc(actual_file_name)
     return True
 
 
 def input_filter(filename: str, dirpath: str, opts: Namespace) -> bool:
     # Code systems aren't currently converted to RDF
-    summary.nfiles.add(filename)
     if bool(opts.infile):
         # One file to be processed
         return True
     if filename.startswith('codesystem-'):
         if opts.verbose:
             print(f"{filename} skipped (codesystem)")
-        summary.ncodesystems.add(filename)
+        summary.nskips.ncodesystems.inc(filename)
         return False
     if filename.startswith('valueset-') or '-valueset-' in filename:
         if opts.verbose:
             print(f"{filename} skipped (valueset)")
-        summary.nvaluesets.add(filename)
+        summary.nskips.nvaluesets.inc(filename)
         return False
     if opts.maxtriples:
         tot_triples = sum(1 for _ in open(os.path.join(dirpath, filename)))
         if tot_triples > opts.maxtriples:
             if opts.verbose:
                 print(f"{filename} skipped - {tot_triples} > max ({opts.maxtriples} ")
-            summary.ntoolarge.add(filename)
+            summary.nskips.ntoolarge.inc(filename)
             return False
     return True
 
@@ -377,9 +360,27 @@ def main(argv: Optional[Union[str, List[str]]] = None) -> object:
         gen_dlp(argv if argv is not None else sys.argv[1:] + ["--help"])  # Does not exist
 
     nfiles, nsuccess = dlp.run(compare_files, file_filter_2=input_filter)
-    print(str(summary))
+    print('-'*40)
+    print('\n'.join(summary.summary()))
+    print()
+    print('-'*40)
+    print('\n'.join(details.summary()))
+
+    print('===== UNKNOWN w/o containment issues =====')
+    uncontained_unknowns = unknowns.difference(contains)
+    print('\n'.join(sorted(list(uncontained_unknowns))))
+
+    print('===== Contains w/o UNKNOWN issues =====')
+    unknown_contains = contains.difference(unknowns)
+    print('\n'.join(sorted(list(unknown_contains))))
+
+    print('==== Both =====')
+    both = contains.intersection(unknowns)
+    print('\n'.join(sorted(list(both))))
 
     return 0 if nfiles == nsuccess else 1
+
+
 
 
 if __name__ == '__main__':

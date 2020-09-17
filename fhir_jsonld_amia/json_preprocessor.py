@@ -127,7 +127,8 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace,
                         d["fhir:link"] = ref
                 d[k] = to_value(v)
             elif k == "resourceType" and not(v.startswith('fhir:')):
-                resource_type_set.add(v)
+                # resource_type_set.add(v)
+                d['@context'] = f"{opts.contextserver}{v.lower()}.context.jsonld"
                 d[k] = 'fhir:' + v
             elif k not in ["nodeRole", "index", "div"]:    # Convert most other nodes to value entries
                 d[k] = to_value(v)

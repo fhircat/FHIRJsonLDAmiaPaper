@@ -39,28 +39,28 @@ if [ $P1 ]; then
 fi
 if [ $P2 ]; then
         if [ $PROC_JAVA ]; then
-            echo "Converting data/$dir/jsonld-pre to data/$dir/original-java"
-            rm data/$dir/original-java/*
-            java -jar fhir_jsonld_java/jsonld-cli-1.0-SNAPSHOT-jar-with-dependencies.jar -f ttl --input data/$dir/jsonld-pre --output data/$dir/original-java
+            echo "Converting data/$dir/jsonld-pre to data/$dir/original/java"
+            rm data/$dir/original/java/*
+            java -jar fhir_jsonld_java/jsonld-cli-1.0-SNAPSHOT-jar-with-dependencies.jar -f ttl --input data/$dir/jsonld-pre --output data/$dir/original/java
          fi
          if [ $PROC_JS ]; then
-            echo "Converting data/$dir/jsonld-pre to data/$dir/original"
-            rm data/$dir/original/*
+            echo "Converting data/$dir/jsonld-pre to data/$dir/original/js"
+            rm data/$dir/original/js/*
             pushd fhir_jsonld_js
-            yarn jsonld -c toRDF -n ../data/$dir/jsonld-pre -m ../data/$dir/original
+            yarn jsonld -c toRDF -n ../data/$dir/jsonld-pre -m ../data/$dir/original/js
   	    popd
          fi
 fi
 if [ $P3 ]; then
         if [ $PROC_JAVA ]; then
-           echo "Generating data/$dir/compare-report/java from  data/$dir/original-java and data/$dir/examples-ttl"
+           echo "Generating data/$dir/compare-report/java from  data/$dir/original/java and data/$dir/examples-ttl"
            rm data/$dir/compare-report/java/*
-           pipenv run python fhir_jsonld_amia/compare_rdf.py -id data/$dir/original-java -od data/$dir/compare-report/java/ -td data/$examples_dir/examples-ttl $compareopts
+           pipenv run python fhir_jsonld_amia/compare_rdf.py -id data/$dir/original/java -od data/$dir/compare-report/java/ -td data/$examples_dir/examples-ttl $compareopts
         fi
         if [ $PROC_JS ]; then
-           echo "Generating data/$dir/compare-report/js from  data/$dir/original and data/$dir/examples-ttl"
+           echo "Generating data/$dir/compare-report/js from  data/$dir/original/js and data/$dir/examples-ttl"
            rm data/$dir/compare-report/js/*
-           pipenv run python fhir_jsonld_amia/compare_rdf.py -id data/$dir/original-od data/$dir/compare-report/js/ -td data/$examples_dir/examples-ttl $compareopts
+           pipenv run python fhir_jsonld_amia/compare_rdf.py -id data/$dir/original/js -od data/$dir/compare-report/js/ -td data/$examples_dir/examples-ttl $compareopts
         fi
 fi
 echo DONE!
