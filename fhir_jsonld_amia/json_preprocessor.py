@@ -93,9 +93,10 @@ def to_r4(o: JsonObj, server: Optional[str], add_context: bool, opts: Namespace,
             else:
                 link = do.reference
                 typ = getattr(do, 'type', None)
-            if typ:
+            if link:
                 rval = JsonObj(**{"@id": link})
-                rval['@type'] = "fhir:" + typ
+                if typ:
+                    rval['@type'] = "fhir:" + typ
             return rval
 
         # Normalize all the elements in d.
