@@ -61,17 +61,37 @@ def print_triples(g: Graph, fmt: str) -> None:
     print(g_text)
 
 
-def subj_diff(expected: Graph, actual: Graph) -> Optional[str]:
+def subj_diff(expected: Graph, actual: Graph, opts: Namespace) -> Optional[str]:
     """
     Make sure that both graphs have the same non-BNODE subjects
     :param expected: Graph being compared against
     :param actual: Graph being compared
+    :param opts: input options
     :return: Error message if subjects don't agree
     """
     expected_subjs = set([str(s) for s in expected.subjects() if isinstance(s, URIRef)])
     actual_subjs = set([str(s) for s in actual.subjects() if isinstance(s, URIRef)])
     expected_only = sorted(list(expected_subjs.difference(actual_subjs)))
     actual_only = sorted(list(actual_subjs.difference(expected_subjs)))
+
+    def bnodify(subj, g: Graph):
+        """ Convert subject subj from a URI into a blank node in graph g """
+        new_subject = BNode()
+        for t in list(g.triples((subj, None, None))):
+            g.remove(t)
+            g.add((new_subject, t[1], t[2]))
+        for t in list(g.triples((None, None, subj))):
+            g.remove(t)
+            g.add((t[0], t[1], new_subject))
+
+    # If we've got a difference and opts.tweakcontained is true, turn any contained URI's into BNodes
+    if opts.tweakcontained and actual_only and not expected_only:
+        for a in list(actual_only):
+            auri = URIRef(a)
+            for _, p in actual.subject_predicates(auri):
+                if '.contained' in str(p):
+                    bnodify(auri, actual)
+                    actual_only.remove(a)
 
     if expected_only or actual_only:
         exp_str = "----- Missing Subjects -----\n\t"
@@ -106,7 +126,6 @@ summary = Heading("files processed")
 summary.nsuccesses = Counter("successful matches")
 
 summary.nfails = Heading("match failures")
-summary.nfails.nincompletes = Counter("incomplete transforms (UNKNOWN in output)", print_progress=True)
 summary.nfails.nmismatches = Counter("content mismatch")
 
 summary.nskips = Heading("files skipped")
@@ -116,18 +135,20 @@ summary.nskips.ntargetmissing = Heading("missing FHIR ttl files")
 summary.nskips.ntargetmissing.nprofiles = Counter("missing profiles")
 summary.nskips.ntargetmissing.nextensions = Counter("missing extensions")
 summary.nskips.ntargetmissing.nmissing = Counter("missing for other reasons")
-summary.nskips.ntoolarge = Counter("files with too many triples")
+summary.nskips.ntoolarge = Counter("file exceeds max triples", print_progress=True)
 
 details = Heading("details")
-details.ntoolarge = Counter("files too big for detailed comparison")
+details.ntoomanytriples = Counter("File has too many triples for detailed compare")
 details.nmissingsourcemetadata = Counter("missing metadata in source")
 details.ntypearcadjustments = Counter("adjusted type arcs")
 details.nadjusteddecimals = Counter("adjusted decimals")
 details.ncontaiment = Counter("expected files with incorrect contained mapping", print_progress=True)
+details.nincompletes = Counter("incomplete transforms (UNKNOWN in output)", print_progress=True)
 
 # TODO: This is temporary
 unknowns: Set[str] = set()
 contains: Set[str] = set()
+
 
 def compare_rdf(filename: str, expected: Union[Graph, str], actual: Union[Graph, str], opts: Namespace)\
         -> Tuple[Optional[str], int, int, int]:
@@ -164,7 +185,7 @@ def compare_rdf(filename: str, expected: Union[Graph, str], actual: Union[Graph,
     expected_graph_length = len(expected_graph)
 
     if opts.skipdetailedcompare or (opts.maxcomparetriples and expected_graph_length > opts.maxcomparetriples):
-        details.ntoolarge.inc(filename)
+        details.ntoomanytriples.inc(filename)
         summary.nfails.nmismatches.inc(filename)
         return "similar() comparison mismatch", expected_graph_length, expected_graph_length, len(actual_graph)
 
@@ -216,7 +237,7 @@ def compare_rdf(filename: str, expected: Union[Graph, str], actual: Union[Graph,
 
     if old_len or new_len:
         # Start by checking the subjects
-        diffs = subj_diff(in_old, in_new)
+        diffs = subj_diff(in_old, in_new, opts)
         if diffs:
             summary.nfails.nmismatches.inc(filename)
             return diffs, len(in_both), len(in_old), len(in_new)
@@ -247,8 +268,6 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
     expected_file = expected_file_name if opts.outfile else \
                     actual_file_name.replace(opts.indir, opts.turtledir).replace(opts.infilesuffix, '.ttl')
     if not path.exists(expected_file):
-        if opts.verbose:
-            print(f'{os.path.join(os.path.dirname(__file__), expected_file)} not found')
         if ".profile.ttl" in expected_file:
             summary.nskips.ntargetmissing.nprofiles.inc(expected_file)
         elif "extension" in expected_file:
@@ -261,42 +280,44 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
     with open(actual_file, 'r') as f:
         actual_str = f.read()
     if 'UNKNOWN' in actual_str:
-        if opts.verbose:
-            print(f'{actual_file_name} has unmapped elements')
-        summary.nfails.nincompletes.inc(actual_file_name)
+        details.nincompletes.inc(actual_file_name)
         unknowns.add(actual_file_name)
-        return False
-    with open(expected_file, 'r') as file:
-        expected_str = file.read()
+        result = "UNKNOWNS in output\n"
+        actual_graph = None
+    else:
+        with open(expected_file, 'r') as file:
+            expected_str = file.read()
 
-    # TODO: A monkey patch (kludge) to fix the issue in comparing when jsonld has ^^xsd:string and ^^xsd:anyURI
-    actual_str = actual_str.replace("^^<http://www.w3.org/2001/XMLSchema#anyURI>", "")
+        # TODO: A monkey patch (kludge) to fix the issue in comparing when jsonld has ^^xsd:string and ^^xsd:anyURI
+        actual_str = actual_str.replace("^^<http://www.w3.org/2001/XMLSchema#anyURI>", "")
 
-    # It appears that the nquads parser and turtle parser handle decimals differently -- it looks like we've got to
-    # do a double transform
-    actual_graph = post_process(Graph().parse(data=actual_str, format='nquads'))
-    expected_graph = to_graph(expected_str, 'turtle')
+        # It appears that the nquads parser and turtle parser handle decimals differently -- it looks like we've got to
+        # do a double transform
+        actual_graph = post_process(Graph().parse(data=actual_str, format='nquads'))
+        expected_graph = to_graph(expected_str, 'turtle')
 
-    # If we've generated metadata and it isn't in the expected graph, remove it
-    if (None, FHIR_META, None) in actual_graph and (None, FHIR_META, None) not in expected_graph:
-        details.nmissingsourcemetadata.inc(actual_file_name)
+        # If we've generated metadata and it isn't in the expected graph, remove it
+        if (None, FHIR_META, None) in actual_graph and (None, FHIR_META, None) not in expected_graph:
+            details.nmissingsourcemetadata.inc(actual_file_name)
+        # Even WHEN FHIR metadata is present, it is incomplete
         remove_subgraph(FHIR_META, actual_graph)
+        remove_subgraph(FHIR_META, expected_graph)
 
-    result, len_in_both, len_in_new, len_in_old = compare_rdf(actual_file_name, expected_graph, actual_graph, opts)
+        result, len_in_both, len_in_new, len_in_old = compare_rdf(actual_file_name, expected_graph, actual_graph, opts)
 
     if result:
         if report_file:
             with open(report_file, 'w') as file:
                 file.write(result)
         else:
-            if opts.verbose:
-                print(result)
+            print(result)
         summary.nfails.nmismatches.inc(actual_file_name)
-        for s, p, o in actual_graph:
-            if isinstance(o, URIRef) and 'contained' in str(p):
-                details.ncontaiment.inc(actual_file_name)
-                contains.add(actual_file_name)
-                break
+        if actual_graph:
+            for s, p, o in actual_graph:
+                if isinstance(o, URIRef) and 'contained' in str(p):
+                    details.ncontaiment.inc(actual_file_name)
+                    contains.add(actual_file_name)
+                    break
         return False
     summary.nsuccesses.inc(actual_file_name)
     return True
@@ -308,20 +329,14 @@ def input_filter(filename: str, dirpath: str, opts: Namespace) -> bool:
         # One file to be processed
         return True
     if filename.startswith('codesystem-'):
-        if opts.verbose:
-            print(f"{filename} skipped (codesystem)")
         summary.nskips.ncodesystems.inc(filename)
         return False
     if filename.startswith('valueset-') or '-valueset-' in filename:
-        if opts.verbose:
-            print(f"{filename} skipped (valueset)")
         summary.nskips.nvaluesets.inc(filename)
         return False
     if opts.maxtriples:
         tot_triples = sum(1 for _ in open(os.path.join(dirpath, filename)))
         if tot_triples > opts.maxtriples:
-            if opts.verbose:
-                print(f"{filename} skipped - {tot_triples} > max ({opts.maxtriples} ")
             summary.nskips.ntoolarge.inc(filename)
             return False
     return True
@@ -335,7 +350,9 @@ def addargs(parser: ArgumentParser) -> None:
     parser.add_argument("-maxtc", "--maxcomparetriples", help="Detailed compare cutoff (default: unlimited)", type=int)
     parser.add_argument("-sta", "--skiptypearcs", help="Ignore missing type arcs in conversion", action="store_true")
     parser.add_argument("-dec", "--adjustdecimals", help="Fix decimal problems", action="store_true")
-    parser.add_argument("-v", "--verbose", help="Emit more detailed output", action="store_true")
+    parser.add_argument("-v", "--verbose", help="Print progress", action="store_true")
+    parser.add_argument("-tc", "--tweakcontained", help="Represent contained graphs as BNodes to match R4 error",
+                        action="store_true")
 
 
 def main(argv: Optional[Union[str, List[str]]] = None) -> object:
@@ -366,15 +383,15 @@ def main(argv: Optional[Union[str, List[str]]] = None) -> object:
     print('-'*40)
     print('\n'.join(details.summary()))
 
-    print('===== UNKNOWN w/o containment issues =====')
+    print('\n===== UNKNOWN w/fhir_json containment issues =====')
     uncontained_unknowns = unknowns.difference(contains)
     print('\n'.join(sorted(list(uncontained_unknowns))))
 
-    print('===== Contains w/o UNKNOWN issues =====')
+    print('\n===== Contains w/fhir_json UNKNOWN issues =====')
     unknown_contains = contains.difference(unknowns)
     print('\n'.join(sorted(list(unknown_contains))))
 
-    print('==== Both =====')
+    print('\n==== Both =====')
     both = contains.intersection(unknowns)
     print('\n'.join(sorted(list(both))))
 

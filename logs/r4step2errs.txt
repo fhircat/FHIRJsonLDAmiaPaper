@@ -1,1 +1,0 @@
-rm: data/fhir-r4/original/java/*: No such file or directory

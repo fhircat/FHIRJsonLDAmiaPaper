@@ -59,6 +59,26 @@ Of the 2834 input files:
 * 824 were value sets (not currently tested)
 
 ### Analysis
+####
+The key, `reference` is used in multiple contexts.  As an example, the [Consent](http://build.fhir.org/consent.html) resource
+has an attribute `reference` whose type is `Reference`.  We have addressed this issue by treating strings as true reference
+objects and objects as not.
+
+The key, `index` is used in the [TestScript](http://build.fhir.org/testscript.html) resource.  To address this issue, we
+propose changing the plain `index` to `fhir:index` in our transformations.
+
+The claimresponse context, 'claimresponse.adjudication.context.jsonld' is not being generated.  
+#### FHIR Profiles
+We have a couple of issues with the RDF representation of fhir profiles:
+1) The _html_ representation of the profiles is generated (e.g. [account.profile.ttl.html](http://build.fhir.org/account.profile.ttl.html)), but
+there is no raw turtle.  The "raw" link just redirects to the html page.
+2) Neither the ttl nor the html are included in any of the FHIR zip files.  
+
+* **TODO:** File an issue report with the FHIR community
+* **TODO:** Extract at least a representative sample from the profiles and test them to make sure our conversions
+are working.
+
+
 #### UNKNOWN uri's
 1) A portion of these were being generated because we have been adding multiple contexts to the 
 outermost level -- as an example, specimen.context.jsonld + substance.context.jsonld.  These have overlapping keys,
@@ -90,23 +110,120 @@ As an example,
 
 3) General context generation issue:
 
-![R4 contract](images/r4contract.png)
+    ![R4 contract](images/r4contract.png)
 
-`group` was not included in the `contract.term.context.jsonld` file -- corrected by manual edit:
+    `group` was not included in the `contract.term.context.jsonld` file -- corrected by manual edit:
+    ```json
+        "action": {
+          "@id": "fhir:Contract.term.action",
+          "@context": "contract.term.action.context.jsonld"
+        },
+        "group": {
+          "@id": "fhir:Contract.term.group",
+          "@context": "contract.term.context.jsonld"
+        },
+        "index": {
+          "@id": "fhir:index",
+          "@type": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+    ```
+   TODO: Need a ticket to fix this
+
+4) Bundle ResourceType missing:
+    Not sure why this is, but `resourceType` is not being emitted in `bundle.context.jsonld`:
+    ```
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "id": {
+      "@id": "fhir:Resource.id",
+      "@context": "string.context.jsonld"
+    },
+    "resourceType": {
+      "@id": "rdf:type",
+      "@type": "@id"
+    },
+    "meta": {
+      "@id": "fhir:Resource.meta",
+      "@context": "meta.context.jsonld"
+    },
+   ```
+   Manually added this. TODO: Need a ticket to fix this
+   
+5) Reference link issue
+
+    See: r4 paymentreconciliation-example for details.  
+    ![paymentreconcilliation](images/paymentreconciliation.png)
+    
+    The general problem is the following structure:
+    ```json
+    "detail": [
+       ...
+      "request": {
+        "reference": "http://www.BenefitsInc.com/fhir/oralhealthclaim/225476332699"
+      },
+    ```
+    Needs to produce the following output:
+    ```turtle
+     fhir:PaymentReconciliation.detail.request 
+       [ fhir:Reference.reference 
+           [ ns1:value "http://www.BenefitsInc.com/fhir/oralhealthclaim/225476332699" ] ;
+             ns1:link <http://www.BenefitsInc.com/fhir/oralhealthclaim/225476332699> 
+       ] ;
+    ```
+
+    The fundamental problem is, as JSON-LD can't add tags, we need to _recognize that the range of `request` is `Reference`_
+    in order to add the additional element below in the preprocessing step:
+    
+    ```json
+        "detail": [
+           ...
+         "request": {
+            "reference": {
+               "value": "http://www.BenefitsInc.com/fhir/oralhealthclaim/225476332699"
+            },
+           fhir:link {
+             "@id": "<http://www.BenefitsInc.com/fhir/oralhealthclaim/225476332699>"
+           }
+         },
+    ```
+    
+### Missing links (no pun intended)
+The FHIR [canonical](http://hl7.org/fhir/datatypes.html#canonical) data type presents a different sort of problem.  While
+we are making some assumptions about the uniqueness of tags, we can map `id` and `reference` to their appropriate targets.
+`canonical`, however, provides no way to determine that someting is of this type without having access to the underlying
+definitions.  As an example, [ActivityDefinition](http://hl7.org/fhir/activitydefinition.html), and its example, 
+[administer-zika-virus-exposure-assessment](http://hl7.org/fhir/administer-zika-virus-exposure-assessment.html) has 
 ```json
-    "action": {
-      "@id": "fhir:Contract.term.action",
-      "@context": "contract.term.action.context.jsonld"
-    },
-    "group": {
-      "@id": "fhir:Contract.term.group",
-      "@context": "contract.term.context.jsonld"
-    },
-    "index": {
-      "@id": "fhir:index",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
-    }
+  "library": [
+    "Library/zika-virus-intervention-logic"
+  ],
 ```
+
+We have to, somehow, recognize that `libarary` is of type `canonical` so that we can add the `fhir:link` tag.  What we
+have at the moment is:
+```json
+   "library": [
+      {
+         "value": "Library/zika-virus-intervention-logic",
+         "index": 0
+      }
+   ],
+```
+and we need to add a link:
+```json
+   "library": [
+      {
+         "value": "Library/zika-virus-intervention-logic",
+         "index": 0
+         "fhir:link": {
+            "@id": "Library/zika-virus-intervention-logic"
+         }
+      }
+   ],
+```
+Also, while the current FHIR RDF does not add a type arc, there are two possible ways that this might (should?) occur:
+
+1) the definition of `library` is `canonical(Library)`, meaning that we KNOW what the type is no matter the URL 
+2) the URL could be parsed just like in other places, which will also yield a type.
     
 ## Other missing ttl files
 * examples-ttl/capabilitystatement2.profile.ttl
