@@ -86,12 +86,15 @@ def add_type_arc(codedobject: JsonObj) -> None:
         codedobject['@type'] = base + urllib.parse.quote(code, safe='')
 
 
-def add_type_arcs(element_key: str, container: JsonObj, path: List[str], opts: Namespace, server: str) -> None:
+def add_type_arcs(element_key: str, container: JsonObj, parent_container: JsonObj, path: List[str], opts: Namespace,
+                  server: str) -> None:
     """
     Add type arcs if element_key is "code", "reference" or a type of canonical
 
     :param element_key: Key to test
     :param container: Object to add the arcs to
+    :param parent_container: Object that holds the container.  This is because the FHIR R4 RDF puts the link in the
+        parent of a reference key, not the value
     :param path: Path to object
     :param opts: Holder for the FSVProcessor element (opts.fsv)
     :param server:
@@ -100,13 +103,12 @@ def add_type_arcs(element_key: str, container: JsonObj, path: List[str], opts: N
     if opts.fsv.is_canonical(path):
         # Container is a simple string in this case
         ref = gen_reference(from_value(container), container, server)
+        container["fhir:link"] = ref
     elif element_key == REFERENCE_KEY:
         container_value = from_value(container)
         if isinstance(container_value, str):
             ref = gen_reference(container_value, container, server)
-
-    if ref:
-        container["fhir:link"] = ref
+            parent_container["fhir:link"] = ref
 
     if element_key == CODE_KEY:
         add_type_arc(container)
@@ -122,18 +124,17 @@ def gen_reference(ref: str, refobject: JsonObj, server: Optional[str]) -> Option
     :return: link and optional type element
     """
     if "://" not in ref and not ref.startswith('/'):  # Relative path
+        link = ('' if server else '../') + ref  # If server is supplied, ref is local, else relative to parent
+    else:
+        link = ref
+    if link:
         if hasattr(refobject, TYPE_KEY):
             typ = refobject[TYPE_KEY]
         else:
             # TODO: we need to decide whether to use R5 or R4 regular expressions here
             m = R5_FHIR_URI_RE.match(ref)
             typ = m[4] if m else None
-        link = ('' if server else '../') + ref  # If server is supplied, ref is local, else relative to parent
-    else:
-        link = ref
-        typ = getattr(refobject, TYPE_KEY, None)
 
-    if link:
         rval = JsonObj()
         rval['@id'] = link
         if typ:
@@ -190,7 +191,7 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
             container[element_key] = to_value(element_value)
 
         if not isinstance(element_value, list):
-            add_type_arcs(element_key, container[element_key], path, opts, server)
+            add_type_arcs(element_key, container[element_key], container, path, opts, server)
 
         path.pop()
 
@@ -225,19 +226,26 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
             map_element(k, container[k], resource_type, path, url_base, container)
 
         # Merge any extensions (keys that start with '_') into the base
+        #  This happens when either:
+        #     A) there is only an extension and no base
+        #     B) there is a base, but it isn't a JSON object
         for ext_key in [k for k in as_dict(container).keys() if k.startswith('_')]:
             base_key = ext_key[1:]
-            # You can have an extension with no base ...
-            # ... or an extension whose type is not an object.
-            if not hasattr(container, base_key):
-                container[base_key] = JsonObj()
-            elif not isinstance(container[base_key], JsonObj):
-                container[base_key] = to_value(container[base_key])
-
-            # Move the extensions into the base
             ext_value = container[ext_key]
-            map_element(base_key, ext_value, EXTENSION_RESOURCE_TYPE, [EXTENSION_RESOURCE_TYPE], url_base, container)
             del(container[ext_key])
+
+            if not hasattr(container, base_key):
+                container[base_key] = ext_value                 # No base -- move the extension in
+            elif not isinstance(container[base_key], JsonObj):
+                container[base_key] = to_value(container[base_key])     # Base is not a JSON object
+                container[base_key]['extension'] = ext_value['extension'] \
+                    if isinstance(ext_value, JsonObj) else ext_value
+            else:
+                container[base_key]['extension'] = ext_value['extension']
+
+            map_element(base_key, ext_value, EXTENSION_RESOURCE_TYPE, [EXTENSION_RESOURCE_TYPE], url_base, container)
+
+
 
     def list_processor(list_key: str, list_object: List[Any], resource_type: str, url_base: str,
                        path: List[str] = None) -> List[Any]:
@@ -274,7 +282,7 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
                 print(f"{ifn} - problem: {list_key} has a list in a list")
             else:
                 entry = to_value(entry)
-                add_type_arcs(list_key, entry, path, opts, server)
+                add_type_arcs(list_key, entry, entry, path, opts, server)
                 entry.index = pos
             return entry
 

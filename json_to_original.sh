@@ -2,7 +2,7 @@
 
 usage="Usage: json_to_original-sh [-1, -2, -3 or -a] [-v]  [-java, -js or -all] [-cs contextsource] [-co compareopts] [directory]"
 examples_dir="fhir-r4"
-COMPAREOPTS="-sta -maxtc 2000 -dec -maxt 5000"
+COMPAREOPTS="-sta -maxtc 2000 -dec -maxt 5000 -mb -tc"
 VERBOSE=""
 
 echo Processing FHIR release $dir

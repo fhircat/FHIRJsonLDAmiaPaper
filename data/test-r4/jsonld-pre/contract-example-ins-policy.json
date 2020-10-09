@@ -28,11 +28,11 @@
    "subject": [
       {
          "reference": {
-            "value": "Patient/1",
-            "fhir:link": {
-               "@id": "Patient/1",
-               "@type": "fhir:Patient"
-            }
+            "value": "Patient/1"
+         },
+         "fhir:link": {
+            "@id": "Patient/1",
+            "@type": "fhir:Patient"
          },
          "index": 0
       }

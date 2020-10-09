@@ -22,14 +22,27 @@ class FSVProcessor:
         :param check_valid: True means make sure the path exists
         :return: True if range of path is canonical type
         """
-        item = self.flat_path(path)
-        if (item, RDFS.range, FHIR.canonical) in self.g:
-            return True
-        # Note: This was a good idea, but it doesn't take inheritence into account.  If we want to actually do this
-        # test, we would need to run up the parents of path[0].  For now we just drop it
-        # if check_valid:
-        #     assert item in self.g.subjects(), f"{item}: Testing an item that doesn't exist"
-        return False
+        # Work backwards from the full path, following ranges where necessary
+        path_base = self.flat_path(path)
+        if (path_base, None, None) in self.g:
+            path_range = self.g.value(path_base, RDFS.range)
+            return path_range is not None and path_range == FHIR.canonical
+
+        path_range = None
+
+        # Full path isn't there, back up until we find a range
+        for idx in range(len(path)-1, 1, -1):
+            path_base = self.flat_path(path[:idx])
+            if (path_base, None, None) in self.g:
+                path_range = self.g.value(path_base, RDFS.range)
+                break
+        if not path_range:
+            return False
+
+        # Process the new range
+        new_path = [str(path_range)[len(str(FHIR)):]] + path[idx:]
+        return self.is_canonical(new_path)
+
 
 
 if __name__ == '__main__':

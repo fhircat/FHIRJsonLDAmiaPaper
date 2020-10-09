@@ -1,6 +1,49 @@
 # Summary of FHIR Original (current) JSON-LD Conversions
 
 ## Step 1: Structural transformation process
+### R4 Transformation
+As of 9/29/2020:
+* There are 2912 FHIR JSON files in examples-json.zip.  
+* All 2912 of these were successfully transformed by the preprocessor.  (Note: this seems suspicious)
+* All 2912 were successfully transformed into RDF triples by the JAVA JSON-LD processor
+* 2910 of the 2912 files were processed by the RDF comparison routine
+   * 2120 Files were skipped:
+      * 501 were code systems
+      * 776 were value sets
+      * 755 were missing ttl to compare with (363 extensions, 200 profiles, 192 other)
+      *  88 had more than 5000 triples
+   * 312 files failed to match
+      *   9 because of UNKNOWN in the output
+      * 144 because of contained issues (This is a problem with the _existing_ RDF)
+      * 159 for other reasons
+   * 478 matched successfully
+```text  
+     Number of files processed: 2910
+      Number of match failures: 312
+        Number of content mismatch: 312
+      Number of files skipped: 2120
+        Number of code systems: 501
+        Number of missing FHIR ttl files: 755
+          Number of missing extensions: 363
+          Number of missing for other reasons: 192
+          Number of missing profiles: 200
+        Number of file exceeds max triples: 88
+        Number of value sets: 776
+      Number of successful matches: 478
+
+    ----------------------------------------
+    Number of details: 726
+      Number of adjusted decimals: 73
+      Number of expected files with incorrect contained mapping: 134
+      Number of incomplete transforms (UNKNOWN in output): 9
+      Number of missing metadata in source: 642
+      Number of FHIR.link elements removed from actual: 463
+      Number of FHIR.link elements removed from expected: 434
+      Number of File has too many triples for detailed compare: 5
+      Number of adjusted type arcs: 507
+```
+
+### R5 Transformation
 There are currently 2881 FHIR JSON files in examples-json.zip. Of these, 2875 were successfully transformed using the
 preprocessor.
 
@@ -59,6 +102,11 @@ Of the 2834 input files:
 * 824 were value sets (not currently tested)
 
 ### Analysis
+#### Individual issues
+binary-example.json has a `resourceType` entry.  This was a bug where "DomainResource" was recognized but not 
+"Resource" roots.
+
+### The types of  
 ####
 The key, `reference` is used in multiple contexts.  As an example, the [Consent](http://build.fhir.org/consent.html) resource
 has an attribute `reference` whose type is `Reference`.  We have addressed this issue by treating strings as true reference
