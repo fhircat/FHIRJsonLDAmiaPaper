@@ -1,46 +1,160 @@
 # Summary of FHIR Original (current) JSON-LD Conversions
 
 ## Step 1: Structural transformation process
+
 ### R4 Transformation
-As of 9/29/2020:
+As of 10/8/2020:
 * There are 2912 FHIR JSON files in examples-json.zip.  
 * All 2912 of these were successfully transformed by the preprocessor.  (Note: this seems suspicious)
 * All 2912 were successfully transformed into RDF triples by the JAVA JSON-LD processor
 * 2910 of the 2912 files were processed by the RDF comparison routine
-   * 2120 Files were skipped:
-      * 501 were code systems
-      * 776 were value sets
-      * 755 were missing ttl to compare with (363 extensions, 200 profiles, 192 other)
-      *  88 had more than 5000 triples
-   * 312 files failed to match
-      *   9 because of UNKNOWN in the output
-      * 144 because of contained issues (This is a problem with the _existing_ RDF)
-      * 159 for other reasons
-   * 478 matched successfully
-```text  
-     Number of files processed: 2910
-      Number of match failures: 312
-        Number of content mismatch: 312
+```text
+    ----------------------------------------
+    Number of files processed: 2910
+      Number of match failures: 143
+        Number of content mismatch: 143
       Number of files skipped: 2120
         Number of code systems: 501
-        Number of missing FHIR ttl files: 755
+        Number of missing FHIR ttl files: 753
           Number of missing extensions: 363
           Number of missing for other reasons: 192
-          Number of missing profiles: 200
-        Number of file exceeds max triples: 88
+          Number of missing profiles: 198
+        Number of file exceeds max triples: 90
         Number of value sets: 776
-      Number of successful matches: 478
-
+      Number of successful matches: 647
+    
     ----------------------------------------
-    Number of details: 726
+    Number of details: 722
       Number of adjusted decimals: 73
-      Number of expected files with incorrect contained mapping: 134
-      Number of incomplete transforms (UNKNOWN in output): 9
-      Number of missing metadata in source: 642
-      Number of FHIR.link elements removed from actual: 463
-      Number of FHIR.link elements removed from expected: 434
+      Number of expected files with incorrect contained mapping: 2
+      Number of incomplete transforms (UNKNOWN in output): 0
+      Number of missing metadata in source: 647
+      Number of FHIR.link elements removed from actual: 165
+      Number of FHIR.link elements removed from expected: 54
       Number of File has too many triples for detailed compare: 5
-      Number of adjusted type arcs: 507
+      Number of adjusted type arcs: 511
+```  
+
+Of the 2910 files that were processed:
+* 2120 were skipped
+    * 776 Value sets resources, which aren't emitted in the existing FHIR build
+    * 753 Missing because:
+        * 363 Extensions 
+        * 198 Profiles 
+        * 192 Other unspecified reasons
+    * 501 Code system resources, which aren't emitted in the existing FHIR build
+    *  90 files exceed 5000 triples in length
+* **790 files were compared**
+    * 647 successfull matches
+    * 142 match failures
+    
+### Analysis of 142 match failures
+#### Issue 1: significance of fullUrl and its relationship to links in a bundle
+[xds-example.json](http://hl7.org/fhir/xds-example.json) is a bundle that uses `fullUrl`.  The question
+is what to do with the embedded links (e.g. `Patient/a2`, `Practitioner/a3`, etc.) The current FHIR transformation
+does not make the connection between the assigned fullUrl (`http://localhost:9556/svc/fhir/Patient/a2`) and the 
+embedded link (`Patient/a2`).  The current FHIR RDF emits:
+```turtle
+<http://hl7.org/fhir/Patient/a2> a fhir:Patient .
+<http://localhost:9556/svc/fhir/Patient/a2> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "a2"];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2013-07-01T13:11:33Z"^^xsd:dateTime ]
+  ];
+  ...
+```
+This is not correct, as the `Observation.subject` should be resolved relative to the "base" URL, 
+which (as we understand it) is the purpose for the `fullUrl` in the bundle container.  This means that the three links,
+```turtle
+<http://hl7.org/fhir/Patient/a2> a fhir:Patient .
+<http://hl7.org/fhir/Practitioner/a3> a fhir:Practitioner .
+<http://hl7.org/fhir/Practitioner/a4> a fhir:Practitioner .
+```
+Should NOT be emitted by the RDF.
+
+#### Issue 2: URI's for badly formed and compositional concept codes.
+[riskassessment-example-prognosis.json](http://hl7.org/fhir/riskassessment-example-prognosis.json) has a compositional
+SNOMED-CT concept "code":
+```json
+  "outcome": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "249943000:363698007\u003d72098002,260868000\u003d6934004"
+          }
+        ],
+        "text": "permanent weakness of the left arm"
+      },
+```
+The differentiation of concept _codes_ from compositional expressions should NOT be the function of language parsers.
+As such, the JSON-LD emits:
+```turtle
+    [] ns1:RiskAssessment.prediction.outcome [ ns1:CodeableConcept.coding [ 
+                    a <http://snomed.info/id/249943000%253A363698007%253D72098002%252C260868000%253D6934004> ;
+                    ns1:Coding.code [ ns1:value "249943000:363698007=72098002,260868000=6934004" ] ;
+                    ns1:Coding.system [ ns1:value "http://snomed.info/sct" ] ;
+                    ns1:index 0 ] ;
+            ns1:CodeableConcept.text [ ] ] ;
+    ns1:RiskAssessment.prediction.qualitativeRisk [ ns1:CodeableConcept.coding [ ns1:Coding.code [ ns1:value "moderate" ] ;
+                    ns1:Coding.display [ ns1:value "moderate likelihood" ] ;
+                    ns1:Coding.system [ ns1:value "http://terminology.hl7.org/CodeSystem/risk-probability" ] ] ] .
+```
+Where the existing turtle does not have the type arc.
+
+#### Issue 3: Existing TTL generator not parsing URLs correctly
+[orgrole-example-hie](http://build.fhir.org/orgrole-example-hie.json) got the types listed
+below.  This is because they are NOT using the official regular expressions and have parsed:
+'http://hl7.org/fhir/ig/vhdir/Endpoint/foundingfathersHIE' as an "ig" instead of an "Endpoint"
+
+```text
+----- Missing Triples -----
+
+<http://hl7.org/fhir/ig/vhdir/Endpoint/foundingfathersHIE> a <http://hl7.org/fhir/ig> .
+
+<http://hl7.org/fhir/ig/vhdir/Organization/foundingfathers> a <http://hl7.org/fhir/ig> .
+
+<http://hl7.org/fhir/ig/vhdir/Organization/monumentHIE> a <http://hl7.org/fhir/ig> .
+
+
+----- Added Triples -----
+
+<http://hl7.org/fhir/ig/vhdir/Endpoint/foundingfathersHIE> a <http://hl7.org/fhir/Endpoint> .
+
+<http://hl7.org/fhir/ig/vhdir/Organization/foundingfathers> a <http://hl7.org/fhir/Organization> .
+
+<http://hl7.org/fhir/ig/vhdir/Organization/monumentHIE> a <http://hl7.org/fhir/Organization> .
+```
+
+#### Issue 4: Resources with no `id` or `resourceType`
+data/fhir-r4/examples-json/json-edge-cases.json
+```text
+  File "/Users/solbrig/.local/share/virtualenvs/FHIRJsonLDAmiaPaper-ikFPjg5o/lib/python3.8/site-packages/dirlistproc/DirectoryListProcessor.py", line 138, in _call_proc
+    rslt = proc(ifn, ofn, self.opts)
+  File "fhir_jsonld_amia/json_preprocessor.py", line 436, in convert_file
+    out_json = to_r4(opts.in_json, opts, ifn)
+  File "fhir_jsonld_amia/json_preprocessor.py", line 394, in to_r4
+    dict_processor(fhir_json)
+  File "fhir_jsonld_amia/json_preprocessor.py", line 320, in dict_processor
+    add_contained_urls(container, id_map)
+  File "fhir_jsonld_amia/json_preprocessor.py", line 203, in add_contained_urls
+    id_map[contained_id] = (contained_type + '/' + getattr(resource, ID_KEY) + contained_id, contained_type)
+
+***** ERROR: data/fhir-r4/examples-json/json-edge-cases.json
+'JsonObj' object has no attribute 'id'
+```
+it turns out that neither `resourceType` or `id` is required. 
+
+#### Issue 5: New Preprocessor not parsing concept codes correctly
+data/fhir-r4/original/java/plandefinition-example-cardiology-os.json includes the SCT concept code "look up value".  This
+is not getting correctly encoded, which results in the following error:
+```
+  
+  File "/Users/solbrig/.local/share/virtualenvs/FHIRJsonLDAmiaPaper-ikFPjg5o/lib/python3.8/site-packages/rdflib/graph.py", line 1078, in parse
+    parser.parse(source, self, **args)
+***** ERROR: data/fhir-r4/original/java/plandefinition-example-cardiology-os.nq
+at line 418 of <>:
+Bad syntax (']' expected) at ^ in:
+"...b'eConcept.coding [\n         fhir:index 0;\n         a sct:look'^b' up value;\n         fhir:Coding.system [ fhir:value "http://'..."
 ```
 
 ### R5 Transformation
