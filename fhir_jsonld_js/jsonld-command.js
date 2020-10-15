@@ -6,8 +6,8 @@ import path from 'path'
 const opts = optimist.usage('$0: A command line JSONLD script')
     .describe('i', 'JSON file to process')
     .alias('i', 'input')
-    .describe('o', 'Output file')
-    .alias('o', 'output')
+    .describe('fhir_json', 'Output file')
+    .alias('fhir_json', 'output')
     .describe('c', 'Command: expand, frame or compact')
     .alias('c', 'command')
     .describe('x', 'JSONLD Context')
@@ -44,7 +44,7 @@ const runCommand = (command, input, output=null, options={}) => {
                 invalidUrls.add(error.details.url)
                 console.log(invalidUrls)
             }
-            //console.log(error, error.message)
+            console.log(error, error.message)
         })
     }
 };

@@ -1,0 +1,168 @@
+_:Addfe0845X2dX62a0X2dX41f7X2dXa1bbX2dX532ffc61aaa6 <http://hl7.org/fhir/value> "Professional Visit Copay"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Ad42e76dcX2dXc4b0X2dX4597X2dX8817X2dXb8429280c90c <http://hl7.org/fhir/value> "INS-101"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A6be72fa4X2dX8c65X2dX4320X2dXb991X2dXd820049711e8 <http://hl7.org/fhir/Contract.term.offer.text> _:Ae9683cdcX2dX305bX2dX4842X2dXb412X2dX6ea21bedf64b .
+_:A82e95dc9X2dX65f6X2dX4af3X2dX8a7cX2dX23784bdaecac <http://hl7.org/fhir/link> <http://hl7.org/fhir/Patient/1> .
+_:A82e95dc9X2dX65f6X2dX4af3X2dX8a7cX2dX23784bdaecac <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A82e95dc9X2dX65f6X2dX4af3X2dX8a7cX2dX23784bdaecac <http://hl7.org/fhir/Reference.reference> _:A91e4db6dX2dX71caX2dX4284X2dX92eeX2dX1aeab6ff4133 .
+_:A6c41fcc3X2dX08ddX2dX4858X2dX888fX2dXb8521b25a189 <http://hl7.org/fhir/value> "1995"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:A118e6cb0X2dX16b6X2dX4020X2dXaae0X2dXb81647bf382f <http://hl7.org/fhir/value> "RicardianContract"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Aabe9594dX2dX1345X2dX439bX2dXb0ceX2dX6fd61118014f <http://hl7.org/fhir/value> "Diagnostic Services"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Aceb1f113X2dX1ab0X2dX47c8X2dXb055X2dX88af0c0fd3b2 <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:Aceb1f113X2dX1ab0X2dX47c8X2dXb055X2dX88af0c0fd3b2 <http://hl7.org/fhir/Coding.system> _:Adc8bfa1fX2dXbb3fX2dX4bb5X2dX9daaX2dX8d654c9ee6e5 .
+_:Aceb1f113X2dX1ab0X2dX47c8X2dXb055X2dX88af0c0fd3b2 <http://hl7.org/fhir/Coding.display> _:A1fccca8fX2dXef28X2dX426aX2dX9312X2dX71300c82eec2 .
+_:Aceb1f113X2dX1ab0X2dX47c8X2dXb055X2dX88af0c0fd3b2 <http://hl7.org/fhir/Coding.code> _:A297d3024X2dX8a2cX2dX4421X2dXafbeX2dX40cc118629b5 .
+_:Aceb1f113X2dX1ab0X2dX47c8X2dXb055X2dX88af0c0fd3b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://terminology.hl7.org/CodeSystem/contract-type/healthinsurance> .
+_:A24f667dbX2dXce5fX2dX47f4X2dX9276X2dX860bab62fc24 <http://hl7.org/fhir/Money.value> _:A33aea53eX2dX4e2bX2dX4a23X2dXa59eX2dX7feca192de68 .
+_:A24f667dbX2dXce5fX2dX47f4X2dX9276X2dX860bab62fc24 <http://hl7.org/fhir/Money.currency> _:Ad2af3dd3X2dX5657X2dX4beeX2dX9ef7X2dX07a777c8fff7 .
+_:A662405ccX2dX2234X2dX46b5X2dX9599X2dX3315e65281bc <http://hl7.org/fhir/index> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A662405ccX2dX2234X2dX46b5X2dX9599X2dX3315e65281bc <http://hl7.org/fhir/Contract.term.offer> _:Ade53f415X2dX8418X2dX47d3X2dXbff2X2dX921b200f99ca .
+_:A0a85b7c7X2dX9b19X2dX4b9dX2dXad85X2dX6557e39837f6 <http://hl7.org/fhir/value> "urn:ietf:rfc:3986"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:Af4b9218cX2dXdefdX2dX47fdX2dXa32bX2dX0aad6fbe6e46 <http://hl7.org/fhir/value> "YCSCWLN(01-2017)"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Aa551b974X2dXa320X2dX4078X2dX9c0aX2dX8db0806e794c <http://hl7.org/fhir/value> "Ford Bobcat"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Aae6e0422X2dX0622X2dX4f44X2dX8857X2dXfb682532e31d <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:Aae6e0422X2dX0622X2dX4f44X2dX8857X2dXfb682532e31d <http://hl7.org/fhir/Contract.term.asset.valuedItem.unitPrice> _:Abc42a1cbX2dX0df7X2dX4e7cX2dXb2a9X2dX0615699df075 .
+_:Aae6e0422X2dX0622X2dX4f44X2dX8857X2dXfb682532e31d <http://hl7.org/fhir/Contract.term.asset.valuedItem.quantity> _:A5ef9768eX2dXcb93X2dX4a31X2dX96bbX2dX7fe57d6ef972 .
+_:Aae6e0422X2dX0622X2dX4f44X2dX8857X2dXfb682532e31d <http://hl7.org/fhir/Contract.term.asset.valuedItem.points> _:A961dab86X2dX7112X2dX473aX2dXbf37X2dXc22364335dd9 .
+_:Aae6e0422X2dX0622X2dX4f44X2dX8857X2dXfb682532e31d <http://hl7.org/fhir/Contract.term.asset.valuedItem.net> _:A24f667dbX2dXce5fX2dX47f4X2dX9276X2dX860bab62fc24 .
+_:Aae6e0422X2dX0622X2dX4f44X2dX8857X2dXfb682532e31d <http://hl7.org/fhir/Contract.term.asset.valuedItem.identifier> _:A89b255feX2dX868bX2dX42a8X2dXbcbaX2dX4de1b621b7ad .
+_:Aae6e0422X2dX0622X2dX4f44X2dX8857X2dXfb682532e31d <http://hl7.org/fhir/Contract.term.asset.valuedItem.factor> _:A79550255X2dXa34bX2dX4c83X2dXa292X2dX05bf14f305df .
+_:Aae6e0422X2dX0622X2dX4f44X2dX8857X2dXfb682532e31d <http://hl7.org/fhir/Contract.term.asset.valuedItem.entityCodeableConcept> _:Ab16b45c3X2dXf0f8X2dX41e2X2dXbf0cX2dX8ed061907799 .
+_:Aae6e0422X2dX0622X2dX4f44X2dX8857X2dXfb682532e31d <http://hl7.org/fhir/Contract.term.asset.valuedItem.effectiveTime> _:A6c41fcc3X2dX08ddX2dX4858X2dX888fX2dXb8521b25a189 .
+_:A122bb072X2dXc3c7X2dX43c8X2dX832cX2dX368b31e90a21 <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A122bb072X2dXc3c7X2dX43c8X2dX832cX2dX368b31e90a21 <http://hl7.org/fhir/CodeableConcept.coding> _:Adf11c1d6X2dXd429X2dX47f9X2dX85d5X2dX292f00c6802e .
+_:Ae9683cdcX2dX305bX2dX4842X2dXb412X2dX6ea21bedf64b <http://hl7.org/fhir/value> "Medical Services"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A88ffa2e9X2dX3d75X2dX449cX2dX9bd2X2dXac851da61cf0 <http://hl7.org/fhir/Contract.term.offer.text> _:Aabe9594dX2dX1345X2dX439bX2dXb0ceX2dX6fd61118014f .
+_:A242c07f6X2dX48a1X2dX402eX2dXaaceX2dX3bcafe350fbd <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A242c07f6X2dX48a1X2dX402eX2dXaaceX2dX3bcafe350fbd <http://hl7.org/fhir/Contract.term.offer> _:A0adc1756X2dXe909X2dX4f15X2dXb588X2dX690402516d52 .
+_:A242c07f6X2dX48a1X2dX402eX2dXaaceX2dX3bcafe350fbd <http://hl7.org/fhir/Contract.term.group> _:A48ad34cbX2dXb068X2dX4febX2dXa204X2dXadf9d4c67986 .
+_:A242c07f6X2dX48a1X2dX402eX2dXaaceX2dX3bcafe350fbd <http://hl7.org/fhir/Contract.term.group> _:A4132f07aX2dX1c37X2dX4adaX2dX9fd8X2dX99b02e64f26b .
+_:Ab7496ac3X2dXe29dX2dX4a0cX2dXb078X2dX673300ccde7d <http://hl7.org/fhir/value> "2017-01-01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:A331d1ea2X2dX54b6X2dX49c1X2dX933aX2dXb84592f9fa77 <http://hl7.org/fhir/index> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A331d1ea2X2dX54b6X2dX49c1X2dX933aX2dXb84592f9fa77 <http://hl7.org/fhir/Contract.term.offer> _:A6be72fa4X2dX8c65X2dX4320X2dXb991X2dXd820049711e8 .
+_:A331d1ea2X2dX54b6X2dX49c1X2dX933aX2dXb84592f9fa77 <http://hl7.org/fhir/Contract.term.group> _:A38487190X2dXfb4dX2dX4fb6X2dX9dd9X2dX0f3a566c295a .
+_:A331d1ea2X2dX54b6X2dX49c1X2dX933aX2dXb84592f9fa77 <http://hl7.org/fhir/Contract.term.group> _:Aa24b1561X2dX7b4fX2dX4ed2X2dXa520X2dX7f1ca2c25ebe .
+_:A331d1ea2X2dX54b6X2dX49c1X2dX933aX2dXb84592f9fa77 <http://hl7.org/fhir/Contract.term.group> _:A87b40c42X2dX448eX2dX4ee6X2dXadc3X2dX0bc3ef42cb6c .
+_:A331d1ea2X2dX54b6X2dX49c1X2dX933aX2dXb84592f9fa77 <http://hl7.org/fhir/Contract.term.group> _:A29f22ed3X2dX1cfeX2dX4ce2X2dXb8bfX2dXf6359212abf6 .
+_:A331d1ea2X2dX54b6X2dX49c1X2dX933aX2dXb84592f9fa77 <http://hl7.org/fhir/Contract.term.group> _:A9ebced54X2dXe6aaX2dX465fX2dX9ca4X2dXe933fb5b0a1a .
+_:Ab5706137X2dXac49X2dX4317X2dX96a3X2dX8a461eb6ffb0 <http://hl7.org/fhir/value> "The benefits, limitations, exclusions and other coverage provisions in this booklet are subject to the terms of our contract with the Group. This booklet is a part of that contract, which is on file in the Group's office."^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A92b8f7beX2dX8ba4X2dX4dd4X2dX95e9X2dX94562d2812ea <http://hl7.org/fhir/index> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A92b8f7beX2dX8ba4X2dX4dd4X2dX95e9X2dX94562d2812ea <http://hl7.org/fhir/Contract.term.offer> _:Aeb738b53X2dX1259X2dX41ebX2dXb97dX2dX335ad2fabaca .
+_:Abf14b373X2dX8844X2dX4611X2dXa1adX2dX530d7346dd44 <http://hl7.org/fhir/value> "Dental Services"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Ad2af3dd3X2dX5657X2dX4beeX2dX9ef7X2dX07a777c8fff7 <http://hl7.org/fhir/value> "CAD"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A41267d5aX2dXaf57X2dX4f63X2dXa04cX2dXa20d7cfb4a43 <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A41267d5aX2dXaf57X2dX4f63X2dXa04cX2dXa20d7cfb4a43 <http://hl7.org/fhir/Contract.term.offer> _:A028b602eX2dXfb2aX2dX440dX2dXabb3X2dX2dfe6a0615ae .
+_:A39809da7X2dX25e6X2dX4ba8X2dXbdf5X2dX2d2e8eb0973d <http://hl7.org/fhir/Period.start> _:Ab7496ac3X2dXe29dX2dX4a0cX2dXb078X2dX673300ccde7d .
+_:A9dbc6beaX2dXf04dX2dX4af6X2dXa1e7X2dX04cb80bb6007 <http://hl7.org/fhir/Narrative.status> _:A04d0671cX2dXe2c6X2dX423eX2dXbd06X2dX384e54af44c1 .
+_:A9dbc6beaX2dXf04dX2dX4af6X2dXa1e7X2dX04cb80bb6007 <http://hl7.org/fhir/Narrative.div> "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n         <p>Plan: Your Choice Split Copay (Non-Grandfathered)</p>\n         <p>Certificate Form Number: YCSCWLN (01-2017)</p>\n      </div>"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A0adc1756X2dXe909X2dX4f15X2dXb588X2dX690402516d52 <http://hl7.org/fhir/Contract.term.offer.text> _:A6a489252X2dX9084X2dX45cfX2dXbe7aX2dXcd7fe2e65a22 .
+_:A5104229dX2dX8191X2dX4197X2dX806aX2dX52ce7989b2ce <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A5104229dX2dX8191X2dX4197X2dX806aX2dX52ce7989b2ce <http://hl7.org/fhir/Coding.system> _:Ab388c0c9X2dXd469X2dX43cdX2dX8756X2dX764086299403 .
+_:A5104229dX2dX8191X2dX4197X2dX806aX2dX52ce7989b2ce <http://hl7.org/fhir/Coding.display> _:A16d60ed9X2dX4facX2dX4f98X2dXac67X2dX55d402826b5b .
+_:A5104229dX2dX8191X2dX4197X2dX806aX2dX52ce7989b2ce <http://hl7.org/fhir/Coding.code> _:A0ad5c99aX2dX9958X2dX4114X2dXba79X2dX014e01ff84dd .
+_:A26f0bec4X2dX75c5X2dX478aX2dX9a54X2dX89325c9dc899 <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A26f0bec4X2dX75c5X2dX478aX2dX9a54X2dX89325c9dc899 <http://hl7.org/fhir/Contract.term.offer> _:Adb0543f7X2dXce7dX2dX4e93X2dX86e3X2dX390b97f93f7f .
+_:A26f0bec4X2dX75c5X2dX478aX2dX9a54X2dX89325c9dc899 <http://hl7.org/fhir/Contract.term.group> _:A98d8e33eX2dXa1acX2dX47f3X2dXb32dX2dX2b5a1a01424c .
+_:A26f0bec4X2dX75c5X2dX478aX2dX9a54X2dX89325c9dc899 <http://hl7.org/fhir/Contract.term.group> _:A92b8f7beX2dX8ba4X2dX4dd4X2dX95e9X2dX94562d2812ea .
+_:A26f0bec4X2dX75c5X2dX478aX2dX9a54X2dX89325c9dc899 <http://hl7.org/fhir/Contract.term.group> _:A41267d5aX2dXaf57X2dX4f63X2dXa04cX2dXa20d7cfb4a43 .
+_:A26f0bec4X2dX75c5X2dX478aX2dX9a54X2dX89325c9dc899 <http://hl7.org/fhir/Contract.term.asset> _:A752ec86dX2dXb876X2dX4d9fX2dXb055X2dX95d928d9ba0f .
+_:A6a489252X2dX9084X2dX45cfX2dXbe7aX2dXcd7fe2e65a22 <http://hl7.org/fhir/value> "Copays"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A028b602eX2dXfb2aX2dX440dX2dXabb3X2dX2dfe6a0615ae <http://hl7.org/fhir/Contract.term.offer.text> _:Af46113d7X2dXd363X2dX4a5cX2dX88bbX2dXeaf7463929bb .
+_:A87b40c42X2dX448eX2dX4ee6X2dXadc3X2dX0bc3ef42cb6c <http://hl7.org/fhir/index> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A87b40c42X2dX448eX2dX4ee6X2dXadc3X2dX0bc3ef42cb6c <http://hl7.org/fhir/Contract.term.offer> _:A88ffa2e9X2dX3d75X2dX449cX2dX9bd2X2dXac851da61cf0 .
+_:A7b3c1a84X2dX67e6X2dX46d6X2dX9c9eX2dX22a0526a3c1f <http://hl7.org/fhir/value> "Emergency Room Services"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A06cc69e5X2dX3b9aX2dX4783X2dX8cfaX2dX2ffbdfb10831 <http://hl7.org/fhir/Contract.term.offer.text> _:A7b3c1a84X2dX67e6X2dX46d6X2dX9c9eX2dX22a0526a3c1f .
+_:A39a9e7beX2dXb337X2dX456aX2dXb1d7X2dXf3bd03908582 <http://hl7.org/fhir/Contract.term.offer.text> _:A6a675ddcX2dX3b87X2dX43e0X2dX82d3X2dX5d5927fc133c .
+_:A16d60ed9X2dX4facX2dX4f98X2dXac67X2dX55d402826b5b <http://hl7.org/fhir/value> "test health data"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A739eea60X2dXfb28X2dX43fcX2dX831cX2dXa6edad892b9f <http://hl7.org/fhir/value> "CAD"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A46dc2c69X2dX0ac9X2dX4d28X2dXbe8cX2dXb3917bef6eae <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A46dc2c69X2dX0ac9X2dX4d28X2dXbe8cX2dXb3917bef6eae <http://hl7.org/fhir/CodeableConcept.text> _:A56ca4cc5X2dX8363X2dX49ecX2dX80f9X2dX38f6173f4eba .
+_:Aeb738b53X2dX1259X2dX41ebX2dXb97dX2dX335ad2fabaca <http://hl7.org/fhir/Contract.term.offer.text> _:A78f2bd5aX2dX5442X2dX4f2bX2dXa09eX2dXfbbcdc742cc2 .
+_:Ac385a8b3X2dXa9abX2dX4441X2dX801cX2dX6a7a52c2ac4c <http://hl7.org/fhir/value> "Out-Of-Pocket Maximum"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A89b255feX2dX868bX2dX42a8X2dXbcbaX2dX4de1b621b7ad <http://hl7.org/fhir/Identifier.value> _:A35fdde3bX2dX00b2X2dX4e15X2dX918fX2dXbd4c718274fd .
+_:A89b255feX2dX868bX2dX42a8X2dXbcbaX2dX4de1b621b7ad <http://hl7.org/fhir/Identifier.system> _:Ae0543d99X2dXd83fX2dX4a29X2dX8113X2dX4b666f88f490 .
+_:A27f034e1X2dX1587X2dX4baeX2dX81adX2dX7ef9ee0e4ff5 <http://hl7.org/fhir/CodeableConcept.coding> _:Aceb1f113X2dX1ab0X2dX47c8X2dXb055X2dX88af0c0fd3b2 .
+_:A297d3024X2dX8a2cX2dX4421X2dXafbeX2dX40cc118629b5 <http://hl7.org/fhir/value> "healthinsurance"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Ab16b45c3X2dXf0f8X2dX41e2X2dXbf0cX2dX8ed061907799 <http://hl7.org/fhir/CodeableConcept.text> _:Aa551b974X2dXa320X2dX4078X2dX9c0aX2dX8db0806e794c .
+_:Aef5e5b15X2dX5bccX2dX4b25X2dXb2c6X2dX7857a2f93a32 <http://hl7.org/fhir/value> "Ambulance Services"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Adf11c1d6X2dXd429X2dX47f9X2dX85d5X2dX292f00c6802e <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:Adf11c1d6X2dXd429X2dX47f9X2dX85d5X2dX292f00c6802e <http://hl7.org/fhir/Coding.system> _:A0a85b7c7X2dX9b19X2dX4b9dX2dXad85X2dX6557e39837f6 .
+_:Adf11c1d6X2dXd429X2dX47f9X2dX85d5X2dX292f00c6802e <http://hl7.org/fhir/Coding.code> _:A118e6cb0X2dX16b6X2dX4020X2dXaae0X2dXb81647bf382f .
+_:Adf11c1d6X2dXd429X2dX47f9X2dX85d5X2dX292f00c6802e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:ietf:rfc:3986/RicardianContract> .
+_:Aa24b1561X2dX7b4fX2dX4ed2X2dXa520X2dX7f1ca2c25ebe <http://hl7.org/fhir/index> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:Aa24b1561X2dX7b4fX2dX4ed2X2dXa520X2dX7f1ca2c25ebe <http://hl7.org/fhir/Contract.term.offer> _:A06cc69e5X2dX3b9aX2dX4783X2dX8cfaX2dX2ffbdfb10831 .
+_:A9c599f32X2dX5b3bX2dX48caX2dXb492X2dXcad9ba60827d <http://hl7.org/fhir/value> "Calendar Year Deductible"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A961dab86X2dX7112X2dX473aX2dXbf37X2dXc22364335dd9 <http://hl7.org/fhir/value> "1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:A35fdde3bX2dX00b2X2dX4e15X2dX918fX2dXbd4c718274fd <http://hl7.org/fhir/value> "XXSVT34-7665t952236"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://hl7.org/fhir/Contract/INS-101> <http://hl7.org/fhir/DomainResource.text> _:A9dbc6beaX2dXf04dX2dX4af6X2dXa1e7X2dX04cb80bb6007 .
+<http://hl7.org/fhir/Contract/INS-101> <http://hl7.org/fhir/Contract.term> _:A26f0bec4X2dX75c5X2dX478aX2dX9a54X2dX89325c9dc899 .
+<http://hl7.org/fhir/Contract/INS-101> <http://hl7.org/fhir/Contract.type> _:A27f034e1X2dX1587X2dX4baeX2dX81adX2dX7ef9ee0e4ff5 .
+<http://hl7.org/fhir/Contract/INS-101> <http://hl7.org/fhir/Contract.applies> _:A39809da7X2dX25e6X2dX4ba8X2dXbdf5X2dX2d2e8eb0973d .
+<http://hl7.org/fhir/Contract/INS-101> <http://hl7.org/fhir/nodeRole> <http://hl7.org/fhir/treeRoot> .
+<http://hl7.org/fhir/Contract/INS-101> <http://hl7.org/fhir/Resource.id> _:Ad42e76dcX2dXc4b0X2dX4597X2dX8817X2dXb8429280c90c .
+<http://hl7.org/fhir/Contract/INS-101> <http://hl7.org/fhir/Resource.meta> _:A2353f74fX2dXc417X2dX4d07X2dX9d68X2dXc6c67fd0fe31 .
+<http://hl7.org/fhir/Contract/INS-101> <http://hl7.org/fhir/Contract.subject> _:A82e95dc9X2dX65f6X2dX4af3X2dX8a7cX2dX23784bdaecac .
+<http://hl7.org/fhir/Contract/INS-101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hl7.org/fhir/Contract> .
+<http://hl7.org/fhir/Contract/INS-101> <http://hl7.org/fhir/Contract.identifier> _:A8f29c687X2dX3916X2dX479cX2dXb337X2dX815d9645ff42 .
+_:A33aea53eX2dX4e2bX2dX4a23X2dXa59eX2dX7feca192de68 <http://hl7.org/fhir/value> "200"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:Adc8bfa1fX2dXbb3fX2dX4bb5X2dX9daaX2dX8d654c9ee6e5 <http://hl7.org/fhir/value> "http://terminology.hl7.org/CodeSystem/contract-type"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:Af46113d7X2dXd363X2dX4a5cX2dX88bbX2dXeaf7463929bb <http://hl7.org/fhir/value> "Eligible Providers"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A2e526880X2dX1137X2dX4a6eX2dX8c2eX2dXf58783eda574 <http://hl7.org/fhir/Contract.term.offer.text> _:Abf14b373X2dX8844X2dX4611X2dXa1adX2dX530d7346dd44 .
+_:Ab388c0c9X2dXd469X2dX43cdX2dX8756X2dX764086299403 <http://hl7.org/fhir/value> "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:A6f5bfa5dX2dXd0eaX2dX4b95X2dXac92X2dXf07d6f8b5d98 <http://hl7.org/fhir/value> "List of Benefits"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A5ef9768eX2dXcb93X2dX4a31X2dX96bbX2dX7fe57d6ef972 <http://hl7.org/fhir/Quantity.value> _:A4c50e01dX2dXee8aX2dX4ebeX2dX9842X2dX3a486cba366d .
+_:A78f2bd5aX2dX5442X2dX4f2bX2dXa09eX2dXfbbcdc742cc2 <http://hl7.org/fhir/value> "Responsibility for Payment"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://hl7.org/fhir/Patient/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://hl7.org/fhir/Patient> .
+_:A91e4db6dX2dX71caX2dX4284X2dX92eeX2dX1aeab6ff4133 <http://hl7.org/fhir/value> "Patient/1"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Abc42a1cbX2dX0df7X2dX4e7cX2dXb2a9X2dX0615699df075 <http://hl7.org/fhir/Money.value> _:Aa05f5494X2dX9450X2dX4d1bX2dX8d18X2dXd87b203654ca .
+_:Abc42a1cbX2dX0df7X2dX4e7cX2dXb2a9X2dX0615699df075 <http://hl7.org/fhir/Money.currency> _:A739eea60X2dXfb28X2dX43fcX2dX831cX2dXa6edad892b9f .
+_:Aaf437dceX2dXd6f7X2dX4c73X2dXbf0bX2dXef99e7cefcac <http://hl7.org/fhir/Contract.term.offer.text> _:A9d42cc62X2dXf390X2dX46b8X2dX94b1X2dX0547fb57437c .
+_:A1fccca8fX2dXef28X2dX426aX2dX9312X2dX71300c82eec2 <http://hl7.org/fhir/value> "Health Insurance"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://hl7.org/fhir/Contract/INS-101.ttl> <http://www.w3.org/2002/07/owl#versionIRI> <http://build.fhir.org/Contract/INS-101.ttl> .
+<http://hl7.org/fhir/Contract/INS-101.ttl> <http://www.w3.org/2002/07/owl#imports> <http://hl7.org/fhir/fhir.ttl> .
+<http://hl7.org/fhir/Contract/INS-101.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+_:A4132f07aX2dX1c37X2dX4adaX2dX9fd8X2dX99b02e64f26b <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A4132f07aX2dX1c37X2dX4adaX2dX9fd8X2dX99b02e64f26b <http://hl7.org/fhir/Contract.term.offer> _:Aaf437dceX2dXd6f7X2dX4c73X2dXbf0bX2dXef99e7cefcac .
+_:A8f29c687X2dX3916X2dX479cX2dXb337X2dX815d9645ff42 <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A8f29c687X2dX3916X2dX479cX2dXb337X2dX815d9645ff42 <http://hl7.org/fhir/Identifier.value> _:Af4b9218cX2dXdefdX2dX47fdX2dXa32bX2dX0aad6fbe6e46 .
+_:A8f29c687X2dX3916X2dX479cX2dXb337X2dX815d9645ff42 <http://hl7.org/fhir/Identifier.system> _:A893a2b86X2dX4b9cX2dX4fadX2dXb39aX2dXe88e01ae2ff0 .
+_:A29f22ed3X2dX1cfeX2dX4ce2X2dXb8bfX2dXf6359212abf6 <http://hl7.org/fhir/index> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A29f22ed3X2dX1cfeX2dX4ce2X2dXb8bfX2dXf6359212abf6 <http://hl7.org/fhir/Contract.term.offer> _:A2e526880X2dX1137X2dX4a6eX2dX8c2eX2dXf58783eda574 .
+_:Ade53f415X2dX8418X2dX47d3X2dXbff2X2dX921b200f99ca <http://hl7.org/fhir/Contract.term.offer.text> _:A9c599f32X2dX5b3bX2dX48caX2dXb492X2dXcad9ba60827d .
+_:A893a2b86X2dX4b9cX2dX4fadX2dXb39aX2dXe88e01ae2ff0 <http://hl7.org/fhir/value> "http://xyz-insurance.com/forms"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:A60045ea3X2dX3d52X2dX4554X2dX8432X2dX03c6758c7d38 <http://hl7.org/fhir/Contract.term.offer.text> _:A6f5bfa5dX2dXd0eaX2dX4b95X2dXac92X2dXf07d6f8b5d98 .
+_:A9ebced54X2dXe6aaX2dX465fX2dX9ca4X2dXe933fb5b0a1a <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A9ebced54X2dXe6aaX2dX465fX2dX9ca4X2dXe933fb5b0a1a <http://hl7.org/fhir/Contract.term.offer> _:A3e880373X2dX8420X2dX4c11X2dXa754X2dXa5f30e61eac6 .
+_:A9d42cc62X2dXf390X2dX46b8X2dX94b1X2dX0547fb57437c <http://hl7.org/fhir/value> "Emergency Room Copay"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A10af8a21X2dXea30X2dX4c36X2dX8e17X2dX79bcde5bd39e <http://hl7.org/fhir/Contract.term.offer.text> _:Ac385a8b3X2dXa9abX2dX4441X2dX801cX2dX6a7a52c2ac4c .
+_:A46de2609X2dX964fX2dX415aX2dX9f71X2dX4f5b882eab68 <http://hl7.org/fhir/index> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A46de2609X2dX964fX2dX415aX2dX9f71X2dX4f5b882eab68 <http://hl7.org/fhir/Contract.term.offer> _:A10af8a21X2dXea30X2dX4c36X2dX8e17X2dX79bcde5bd39e .
+_:A38487190X2dXfb4dX2dX4fb6X2dX9dd9X2dX0f3a566c295a <http://hl7.org/fhir/index> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A38487190X2dXfb4dX2dX4fb6X2dX9dd9X2dX0f3a566c295a <http://hl7.org/fhir/Contract.term.offer> _:A39a9e7beX2dXb337X2dX456aX2dXb1d7X2dXf3bd03908582 .
+_:A2353f74fX2dXc417X2dX4d07X2dX9d68X2dXc6c67fd0fe31 <http://hl7.org/fhir/Meta.tag> _:A5104229dX2dX8191X2dX4197X2dX806aX2dX52ce7989b2ce .
+_:Ae0543d99X2dXd83fX2dX4a29X2dX8113X2dX4b666f88f490 <http://hl7.org/fhir/value> "http://somewhere.motor-vehicle.com/vin"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:A04d0671cX2dXe2c6X2dX423eX2dXbd06X2dX384e54af44c1 <http://hl7.org/fhir/value> "generated"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A48ad34cbX2dXb068X2dX4febX2dXa204X2dXadf9d4c67986 <http://hl7.org/fhir/index> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A48ad34cbX2dXb068X2dX4febX2dXa204X2dXadf9d4c67986 <http://hl7.org/fhir/Contract.term.offer> _:Af4fa2150X2dXee96X2dX442cX2dX8069X2dX1ae701ec1083 .
+_:A4c50e01dX2dXee8aX2dX4ebeX2dX9842X2dX3a486cba366d <http://hl7.org/fhir/value> "1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:A3e880373X2dX8420X2dX4c11X2dXa754X2dXa5f30e61eac6 <http://hl7.org/fhir/Contract.term.offer.text> _:Aef5e5b15X2dX5bccX2dX4b25X2dXb2c6X2dX7857a2f93a32 .
+_:A98d8e33eX2dXa1acX2dX47f3X2dXb32dX2dX2b5a1a01424c <http://hl7.org/fhir/index> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A98d8e33eX2dXa1acX2dX47f3X2dXb32dX2dX2b5a1a01424c <http://hl7.org/fhir/Contract.term.offer> _:A60045ea3X2dX3d52X2dX4554X2dX8432X2dX03c6758c7d38 .
+_:A98d8e33eX2dXa1acX2dX47f3X2dXb32dX2dX2b5a1a01424c <http://hl7.org/fhir/Contract.term.group> _:A331d1ea2X2dX54b6X2dX49c1X2dX933aX2dXb84592f9fa77 .
+_:A98d8e33eX2dXa1acX2dX47f3X2dXb32dX2dX2b5a1a01424c <http://hl7.org/fhir/Contract.term.group> _:A46de2609X2dX964fX2dX415aX2dX9f71X2dX4f5b882eab68 .
+_:A98d8e33eX2dXa1acX2dX47f3X2dXb32dX2dX2b5a1a01424c <http://hl7.org/fhir/Contract.term.group> _:A662405ccX2dX2234X2dX46b5X2dX9599X2dX3315e65281bc .
+_:A98d8e33eX2dXa1acX2dX47f3X2dXb32dX2dX2b5a1a01424c <http://hl7.org/fhir/Contract.term.group> _:A242c07f6X2dX48a1X2dX402eX2dXaaceX2dX3bcafe350fbd .
+_:Aa05f5494X2dX9450X2dX4d1bX2dX8d18X2dXd87b203654ca <http://hl7.org/fhir/value> "200"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:Af4fa2150X2dXee96X2dX442cX2dX8069X2dX1ae701ec1083 <http://hl7.org/fhir/Contract.term.offer.text> _:Addfe0845X2dX62a0X2dX41f7X2dXa1bbX2dX532ffc61aaa6 .
+_:Adb0543f7X2dXce7dX2dX4e93X2dX86e3X2dX390b97f93f7f <http://hl7.org/fhir/Contract.term.offer.text> _:Ab5706137X2dXac49X2dX4317X2dX96a3X2dX8a461eb6ffb0 .
+_:A752ec86dX2dXb876X2dX4d9fX2dXb055X2dX95d928d9ba0f <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:A752ec86dX2dXb876X2dX4d9fX2dXb055X2dX95d928d9ba0f <http://hl7.org/fhir/Contract.term.asset.valuedItem> _:Aae6e0422X2dX0622X2dX4f44X2dX8857X2dXfb682532e31d .
+_:A752ec86dX2dXb876X2dX4d9fX2dXb055X2dX95d928d9ba0f <http://hl7.org/fhir/Contract.term.asset.type> _:A122bb072X2dXc3c7X2dX43c8X2dX832cX2dX368b31e90a21 .
+_:A752ec86dX2dXb876X2dX4d9fX2dXb055X2dX95d928d9ba0f <http://hl7.org/fhir/Contract.term.asset.subtype> _:A46dc2c69X2dX0ac9X2dX4d28X2dXbe8cX2dXb3917bef6eae .
+_:A752ec86dX2dXb876X2dX4d9fX2dXb055X2dX95d928d9ba0f <http://hl7.org/fhir/Contract.term.asset.period> _:Afe6bee06X2dX330aX2dX4096X2dXbbf9X2dX3b6ba2390511 .
+_:A79550255X2dXa34bX2dX4c83X2dXa292X2dX05bf14f305df <http://hl7.org/fhir/value> "1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:A6a675ddcX2dX3b87X2dX43e0X2dX82d3X2dX5d5927fc133c <http://hl7.org/fhir/value> "Hospital Inpatient Care"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A0ad5c99aX2dX9958X2dX4114X2dXba79X2dX014e01ff84dd <http://hl7.org/fhir/value> "HTEST"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:A4ea60811X2dX0333X2dX4c80X2dX9afaX2dX269322e77f20 <http://hl7.org/fhir/value> "2017-06-01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:A56ca4cc5X2dX8363X2dX49ecX2dX80f9X2dX38f6173f4eba <http://hl7.org/fhir/value> "sample"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Afe6bee06X2dX330aX2dX4096X2dXbbf9X2dX3b6ba2390511 <http://hl7.org/fhir/index> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:Afe6bee06X2dX330aX2dX4096X2dXbbf9X2dX3b6ba2390511 <http://hl7.org/fhir/Period.start> _:A4ea60811X2dX0333X2dX4c80X2dX9afaX2dX269322e77f20 .

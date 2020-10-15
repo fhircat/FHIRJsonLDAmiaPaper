@@ -4,10 +4,30 @@ Source for FHIR JSON-LD AMIA submission
 
 ## Setup
 
+Clone this repository
+```
+> git@github.com:fhircat/FHIRJsonLDAmiaPaper.git
+```
+
 Install pipenv and packages
 ```
+> cd FHIRJsonLDAmiaPaper
 > pipenv install  
 ```
+
+## Running
+The main script for generation and testing is `json_to_original.sh`
+```
+> ./json_to_original.sh --help
+Processing FHIR release fhir-r5
+Usage: json_to_original-sh [-1, -2, -3 or -a] [-java, -js or -all] [-cs contextsource] [directory]
+>
+```
+Parameters:
+* "-1" -- this is the preprocessing step, which transforms all json files found in `data/<directory>/examples-json/` into
+their equivalents in `data/<directory>/json-pre/`
+ 
+
 
 Upgrade nodejs to > 13.*
 ```
