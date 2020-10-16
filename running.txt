@@ -1,0 +1,5 @@
+# Environment
+v=fhir
+s=a
+
+./json_to_original.sh -java -$s -cs "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/" $v-r4 > data/$v-r4/logs/step$s.txt
