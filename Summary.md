@@ -3,16 +3,16 @@
 ## Step 1: Structural transformation process
 
 ### R4 Transformation
-As of 10/8/2020:
+As of 10/16/2020:
 * There are 2912 FHIR JSON files in examples-json.zip.  
-* All 2912 of these were successfully transformed by the preprocessor.  (Note: this seems suspicious)
-* All 2912 were successfully transformed into RDF triples by the JAVA JSON-LD processor
-* 2910 of the 2912 files were processed by the RDF comparison routine
+* 2911 of these were successfully transformed by the preprocessor.  One of them was not a FHIR resource
+* 2906 of these were successfully transformed into RDF triples by the JAVA JSON-LD processor
+* 2906 of the files were processed by the comparison routine
 ```text
-    ----------------------------------------
-    Number of files processed: 2910
-      Number of match failures: 143
-        Number of content mismatch: 143
+    ---------------------------------------
+    Number of files processed: 2906
+      Number of match failures: 121
+        Number of content mismatch: 121
       Number of files skipped: 2120
         Number of code systems: 501
         Number of missing FHIR ttl files: 753
@@ -21,21 +21,22 @@ As of 10/8/2020:
           Number of missing profiles: 198
         Number of file exceeds max triples: 90
         Number of value sets: 776
-      Number of successful matches: 647
+      Number of successful matches: 665
     
     ----------------------------------------
-    Number of details: 722
-      Number of adjusted decimals: 73
-      Number of expected files with incorrect contained mapping: 2
+    Number of details: 713
+      Number of adjusted decimals: 67
+      Number of expected files with incorrect contained mapping: 9
       Number of incomplete transforms (UNKNOWN in output): 0
-      Number of missing metadata in source: 647
-      Number of FHIR.link elements removed from actual: 165
-      Number of FHIR.link elements removed from expected: 54
-      Number of File has too many triples for detailed compare: 5
-      Number of adjusted type arcs: 511
+      Number of SERIOUS ISSUE: rdf:type rdf:List found in graph: 0
+      Number of missing metadata in source: 644
+      Number of FHIR.link elements removed from actual: 152
+      Number of FHIR.link elements removed from expected: 0
+      Number of File has too many triples for detailed compare: 0
+      Number of adjusted type arcs: 508
 ```  
 
-Of the 2910 files that were processed:
+Of the 20906 files that were processed:
 * 2120 were skipped
     * 776 Value sets resources, which aren't emitted in the existing FHIR build
     * 753 Missing because:
@@ -44,9 +45,9 @@ Of the 2910 files that were processed:
         * 192 Other unspecified reasons
     * 501 Code system resources, which aren't emitted in the existing FHIR build
     *  90 files exceed 5000 triples in length
-* **790 files were compared**
-    * 647 successfull matches
-    * 142 match failures
+* **786 files were compared**
+    * 665 successfull matches
+    * 121 match failures
     
 ### Analysis of 142 match failures
 #### Issue 1: significance of fullUrl and its relationship to links in a bundle
