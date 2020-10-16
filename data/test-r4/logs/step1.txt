@@ -1,1 +1,23 @@
-Total=6 Successful=6
+Processing FHIR release
+Vals: p1=T p2= p3= js= java=T dir=test-r4 CONTEXT_SERVER=/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/
+Preprocessing data/test-r4/examples-json to data/test-r4/jsonld-pre/
+Processing data/test-r4/examples-json/activitydefinition-administer-zika-virus-exposure-assessment.json
+Processing data/test-r4/examples-json/consent-example-notThis.json
+Processing data/test-r4/examples-json/message-response-link.json
+Processing data/test-r4/examples-json/xds-example.json
+Processing data/test-r4/examples-json/contract-example-ins-policy.json
+Processing data/test-r4/examples-json/task-example1.json
+Processing data/test-r4/examples-json/testscript-example-history.json
+Processing data/test-r4/examples-json/patient-example.json
+Processing data/test-r4/examples-json/paymentreconciliation-example.json
+Processing data/test-r4/examples-json/library-opioidcds-recommendation-08.json
+Processing data/test-r4/examples-json/relatedperson-example-f002-ariadne.json
+Processing data/test-r4/examples-json/diagnosticreport-example-lri.json
+Processing data/test-r4/examples-json/json-edge-cases.json
+Processing data/test-r4/examples-json/bundle-transaction.json
+Processing data/test-r4/examples-json/diagnosticreport-examples-general.json
+Processing data/test-r4/examples-json/visionprescription-example.json
+Processing data/test-r4/examples-json/namingsystem-registry.json
+Processing data/test-r4/examples-json/basic-example.json
+Total=18 Successful=18
+DONE!

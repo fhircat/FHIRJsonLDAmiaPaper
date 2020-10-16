@@ -1,14 +1,11 @@
-Processing data/test-r4/original/java/task-example1.nq
-data/test-r4/original/java/task-example1.nq: expected files with incorrect contained mapping (total: 1)
-Processing data/test-r4/original/java/testscript-example-history.nq
-data/test-r4/original/java/testscript-example-history.nq: incomplete transforms (UNKNOWN in output) (total: 1)
-Processing data/test-r4/original/java/paymentreconciliation-example.nq
-Processing data/test-r4/original/java/contract-example-ins-policy.nq
-Processing data/test-r4/original/java/visionprescription-example.nq
+Processing FHIR release
+Vals: p1= p2= p3=T js= java=T dir=test-r4 CONTEXT_SERVER=/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/
+Generating data/test-r4/compare-report/java from  data/test-r4/original/java and data/test-r4/examples-ttl
+Processing data/test-r4/original/java/basic-example.nq
 ----------------------------------------
-Number of files processed: 5
-  Number of match failures: 2
-    Number of content mismatch: 2
+Number of files processed: 1
+  Number of match failures: 0
+    Number of content mismatch: 0
   Number of files skipped: 0
     Number of code systems: 0
     Number of missing FHIR ttl files: 0
@@ -17,22 +14,17 @@ Number of files processed: 5
       Number of missing profiles: 0
     Number of file exceeds max triples: 0
     Number of value sets: 0
-  Number of successful matches: 3
+  Number of successful matches: 1
 
 ----------------------------------------
-Number of details: 5
-  Number of adjusted decimals: 3
-  Number of expected files with incorrect contained mapping: 1
-  Number of incomplete transforms (UNKNOWN in output): 1
-  Number of missing metadata in source: 4
+Number of details: 1
+  Number of adjusted decimals: 0
+  Number of expected files with incorrect contained mapping: 0
+  Number of incomplete transforms (UNKNOWN in output): 0
+  Number of SERIOUS ISSUE: rdf:type rdf:List found in graph: 0
+  Number of missing metadata in source: 1
+  Number of FHIR.link elements removed from actual: 0
+  Number of FHIR.link elements removed from expected: 0
   Number of File has too many triples for detailed compare: 0
-  Number of adjusted type arcs: 4
-
-===== UNKNOWN w/o containment issues =====
-data/test-r4/original/java/testscript-example-history.nq
-
-===== Contains w/o UNKNOWN issues =====
-data/test-r4/original/java/task-example1.nq
-
-==== Both =====
-
+  Number of adjusted type arcs: 1
+DONE!

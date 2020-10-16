@@ -22,7 +22,10 @@
    ],
    "applies": {
       "start": {
-         "value": "2017-01-01"
+         "value": {
+            "@value": "2017-01-01",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+         }
       }
    },
    "subject": [
@@ -91,7 +94,10 @@
                "period": [
                   {
                      "start": {
-                        "value": "2017-06-01"
+                        "value": {
+                           "@value": "2017-06-01",
+                           "@type": "http://www.w3.org/2001/XMLSchema#date"
+                        }
                      },
                      "index": 0
                   }
@@ -112,7 +118,10 @@
                         }
                      },
                      "effectiveTime": {
-                        "value": "1995"
+                        "value": {
+                           "@value": "1995",
+                           "@type": "http://www.w3.org/2001/XMLSchema#gYear"
+                        }
                      },
                      "quantity": {
                         "value": {
