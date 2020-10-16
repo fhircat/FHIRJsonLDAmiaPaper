@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/VisionPrescription/33123> a fhir:VisionPrescription ;
+    fhir:DomainResource.text [ fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml">
+			<p>OD -2.00 SPH         +2.00 add    0.5 p.d. BD</p>
+			<p>OS -1.00 -0.50 x 180 +2.00 add    0.5 p.d. BU</p>
+		</div>"""^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:Resource.id [ fhir:value "33123"^^xsd:string ] ;
+    fhir:Resource.meta [ fhir:Meta.tag [ fhir:Coding.code [ fhir:value "HTEST"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "test health data"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:VisionPrescription.created [ fhir:value "2014-06-15"^^xsd:date ] ;
+    fhir:VisionPrescription.dateWritten [ fhir:value "2014-06-15"^^xsd:date ] ;
+    fhir:VisionPrescription.identifier [ fhir:Identifier.system [ fhir:value "http://www.happysight.com/prescription" ] ;
+            fhir:Identifier.value [ fhir:value "15013"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:VisionPrescription.lensSpecification [ fhir:VisionPrescription.lensSpecification.add [ fhir:value 2.0 ] ;
+            fhir:VisionPrescription.lensSpecification.axis [ fhir:value 180 ] ;
+            fhir:VisionPrescription.lensSpecification.cylinder [ fhir:value -0.50 ] ;
+            fhir:VisionPrescription.lensSpecification.eye [ fhir:value "left"^^xsd:string ] ;
+            fhir:VisionPrescription.lensSpecification.prism [ fhir:VisionPrescription.lensSpecification.prism.amount [ fhir:value 0.50 ] ;
+                    fhir:VisionPrescription.lensSpecification.prism.base [ fhir:value "up"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:VisionPrescription.lensSpecification.product [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct/lens> ;
+                            fhir:Coding.code [ fhir:value "lens"^^xsd:string ] ;
+                            fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct" ] ;
+                            fhir:index 0 ] ] ;
+            fhir:VisionPrescription.lensSpecification.sphere [ fhir:value -1.00 ] ;
+            fhir:index 1 ],
+        [ fhir:VisionPrescription.lensSpecification.add [ fhir:value 2.0 ] ;
+            fhir:VisionPrescription.lensSpecification.eye [ fhir:value "right"^^xsd:string ] ;
+            fhir:VisionPrescription.lensSpecification.prism [ fhir:VisionPrescription.lensSpecification.prism.amount [ fhir:value 0.50 ] ;
+                    fhir:VisionPrescription.lensSpecification.prism.base [ fhir:value "down"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:VisionPrescription.lensSpecification.product [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct/lens> ;
+                            fhir:Coding.code [ fhir:value "lens"^^xsd:string ] ;
+                            fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct" ] ;
+                            fhir:index 0 ] ] ;
+            fhir:VisionPrescription.lensSpecification.sphere [ fhir:value -2.00 ] ;
+            fhir:index 0 ] ;
+    fhir:VisionPrescription.patient [ fhir:Reference.reference [ fhir:value "Patient/example"^^xsd:string ] ;
+            fhir:link <http://hl7.org/fhir/Patient/example> ] ;
+    fhir:VisionPrescription.prescriber [ fhir:Reference.reference [ fhir:value "Practitioner/example"^^xsd:string ] ;
+            fhir:link <http://hl7.org/fhir/Practitioner/example> ] ;
+    fhir:VisionPrescription.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:nodeRole fhir:treeRoot .
+
+<http://hl7.org/fhir/VisionPrescription/33123.ttl> a owl:Ontology ;
+    owl:imports fhir:fhir.ttl ;
+    owl:versionIRI <http://build.fhir.org/VisionPrescription/33123.ttl> .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+

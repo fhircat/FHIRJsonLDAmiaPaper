@@ -1,0 +1,229 @@
+Processing FHIR release
+Vals: p1=T p2=T p3=T js= java=T dir=test-r4 CONTEXT_SERVER=/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/
+Preprocessing data/test-r4/examples-json to data/test-r4/jsonld-pre
+Processing data/test-r4/examples-json/activitydefinition-administer-zika-virus-exposure-assessment.json
+Processing data/test-r4/examples-json/consent-example-notThis.json
+Processing data/test-r4/examples-json/message-response-link.json
+Processing data/test-r4/examples-json/xds-example.json
+Processing data/test-r4/examples-json/contract-example-ins-policy.json
+Processing data/test-r4/examples-json/task-example1.json
+Processing data/test-r4/examples-json/testscript-example-history.json
+Processing data/test-r4/examples-json/patient-example.json
+Processing data/test-r4/examples-json/paymentreconciliation-example.json
+Processing data/test-r4/examples-json/library-opioidcds-recommendation-08.json
+Processing data/test-r4/examples-json/relatedperson-example-f002-ariadne.json
+Processing data/test-r4/examples-json/diagnosticreport-example-lri.json
+Processing data/test-r4/examples-json/json-edge-cases.json
+Processing data/test-r4/examples-json/bundle-transaction.json
+Processing data/test-r4/examples-json/diagnosticreport-examples-general.json
+Processing data/test-r4/examples-json/visionprescription-example.json
+Processing data/test-r4/examples-json/namingsystem-registry.json
+Processing data/test-r4/examples-json/basic-example.json
+Total=18 Successful=18
+Converting data/test-r4/jsonld-pre to data/test-r4/original/java
+13:08:46.594 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/activitydefinition-administer-zika-virus-exposure-assessment.json
+13:08:46.717 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/activitydefinition-administer-zika-virus-exposure-assessment.json
+13:08:46.717 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/activitydefinition-administer-zika-virus-exposure-assessment.json
+13:08:46.718 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/activitydefinition-administer-zika-virus-exposure-assessment.json
+76
+13:08:46.719 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/activitydefinition-administer-zika-virus-exposure-assessment.json
+13:08:46.719 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/activitydefinition-administer-zika-virus-exposure-assessment.json
+13:08:46.898 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/activitydefinition-administer-zika-virus-exposure-assessment.json
+13:08:46.903 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/activitydefinition-administer-zika-virus-exposure-assessment.json to data/test-r4/original/java/activitydefinition-administer-zika-virus-exposure-assessment.nq
+13:08:46.916 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/consent-example-notThis.json
+13:08:46.951 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/consent-example-notThis.json
+13:08:46.951 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/consent-example-notThis.json
+13:08:46.951 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/consent-example-notThis.json
+75
+13:08:46.952 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/consent-example-notThis.json
+13:08:46.952 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/consent-example-notThis.json
+13:08:46.959 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/consent-example-notThis.json
+13:08:46.959 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/consent-example-notThis.json to data/test-r4/original/java/consent-example-notThis.nq
+13:08:46.962 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/message-response-link.json
+13:08:47.045 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/message-response-link.json
+13:08:47.045 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/message-response-link.json
+13:08:47.045 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/message-response-link.json
+225
+13:08:47.047 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/message-response-link.json
+13:08:47.047 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/message-response-link.json
+13:08:47.061 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/message-response-link.json
+13:08:47.061 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/message-response-link.json to data/test-r4/original/java/message-response-link.nq
+13:08:47.070 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/xds-example.json
+13:08:47.154 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/xds-example.json
+13:08:47.154 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/xds-example.json
+13:08:47.154 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/xds-example.json
+248
+13:08:47.155 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/xds-example.json
+13:08:47.155 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/xds-example.json
+13:08:47.167 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/xds-example.json
+13:08:47.167 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/xds-example.json to data/test-r4/original/java/xds-example.nq
+13:08:47.173 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/contract-example-ins-policy.json
+13:08:47.220 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/contract-example-ins-policy.json
+13:08:47.220 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/contract-example-ins-policy.json
+13:08:47.220 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/contract-example-ins-policy.json
+168
+13:08:47.220 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/contract-example-ins-policy.json
+13:08:47.220 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/contract-example-ins-policy.json
+13:08:47.226 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/contract-example-ins-policy.json
+13:08:47.226 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/contract-example-ins-policy.json to data/test-r4/original/java/contract-example-ins-policy.nq
+13:08:47.230 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/task-example1.json
+13:08:47.279 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/task-example1.json
+13:08:47.280 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/task-example1.json
+13:08:47.280 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/task-example1.json
+183
+13:08:47.280 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/task-example1.json
+13:08:47.280 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/task-example1.json
+13:08:47.287 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/task-example1.json
+13:08:47.288 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/task-example1.json to data/test-r4/original/java/task-example1.nq
+13:08:47.294 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/testscript-example-history.json
+13:08:47.370 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/testscript-example-history.json
+13:08:47.370 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/testscript-example-history.json
+13:08:47.370 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/testscript-example-history.json
+307
+13:08:47.371 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/testscript-example-history.json
+13:08:47.372 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/testscript-example-history.json
+13:08:47.380 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/testscript-example-history.json
+13:08:47.381 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/testscript-example-history.json to data/test-r4/original/java/testscript-example-history.nq
+13:08:47.388 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/patient-example.json
+13:08:47.424 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/patient-example.json
+13:08:47.424 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/patient-example.json
+13:08:47.424 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/patient-example.json
+205
+13:08:47.425 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/patient-example.json
+13:08:47.425 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/patient-example.json
+13:08:47.430 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/patient-example.json
+13:08:47.430 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/patient-example.json to data/test-r4/original/java/patient-example.nq
+13:08:47.432 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/paymentreconciliation-example.json
+13:08:47.463 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/paymentreconciliation-example.json
+13:08:47.463 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/paymentreconciliation-example.json
+13:08:47.463 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/paymentreconciliation-example.json
+169
+13:08:47.463 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/paymentreconciliation-example.json
+13:08:47.463 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/paymentreconciliation-example.json
+13:08:47.468 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/paymentreconciliation-example.json
+13:08:47.468 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/paymentreconciliation-example.json to data/test-r4/original/java/paymentreconciliation-example.nq
+13:08:47.470 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/library-opioidcds-recommendation-08.json
+13:08:47.503 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/library-opioidcds-recommendation-08.json
+13:08:47.503 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/library-opioidcds-recommendation-08.json
+13:08:47.503 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/library-opioidcds-recommendation-08.json
+205
+13:08:47.504 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/library-opioidcds-recommendation-08.json
+13:08:47.504 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/library-opioidcds-recommendation-08.json
+13:08:47.510 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/library-opioidcds-recommendation-08.json
+13:08:47.510 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/library-opioidcds-recommendation-08.json to data/test-r4/original/java/library-opioidcds-recommendation-08.nq
+13:08:47.514 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/relatedperson-example-f002-ariadne.json
+13:08:47.527 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/relatedperson-example-f002-ariadne.json
+13:08:47.528 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/relatedperson-example-f002-ariadne.json
+13:08:47.528 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/relatedperson-example-f002-ariadne.json
+61
+13:08:47.528 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/relatedperson-example-f002-ariadne.json
+13:08:47.528 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/relatedperson-example-f002-ariadne.json
+13:08:47.530 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/relatedperson-example-f002-ariadne.json
+13:08:47.530 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/relatedperson-example-f002-ariadne.json to data/test-r4/original/java/relatedperson-example-f002-ariadne.nq
+13:08:47.531 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-example-lri.json
+13:08:47.818 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-example-lri.json
+13:08:47.818 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-example-lri.json
+13:08:47.818 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-example-lri.json
+2039
+13:08:47.821 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-example-lri.json
+13:08:47.821 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-example-lri.json
+13:08:47.857 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-example-lri.json
+13:08:47.857 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/diagnosticreport-example-lri.json to data/test-r4/original/java/diagnosticreport-example-lri.nq
+13:08:47.876 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/json-edge-cases.json
+13:08:47.920 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/json-edge-cases.json
+13:08:47.920 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/json-edge-cases.json
+13:08:47.920 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/json-edge-cases.json
+246
+13:08:47.922 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/json-edge-cases.json
+13:08:47.922 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/json-edge-cases.json
+13:08:47.928 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/json-edge-cases.json
+13:08:47.928 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/json-edge-cases.json to data/test-r4/original/java/json-edge-cases.nq
+13:08:47.931 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/bundle-transaction.json
+13:08:47.975 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/bundle-transaction.json
+13:08:47.976 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/bundle-transaction.json
+13:08:47.976 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/bundle-transaction.json
+258
+13:08:47.976 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/bundle-transaction.json
+13:08:47.976 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/bundle-transaction.json
+13:08:47.979 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/bundle-transaction.json
+13:08:47.979 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/bundle-transaction.json to data/test-r4/original/java/bundle-transaction.nq
+13:08:47.981 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-examples-general.json
+13:08:50.660 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-examples-general.json
+13:08:50.660 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-examples-general.json
+13:08:50.660 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-examples-general.json
+23331
+13:08:50.684 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-examples-general.json
+13:08:50.684 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-examples-general.json
+13:08:50.867 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/diagnosticreport-examples-general.json
+13:08:50.867 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/diagnosticreport-examples-general.json to data/test-r4/original/java/diagnosticreport-examples-general.nq
+13:08:50.980 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/visionprescription-example.json
+13:08:50.994 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/visionprescription-example.json
+13:08:50.994 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/visionprescription-example.json
+13:08:50.994 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/visionprescription-example.json
+90
+13:08:50.994 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/visionprescription-example.json
+13:08:50.994 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/visionprescription-example.json
+13:08:50.996 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/visionprescription-example.json
+13:08:50.996 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/visionprescription-example.json to data/test-r4/original/java/visionprescription-example.nq
+13:08:50.997 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/namingsystem-registry.json
+13:08:51.308 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/namingsystem-registry.json
+13:08:51.308 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/namingsystem-registry.json
+13:08:51.308 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/namingsystem-registry.json
+2971
+13:08:51.311 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/namingsystem-registry.json
+13:08:51.311 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/namingsystem-registry.json
+13:08:51.327 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/namingsystem-registry.json
+13:08:51.327 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/namingsystem-registry.json to data/test-r4/original/java/namingsystem-registry.nq
+13:08:51.340 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/basic-example.json
+13:08:51.353 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done JSONLD for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/basic-example.json
+13:08:51.353 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing Create for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/basic-example.json
+13:08:51.354 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/basic-example.json
+103
+13:08:51.354 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Writing for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/basic-example.json
+13:08:51.354 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Starting RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/basic-example.json
+13:08:51.355 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Done RDF Transform for: /Users/solbrig/git/FHIRCat/FHIRJsonLDAmiaPaper/data/test-r4/jsonld-pre/basic-example.json
+13:08:51.355 [main] INFO  org.fhircat.jsonld.cli.ToRdf - Writing: data/test-r4/jsonld-pre/basic-example.json to data/test-r4/original/java/basic-example.nq
+Generating data/test-r4/compare-report/java from  data/test-r4/original/java and data/test-r4/examples-ttl
+Processing data/test-r4/original/java/task-example1.nq
+Processing data/test-r4/original/java/patient-example.nq
+Processing data/test-r4/original/java/message-response-link.nq
+Processing data/test-r4/original/java/testscript-example-history.nq
+Processing data/test-r4/original/java/consent-example-notThis.nq
+Processing data/test-r4/original/java/paymentreconciliation-example.nq
+Processing data/test-r4/original/java/basic-example.nq
+Processing data/test-r4/original/java/namingsystem-registry.nq
+Skipping diagnosticreport-example-lri.nq because Graph diff issues
+Processing data/test-r4/original/java/library-opioidcds-recommendation-08.nq
+Processing data/test-r4/original/java/xds-example.nq
+Processing data/test-r4/original/java/json-edge-cases.nq
+Processing data/test-r4/original/java/relatedperson-example-f002-ariadne.nq
+Processing data/test-r4/original/java/contract-example-ins-policy.nq
+Processing data/test-r4/original/java/bundle-transaction.nq
+Processing data/test-r4/original/java/activitydefinition-administer-zika-virus-exposure-assessment.nq
+Processing data/test-r4/original/java/visionprescription-example.nq
+----------------------------------------
+Number of files processed: 17
+  Number of match failures: 1
+    Number of content mismatch: 1
+  Number of files skipped: 2
+    Number of code systems: 0
+    Number of missing FHIR ttl files: 1
+      Number of missing extensions: 0
+      Number of missing for other reasons: 1
+      Number of missing profiles: 0
+    Number of file exceeds max triples: 1
+    Number of value sets: 0
+  Number of successful matches: 14
+
+----------------------------------------
+Number of details: 14
+  Number of adjusted decimals: 3
+  Number of expected files with incorrect contained mapping: 0
+  Number of incomplete transforms (UNKNOWN in output): 0
+  Number of SERIOUS ISSUE: rdf:type rdf:List found in graph: 0
+  Number of missing metadata in source: 11
+  Number of FHIR.link elements removed from actual: 3
+  Number of FHIR.link elements removed from expected: 0
+  Number of File has too many triples for detailed compare: 0
+  Number of adjusted type arcs: 14
+DONE!

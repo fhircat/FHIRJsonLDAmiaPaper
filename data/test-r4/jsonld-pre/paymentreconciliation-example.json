@@ -1,0 +1,331 @@
+{
+   "resourceType": "fhir:PaymentReconciliation",
+   "id": {
+      "value": "ER2500"
+   },
+   "text": {
+      "status": {
+         "value": "generated"
+      },
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the PaymentReconciliation</div>"
+   },
+   "identifier": [
+      {
+         "system": {
+            "value": "http://www.BenefitsInc.com/fhir/enrollmentresponse"
+         },
+         "value": {
+            "value": "781234"
+         },
+         "index": 0
+      }
+   ],
+   "status": {
+      "value": "active"
+   },
+   "period": {
+      "start": {
+         "value": {
+            "@value": "2014-08-16",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+         }
+      },
+      "end": {
+         "value": {
+            "@value": "2014-08-31",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+         }
+      }
+   },
+   "created": {
+      "value": {
+         "@value": "2014-08-16",
+         "@type": "http://www.w3.org/2001/XMLSchema#date"
+      }
+   },
+   "paymentIssuer": {
+      "reference": {
+         "value": "Organization/2"
+      },
+      "fhir:link": {
+         "@id": "Organization/2",
+         "@type": "fhir:Organization"
+      }
+   },
+   "request": {
+      "reference": {
+         "value": "http://www.BenefitsInc.com/fhir/eligibility/225476332402"
+      },
+      "fhir:link": {
+         "@id": "http://www.BenefitsInc.com/fhir/eligibility/225476332402"
+      }
+   },
+   "requestor": {
+      "reference": {
+         "value": "Organization/1"
+      },
+      "fhir:link": {
+         "@id": "Organization/1",
+         "@type": "fhir:Organization"
+      }
+   },
+   "outcome": {
+      "value": "complete"
+   },
+   "disposition": {
+      "value": "2014 August mid-month settlement."
+   },
+   "paymentDate": {
+      "value": {
+         "@value": "2014-08-01",
+         "@type": "http://www.w3.org/2001/XMLSchema#date"
+      }
+   },
+   "paymentAmount": {
+      "value": {
+         "value": 7000.0
+      },
+      "currency": {
+         "value": "USD"
+      }
+   },
+   "paymentIdentifier": {
+      "system": {
+         "value": "http://www.BenefitsInc.com/payment/2018"
+      },
+      "value": {
+         "value": "10-12345"
+      }
+   },
+   "detail": [
+      {
+         "identifier": {
+            "system": {
+               "value": "http://www.BenefitsInc.com/payment/2018/detail"
+            },
+            "value": {
+               "value": "10-12345-001"
+            }
+         },
+         "type": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://terminology.hl7.org/CodeSystem/payment-type"
+                  },
+                  "code": {
+                     "value": "payment"
+                  },
+                  "index": 0,
+                  "@type": "http://terminology.hl7.org/CodeSystem/payment-type/payment"
+               }
+            ]
+         },
+         "request": {
+            "identifier": {
+               "system": {
+                  "value": "http://happyvalleyclinic.com/claim"
+               },
+               "value": {
+                  "value": "AB12345"
+               }
+            }
+         },
+         "submitter": {
+            "reference": {
+               "value": "Organization/1"
+            },
+            "fhir:link": {
+               "@id": "Organization/1",
+               "@type": "fhir:Organization"
+            }
+         },
+         "response": {
+            "identifier": {
+               "system": {
+                  "value": "http://www.BenefitsInc.com/fhir/claimresponse"
+               },
+               "value": {
+                  "value": "CR20140815-AB12345"
+               }
+            }
+         },
+         "date": {
+            "value": {
+               "@value": "2014-08-16",
+               "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+         },
+         "payee": {
+            "reference": {
+               "value": "Organization/1"
+            },
+            "fhir:link": {
+               "@id": "Organization/1",
+               "@type": "fhir:Organization"
+            }
+         },
+         "amount": {
+            "value": {
+               "value": 3500.0
+            },
+            "currency": {
+               "value": "USD"
+            }
+         },
+         "index": 0
+      },
+      {
+         "identifier": {
+            "system": {
+               "value": "http://www.BenefitsInc.com/payment/2018/detail"
+            },
+            "value": {
+               "value": "10-12345-002"
+            }
+         },
+         "type": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://terminology.hl7.org/CodeSystem/payment-type"
+                  },
+                  "code": {
+                     "value": "payment"
+                  },
+                  "index": 0,
+                  "@type": "http://terminology.hl7.org/CodeSystem/payment-type/payment"
+               }
+            ]
+         },
+         "request": {
+            "reference": {
+               "value": "http://www.BenefitsInc.com/fhir/oralhealthclaim/225476332699"
+            },
+            "fhir:link": {
+               "@id": "http://www.BenefitsInc.com/fhir/oralhealthclaim/225476332699"
+            }
+         },
+         "date": {
+            "value": {
+               "@value": "2014-08-12",
+               "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+         },
+         "amount": {
+            "value": {
+               "value": 4000.0
+            },
+            "currency": {
+               "value": "USD"
+            }
+         },
+         "index": 1
+      },
+      {
+         "identifier": {
+            "system": {
+               "value": "http://www.BenefitsInc.com/payment/2018/detail"
+            },
+            "value": {
+               "value": "10-12345-003"
+            }
+         },
+         "type": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://terminology.hl7.org/CodeSystem/payment-type"
+                  },
+                  "code": {
+                     "value": "advance"
+                  },
+                  "index": 0,
+                  "@type": "http://terminology.hl7.org/CodeSystem/payment-type/advance"
+               }
+            ]
+         },
+         "date": {
+            "value": {
+               "@value": "2014-08-16",
+               "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+         },
+         "amount": {
+            "value": {
+               "value": -1500.0
+            },
+            "currency": {
+               "value": "USD"
+            }
+         },
+         "index": 2
+      }
+   ],
+   "formCode": {
+      "coding": [
+         {
+            "system": {
+               "value": "http://ncforms.org/formid"
+            },
+            "code": {
+               "value": "PAYREC/2016/01B"
+            },
+            "index": 0,
+            "@type": "http://ncforms.org/formid/PAYREC%252F2016%252F01B"
+         }
+      ]
+   },
+   "processNote": [
+      {
+         "type": {
+            "value": "display"
+         },
+         "text": {
+            "value": "Due to the year end holiday the cutoff for submissions for December will be the 28th."
+         },
+         "index": 0
+      }
+   ],
+   "meta": {
+      "tag": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            },
+            "code": {
+               "value": "HTEST"
+            },
+            "display": {
+               "value": "test health data"
+            },
+            "index": 0
+         }
+      ]
+   },
+   "@context": [
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/paymentreconciliation.context.jsonld",
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/root.context.jsonld",
+      {
+         "nodeRole": {
+            "@type": "@id",
+            "@id": "fhir:nodeRole"
+         },
+         "@base": "http://hl7.org/fhir/",
+         "owl:imports": {
+            "@type": "@id"
+         },
+         "owl:versionIRI": {
+            "@type": "@id"
+         }
+      }
+   ],
+   "@id": "PaymentReconciliation/ER2500",
+   "nodeRole": "fhir:treeRoot",
+   "@included": {
+      "@id": "PaymentReconciliation/ER2500.ttl",
+      "owl:versionIRI": "http://build.fhir.org/PaymentReconciliation/ER2500.ttl",
+      "owl:imports": "fhir:fhir.ttl",
+      "@type": "owl:Ontology"
+   }
+}

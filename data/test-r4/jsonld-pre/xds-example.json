@@ -1,0 +1,459 @@
+{
+   "resourceType": "fhir:Bundle",
+   "id": {
+      "value": "xds"
+   },
+   "meta": {
+      "lastUpdated": {
+         "value": "2013-07-01T13:11:33Z"
+      },
+      "tag": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            },
+            "code": {
+               "value": "HTEST"
+            },
+            "display": {
+               "value": "test health data"
+            },
+            "index": 0
+         }
+      ]
+   },
+   "type": {
+      "value": "transaction"
+   },
+   "entry": [
+      {
+         "fullUrl": {
+            "value": "urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d"
+         },
+         "resource": {
+            "resourceType": "fhir:DocumentReference",
+            "meta": {
+               "lastUpdated": {
+                  "value": "2013-07-01T13:11:33Z"
+               }
+            },
+            "text": {
+               "status": {
+                  "value": "generated"
+               },
+               "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\n\t\t\t\t\t\t<a href=\"http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32\">Document: urn:oid:129.6.58.92.88336</a>undefined, created 24/12/2005\n\t\t\t\t\t</div>"
+            },
+            "masterIdentifier": {
+               "system": {
+                  "value": "urn:ietf:rfc:3986"
+               },
+               "value": {
+                  "value": "urn:oid:129.6.58.92.88336"
+               }
+            },
+            "status": {
+               "value": "current"
+            },
+            "type": {
+               "coding": [
+                  {
+                     "system": {
+                        "value": "http://ihe.net/connectathon/classCodes"
+                     },
+                     "code": {
+                        "value": "History and Physical"
+                     },
+                     "display": {
+                        "value": "History and Physical"
+                     },
+                     "index": 0,
+                     "@type": "http://ihe.net/connectathon/classCodes/History%2520and%2520Physical"
+                  }
+               ]
+            },
+            "category": [
+               {
+                  "coding": [
+                     {
+                        "system": {
+                           "value": "http://loinc.org"
+                        },
+                        "code": {
+                           "value": "47039-3"
+                        },
+                        "display": {
+                           "value": "Inpatient Admission history and physical note"
+                        },
+                        "index": 0,
+                        "@type": "loinc:47039-3"
+                     }
+                  ],
+                  "index": 0
+               }
+            ],
+            "subject": {
+               "reference": {
+                  "value": "Patient/a2"
+               },
+               "fhir:link": {
+                  "@id": "http://localhost:9556/svc/fhir/Patient/a2"
+               }
+            },
+            "date": {
+               "value": "2013-07-01T23:11:33+10:00"
+            },
+            "author": [
+               {
+                  "reference": {
+                     "value": "Practitioner/a3"
+                  },
+                  "fhir:link": {
+                     "@id": "http://localhost:9556/svc/fhir/Practitioner/a3"
+                  },
+                  "index": 0
+               },
+               {
+                  "reference": {
+                     "value": "Practitioner/a4"
+                  },
+                  "fhir:link": {
+                     "@id": "http://localhost:9556/svc/fhir/Practitioner/a4"
+                  },
+                  "index": 1
+               }
+            ],
+            "description": {
+               "value": "Physical"
+            },
+            "securityLabel": [
+               {
+                  "coding": [
+                     {
+                        "system": {
+                           "value": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+                        },
+                        "code": {
+                           "value": "N"
+                        },
+                        "display": {
+                           "value": "normal"
+                        },
+                        "index": 0,
+                        "@type": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality/N"
+                     }
+                  ],
+                  "index": 0
+               }
+            ],
+            "content": [
+               {
+                  "attachment": {
+                     "contentType": {
+                        "value": "text/plain"
+                     },
+                     "language": {
+                        "value": "en-US"
+                     },
+                     "url": {
+                        "value": "http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32"
+                     },
+                     "title": {
+                        "value": "Physical"
+                     },
+                     "creation": {
+                        "value": {
+                           "@value": "2005-12-24",
+                           "@type": "http://www.w3.org/2001/XMLSchema#date"
+                        }
+                     }
+                  },
+                  "format": {
+                     "system": {
+                        "value": "urn:oid:1.3.6.1.4.1.19376.1.2.3"
+                     },
+                     "code": {
+                        "value": "urn:ihe:pcc:handp:2008"
+                     }
+                  },
+                  "index": 0
+               }
+            ],
+            "context": {
+               "period": {
+                  "start": {
+                     "value": {
+                        "@value": "2004-12-23T08:00:00+10:00",
+                        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+                     }
+                  },
+                  "end": {
+                     "value": {
+                        "@value": "2004-12-23T08:01:00+10:00",
+                        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+                     }
+                  }
+               },
+               "practiceSetting": {
+                  "coding": [
+                     {
+                        "system": {
+                           "value": "http://ihe.net/connectathon/practiceSettingCodes"
+                        },
+                        "code": {
+                           "value": "General Medicine"
+                        },
+                        "display": {
+                           "value": "General Medicine"
+                        },
+                        "index": 0,
+                        "@type": "http://ihe.net/connectathon/practiceSettingCodes/General%2520Medicine"
+                     }
+                  ]
+               }
+            },
+            "@id": "urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d",
+            "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/documentreference.context.jsonld"
+         },
+         "request": {
+            "method": {
+               "value": "POST"
+            },
+            "url": {
+               "value": "DocumentReference"
+            }
+         },
+         "index": 0
+      },
+      {
+         "fullUrl": {
+            "value": "http://localhost:9556/svc/fhir/Patient/a2"
+         },
+         "resource": {
+            "resourceType": "fhir:Patient",
+            "id": {
+               "value": "a2"
+            },
+            "meta": {
+               "lastUpdated": {
+                  "value": "2013-07-01T13:11:33Z"
+               }
+            },
+            "text": {
+               "status": {
+                  "value": "generated"
+               },
+               "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Person DOE, John, M, dob: 27/05/1956</div>"
+            },
+            "identifier": [
+               {
+                  "use": {
+                     "value": "usual"
+                  },
+                  "value": {
+                     "value": "MRN"
+                  },
+                  "index": 0
+               }
+            ],
+            "name": [
+               {
+                  "use": {
+                     "value": "usual"
+                  },
+                  "text": {
+                     "value": "DOE, John"
+                  },
+                  "family": {
+                     "value": "Doe"
+                  },
+                  "given": [
+                     {
+                        "value": "John",
+                        "index": 0
+                     }
+                  ],
+                  "index": 0
+               }
+            ],
+            "birthDate": {
+               "value": {
+                  "@value": "1956-05-27",
+                  "@type": "http://www.w3.org/2001/XMLSchema#date"
+               }
+            },
+            "@id": "http://localhost:9556/svc/fhir/Patient/a2",
+            "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/patient.context.jsonld"
+         },
+         "request": {
+            "method": {
+               "value": "POST"
+            },
+            "url": {
+               "value": "Patient"
+            },
+            "ifNoneExist": {
+               "value": "Patient?identifier=http://acme.org/xds/patients!89765a87b"
+            }
+         },
+         "index": 1
+      },
+      {
+         "fullUrl": {
+            "value": "http://localhost:9556/svc/fhir/Practitioner/a3"
+         },
+         "resource": {
+            "resourceType": "fhir:Practitioner",
+            "id": {
+               "value": "a3"
+            },
+            "meta": {
+               "lastUpdated": {
+                  "value": "2013-07-01T13:11:33Z"
+               }
+            },
+            "text": {
+               "status": {
+                  "value": "generated"
+               },
+               "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Author Gerald Smitty @ Cleveland Clinic</div>"
+            },
+            "name": [
+               {
+                  "use": {
+                     "value": "usual"
+                  },
+                  "family": {
+                     "value": "Smitty"
+                  },
+                  "given": [
+                     {
+                        "value": "Gerald",
+                        "index": 0
+                     }
+                  ],
+                  "index": 0
+               }
+            ],
+            "@id": "http://localhost:9556/svc/fhir/Practitioner/a3",
+            "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/practitioner.context.jsonld"
+         },
+         "request": {
+            "method": {
+               "value": "POST"
+            },
+            "url": {
+               "value": "Practitioner"
+            }
+         },
+         "index": 2
+      },
+      {
+         "fullUrl": {
+            "value": "http://localhost:9556/svc/fhir/Practitioner/a4"
+         },
+         "resource": {
+            "resourceType": "fhir:Practitioner",
+            "id": {
+               "value": "a4"
+            },
+            "meta": {
+               "lastUpdated": {
+                  "value": "2013-07-01T13:11:33Z"
+               }
+            },
+            "text": {
+               "status": {
+                  "value": "generated"
+               },
+               "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Author Person @ Cleveland Clinic</div>"
+            },
+            "name": [
+               {
+                  "use": {
+                     "value": "usual"
+                  },
+                  "family": {
+                     "value": "Dopplemeyer"
+                  },
+                  "given": [
+                     {
+                        "value": "Sherry",
+                        "index": 0
+                     }
+                  ],
+                  "index": 0
+               }
+            ],
+            "@id": "http://localhost:9556/svc/fhir/Practitioner/a4",
+            "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/practitioner.context.jsonld"
+         },
+         "request": {
+            "method": {
+               "value": "POST"
+            },
+            "url": {
+               "value": "Practitioner"
+            }
+         },
+         "index": 3
+      },
+      {
+         "fullUrl": {
+            "value": "http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32"
+         },
+         "resource": {
+            "resourceType": "fhir:Binary",
+            "id": {
+               "value": "1e404af3-077f-4bee-b7a6-a9be97e1ce32"
+            },
+            "meta": {
+               "lastUpdated": {
+                  "value": "2013-07-01T13:11:33Z"
+               }
+            },
+            "contentType": {
+               "value": "text/plain"
+            },
+            "data": {
+               "value": "YXNkYXNkYXNkYXNkYXNk"
+            },
+            "@id": "http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32",
+            "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/binary.context.jsonld"
+         },
+         "request": {
+            "method": {
+               "value": "POST"
+            },
+            "url": {
+               "value": "Binary"
+            }
+         },
+         "index": 4
+      }
+   ],
+   "@context": [
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/bundle.context.jsonld",
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/root.context.jsonld",
+      {
+         "nodeRole": {
+            "@type": "@id",
+            "@id": "fhir:nodeRole"
+         },
+         "@base": "http://hl7.org/fhir/",
+         "owl:imports": {
+            "@type": "@id"
+         },
+         "owl:versionIRI": {
+            "@type": "@id"
+         }
+      }
+   ],
+   "@id": "Bundle/xds",
+   "nodeRole": "fhir:treeRoot",
+   "@included": {
+      "@id": "Bundle/xds.ttl",
+      "owl:versionIRI": "http://build.fhir.org/Bundle/xds.ttl",
+      "owl:imports": "fhir:fhir.ttl",
+      "@type": "owl:Ontology"
+   }
+}

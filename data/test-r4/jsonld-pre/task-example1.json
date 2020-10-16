@@ -1,0 +1,354 @@
+{
+   "resourceType": "fhir:Task",
+   "id": {
+      "value": "example1"
+   },
+   "text": {
+      "status": {
+         "value": "generated"
+      },
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example1</p><p><b>contained</b>: </p><p><b>identifier</b>: 20170201-001 (OFFICIAL)</p><p><b>basedOn</b>: General Wellness Careplan</p><p><b>groupIdentifier</b>: G20170201-001 (OFFICIAL)</p><p><b>status</b>: in-progress</p><p><b>businessStatus</b>: waiting for specimen <span>(Details )</span></p><p><b>intent</b>: order</p><p><b>priority</b>: routine</p><p><b>code</b>: Lipid Panel <span>(Details )</span></p><p><b>description</b>: Create order for getting specimen, Set up inhouse testing,  generate order for any sendouts and submit with specimen</p><p><b>focus</b>: <a>Lipid Panel Request</a></p><p><b>for</b>: <a>Peter James Chalmers</a></p><p><b>encounter</b>: <a>Example In-Patient Encounter</a></p><p><b>executionPeriod</b>: 31/10/2016 8:25:05 AM --&gt; (ongoing)</p><p><b>authoredOn</b>: 31/10/2016 8:25:05 AM</p><p><b>lastModified</b>: 31/10/2016 9:45:05 AM</p><p><b>requester</b>: <a>Dr Adam Careful</a></p><p><b>performerType</b>: Performer <span>(Details : {http://terminology.hl7.org/CodeSystem/task-performer-type code 'performer' = 'performer', given as 'Performer'})</span></p><p><b>owner</b>: <a>Clinical Laboratory @ Acme Hospital</a></p><p><b>reasonCode</b>: The Task.reason should only be included if there is no Task.focus or if it differs from the reason indicated on the focus <span>(Details )</span></p><p><b>note</b>: This is an example to demonstrate using task for actioning a servicerequest and to illustrate how to populate many of the task elements - this is the parent task that will be broken into subtask to grab the specimen and a sendout lab test </p><p><b>relevantHistory</b>: Author's Signature. Generated Summary: id: signature; recorded: 31/10/2016 8:25:05 AM; </p><h3>Restrictions</h3><table><tr><td>-</td><td><b>Repetitions</b></td><td><b>Period</b></td></tr><tr><td>*</td><td>1</td><td>?? --&gt; 02/11/2016 9:45:05 AM</td></tr></table></div>"
+   },
+   "contained": [
+      {
+         "resourceType": "fhir:Provenance",
+         "id": {
+            "value": "signature"
+         },
+         "target": [
+            {
+               "reference": {
+                  "value": "ServiceRequest/physiotherapy/_history/1"
+               },
+               "fhir:link": {
+                  "@id": "ServiceRequest/physiotherapy/_history/1",
+                  "@type": "fhir:ServiceRequest"
+               },
+               "index": 0
+            }
+         ],
+         "recorded": {
+            "value": "2016-10-31T08:25:05+10:00"
+         },
+         "agent": [
+            {
+               "role": [
+                  {
+                     "coding": [
+                        {
+                           "system": {
+                              "value": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                           },
+                           "code": {
+                              "value": "AUT"
+                           },
+                           "index": 0,
+                           "@type": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType/AUT"
+                        }
+                     ],
+                     "index": 0
+                  }
+               ],
+               "who": {
+                  "reference": {
+                     "value": "Practitioner/f202"
+                  },
+                  "display": {
+                     "value": "Luigi Maas"
+                  },
+                  "fhir:link": {
+                     "@id": "Practitioner/f202",
+                     "@type": "fhir:Practitioner"
+                  }
+               },
+               "index": 0
+            }
+         ],
+         "signature": [
+            {
+               "type": [
+                  {
+                     "system": {
+                        "value": "urn:iso-astm:E1762-95:2013"
+                     },
+                     "code": {
+                        "value": "1.2.840.10065.1.12.1.1"
+                     },
+                     "display": {
+                        "value": "Author's Signature"
+                     },
+                     "index": 0
+                  }
+               ],
+               "when": {
+                  "value": "2016-10-31T08:25:05+10:00"
+               },
+               "who": {
+                  "reference": {
+                     "value": "Practitioner/example"
+                  },
+                  "display": {
+                     "value": "Dr Adam Careful"
+                  },
+                  "fhir:link": {
+                     "@id": "Practitioner/example",
+                     "@type": "fhir:Practitioner"
+                  }
+               },
+               "targetFormat": {
+                  "value": "application/fhir+xml"
+               },
+               "sigFormat": {
+                  "value": "application/signature+xml"
+               },
+               "data": {
+                  "value": "dGhpcyBibG9iIGlzIHNuaXBwZWQ="
+               },
+               "index": 0
+            }
+         ],
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/provenance.context.jsonld",
+         "@id": "Task/example1#signature",
+         "index": 0
+      }
+   ],
+   "identifier": [
+      {
+         "use": {
+            "value": "official"
+         },
+         "system": {
+            "value": "http:/goodhealth.org/identifiers"
+         },
+         "value": {
+            "value": "20170201-001"
+         },
+         "index": 0
+      }
+   ],
+   "basedOn": [
+      {
+         "display": {
+            "value": "General Wellness Careplan"
+         },
+         "index": 0
+      }
+   ],
+   "groupIdentifier": {
+      "use": {
+         "value": "official"
+      },
+      "system": {
+         "value": "http:/goodhealth.org/accession/identifiers"
+      },
+      "value": {
+         "value": "G20170201-001"
+      }
+   },
+   "status": {
+      "value": "in-progress"
+   },
+   "businessStatus": {
+      "text": {
+         "value": "waiting for specimen"
+      }
+   },
+   "intent": {
+      "value": "order"
+   },
+   "priority": {
+      "value": "routine"
+   },
+   "code": {
+      "text": {
+         "value": "Lipid Panel"
+      }
+   },
+   "description": {
+      "value": "Create order for getting specimen, Set up inhouse testing,  generate order for any sendouts and submit with specimen"
+   },
+   "focus": {
+      "reference": {
+         "value": "ServiceRequest/lipid"
+      },
+      "display": {
+         "value": "Lipid Panel Request"
+      },
+      "fhir:link": {
+         "@id": "ServiceRequest/lipid",
+         "@type": "fhir:ServiceRequest"
+      }
+   },
+   "for": {
+      "reference": {
+         "value": "Patient/example"
+      },
+      "display": {
+         "value": "Peter James Chalmers"
+      },
+      "fhir:link": {
+         "@id": "Patient/example",
+         "@type": "fhir:Patient"
+      }
+   },
+   "encounter": {
+      "reference": {
+         "value": "Encounter/example"
+      },
+      "display": {
+         "value": "Example In-Patient Encounter"
+      },
+      "fhir:link": {
+         "@id": "Encounter/example",
+         "@type": "fhir:Encounter"
+      }
+   },
+   "executionPeriod": {
+      "start": {
+         "value": {
+            "@value": "2016-10-31T08:25:05+10:00",
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+         }
+      }
+   },
+   "authoredOn": {
+      "value": {
+         "@value": "2016-10-31T08:25:05+10:00",
+         "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+   },
+   "lastModified": {
+      "value": {
+         "@value": "2016-10-31T09:45:05+10:00",
+         "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+   },
+   "requester": {
+      "reference": {
+         "value": "Practitioner/example"
+      },
+      "display": {
+         "value": "Dr Adam Careful"
+      },
+      "fhir:link": {
+         "@id": "Practitioner/example",
+         "@type": "fhir:Practitioner"
+      }
+   },
+   "performerType": [
+      {
+         "coding": [
+            {
+               "system": {
+                  "value": "http://terminology.hl7.org/CodeSystem/task-performer-type"
+               },
+               "code": {
+                  "value": "performer"
+               },
+               "display": {
+                  "value": "Performer"
+               },
+               "index": 0,
+               "@type": "http://terminology.hl7.org/CodeSystem/task-performer-type/performer"
+            }
+         ],
+         "text": {
+            "value": "Performer"
+         },
+         "index": 0
+      }
+   ],
+   "owner": {
+      "reference": {
+         "value": "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f"
+      },
+      "display": {
+         "value": "Clinical Laboratory @ Acme Hospital"
+      },
+      "fhir:link": {
+         "@id": "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f",
+         "@type": "fhir:Organization"
+      }
+   },
+   "reasonCode": {
+      "text": {
+         "value": "The Task.reason should only be included if there is no Task.focus or if it differs from the reason indicated on the focus"
+      }
+   },
+   "note": [
+      {
+         "text": {
+            "value": "This is an example to demonstrate using task for actioning a servicerequest and to illustrate how to populate many of the task elements - this is the parent task that will be broken into subtask to grab the specimen and a sendout lab test "
+         },
+         "index": 0
+      }
+   ],
+   "relevantHistory": [
+      {
+         "reference": {
+            "value": "#signature"
+         },
+         "display": {
+            "value": "Author's Signature"
+         },
+         "fhir:link": {
+            "@id": "Task/example1#signature"
+         },
+         "index": 0
+      }
+   ],
+   "restriction": {
+      "repetitions": {
+         "value": 1
+      },
+      "period": {
+         "end": {
+            "value": {
+               "@value": "2016-11-02T09:45:05+10:00",
+               "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+         }
+      }
+   },
+   "meta": {
+      "tag": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            },
+            "code": {
+               "value": "HTEST"
+            },
+            "display": {
+               "value": "test health data"
+            },
+            "index": 0
+         }
+      ]
+   },
+   "@context": [
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/task.context.jsonld",
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/root.context.jsonld",
+      {
+         "nodeRole": {
+            "@type": "@id",
+            "@id": "fhir:nodeRole"
+         },
+         "@base": "http://hl7.org/fhir/",
+         "owl:imports": {
+            "@type": "@id"
+         },
+         "owl:versionIRI": {
+            "@type": "@id"
+         }
+      }
+   ],
+   "@id": "Task/example1",
+   "nodeRole": "fhir:treeRoot",
+   "@included": {
+      "@id": "Task/example1.ttl",
+      "owl:versionIRI": "http://build.fhir.org/Task/example1.ttl",
+      "owl:imports": "fhir:fhir.ttl",
+      "@type": "owl:Ontology"
+   }
+}

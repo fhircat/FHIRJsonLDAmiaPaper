@@ -4,15 +4,20 @@ import os
 import sys
 import urllib
 from argparse import Namespace, ArgumentParser
-from typing import Any, List, Optional, Union
+from typing import Any, List, Optional, Union, Dict, Tuple
 from urllib.parse import quote
 
 import dirlistproc
 import requests
 from jsonasobj import JsonObj, loads, as_dict, as_json
+from rdflib import URIRef, XSD
 
 from fhir_url_re import R5_FHIR_URI_RE
-from fsv_processor import FSVProcessor
+from fsv_processor import FSVProcessor, FHIR
+from rdf_postprocessor import gYear_re, gYearMonth_re, date_re, dateTime_re
+
+# For internal debugging.  Should be an empty list for submission
+INCLUDE_ONLY = []
 
 DEFAULT_CONTEXT_SERVER = "https://fhircat.org/fhir-r5/original/contexts/"
 
@@ -32,9 +37,10 @@ CODE_KEY = "code"               # code
 REFERENCE_KEY = "reference"     # assumed to always point to a partial or full URL
                                 # Not true:  In particular, the Consent resource has a 'reference' of type 'Reference'
 TYPE_KEY = "type"               # If reference is present, "type" (if present) names the type of the target resource
-FULLURL_KEY = "fullUrl"         # URL of resource in a Bundle.  Only tested in "Bundle" esources
+
 RESOURCETYPE_KEY = "resourceType"  # Changes the type of the current resource being analyzed
 ID_KEY = "id"                   # All resources have to have both a type and an id. Id is the resource IRI
+CONTAINED_KEY = "contained"     # Contained resources in root
 
 # Keys that aren't converted to value objetsc
 NODEROLE_KEY = "nodeRole"       # nodeRole is one WE add, We don't use value notation
@@ -44,7 +50,15 @@ DIV_KEY = "div"                 # div is not converted to value as per the spec
 CODING_KEY = "coding"           # Assumption is that ALL "coding" entries carry concept codes and that all entries are
                                 # lists
 
+VALUE_KEY = 'value'
+VALUE_KEY_LEN = len(VALUE_KEY)
+
 EXTENSION_RESOURCE_TYPE = "Extension"
+
+BUNDLE_RESOURCE_TYPE = "Bundle"
+BUNDLE_ENTRY = "entry"
+BUNDLE_ENTRY_FULLURL = "fullUrl"
+BUNDLE_ENTRY_RESOURCE = "resource"
 
 
 def to_value(v: Any) -> JsonObj:
@@ -70,6 +84,31 @@ def local_name(tag: str) -> str:
     """
     return tag if tag is None or not tag.startswith('fhir:') else tag[len('fhir:'):]
 
+
+def add_date_type(date_type: URIRef, container: JsonObj) -> None:
+    """
+    Add the appropriate type to container
+    :param date_type: FHIR date/time type
+    :param container: Target container
+    """
+    date_str = from_value(container)
+    dt = None
+    if date_type in (FHIR.date, FHIR.dateTime):
+        if gYear_re.match(date_str):
+            dt = XSD.gYear
+        elif gYearMonth_re.match(date_str):
+            dt = XSD.gYearMonth
+        elif date_re.match(date_str):
+            dt = XSD.date
+        elif date_type == FHIR.dateTime and dateTime_re.match(date_str):
+            dt = XSD.dateTime
+    if dt:
+        typed_obj = JsonObj()
+        typed_obj['@value'] = date_str
+        typed_obj['@type'] = str(dt)
+        container['value'] = typed_obj
+
+
 def add_type_arc(codedobject: JsonObj) -> None:
     """
     Add a type arc to a coded concept
@@ -87,7 +126,7 @@ def add_type_arc(codedobject: JsonObj) -> None:
 
 
 def add_type_arcs(element_key: str, container: JsonObj, parent_container: JsonObj, path: List[str], opts: Namespace,
-                  server: str) -> None:
+                  server: str, id_map: Optional[Dict[str, str]]) -> None:
     """
     Add type arcs if element_key is "code", "reference" or a type of canonical
 
@@ -98,33 +137,40 @@ def add_type_arcs(element_key: str, container: JsonObj, parent_container: JsonOb
     :param path: Path to object
     :param opts: Holder for the FSVProcessor element (opts.fsv)
     :param server:
+    :param id_map: Map from relative to absolute URI's
     """
     ref = None
     if opts.fsv.is_canonical(path):
         # Container is a simple string in this case
-        ref = gen_reference(from_value(container), container, server)
+        ref = gen_reference(from_value(container), container, server, id_map)
         container["fhir:link"] = ref
     elif element_key == REFERENCE_KEY:
         container_value = from_value(container)
         if isinstance(container_value, str):
-            ref = gen_reference(container_value, container, server)
+            ref = gen_reference(container_value, container, server, id_map)
             parent_container["fhir:link"] = ref
+
+    date_type = opts.fsv.is_date(path)
+    if date_type:
+        add_date_type(date_type, container)
 
     if element_key == CODE_KEY:
         add_type_arc(container)
 
 
-def gen_reference(ref: str, refobject: JsonObj, server: Optional[str]) -> Optional[JsonObj]:
+def gen_reference(ref: str, refobject: JsonObj, server: Optional[str], id_map: Optional[Dict[str, Tuple[str, str]]])\
+        -> Optional[JsonObj]:
     """
     Return the object of a fhir:link based on the reference in refObject
 
     :param ref: reference
     :param refobject: object containing the reference
-    :param server:
+    :param server: If supplied,
+    :param id_map: Map of bundle reference names to URI/type tuples
     :return: link and optional type element
     """
     if "://" not in ref and not ref.startswith('/'):  # Relative path
-        link = ('' if server else '../') + ref  # If server is supplied, ref is local, else relative to parent
+        link = ('' if server else '../') + ref        # If server is supplied, ref is local, else relative to parent
     else:
         link = ref
     if link:
@@ -136,11 +182,78 @@ def gen_reference(ref: str, refobject: JsonObj, server: Optional[str]) -> Option
             typ = m[4] if m else None
 
         rval = JsonObj()
-        rval['@id'] = link
-        if typ:
-            rval['@type'] = "fhir:" + typ
+
+        if link in id_map:
+            rval['@id'] = id_map[link][0]
+        else:
+            rval['@id'] = link
+            if typ:
+                rval['@type'] = "fhir:" + typ
         return rval
     return None
+
+
+def add_contained_urls(resource: JsonObj, id_map: Dict[str, Tuple[str, str]]) -> None:
+    """
+    Return a map of contained resources to absolute URL's
+
+    :param resource: resource that may have contained entries
+    :param id_map: map of relative URL's to absolute url and type
+    """
+
+    containers = getattr(resource, CONTAINED_KEY, [])
+
+    for container in containers:
+        contained_id = '#' + getattr(container, ID_KEY)
+        contained_type = getattr(resource, RESOURCETYPE_KEY)
+        id_map[contained_id] = (contained_type + '/' + getattr(resource, ID_KEY) + contained_id, contained_type)
+
+
+def bundle_urls(resource: JsonObj) -> Optional[Dict[str, Tuple[str, str]]]:
+    """
+    Return a map of relative bundle URL's to absolute URLs, assigning full URL's to interior entries as well
+    :param resource: Resource to be mapped
+    :return: Map from local identifier to URL/Type tuple
+    """
+    rt = getattr(resource, RESOURCETYPE_KEY, None)
+    if rt != BUNDLE_RESOURCE_TYPE:
+        return None
+
+    rval = dict()
+    entries = getattr(resource, BUNDLE_ENTRY, None)
+    if entries:
+        for entry in entries:
+            fullUrl = getattr(entry, BUNDLE_ENTRY_FULLURL, None)
+            if fullUrl:
+                resource = getattr(entry, BUNDLE_ENTRY_RESOURCE, None)
+                if resource:
+                    resource['@id'] = fullUrl
+                    resource_id = getattr(resource, ID_KEY, None)
+                    resource_type = getattr(resource, RESOURCETYPE_KEY, None)
+                    if resource_id:
+                        rval[resource_type + '/' + resource_id] = (fullUrl, resource_type)
+    return rval
+
+
+def adjust_urls(fhir_json: Any, outer_url: Optional[str] = "") -> None:
+    """
+    Traverse the structure adding relative URL's to inner structures
+    :param fhir_json:
+    :param outer_url: Containing URL
+    :return:
+    """
+    if isinstance(fhir_json, JsonObj):
+        if hasattr(fhir_json, '@id'):
+            container_id = getattr(fhir_json, '@id')
+            if str(container_id).startswith('#'):
+                container_id = outer_url + container_id
+                fhir_json['@id'] = container_id
+            outer_url = container_id
+        for k in as_dict(fhir_json).keys():
+            adjust_urls(fhir_json[k], outer_url)
+    elif isinstance(fhir_json, list):
+        for e in fhir_json:
+            adjust_urls(e, outer_url)
 
 
 def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
@@ -154,8 +267,15 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
     """
     server = opts.fhirserver            # If absent, the FILE becomes the base of the context
 
-    def map_element(element_key: str, element_value: Any, container_type: str, path: List[str], url_base: str,
-                    container: JsonObj) -> None:
+    def is_choice_element(name):
+        # TODO: we really do need to be a lot more clever if this is to scale in the longer term.  For now, we
+        # assume that valueX is a choice unless it is an exception
+        return name.startswith(VALUE_KEY) and name[VALUE_KEY_LEN:] and name[VALUE_KEY_LEN].isupper() and\
+               name[VALUE_KEY_LEN:] not in ['Set']
+
+
+    def map_element(element_key: str, element_value: Any, container_type: str, path: List[str],
+                    container: JsonObj, id_map: Optional[Dict[str, str]] = None, in_container: bool = False) -> None:
         """
         Transform element_value into the R4 RDF json structure
 
@@ -163,19 +283,23 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
         :param element_value: Element itself.  Can be any JSON object
         :param container_type: The type of the containing resource
         :param path: The path from the containing resource down to the element excluding element_key
-        :param url_base: Base for resolving partial URL's
         :param container: Dictionary that contains key/value
+        :param id_map: Map from local resource to URI if inside a bundle
+        :param in_container: True means don't tack the resource type onto the identifier
         """
         if element_key.startswith('@'):  # Ignore JSON-LD components
             return
 
-        path.append(element_key)
+        if not is_choice_element(element_key):
+            path.append(element_key)
+        if path == ['Coding', 'system']:
+            add_type_arc(container)
         inner_type = local_name(getattr(container, RESOURCETYPE_KEY, None))
         if isinstance(element_value, JsonObj):          # Inner object -- process each element
-            dict_processor(element_value, resource_type, path, url_base)
+            dict_processor(element_value, resource_type, path, id_map)
 
         elif isinstance(element_value, list):           # List -- process each member individually
-            container[element_key] = list_processor(element_key, element_value, resource_type, url_base, path)
+            container[element_key] = list_processor(element_key, element_value, resource_type, path, id_map)
 
         # We have a primitive JSON value
         elif element_key == RESOURCETYPE_KEY and not element_value.startswith('fhir:'):
@@ -183,27 +307,36 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
             container['@context'] = f"{opts.contextserver}{element_value.lower()}.context.jsonld"
 
         elif element_key == ID_KEY:     # Internal ids are relative to the document
-            container['@id'] = ('#' if not inner_type and not element_value.startswith('#') else (container_type + '/')) \
-                               + element_value
+            if in_container or getattr(container, RESOURCETYPE_KEY, None) is None:
+                relative_id = '#' + element_value
+            else:
+                relative_id = element_value if element_value.startswith('#') else \
+                            ((inner_type or container_type) + '/' + element_value)
+            container_id = id_map.get(relative_id, (relative_id, None))[0] if id_map else relative_id
+            if not hasattr(container, '@id'):
+                # Bundle ids have already been added elsewhere
+                container['@id'] = container_id
             container[element_key] = to_value(element_value)
 
         elif element_key not in [NODEROLE_KEY, INDEX_KEY, DIV_KEY]:      # Convert most other nodes to value entries
             container[element_key] = to_value(element_value)
 
         if not isinstance(element_value, list):
-            add_type_arcs(element_key, container[element_key], container, path, opts, server)
+            add_type_arcs(element_key, container[element_key], container, path, opts, server, id_map)
 
-        path.pop()
+        if not is_choice_element(element_key):
+            path.pop()
 
     def dict_processor(container: JsonObj, resource_type: Optional[str] = None, path: List[str] = None,
-                       url_base: Optional[str] = None) -> None:
+                       id_map: Optional[Dict[str, str]] = None, in_container: bool = False) -> None:
         """
         Process the elements in container
 
         :param container: JSON dictionary to be processed
         :param resource_type: type of resource that container appears in
         :param path: Full path from the base resource type to the actual element
-        :param url_base: Base to use for resolving relative URL's
+        :param id_map: Map from local resource to URI if inside a bundle
+        :param in_container: If True then don't tack they type onto the identifier
         """
 
         # Rule: Whenever we find an embedded resourceType, we assume that we've encountered a brand new resource
@@ -216,14 +349,23 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
             resource_type = container[RESOURCETYPE_KEY]
             path = [resource_type]
 
-        full_url = getattr(container, FULLURL_KEY, None)
-        if full_url:
-            container['@id'] = from_value(full_url)
+        # If we've got bundle, build an id map to use in the interior
+        possible_id_map = bundle_urls(container)            # Note that this will also assign ids to bundle entries
+        if possible_id_map is not None:
+            id_map = possible_id_map
+        elif id_map is None:
+            id_map = dict()
+
+        # Add any contained resources to the contained URL map
+        add_contained_urls(container, id_map)
 
         # Process each of the elements in the dictionary
         # Note: use keys() and re-look up to prevent losing the JsonObj characteristics of the values
         for k in [k for k in as_dict(container).keys() if not k.startswith('_')]:
-            map_element(k, container[k], resource_type, path, url_base, container)
+            if is_choice_element(k):
+                map_element(k, container[k], resource_type, [k[VALUE_KEY_LEN:]], container, id_map, in_container)
+            else:
+                map_element(k, container[k], resource_type, path, container, id_map, in_container)
 
         # Merge any extensions (keys that start with '_') into the base
         #  This happens when either:
@@ -243,12 +385,10 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
             else:
                 container[base_key]['extension'] = ext_value['extension']
 
-            map_element(base_key, ext_value, EXTENSION_RESOURCE_TYPE, [EXTENSION_RESOURCE_TYPE], url_base, container)
+            map_element(base_key, ext_value, EXTENSION_RESOURCE_TYPE, [EXTENSION_RESOURCE_TYPE], container, id_map)
 
-
-
-    def list_processor(list_key: str, list_object: List[Any], resource_type: str, url_base: str,
-                       path: List[str] = None) -> List[Any]:
+    def list_processor(list_key: str, list_object: List[Any], resource_type: str, path: List[str] = None,
+                       id_map: Optional[Dict[str, str]] = None) -> List[Any]:
         """
         Process the elements in the supplied list adding indices and doing an iterative transformation on the
         interior nodes
@@ -256,8 +396,8 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
         :param list_key: JSON key at the start of the list
         :param list_object: List to be processed
         :param resource_type: The type of resource containing the list
-        :param url_base: base URL for URI references
         :param path: JSON path to list element.  Head of path is the root resource type
+        :param id_map: Map from local resource to URI if inside a bundle
 
         :return Ordered list of entries
         """
@@ -271,7 +411,7 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
             :return: adjusted object
             """
             if isinstance(entry, JsonObj):
-                dict_processor(entry, resource_type, path, url_base)
+                dict_processor(entry, resource_type, path, id_map, list_key == CONTAINED_KEY)
                 if getattr(entry, INDEX_KEY, None) is not None and '_' not in opts.fsv.flat_path(path):
                     print(f'{ifn} - problem: "{list_key}: {opts.fsv.flat_path(path)}" element {pos} already has an index')
                 else:
@@ -282,7 +422,7 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
                 print(f"{ifn} - problem: {list_key} has a list in a list")
             else:
                 entry = to_value(entry)
-                add_type_arcs(list_key, entry, entry, path, opts, server)
+                add_type_arcs(list_key, entry, entry, path, opts, server, id_map)
                 entry.index = pos
             return entry
 
@@ -298,6 +438,9 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
 
     # Add nodeRole
     fhir_json['nodeRole'] = "fhir:treeRoot"
+
+    # Traverse the graph adjusting relative URL's
+    adjust_urls(fhir_json)
 
     # Add the "ontology header"
     hdr = JsonObj()
@@ -371,6 +514,10 @@ def check_json(ifn: str, ifdir: str, opts: Namespace) -> bool:
         print(f"{infilename} is too big {len(intext)}")
         return False
 
+    # Internal testing
+    if INCLUDE_ONLY and not any(ifn.startswith(e) for e in INCLUDE_ONLY):
+        return False
+
     in_json = loads(intext)
     if not (hasattr(in_json, RESOURCETYPE_KEY) or hasattr(in_json, ID_KEY)):
         print(f"{infilename} is not a FHIR resource - processing skipped")
@@ -400,6 +547,8 @@ def main(argv: Optional[Union[str, List[str]]] = None) -> object:
         return dirlistproc.DirectoryListProcessor(args, "Add FHIR R4 edits to JSON file", '.json', '.json',
                                                   addargs=addargs)
 
+    if INCLUDE_ONLY:
+        print("=====> WARNING: json preprocessor is configured to process a subset")
     dlp = gen_dlp(argv)
     if not (dlp.opts.infile or dlp.opts.indir):
         gen_dlp(argv if argv is not None else sys.argv[1:] + ["--help"])  # Does not exist

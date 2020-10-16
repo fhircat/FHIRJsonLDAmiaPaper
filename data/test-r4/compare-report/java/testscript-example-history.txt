@@ -1,0 +1,31 @@
+----- Added Subjects -----
+http://hl7.org/fhir/TestScript/testscript-example-history#01-HistoryPatient:
+	http://hl7.org/fhir/Element.id  N3313ba5090884c8594a7ed1f394896c0
+	http://hl7.org/fhir/index  0
+	http://hl7.org/fhir/TestScript.test.action  N94354ee3091b420c8c1cdc1f8f4bc384
+	http://hl7.org/fhir/TestScript.test.description  N8d2b727df3cd4b9dbea214874f654f3d
+	http://hl7.org/fhir/TestScript.test.action  N64edf04f4b3b4ef89f9c1513bde69d0e
+	http://hl7.org/fhir/TestScript.test.name  N452bdd6a6a234cb2b5e334dffad9cd55
+	http://hl7.org/fhir/TestScript.test.action  Neba84cf23bc1463e8d0dff28dd537211
+	http://hl7.org/fhir/TestScript.test.action  Nfdbcac2900fc494fb6a20bfceda5a5fa
+	http://hl7.org/fhir/TestScript.test.action  N067f3d7a6c224a3e8462fd7427ee1824
+
+http://hl7.org/fhir/TestScript/testscript-example-history#bundle-profile:
+	http://hl7.org/fhir/Reference.reference  Ne0546750db36491d86ed2487342b16a3
+	http://hl7.org/fhir/index  0
+	http://hl7.org/fhir/Element.id  Nd96b1f0f4a9449a49f0f149a1110a5c0
+	http://hl7.org/fhir/link  http://hl7.org/fhir/StructureDefinition/Bundle
+
+http://hl7.org/fhir/TestScript/testscript-example-history#fixture-patient-create:
+	http://hl7.org/fhir/TestScript.fixture.autodelete  N62ecb96908564cb6bb5a570b22c87abd
+	http://hl7.org/fhir/index  0
+	http://hl7.org/fhir/TestScript.fixture.resource  N5282ed0386a941e58aa4368b6ea66f06
+	http://hl7.org/fhir/Element.id  Nbeaa89e0c24b4f3e89f1f00a09aa0f3d
+	http://hl7.org/fhir/TestScript.fixture.autocreate  N98e32783df7142f6a78df8252c8d955a
+
+http://hl7.org/fhir/TestScript/testscript-example-history#fixture-patient-update:
+	http://hl7.org/fhir/index  1
+	http://hl7.org/fhir/TestScript.fixture.autocreate  N0c3ccca1bb1d4b239c4847d0d3dc9d0c
+	http://hl7.org/fhir/TestScript.fixture.autodelete  N55ae457f7e624ae0b80f17ca90683c27
+	http://hl7.org/fhir/Element.id  Nae8d083a80e24fc3aea0366d957be81c
+	http://hl7.org/fhir/TestScript.fixture.resource  N993f926b02cf4fc089d7039ad5cd82a6
