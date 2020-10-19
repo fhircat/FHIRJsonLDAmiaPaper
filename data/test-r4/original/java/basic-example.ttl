@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/Basic/referral> a fhir:Basic ;
+    fhir:Basic.author [ fhir:Reference.reference [ fhir:value "Practitioner/example"^^xsd:string ] ;
+            fhir:link <http://hl7.org/fhir/Practitioner/example> ] ;
+    fhir:Basic.code [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/basic-resource-type/referral> ;
+                    fhir:Coding.code [ fhir:value "referral"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/basic-resource-type" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:Basic.created [ fhir:value "2013-05-14"^^xsd:date ] ;
+    fhir:Basic.identifier [ fhir:Identifier.system [ fhir:value "http://goodhealth.org/basic/identifiers" ] ;
+            fhir:Identifier.value [ fhir:value "19283746"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Basic.subject [ fhir:Reference.display [ fhir:value "Roel"^^xsd:string ] ;
+            fhir:Reference.reference [ fhir:value "Patient/f201"^^xsd:string ] ;
+            fhir:link <http://hl7.org/fhir/Patient/f201> ] ;
+    fhir:DomainResource.extension [ fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#notes"^^xsd:string ] ;
+            fhir:Extension.valueString [ fhir:value "The patient had fever peaks over the last couple of days. He is worried about these peaks."^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#fulfillingEncounter"^^xsd:string ] ;
+            fhir:Extension.valueReference [ fhir:Reference.reference [ fhir:value "Encounter/f201"^^xsd:string ] ;
+                    fhir:link <http://hl7.org/fhir/Encounter/f201> ] ;
+            fhir:index 2 ],
+        [ fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#requestingPractitioner"^^xsd:string ] ;
+            fhir:Extension.valueReference [ fhir:Reference.display [ fhir:value "Dokter Bronsig"^^xsd:string ] ;
+                    fhir:Reference.reference [ fhir:value "Practitioner/f201"^^xsd:string ] ;
+                    fhir:link <http://hl7.org/fhir/Practitioner/f201> ] ;
+            fhir:index 0 ] ;
+    fhir:DomainResource.modifierExtension [ fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#referredForService"^^xsd:string ] ;
+            fhir:Extension.valueCodeableConcept [ fhir:CodeableConcept.coding [ a <http://snomed.info/id/11429006> ;
+                            fhir:Coding.code [ fhir:value "11429006"^^xsd:string ] ;
+                            fhir:Coding.display [ fhir:value "Consultation"^^xsd:string ] ;
+                            fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+                            fhir:index 0 ] ] ;
+            fhir:index 0 ],
+        [ fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#status"^^xsd:string ] ;
+            fhir:Extension.valueCode [ fhir:value "complete"^^xsd:string ] ;
+            fhir:index 2 ],
+        [ fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#targetDate"^^xsd:string ] ;
+            fhir:Extension.valuePeriod [ fhir:Period.end [ fhir:value "2013-04-15"^^xsd:date ] ;
+                    fhir:Period.start [ fhir:value "2013-04-01"^^xsd:date ] ] ;
+            fhir:index 1 ] ;
+    fhir:DomainResource.text [ fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml">
+      <p><b>Patient:</b>Roel</p>
+      <p><b>Requestor:</b>Dokter Bronsig</p>
+      <p><b>Type:</b>Consultation</p>
+      <p><b>Target Date:</b>April 1 - April 31</p>
+      <p>COMPLETED</p>
+      <b>The patient had fever peaks over the last couple of days. He is worried about these peaks.</b>
+    </div>"""^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:Resource.id [ fhir:value "referral"^^xsd:string ] ;
+    fhir:Resource.meta [ fhir:Meta.tag [ fhir:Coding.code [ fhir:value "HTEST"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "test health data"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:nodeRole fhir:treeRoot .
+
+<http://hl7.org/fhir/Basic/referral.ttl> a owl:Ontology ;
+    owl:imports fhir:fhir.ttl ;
+    owl:versionIRI <http://build.fhir.org/Basic/referral.ttl> .
+
+<http://hl7.org/fhir/Encounter/f201> a fhir:Encounter .
+
+<http://hl7.org/fhir/Patient/f201> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+<http://hl7.org/fhir/Practitioner/f201> a fhir:Practitioner .
+

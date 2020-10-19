@@ -1,0 +1,111 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/Task/example1> a fhir:Task ;
+    fhir:DomainResource.contained <http://hl7.org/fhir/Task/example1#signature> ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example1</p><p><b>contained</b>: </p><p><b>identifier</b>: 20170201-001 (OFFICIAL)</p><p><b>basedOn</b>: General Wellness Careplan</p><p><b>groupIdentifier</b>: G20170201-001 (OFFICIAL)</p><p><b>status</b>: in-progress</p><p><b>businessStatus</b>: waiting for specimen <span>(Details )</span></p><p><b>intent</b>: order</p><p><b>priority</b>: routine</p><p><b>code</b>: Lipid Panel <span>(Details )</span></p><p><b>description</b>: Create order for getting specimen, Set up inhouse testing,  generate order for any sendouts and submit with specimen</p><p><b>focus</b>: <a>Lipid Panel Request</a></p><p><b>for</b>: <a>Peter James Chalmers</a></p><p><b>encounter</b>: <a>Example In-Patient Encounter</a></p><p><b>executionPeriod</b>: 31/10/2016 8:25:05 AM --&gt; (ongoing)</p><p><b>authoredOn</b>: 31/10/2016 8:25:05 AM</p><p><b>lastModified</b>: 31/10/2016 9:45:05 AM</p><p><b>requester</b>: <a>Dr Adam Careful</a></p><p><b>performerType</b>: Performer <span>(Details : {http://terminology.hl7.org/CodeSystem/task-performer-type code 'performer' = 'performer', given as 'Performer'})</span></p><p><b>owner</b>: <a>Clinical Laboratory @ Acme Hospital</a></p><p><b>reasonCode</b>: The Task.reason should only be included if there is no Task.focus or if it differs from the reason indicated on the focus <span>(Details )</span></p><p><b>note</b>: This is an example to demonstrate using task for actioning a servicerequest and to illustrate how to populate many of the task elements - this is the parent task that will be broken into subtask to grab the specimen and a sendout lab test </p><p><b>relevantHistory</b>: Author's Signature. Generated Summary: id: signature; recorded: 31/10/2016 8:25:05 AM; </p><h3>Restrictions</h3><table><tr><td>-</td><td><b>Repetitions</b></td><td><b>Period</b></td></tr><tr><td>*</td><td>1</td><td>?? --&gt; 02/11/2016 9:45:05 AM</td></tr></table></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:Resource.id [ fhir:value "example1"^^xsd:string ] ;
+    fhir:Resource.meta [ fhir:Meta.tag [ fhir:Coding.code [ fhir:value "HTEST"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "test health data"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:Task.authoredOn [ fhir:value "2016-10-31T08:25:05+10:00"^^xsd:dateTime ] ;
+    fhir:Task.basedOn [ fhir:Reference.display [ fhir:value "General Wellness Careplan"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Task.businessStatus [ fhir:CodeableConcept.text [ fhir:value "waiting for specimen"^^xsd:string ] ] ;
+    fhir:Task.code [ fhir:CodeableConcept.text [ fhir:value "Lipid Panel"^^xsd:string ] ] ;
+    fhir:Task.description [ fhir:value "Create order for getting specimen, Set up inhouse testing,  generate order for any sendouts and submit with specimen"^^xsd:string ] ;
+    fhir:Task.encounter [ fhir:Reference.display [ fhir:value "Example In-Patient Encounter"^^xsd:string ] ;
+            fhir:Reference.reference [ fhir:value "Encounter/example"^^xsd:string ] ;
+            fhir:link <http://hl7.org/fhir/Encounter/example> ] ;
+    fhir:Task.executionPeriod [ fhir:Period.start [ fhir:value "2016-10-31T08:25:05+10:00"^^xsd:dateTime ] ] ;
+    fhir:Task.focus [ fhir:Reference.display [ fhir:value "Lipid Panel Request"^^xsd:string ] ;
+            fhir:Reference.reference [ fhir:value "ServiceRequest/lipid"^^xsd:string ] ;
+            fhir:link <http://hl7.org/fhir/ServiceRequest/lipid> ] ;
+    fhir:Task.for [ fhir:Reference.display [ fhir:value "Peter James Chalmers"^^xsd:string ] ;
+            fhir:Reference.reference [ fhir:value "Patient/example"^^xsd:string ] ;
+            fhir:link <http://hl7.org/fhir/Patient/example> ] ;
+    fhir:Task.groupIdentifier [ fhir:Identifier.system [ fhir:value "http:/goodhealth.org/accession/identifiers" ] ;
+            fhir:Identifier.use [ fhir:value "official"^^xsd:string ] ;
+            fhir:Identifier.value [ fhir:value "G20170201-001"^^xsd:string ] ] ;
+    fhir:Task.identifier [ fhir:Identifier.system [ fhir:value "http:/goodhealth.org/identifiers" ] ;
+            fhir:Identifier.use [ fhir:value "official"^^xsd:string ] ;
+            fhir:Identifier.value [ fhir:value "20170201-001"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Task.intent [ fhir:value "order"^^xsd:string ] ;
+    fhir:Task.lastModified [ fhir:value "2016-10-31T09:45:05+10:00"^^xsd:dateTime ] ;
+    fhir:Task.note [ fhir:Annotation.text [ fhir:value "This is an example to demonstrate using task for actioning a servicerequest and to illustrate how to populate many of the task elements - this is the parent task that will be broken into subtask to grab the specimen and a sendout lab test "^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Task.owner [ fhir:Reference.display [ fhir:value "Clinical Laboratory @ Acme Hospital"^^xsd:string ] ;
+            fhir:Reference.reference [ fhir:value "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f"^^xsd:string ] ;
+            fhir:link <http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> ] ;
+    fhir:Task.performerType [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/task-performer-type/performer> ;
+                    fhir:Coding.code [ fhir:value "performer"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "Performer"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/task-performer-type" ] ;
+                    fhir:index 0 ] ;
+            fhir:CodeableConcept.text [ fhir:value "Performer"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Task.priority [ fhir:value "routine"^^xsd:string ] ;
+    fhir:Task.reasonCode [ fhir:CodeableConcept.text [ fhir:value "The Task.reason should only be included if there is no Task.focus or if it differs from the reason indicated on the focus"^^xsd:string ] ] ;
+    fhir:Task.relevantHistory [ fhir:Reference.display [ fhir:value "Author's Signature"^^xsd:string ] ;
+            fhir:Reference.reference [ fhir:value "#signature"^^xsd:string ] ;
+            fhir:index 0 ;
+            fhir:link <http://hl7.org/fhir/Task/example1#signature> ] ;
+    fhir:Task.requester [ fhir:Reference.display [ fhir:value "Dr Adam Careful"^^xsd:string ] ;
+            fhir:Reference.reference [ fhir:value "Practitioner/example"^^xsd:string ] ;
+            fhir:link <http://hl7.org/fhir/Practitioner/example> ] ;
+    fhir:Task.restriction [ fhir:Task.restriction.period [ fhir:Period.end [ fhir:value "2016-11-02T09:45:05+10:00"^^xsd:dateTime ] ] ;
+            fhir:Task.restriction.repetitions [ fhir:value "1"^^xsd:positiveInteger ] ] ;
+    fhir:Task.status [ fhir:value "in-progress"^^xsd:string ] ;
+    fhir:nodeRole fhir:treeRoot .
+
+<http://hl7.org/fhir/Task/example1.ttl> a owl:Ontology ;
+    owl:imports fhir:fhir.ttl ;
+    owl:versionIRI <http://build.fhir.org/Task/example1.ttl> .
+
+<http://hl7.org/fhir/Encounter/example> a fhir:Encounter .
+
+<http://hl7.org/fhir/Organization/1832473e-2fe0-452d-abe9-3cdb9879522f> a fhir:Organization .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+
+<http://hl7.org/fhir/Practitioner/f202> a fhir:Practitioner .
+
+<http://hl7.org/fhir/ServiceRequest/lipid> a fhir:ServiceRequest .
+
+<http://hl7.org/fhir/ServiceRequest/physiotherapy/_history/1> a fhir:ServiceRequest .
+
+<http://hl7.org/fhir/Practitioner/example> a fhir:Practitioner .
+
+<http://hl7.org/fhir/Task/example1#signature> a fhir:Provenance ;
+    fhir:Provenance.agent [ fhir:Provenance.agent.role [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v3-ParticipationType/AUT> ;
+                            fhir:Coding.code [ fhir:value "AUT"^^xsd:string ] ;
+                            fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ParticipationType" ] ;
+                            fhir:index 0 ] ;
+                    fhir:index 0 ] ;
+            fhir:Provenance.agent.who [ fhir:Reference.display [ fhir:value "Luigi Maas"^^xsd:string ] ;
+                    fhir:Reference.reference [ fhir:value "Practitioner/f202"^^xsd:string ] ;
+                    fhir:link <http://hl7.org/fhir/Practitioner/f202> ] ;
+            fhir:index 0 ] ;
+    fhir:Provenance.recorded [ fhir:value "2016-10-31T08:25:05+10:00"^^xsd:dateTime ] ;
+    fhir:Provenance.signature [ fhir:Signature.data [ fhir:value "this blob is snipped"^^xsd:base64Binary ] ;
+            fhir:Signature.sigFormat [ fhir:value "application/signature+xml"^^xsd:string ] ;
+            fhir:Signature.targetFormat [ fhir:value "application/fhir+xml"^^xsd:string ] ;
+            fhir:Signature.type [ fhir:Coding.code [ fhir:value "1.2.840.10065.1.12.1.1"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "Author's Signature"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso-astm:E1762-95:2013" ] ;
+                    fhir:index 0 ] ;
+            fhir:Signature.when [ fhir:value "2016-10-31T08:25:05+10:00"^^xsd:dateTime ] ;
+            fhir:Signature.who [ fhir:Reference.display [ fhir:value "Dr Adam Careful"^^xsd:string ] ;
+                    fhir:Reference.reference [ fhir:value "Practitioner/example"^^xsd:string ] ;
+                    fhir:link <http://hl7.org/fhir/Practitioner/example> ] ;
+            fhir:index 0 ] ;
+    fhir:Provenance.target [ fhir:Reference.reference [ fhir:value "ServiceRequest/physiotherapy/_history/1"^^xsd:string ] ;
+            fhir:index 0 ;
+            fhir:link <http://hl7.org/fhir/ServiceRequest/physiotherapy/_history/1> ] ;
+    fhir:Resource.id [ fhir:value "signature"^^xsd:string ] ;
+    fhir:index 0 .
+

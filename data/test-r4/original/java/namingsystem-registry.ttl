@@ -1,0 +1,1636 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/Bundle/registry> a fhir:Bundle ;
+    fhir:Bundle.entry [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.28" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.28> ;
+            fhir:index 31 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.44" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.44> ;
+            fhir:index 45 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.41" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.41> ;
+            fhir:index 43 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.35" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.35> ;
+            fhir:index 39 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.26" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.26> ;
+            fhir:index 28 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.6" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.6> ;
+            fhir:index 10 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.5" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.5> ;
+            fhir:index 8 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.10" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.10> ;
+            fhir:index 14 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.51" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.51> ;
+            fhir:index 51 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.29" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.29> ;
+            fhir:index 30 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.33" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.33> ;
+            fhir:index 37 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/us-medicare" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/us-medicare> ;
+            fhir:index 2 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.11" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.11> ;
+            fhir:index 13 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.16" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.16> ;
+            fhir:index 20 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.47" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.47> ;
+            fhir:index 48 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.15" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.15> ;
+            fhir:index 17 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.8" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.8> ;
+            fhir:index 11 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.40" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.40> ;
+            fhir:index 42 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.48" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.48> ;
+            fhir:index 49 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.46" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.46> ;
+            fhir:index 47 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.42" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.42> ;
+            fhir:index 44 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.22" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.22> ;
+            fhir:index 24 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.45" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.45> ;
+            fhir:index 46 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.38" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.38> ;
+            fhir:index 35 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.32" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.32> ;
+            fhir:index 40 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/gtin" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/gtin> ;
+            fhir:index 5 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/us-ssn" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/us-ssn> ;
+            fhir:index 1 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.23" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.23> ;
+            fhir:index 27 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.50" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.50> ;
+            fhir:index 52 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.9" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.9> ;
+            fhir:index 12 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.2" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.2> ;
+            fhir:index 6 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.36" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.36> ;
+            fhir:index 33 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/us-npi" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/us-npi> ;
+            fhir:index 4 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.54" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.54> ;
+            fhir:index 55 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.30" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.30> ;
+            fhir:index 32 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.39" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.39> ;
+            fhir:index 41 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.56" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.56> ;
+            fhir:index 56 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.37" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.37> ;
+            fhir:index 34 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.53" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.53> ;
+            fhir:index 53 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.13" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.13> ;
+            fhir:index 16 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.31" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.31> ;
+            fhir:index 36 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.24" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.24> ;
+            fhir:index 26 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.17" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.17> ;
+            fhir:index 21 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.20" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.20> ;
+            fhir:index 22 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.1" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.1> ;
+            fhir:index 7 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.19" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.19> ;
+            fhir:index 19 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.27" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.27> ;
+            fhir:index 29 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.12" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.12> ;
+            fhir:index 15 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.49" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.49> ;
+            fhir:index 50 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.25" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.25> ;
+            fhir:index 25 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.21" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.21> ;
+            fhir:index 23 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/dicom-uid" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/dicom-uid> ;
+            fhir:index 0 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.4" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.4> ;
+            fhir:index 9 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.18" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.18> ;
+            fhir:index 18 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/us-mbi" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/us-mbi> ;
+            fhir:index 3 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.34" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.34> ;
+            fhir:index 38 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.55" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.55> ;
+            fhir:index 54 ] ;
+    fhir:Bundle.type [ fhir:value "collection"^^xsd:string ] ;
+    fhir:Resource.id [ fhir:value "registry"^^xsd:string ] ;
+    fhir:Resource.meta [ fhir:Meta.tag [ fhir:Coding.code [ fhir:value "HTEST"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "test health data"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:nodeRole fhir:treeRoot .
+
+<http://hl7.org/fhir/Bundle/registry.ttl> a owl:Ontology ;
+    owl:imports fhir:fhir.ttl ;
+    owl:versionIRI <http://build.fhir.org/Bundle/registry.ttl> .
+
+<http://hl7.org/fhir/NamingSystem/4.3.1> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.1</p><p><b>name</b>: Alabama Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.1</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.1</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Alabama Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.1"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.1"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.1"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.10> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.10</p><p><b>name</b>: Delaware Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.10</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.10</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Delaware Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.10"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.10"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.10"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.11> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.11</p><p><b>name</b>: DC Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.11</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.11</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "DC Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.11"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.11"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.11"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.12> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.12</p><p><b>name</b>: Florida Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.12</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.12</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Florida Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.12"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.12"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.12"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.13> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.13</p><p><b>name</b>: Georgia Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.13</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.13</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Georgia Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.13"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.13"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.13"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.15> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.15</p><p><b>name</b>: Hawaii Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.15</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.15</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Hawaii Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.15"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.15"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.15"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.16> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.16</p><p><b>name</b>: Idaho Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.16</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.16</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Idaho Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.16"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.16"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.16"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.17> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.17</p><p><b>name</b>: Illinois Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.17</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.17</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Illinois Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.17"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.17"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.17"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.18> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.18</p><p><b>name</b>: Indiana Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.18</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.18</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Indiana Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.18"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.18"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.18"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.19> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.19</p><p><b>name</b>: Iowa Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.19</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.19</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Iowa Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.19"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.19"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.19"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.2> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.2</p><p><b>name</b>: Alaska Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.2</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.2</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Alaska Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.2"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.2"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.2"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.20> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.20</p><p><b>name</b>: Kansas Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.20</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.20</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Kansas Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.20"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.20"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.20"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.21> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.21</p><p><b>name</b>: Kentucky Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.21</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.21</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Kentucky Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.21"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.21"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.21"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.22> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.22</p><p><b>name</b>: Louisiana Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.22</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.22</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Louisiana Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.22"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.22"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.22"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.23> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.23</p><p><b>name</b>: Maine Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.23</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.23</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Maine Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.23"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.23"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.23"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.24> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.24</p><p><b>name</b>: Maryland Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.24</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.24</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Maryland Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.24"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.24"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.24"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.25> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.25</p><p><b>name</b>: Massachusetts Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.25</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.25</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Massachusetts Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.25"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.25"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.25"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.26> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.26</p><p><b>name</b>: Michigan Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.26</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.26</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Michigan Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.26"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.26"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.26"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.27> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.27</p><p><b>name</b>: Minnesota Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.27</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.27</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Minnesota Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.27"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.27"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.27"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.28> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.28</p><p><b>name</b>: Mississippi Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.28</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.28</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Mississippi Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.28"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.28"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.28"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.29> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.29</p><p><b>name</b>: Missouri Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.29</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.29</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Missouri Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.29"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.29"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.29"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.30> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.30</p><p><b>name</b>: Montana Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.30</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.30</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Montana Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.30"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.30"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.30"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.31> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.31</p><p><b>name</b>: Nebraska Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.31</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.31</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Nebraska Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.31"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.31"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.31"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.32> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.32</p><p><b>name</b>: Nevada Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.32</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.32</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Nevada Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.32"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.32"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.32"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.33> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.33</p><p><b>name</b>: New Hampshire Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.33</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.33</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "New Hampshire Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.33"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.33"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.33"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.34> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.34</p><p><b>name</b>: New Jersey Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.34</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.34</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "New Jersey Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.34"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.34"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.34"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.35> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.35</p><p><b>name</b>: New Mexico Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.35</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.35</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "New Mexico Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.35"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.35"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.35"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.36> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.36</p><p><b>name</b>: New York Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.36</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.36</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "New York Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.36"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.36"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.36"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.37> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.37</p><p><b>name</b>: North Carolina Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.37</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.37</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "North Carolina Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.37"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.37"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.37"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.38> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.38</p><p><b>name</b>: North Dakota Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.38</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.38</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "North Dakota Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.38"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.38"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.38"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.39> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.39</p><p><b>name</b>: Ohio Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.39</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.39</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Ohio Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.39"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.39"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.39"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.4> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.4</p><p><b>name</b>: Arizona Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.4</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.4</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Arizona Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.4"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.4"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.4"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.40> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.40</p><p><b>name</b>: Oklahoma Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.40</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.40</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Oklahoma Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.40"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.40"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.40"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.41> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.41</p><p><b>name</b>: Oregon Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.41</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.41</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Oregon Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.41"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.41"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.41"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.42> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.42</p><p><b>name</b>: Pennsylvania Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.42</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.42</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Pennsylvania Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.42"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.42"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.42"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.44> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.44</p><p><b>name</b>: Rhode Island Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.44</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.44</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Rhode Island Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.44"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.44"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.44"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.45> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.45</p><p><b>name</b>: South Carolina Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.45</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.45</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "South Carolina Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.45"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.45"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.45"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.46> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.46</p><p><b>name</b>: South Dakota Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.46</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.46</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "South Dakota Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.46"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.46"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.46"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.47> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.47</p><p><b>name</b>: Tennessee Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.47</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.47</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Tennessee Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.47"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.47"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.47"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.48> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.48</p><p><b>name</b>: Texas Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.48</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.48</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Texas Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.48"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.48"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.48"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.49> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.49</p><p><b>name</b>: Utah Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.49</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.49</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Utah Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.49"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.49"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.49"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.5> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.5</p><p><b>name</b>: Arkansas Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.5</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.5</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Arkansas Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.5"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.5"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.5"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.50> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.50</p><p><b>name</b>: Vermont Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.50</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.50</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Vermont Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.50"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.50"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.50"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.51> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.51</p><p><b>name</b>: Virginia Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.51</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.51</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Virginia Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.51"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.51"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.51"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.53> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.53</p><p><b>name</b>: Washington Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.53</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.53</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Washington Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.53"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.53"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.53"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.54> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.54</p><p><b>name</b>: West Virginia Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.54</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.54</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "West Virginia Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.54"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.54"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "4.3.54"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.55> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.55</p><p><b>name</b>: Wisconsin Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.55</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.55</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Wisconsin Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.55"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.55"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.55"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.56> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.56</p><p><b>name</b>: Wyoming Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.56</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.56</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Wyoming Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.56"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.56"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.56"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.6> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.6</p><p><b>name</b>: California Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.6</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.6</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "California Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.6"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.6"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.6"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.8> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.8</p><p><b>name</b>: Colorado Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.8</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.8</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Colorado Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.8"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.8"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.8"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/4.3.9> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 4.3.9</p><p><b>name</b>: Connecticut Driver's License</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 03/07/2015</p><p><b>publisher</b>: HL7 International</p><p><b>type</b>: Driver's license number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'DL' = 'Driver's license number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.3.9</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: urn:oid:2.16.840.1.113883.4.3.9</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-03"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Connecticut Driver's License"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "HL7 International"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/DL> ;
+                    fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.9"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.9"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "4.3.9"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/dicom-uid> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: dicom-uid</p><p><b>name</b>: DICOM Unique Id</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 31/07/2015</p><p><b>publisher</b>: NEMA</p><p><b>contact</b>: </p><p><b>description</b>: An OID issued under DICOM OID rules. DICOM OIDs are represented as plain OIDs, with a prefix of &quot;urn:oid:&quot;</p><p><b>jurisdiction</b>: World <span>(Details : {http://unstats.un.org/unsd/methods/m49/m49.htm code '001' = 'World)</span></p><h3>UniqueIds</h3><table><tr><td>-</td><td><b>Type</b></td><td><b>Value</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>uri</td><td>urn:dicom:uid</td><td>true</td></tr></table></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.contact [ fhir:ContactDetail.telecom [ fhir:ContactPoint.system [ fhir:value "url"^^xsd:string ] ;
+                    fhir:ContactPoint.value [ fhir:value "https://www.dicomstandard.org/"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-31"^^xsd:date ] ;
+    fhir:NamingSystem.description [ fhir:value "An OID issued under DICOM OID rules. DICOM OIDs are represented as plain OIDs, with a prefix of \"urn:oid:\""^^xsd:string ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <http://unstats.un.org/unsd/methods/m49/m49.htm/001> ;
+                    fhir:Coding.code [ fhir:value "001"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "DICOM Unique Id"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "NEMA"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.preferred [ fhir:value true ] ;
+            fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:dicom:uid"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "dicom-uid"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/gtin> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: gtin</p><p><b>name</b>: Global Trade Item Number (GTIN)</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 18/12/2017</p><p><b>publisher</b>: GS1</p><p><b>contact</b>: </p><p><b>description</b>: Note: GTINs may be used in both [Codes](datatypes.html#Coding) and [Identifiers](datatypes.html#Identifier)</p><p><b>jurisdiction</b>: World <span>(Details : {http://unstats.un.org/unsd/methods/m49/m49.htm code '001' = 'World)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 1.3.160</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: https://www.gs1.org/gtin</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.contact [ fhir:ContactDetail.telecom [ fhir:ContactPoint.system [ fhir:value "url"^^xsd:string ] ;
+                    fhir:ContactPoint.value [ fhir:value "http://www.gs1.org/"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.date [ fhir:value "2017-12-18"^^xsd:date ] ;
+    fhir:NamingSystem.description [ fhir:value "Note: GTINs may be used in both [Codes](datatypes.html#Coding) and [Identifiers](datatypes.html#Identifier)"^^xsd:string ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <http://unstats.un.org/unsd/methods/m49/m49.htm/001> ;
+                    fhir:Coding.code [ fhir:value "001"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Global Trade Item Number (GTIN)"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "GS1"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "https://www.gs1.org/gtin"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "1.3.160"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "gtin"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/us-mbi> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: us-mbi</p><p><b>name</b>: Medicare Beneficiary Identifier (United States)</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 12/07/2016</p><p><b>publisher</b>: Centers for Medicare &amp; Medicaid Services</p><p><b>contact</b>: </p><p><b>type</b>: Social Beneficiary Identifier <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'SB' = 'Social Beneficiary Identifier)</span></p><p><b>description</b>: Medicare Beneficiary Identifiers are represented without any spaces or dashes</p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: http://hl7.org/fhir/sid/us-mbi</p><p><b>preferred</b>: true</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.927</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.contact [ fhir:ContactDetail.telecom [ fhir:ContactPoint.system [ fhir:value "url"^^xsd:string ] ;
+                    fhir:ContactPoint.value [ fhir:value "https://www.medicare.gov/"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.date [ fhir:value "2016-07-12"^^xsd:date ] ;
+    fhir:NamingSystem.description [ fhir:value "Medicare Beneficiary Identifiers are represented without any spaces or dashes"^^xsd:string ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "Medicare Beneficiary Identifier (United States)"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "Centers for Medicare & Medicaid Services"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/SB> ;
+                    fhir:Coding.code [ fhir:value "SB"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.927"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.preferred [ fhir:value true ] ;
+            fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "http://hl7.org/fhir/sid/us-mbi"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Resource.id [ fhir:value "us-mbi"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/us-medicare> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: us-medicare</p><p><b>name</b>: United States Medicare Number</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 12/07/2016</p><p><b>publisher</b>: Centers for Medicare &amp; Medicaid Services</p><p><b>contact</b>: </p><p><b>type</b>: Social Beneficiary Identifier <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'SB' = 'Social Beneficiary Identifier)</span></p><p><b>description</b>: Medicare Numbers (HIC or HICN) are represented without any spaces or dashes</p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: http://hl7.org/fhir/sid/us-medicare</p><p><b>preferred</b>: true</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.572</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.contact [ fhir:ContactDetail.telecom [ fhir:ContactPoint.system [ fhir:value "url"^^xsd:string ] ;
+                    fhir:ContactPoint.value [ fhir:value "https://www.medicare.gov/"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.date [ fhir:value "2016-07-12"^^xsd:date ] ;
+    fhir:NamingSystem.description [ fhir:value "Medicare Numbers (HIC or HICN) are represented without any spaces or dashes"^^xsd:string ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "United States Medicare Number"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "Centers for Medicare & Medicaid Services"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/SB> ;
+                    fhir:Coding.code [ fhir:value "SB"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.preferred [ fhir:value true ] ;
+            fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "http://hl7.org/fhir/sid/us-medicare"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.572"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "us-medicare"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/us-npi> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: us-npi</p><p><b>name</b>: United States National Provider Identifier</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 31/07/2015</p><p><b>publisher</b>: Centers for Medicare and Medicaid Services</p><p><b>contact</b>: </p><p><b>type</b>: Provider number <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'PRN' = 'Provider number)</span></p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: http://hl7.org/fhir/sid/us-npi</p><p><b>preferred</b>: true</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.6</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.contact [ fhir:ContactDetail.telecom [ fhir:ContactPoint.system [ fhir:value "url"^^xsd:string ] ;
+                    fhir:ContactPoint.value [ fhir:value "http://www.cms.gov/"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-31"^^xsd:date ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "United States National Provider Identifier"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "Centers for Medicare and Medicaid Services"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/PRN> ;
+                    fhir:Coding.code [ fhir:value "PRN"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.preferred [ fhir:value true ] ;
+            fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "http://hl7.org/fhir/sid/us-npi"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.6"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "us-npi"^^xsd:string ] .
+
+<http://hl7.org/fhir/NamingSystem/us-ssn> a fhir:NamingSystem ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: us-ssn</p><p><b>name</b>: United States Social Security Number</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: 31/07/2015</p><p><b>publisher</b>: United States Social Security Administration</p><p><b>contact</b>: </p><p><b>type</b>: Social Beneficiary Identifier <span>(Details : {http://terminology.hl7.org/CodeSystem/v2-0203 code 'SB' = 'Social Beneficiary Identifier)</span></p><p><b>description</b>: The SSN is represented in resources with dashes removed</p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><blockquote><p><b>uniqueId</b></p><p><b>type</b>: uri</p><p><b>value</b>: http://hl7.org/fhir/sid/us-ssn</p><p><b>preferred</b>: true</p></blockquote><blockquote><p><b>uniqueId</b></p><p><b>type</b>: oid</p><p><b>value</b>: 2.16.840.1.113883.4.1</p></blockquote></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:NamingSystem.contact [ fhir:ContactDetail.telecom [ fhir:ContactPoint.system [ fhir:value "url"^^xsd:string ] ;
+                    fhir:ContactPoint.value [ fhir:value "http://www.ssa.gov/"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.date [ fhir:value "2015-07-31"^^xsd:date ] ;
+    fhir:NamingSystem.description [ fhir:value "The SSN is represented in resources with dashes removed"^^xsd:string ] ;
+    fhir:NamingSystem.jurisdiction [ fhir:CodeableConcept.coding [ a <urn:iso:std:iso:3166/US> ;
+                    fhir:Coding.code [ fhir:value "US"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:NamingSystem.kind [ fhir:value "identifier"^^xsd:string ] ;
+    fhir:NamingSystem.name [ fhir:value "United States Social Security Number"^^xsd:string ] ;
+    fhir:NamingSystem.publisher [ fhir:value "United States Social Security Administration"^^xsd:string ] ;
+    fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:NamingSystem.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v2-0203/SB> ;
+                    fhir:Coding.code [ fhir:value "SB"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.preferred [ fhir:value true ] ;
+            fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "http://hl7.org/fhir/sid/us-ssn"^^xsd:string ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.1"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:Resource.id [ fhir:value "us-ssn"^^xsd:string ] .
+

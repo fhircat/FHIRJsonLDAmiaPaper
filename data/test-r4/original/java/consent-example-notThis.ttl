@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/Consent/consent-example-notThis> a fhir:Consent ;
+    fhir:Consent.category [ fhir:CodeableConcept.coding [ a <http://loinc.org/rdf#59284-0> ;
+                    fhir:Coding.code [ fhir:value "59284-0"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:Consent.dateTime [ fhir:value "2015-11-18"^^xsd:date ] ;
+    fhir:Consent.organization [ fhir:Reference.reference [ fhir:value "Organization/f001"^^xsd:string ] ;
+            fhir:index 0 ;
+            fhir:link <http://hl7.org/fhir/Organization/f001> ] ;
+    fhir:Consent.patient [ fhir:Reference.display [ fhir:value "P. van de Heuvel"^^xsd:string ] ;
+            fhir:Reference.reference [ fhir:value "Patient/f001"^^xsd:string ] ;
+            fhir:link <http://hl7.org/fhir/Patient/f001> ] ;
+    fhir:Consent.policyRule [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/v3-ActCode/OPTIN> ;
+                    fhir:Coding.code [ fhir:value "OPTIN"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:Consent.provision [ fhir:Consent.provision.data [ fhir:Consent.provision.data.meaning [ fhir:value "related"^^xsd:string ] ;
+                    fhir:Consent.provision.data.reference [ fhir:Reference.reference [ fhir:value "Task/example3"^^xsd:string ] ;
+                            fhir:link <http://hl7.org/fhir/Task/example3> ] ;
+                    fhir:index 0 ] ] ;
+    fhir:Consent.scope [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/consentscope/patient-privacy> ;
+                    fhir:Coding.code [ fhir:value "patient-privacy"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentscope" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:Consent.sourceAttachment [ fhir:Attachment.title [ fhir:value "The terms of the consent in lawyer speak."^^xsd:string ] ] ;
+    fhir:Consent.status [ fhir:value "active"^^xsd:string ] ;
+    fhir:DomainResource.text [ fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. 
+	The default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. 
+	In other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather 
+	than &quot;withhold&quot; or &quot;withdraw&quot; consent for.
+    <p>
+	specific to use-case 2. Withhold or withdraw consent for disclosure of a specific record (e.g. Lab Order/Result) 
+	</p><p>
+    Patient &quot;P. van de Heuvel&quot; Primary Care Provider, Dr. Philip Primary, has ordered a set of lab test which Adam 
+   wishes to keep as private as possible.  At the sample collection facility, he indicates that he would 
+   like withhold consent to disclose the order and all results associated with that specific order from 
+   all other providers  
+   </p>
+   </div>"""^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:Resource.id [ fhir:value "consent-example-notThis"^^xsd:string ] ;
+    fhir:Resource.meta [ fhir:Meta.tag [ fhir:Coding.code [ fhir:value "HTEST"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "test health data"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:nodeRole fhir:treeRoot .
+
+<http://hl7.org/fhir/Consent/consent-example-notThis.ttl> a owl:Ontology ;
+    owl:imports fhir:fhir.ttl ;
+    owl:versionIRI <http://build.fhir.org/Consent/consent-example-notThis.ttl> .
+
+<http://hl7.org/fhir/Organization/f001> a fhir:Organization .
+
+<http://hl7.org/fhir/Patient/f001> a fhir:Patient .
+
+<http://hl7.org/fhir/Task/example3> a fhir:Task .
+

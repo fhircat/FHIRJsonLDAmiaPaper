@@ -1,0 +1,130 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/ActivityDefinition/administer-zika-virus-exposure-assessment> a fhir:ActivityDefinition ;
+    fhir:ActivityDefinition.code [ fhir:CodeableConcept.coding [ a <http://example.org/questionnaires/zika-virus-exposure-assessment> ;
+                    fhir:Coding.code [ fhir:value "zika-virus-exposure-assessment"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://example.org/questionnaires" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:ActivityDefinition.description [ fhir:value "Administer Zika Virus Exposure Assessment"^^xsd:string ] ;
+    fhir:ActivityDefinition.kind [ fhir:value "ServiceRequest"^^xsd:string ] ;
+    fhir:ActivityDefinition.library [ fhir:index 0 ;
+            fhir:link <http://hl7.org/fhir/Library/zika-virus-intervention-logic> ;
+            fhir:value "Library/zika-virus-intervention-logic" ] ;
+    fhir:ActivityDefinition.participant [ fhir:ActivityDefinition.participant.type [ fhir:value "practitioner"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:ActivityDefinition.relatedArtifact [ fhir:RelatedArtifact.type [ fhir:value "derived-from"^^xsd:string ] ;
+            fhir:RelatedArtifact.url [ fhir:value "https://www.cdc.gov/zika/hc-providers/pregnant-woman.html" ] ;
+            fhir:index 0 ],
+        [ fhir:RelatedArtifact.resource [ fhir:link <http://hl7.org/fhir/Questionnaire/zika-virus-exposure-assessment> ;
+                    fhir:value "Questionnaire/zika-virus-exposure-assessment" ] ;
+            fhir:RelatedArtifact.type [ fhir:value "depends-on"^^xsd:string ] ;
+            fhir:index 1 ] ;
+    fhir:ActivityDefinition.status [ fhir:value "draft"^^xsd:string ] ;
+    fhir:ActivityDefinition.timingTiming [ fhir:Timing.event [ fhir:Element.extension [ fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/cqf-expression"^^xsd:string ] ;
+                            fhir:Extension.valueExpression [ fhir:Expression.expression [ fhir:value "Now()"^^xsd:string ] ;
+                                    fhir:Expression.language [ fhir:value "text/cql"^^xsd:string ] ] ;
+                            fhir:index 0 ] ;
+                    fhir:index 0 ] ] ;
+    fhir:ActivityDefinition.url [ fhir:value "http://example.org/ActivityDefinition/administer-zika-virus-exposure-assessment" ] ;
+    fhir:ActivityDefinition.useContext [ fhir:UsageContext.code [ a <http://terminology.hl7.org/CodeSystem/usage-context-type/age> ;
+                    fhir:Coding.code [ fhir:value "age"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/usage-context-type" ] ] ;
+            fhir:UsageContext.valueRange [ fhir:Range.low [ fhir:Quantity.unit [ fhir:value "a"^^xsd:string ] ;
+                            fhir:Quantity.value [ fhir:value 12.0 ] ] ] ;
+            fhir:index 0 ] ;
+    fhir:DomainResource.text [ fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml">
+         <table class="grid dict">
+            <tr>
+               <td>
+                  <b>Id: </b>
+               </td>
+            </tr>
+            <tr>
+               <td style="padding-left: 25px; padding-right: 25px;">ActivityDefinition/administer-zika-virus-exposure-assessment</td>
+            </tr>
+         </table>
+         <p/>
+         <table class="grid dict">
+            <tr>
+               <td>
+                  <b>Status: </b>
+               </td>
+            </tr>
+            <tr>
+               <td style="padding-left: 25px; padding-right: 25px;">draft</td>
+            </tr>
+         </table>
+         <p/>
+         <table class="grid dict">
+            <tr>
+               <td>
+                  <b>Description: </b>
+               </td>
+            </tr>
+            <tr>
+               <td style="padding-left: 25px; padding-right: 25px;">Administer Zika Virus Exposure Assessment</td>
+            </tr>
+         </table>
+         <p/>
+         <table class="grid dict">
+            <tr>
+               <td>
+                  <b>Category: </b>
+               </td>
+            </tr>
+            <tr>
+               <td style="padding-left: 25px; padding-right: 25px;">procedure</td>
+            </tr>
+         </table>
+         <p/>
+         <table class="grid dict">
+            <tr>
+               <td>
+                  <b>Code: </b>
+               </td>
+            </tr>
+            <tr>
+               <td style="padding-right: 25px;">
+                  <span>
+                     <span>
+                        <span style="padding-left: 25px;">
+                           <b>system: </b>
+                           <span>http://example.org/questionnaires</span>
+                           <br/>
+                        </span>
+                        <span style="padding-left: 25px;">
+                           <b>code: </b>
+                           <span>zika-virus-exposure-assessment</span>
+                           <br/>
+                        </span>
+                     </span>
+                  </span>
+               </td>
+            </tr>
+         </table>
+         <p/>
+         <table class="grid dict">
+            <tr>
+               <td>
+                  <b>Participant: </b>
+               </td>
+            </tr>
+            <tr style="vertical-align: top;">
+               <td style="padding-left: 25px; padding-right: 25px;">practitioner</td>
+            </tr>
+         </table>
+      </div>"""^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:Resource.id [ fhir:value "administer-zika-virus-exposure-assessment"^^xsd:string ] ;
+    fhir:nodeRole fhir:treeRoot .
+
+<http://hl7.org/fhir/ActivityDefinition/administer-zika-virus-exposure-assessment.ttl> a owl:Ontology ;
+    owl:imports fhir:fhir.ttl ;
+    owl:versionIRI <http://build.fhir.org/ActivityDefinition/administer-zika-virus-exposure-assessment.ttl> .
+
+<http://hl7.org/fhir/Library/zika-virus-intervention-logic> a fhir:Library .
+
+<http://hl7.org/fhir/Questionnaire/zika-virus-exposure-assessment> a fhir:Questionnaire .
+
