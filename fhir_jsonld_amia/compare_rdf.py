@@ -254,6 +254,36 @@ class Diffs:
                 # We need to determine which case we've got:
                 #  1) The triple(s) headed by auri do not appear at all in the expected graph
                 #  2) The triples appear, but are headed by BNodes in the expected graph.
+                possible_subjects: Set[BNode] = set()
+                for ap, ao in self.actual_graph.predicate_objects(auri):
+                    # See whether we can't zero in on one bnode in the expected graph
+                    if not possible_subjects:
+                        possible_subjects = set(s for s in self.expected_graph.subjects(ap, ao if not isinstance(ao, BNode) else None) if isinstance(s, BNode))
+                    else:
+                        possible_subjects.intersection_update(set(s for s in self.expected_graph.subjects(ap, ao if not isinstance(ao, BNode) else None) if isinstance(s, BNode)))
+                    if len(possible_subjects) == 1:
+                        break
+                if len(possible_subjects) == 1:
+                    # We're down to one possible subject, now convert as much as we can
+                    expected_subject = possible_subjects.pop()
+                    new_actual_subject = BNode()
+                    keep = False
+                    for ap, ao in list(self.actual_graph.predicate_objects(auri)):
+                        if (expected_subject, ap, ao if not isinstance(ao, BNode) else None) in self.expected_graph:
+                            self.actual_graph.add((new_actual_subject, ap, ao), "Original RDF has a bnode (1)")
+                            self.actual_graph.remove((auri, ap, ao), "Original RDF has a bnode (2)")
+                        else:
+                            keep = True
+                    for asub, ap in list(self.actual_graph.subject_predicates(auri)):
+                        if ap != FHIR.link:
+                            self.actual_graph.add((asub, ap, new_actual_subject), "Original RDF has a bnode (3)")
+                        self.actual_graph.remove((asub, ap, auri), "Original RDF has a bnode (4)")
+                    if not keep:
+                        in_actual_only.remove(a)
+
+            # TODO: Is any of this still sued?
+            for a in list(in_actual_only):
+                auri = URIRef(a)
                 if (auri, RDF.type, None) in self.actual_graph:
                     in_actual_only.remove(a)
                     for exp_type in list(self.actual_graph.objects(auri, RDF.type)):
