@@ -132,6 +132,9 @@ dmypy.json
 */node_modules
 *.iml
 
+# Mac
+.DS_Store
 
 data/fhir-r5/
 data/fhir-r4/
+!data/fhir-r4/compare-report
