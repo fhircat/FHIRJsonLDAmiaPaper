@@ -1,0 +1,234 @@
+----- Missing Triples n=70 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/MedicinalProductPackaged/example> fhir:MedicinalProductPackaged.packageItem :_e1 .
+
+:_e1 fhir:MedicinalProductPackaged.packageItem.manufacturer :_e21 ;
+    fhir:MedicinalProductPackaged.packageItem.material :_e22,
+        :_e23,
+        :_e24 ;
+    fhir:MedicinalProductPackaged.packageItem.packageItem :_e18 ;
+    fhir:MedicinalProductPackaged.packageItem.physicalCharacteristics :_e26 ;
+    fhir:MedicinalProductPackaged.packageItem.quantity :_e28 ;
+    fhir:MedicinalProductPackaged.packageItem.type :_e30 ;
+    fhir:index 0 .
+
+:_e10 fhir:value "Blister" .
+
+:_e11 fhir:value "Thismedicinalproductdoesnotrequireanyspecialstoragecondition." .
+
+:_e12 fhir:value "Paperboard" .
+
+:_e14 fhir:value "http://ema.europa.eu/example/packageitemcontainertype" .
+
+:_e15 fhir:value "http://ema.europa.eu/example/specialprecautionsforstorage" .
+
+:_e16 fhir:value "http://ema.europa.eu/example/packageItemContainerMaterial" .
+
+:_e18 fhir:MedicinalProductPackaged.packageItem.manufacturedItem :_e19 ;
+    fhir:MedicinalProductPackaged.packageItem.manufacturer :_e20 ;
+    fhir:MedicinalProductPackaged.packageItem.material :_e6 ;
+    fhir:MedicinalProductPackaged.packageItem.physicalCharacteristics :_e25 ;
+    fhir:MedicinalProductPackaged.packageItem.quantity :_e27 ;
+    fhir:MedicinalProductPackaged.packageItem.shelfLifeStorage :_e29 ;
+    fhir:MedicinalProductPackaged.packageItem.type :_e2 ;
+    fhir:index 0 .
+
+:_e19 fhir:Reference.reference :_e42 ;
+    fhir:index 0 .
+
+:_e2 fhir:CodeableConcept.coding :_e3 .
+
+:_e20 fhir:Reference.reference :_e43 ;
+    fhir:index 0 ;
+    fhir:link <http://hl7.org/fhir/Organization/example> .
+
+:_e25 fhir:ProdCharacteristic.height :_e31 ;
+    fhir:ProdCharacteristic.width :_e32 .
+
+:_e27 fhir:Quantity.unit :_e35 ;
+    fhir:Quantity.value :_e39 .
+
+:_e29 fhir:ProductShelfLife.period :_e33 ;
+    fhir:ProductShelfLife.specialPrecautionsForStorage :_e4 ;
+    fhir:ProductShelfLife.type :_e8 ;
+    fhir:index 0 .
+
+:_e3 fhir:Coding.code :_e10 ;
+    fhir:Coding.system :_e14 ;
+    fhir:index 0 .
+
+:_e31 fhir:Quantity.unit :_e34 ;
+    fhir:Quantity.value :_e38 .
+
+:_e32 fhir:Quantity.unit :_e36 ;
+    fhir:Quantity.value :_e40 .
+
+:_e33 fhir:Quantity.unit :_e37 ;
+    fhir:Quantity.value :_e41 .
+
+:_e34 fhir:value "mm" .
+
+:_e35 fhir:value "1" .
+
+:_e36 fhir:value "mm" .
+
+:_e37 fhir:value "a" .
+
+:_e38 fhir:value 125.0 .
+
+:_e39 fhir:value 1.0 .
+
+:_e4 fhir:CodeableConcept.coding :_e5 ;
+    fhir:index 0 .
+
+:_e40 fhir:value 45.0 .
+
+:_e41 fhir:value 3.0 .
+
+:_e42 fhir:value "MedicinalProductManufactured/example" .
+
+:_e5 fhir:Coding.code :_e11 ;
+    fhir:Coding.system :_e15 ;
+    fhir:index 0 .
+
+:_e6 fhir:CodeableConcept.coding :_e7 ;
+    fhir:index 0 .
+
+:_e7 fhir:Coding.code :_e12 ;
+    fhir:Coding.system :_e16 ;
+    fhir:index 0 .
+
+:_e8 fhir:CodeableConcept.coding :_e9 .
+
+:_e9 fhir:Coding.code :_e13 ;
+    fhir:Coding.system :_e17 ;
+    fhir:index 0 .
+
+
+----- Added Triples  n=71 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/MedicinalProductPackaged/example> fhir:MedicinalProductPackaged.packageItem :_a1 .
+
+:_a1 fhir:MedicinalProductPackaged.packageItem.manufacturer :_a21 ;
+    fhir:MedicinalProductPackaged.packageItem.material :_a22,
+        :_a23,
+        :_a24 ;
+    fhir:MedicinalProductPackaged.packageItem.packageItem :_a18 ;
+    fhir:MedicinalProductPackaged.packageItem.physicalCharacteristics :_a26 ;
+    fhir:MedicinalProductPackaged.packageItem.quantity :_a28 ;
+    fhir:MedicinalProductPackaged.packageItem.type :_a30 ;
+    fhir:index 0 .
+
+:_a10 fhir:value "Blister" .
+
+:_a11 fhir:value "Thismedicinalproductdoesnotrequireanyspecialstoragecondition." .
+
+:_a13 fhir:value "Paperboard" .
+
+:_a14 fhir:value "http://ema.europa.eu/example/packageitemcontainertype" .
+
+:_a15 fhir:value "http://ema.europa.eu/example/specialprecautionsforstorage" .
+
+:_a17 fhir:value "http://ema.europa.eu/example/packageItemContainerMaterial" .
+
+:_a18 fhir:MedicinalProductPackaged.packageItem.manufacturedItem :_a19 ;
+    fhir:MedicinalProductPackaged.packageItem.manufacturer :_a20 ;
+    fhir:MedicinalProductPackaged.packageItem.material :_a4 ;
+    fhir:MedicinalProductPackaged.packageItem.physicalCharacteristics :_a25 ;
+    fhir:MedicinalProductPackaged.packageItem.quantity :_a27 ;
+    fhir:MedicinalProductPackaged.packageItem.shelfLifeStorage :_a29 ;
+    fhir:MedicinalProductPackaged.packageItem.type :_a8 ;
+    fhir:index 0 .
+
+:_a19 fhir:Reference.reference :_a42 ;
+    fhir:index 0 ;
+    fhir:link <http://hl7.org/fhir/MedicinalProductManufactured/example> .
+
+:_a2 fhir:CodeableConcept.coding :_a3 .
+
+:_a20 fhir:Reference.reference :_a43 ;
+    fhir:index 0 ;
+    fhir:link <http://hl7.org/fhir/Organization/example> .
+
+:_a25 fhir:ProdCharacteristic.height :_a31 ;
+    fhir:ProdCharacteristic.width :_a32 .
+
+:_a27 fhir:Quantity.unit :_a37 ;
+    fhir:Quantity.value :_a41 .
+
+:_a29 fhir:ProductShelfLife.period :_a33 ;
+    fhir:ProductShelfLife.specialPrecautionsForStorage :_a6 ;
+    fhir:ProductShelfLife.type :_a2 ;
+    fhir:index 0 .
+
+:_a3 fhir:Coding.code :_a12 ;
+    fhir:Coding.system :_a16 ;
+    fhir:index 0 .
+
+:_a31 fhir:Quantity.unit :_a34 ;
+    fhir:Quantity.value :_a38 .
+
+:_a32 fhir:Quantity.unit :_a36 ;
+    fhir:Quantity.value :_a40 .
+
+:_a33 fhir:Quantity.unit :_a35 ;
+    fhir:Quantity.value :_a39 .
+
+:_a34 fhir:value "mm" .
+
+:_a35 fhir:value "a" .
+
+:_a36 fhir:value "mm" .
+
+:_a37 fhir:value "1" .
+
+:_a38 fhir:value 125.0 .
+
+:_a39 fhir:value 3.0 .
+
+:_a4 fhir:CodeableConcept.coding :_a5 ;
+    fhir:index 0 .
+
+:_a40 fhir:value 45.0 .
+
+:_a41 fhir:value 1.0 .
+
+:_a42 fhir:value "MedicinalProductManufactured/example" .
+
+:_a5 fhir:Coding.code :_a13 ;
+    fhir:Coding.system :_a17 ;
+    fhir:index 0 .
+
+:_a6 fhir:CodeableConcept.coding :_a7 ;
+    fhir:index 0 .
+
+:_a7 fhir:Coding.code :_a11 ;
+    fhir:Coding.system :_a15 ;
+    fhir:index 0 .
+
+:_a8 fhir:CodeableConcept.coding :_a9 .
+
+:_a9 fhir:Coding.code :_a10 ;
+    fhir:Coding.system :_a14 ;
+    fhir:index 0 .
+
+
+----- Changes to Expected Graph -----
+ADD: Changing reference to FullURI _:1 fhir:link fhir:MedicinalProductManufactured/example
+REMOVE: Changing reference to fullURI _:1 fhir:link fhir:MedicinalProductManufactured/example
+REMOVE: Remove subjects that should have been fullURIs fhir:MedicinalProductManufactured/example rdf:type fhir:MedicinalProductManufactured
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type http://ema.europa.eu/example/packageitemcontainertype/Carton
+REMOVE: Concept URI not mapped in expected _:2 rdf:type http://ema.europa.eu/example/specialprecautionsforstorage/Thismedicinalproductdoesnotrequireanyspecialstoragecondition.
+REMOVE: Concept URI not mapped in expected _:3 rdf:type http://ema.europa.eu/example/shelfLifeTypePlaceHolder/ShelfLifeofPackagedMedicinalProduct
+REMOVE: Concept URI not mapped in expected _:4 rdf:type http://ema.europa.eu/example/packageItemContainerMaterial/Paperboard
+REMOVE: Concept URI not mapped in expected _:5 rdf:type http://ema.europa.eu/example/packageItemContainerMaterial/alu
+REMOVE: Concept URI not mapped in expected _:6 rdf:type http://ema.europa.eu/example/packageItemContainerMaterial/PVDC
+REMOVE: Concept URI not mapped in expected _:7 rdf:type http://ema.europa.eu/example/packageitemcontainertype/Blister
+REMOVE: Concept URI not mapped in expected _:8 rdf:type http://ema.europa.eu/example/packageItemContainerMaterial/PVC

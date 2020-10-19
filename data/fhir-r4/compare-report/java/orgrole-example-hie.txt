@@ -1,0 +1,22 @@
+----- Missing Triples n=3 -----
+@prefix fhir: <http://hl7.org/fhir/> .
+
+<http://hl7.org/fhir/ig/vhdir/Endpoint/foundingfathersHIE> a fhir:ig .
+
+<http://hl7.org/fhir/ig/vhdir/Organization/foundingfathers> a fhir:ig .
+
+<http://hl7.org/fhir/ig/vhdir/Organization/monumentHIE> a fhir:ig .
+
+
+----- Added Triples  n=3 -----
+@prefix fhir: <http://hl7.org/fhir/> .
+
+<http://hl7.org/fhir/ig/vhdir/Endpoint/foundingfathersHIE> a fhir:Endpoint .
+
+<http://hl7.org/fhir/ig/vhdir/Organization/foundingfathers> a fhir:Organization .
+
+<http://hl7.org/fhir/ig/vhdir/Organization/monumentHIE> a fhir:Organization .
+
+
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type fhir:organization-role/member

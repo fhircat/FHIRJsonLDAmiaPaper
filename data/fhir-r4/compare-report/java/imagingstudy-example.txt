@@ -1,0 +1,23 @@
+----- Missing Triples n=5 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+:_e5 fhir:ImagingStudy.series.bodySite :_e1 .
+
+:_e1 a <http://snomed.info/id/67734004> ;
+    fhir:Coding.code :_e2 ;
+    fhir:Coding.display :_e3 ;
+    fhir:Coding.system :_e4 .
+
+
+----- Added Triples  n=4 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+:_a5 fhir:ImagingStudy.series.bodySite :_a1 .
+
+:_a1 fhir:Coding.code :_a2 ;
+    fhir:Coding.display :_a3 ;
+    fhir:Coding.system :_a4 .
+
+

@@ -1,0 +1,108 @@
+----- Missing Triples n=19 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/TestScript/testscript-example-multisystem> fhir:TestScript.destination :_e1,
+        :_e2 ;
+    fhir:TestScript.origin :_e3 .
+
+:_e1 fhir:TestScript.destination.index :_e8 ;
+    fhir:TestScript.destination.profile :_e10 ;
+    fhir:index 1 .
+
+:_e11 fhir:value 1 .
+
+:_e2 fhir:TestScript.destination.index :_e9 ;
+    fhir:TestScript.destination.profile :_e4 ;
+    fhir:index 0 .
+
+:_e3 fhir:TestScript.origin.index :_e11 ;
+    fhir:TestScript.origin.profile :_e6 ;
+    fhir:index 0 .
+
+:_e4 fhir:Coding.code :_e5 .
+
+:_e5 fhir:value "FHIR-Server" .
+
+:_e6 fhir:Coding.code :_e7 .
+
+:_e7 fhir:value "FHIR-Client" .
+
+:_e8 fhir:value 2 .
+
+:_e9 fhir:value 1 .
+
+
+----- Added Triples  n=13 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/TestScript/testscript-example-multisystem> fhir:TestScript.destination :_a1,
+        :_a2 ;
+    fhir:TestScript.origin :_a3 .
+
+:_a1 fhir:TestScript.destination.profile :_a8 ;
+    fhir:index 1 .
+
+:_a2 fhir:TestScript.destination.profile :_a4 ;
+    fhir:index 2 .
+
+:_a3 fhir:TestScript.origin.profile :_a6 ;
+    fhir:index 1 .
+
+:_a4 fhir:Coding.code :_a5 .
+
+:_a5 fhir:value "FHIR-Server" .
+
+:_a6 fhir:Coding.code :_a7 .
+
+:_a7 fhir:value "FHIR-Client" .
+
+
+----- Changes to Actual Graph -----
+ADD: Original RDF has a bnode (1) _:1 fhir:Element.id _:2
+ADD: Original RDF has a bnode (1) _:1 fhir:TestScript.test.action _:3
+ADD: Original RDF has a bnode (1) _:1 fhir:TestScript.test.action _:4
+ADD: Original RDF has a bnode (1) _:1 fhir:TestScript.test.action _:5
+ADD: Original RDF has a bnode (1) _:1 fhir:TestScript.test.action _:6
+ADD: Original RDF has a bnode (1) _:1 fhir:TestScript.test.action _:7
+ADD: Original RDF has a bnode (1) _:1 fhir:TestScript.test.description _:8
+ADD: Original RDF has a bnode (1) _:1 fhir:TestScript.test.name _:9
+ADD: Original RDF has a bnode (1) _:1 fhir:index 1
+ADD: Original RDF has a bnode (1) _:10 fhir:Element.id _:11
+ADD: Original RDF has a bnode (1) _:10 fhir:TestScript.test.action _:12
+ADD: Original RDF has a bnode (1) _:10 fhir:TestScript.test.action _:13
+ADD: Original RDF has a bnode (1) _:10 fhir:TestScript.test.action _:14
+ADD: Original RDF has a bnode (1) _:10 fhir:TestScript.test.action _:15
+ADD: Original RDF has a bnode (1) _:10 fhir:TestScript.test.action _:16
+ADD: Original RDF has a bnode (1) _:10 fhir:TestScript.test.action _:17
+ADD: Original RDF has a bnode (1) _:10 fhir:TestScript.test.description _:18
+ADD: Original RDF has a bnode (1) _:10 fhir:TestScript.test.name _:19
+ADD: Original RDF has a bnode (1) _:10 fhir:index 0
+ADD: Original RDF has a bnode (3) fhir:TestScript/testscript-example-multisystem fhir:TestScript.test _:1
+ADD: Original RDF has a bnode (3) fhir:TestScript/testscript-example-multisystem fhir:TestScript.test _:10
+REMOVE: Concept URI not mapped in expected _:20 rdf:type urn:iso:std:iso:3166/US
+REMOVE: Type arc not declared in expected fhir:CapabilityStatement/example rdf:type fhir:CapabilityStatement
+REMOVE: Original RDF has a bnode (4) fhir:TestScript/testscript-example-multisystem fhir:TestScript.test fhir:TestScript/testscript-example-multisystem#01-ReadPatient-Destination1
+REMOVE: Original RDF has a bnode (4) fhir:TestScript/testscript-example-multisystem fhir:TestScript.test fhir:TestScript/testscript-example-multisystem#02-ReadPatient-Destination2
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#01-ReadPatient-Destination1 fhir:Element.id _:11
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#01-ReadPatient-Destination1 fhir:TestScript.test.action _:12
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#01-ReadPatient-Destination1 fhir:TestScript.test.action _:13
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#01-ReadPatient-Destination1 fhir:TestScript.test.action _:14
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#01-ReadPatient-Destination1 fhir:TestScript.test.action _:15
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#01-ReadPatient-Destination1 fhir:TestScript.test.action _:16
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#01-ReadPatient-Destination1 fhir:TestScript.test.action _:17
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#01-ReadPatient-Destination1 fhir:TestScript.test.description _:18
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#01-ReadPatient-Destination1 fhir:TestScript.test.name _:19
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#01-ReadPatient-Destination1 fhir:index 0
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#02-ReadPatient-Destination2 fhir:Element.id _:2
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#02-ReadPatient-Destination2 fhir:TestScript.test.action _:3
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#02-ReadPatient-Destination2 fhir:TestScript.test.action _:4
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#02-ReadPatient-Destination2 fhir:TestScript.test.action _:5
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#02-ReadPatient-Destination2 fhir:TestScript.test.action _:6
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#02-ReadPatient-Destination2 fhir:TestScript.test.action _:7
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#02-ReadPatient-Destination2 fhir:TestScript.test.description _:8
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#02-ReadPatient-Destination2 fhir:TestScript.test.name _:9
+REMOVE: Original RDF has a bnode (2) fhir:TestScript/testscript-example-multisystem#02-ReadPatient-Destination2 fhir:index 1

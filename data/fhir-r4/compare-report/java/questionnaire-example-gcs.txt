@@ -1,0 +1,394 @@
+----- Missing Triples n=116 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_e30 fhir:ValueSet.compose :_e31 .
+
+:_e33 fhir:ValueSet.compose.include :_e34 .
+
+<http://hl7.org/fhir/Questionnaire/gcs> fhir:DomainResource.contained :_e1 ;
+    fhir:Questionnaire.code :_e2 ;
+    fhir:Questionnaire.item :_e3,
+        :_e4,
+        :_e5 .
+
+:_e1 a fhir:ValueSet ;
+    fhir:Resource.id :_e29 ;
+    fhir:ValueSet.compose :_e32 ;
+    fhir:ValueSet.description :_e71 ;
+    fhir:ValueSet.identifier :_e17 ;
+    fhir:ValueSet.name :_e72 ;
+    fhir:ValueSet.status :_e73 ;
+    fhir:index 2 .
+
+:_e10 fhir:value "9267-6" .
+
+:_e11 a <http://loinc.org/rdf#9270-0> ;
+    fhir:Coding.code :_e12 ;
+    fhir:Coding.system :_e16 ;
+    fhir:index 0 .
+
+:_e12 fhir:value "9270-0" .
+
+:_e13 fhir:value "http://loinc.org" .
+
+:_e14 fhir:value "http://loinc.org" .
+
+:_e15 fhir:value "http://loinc.org" .
+
+:_e16 fhir:value "http://loinc.org" .
+
+:_e17 fhir:Identifier.system :_e18 ;
+    fhir:Identifier.value :_e19 .
+
+:_e18 fhir:value "http://loinc.org" .
+
+:_e19 fhir:value "http://loinc.org/ValueSet/LL355-9" .
+
+:_e2 a <http://loinc.org/rdf#9269-2> ;
+    fhir:Coding.code :_e8 ;
+    fhir:Coding.system :_e14 ;
+    fhir:index 0 .
+
+:_e20 fhir:value "#motor" .
+
+:_e21 fhir:value "#eye" .
+
+:_e23 fhir:value "1.2" .
+
+:_e24 fhir:value "1.3" .
+
+:_e26 fhir:value "choice" .
+
+:_e27 fhir:value "choice" .
+
+:_e3 fhir:Questionnaire.item.answerValueSet :_e20 ;
+    fhir:Questionnaire.item.code :_e6 ;
+    fhir:Questionnaire.item.linkId :_e23 ;
+    fhir:Questionnaire.item.type :_e26 ;
+    fhir:index 1 .
+
+:_e31 fhir:ValueSet.compose.include :_e36 .
+
+:_e32 fhir:ValueSet.compose.include :_e35 .
+
+:_e34 fhir:ValueSet.compose.include.concept :_e37,
+        :_e38,
+        :_e39,
+        :_e40,
+        :_e41 ;
+    fhir:ValueSet.compose.include.system :_e68 ;
+    fhir:index 0 .
+
+:_e35 fhir:ValueSet.compose.include.concept :_e42,
+        :_e43,
+        :_e44,
+        :_e45 ;
+    fhir:ValueSet.compose.include.system :_e69 ;
+    fhir:index 0 .
+
+:_e36 fhir:ValueSet.compose.include.concept :_e46,
+        :_e47,
+        :_e48,
+        :_e49,
+        :_e50,
+        :_e51 ;
+    fhir:ValueSet.compose.include.system :_e70 ;
+    fhir:index 0 .
+
+:_e4 fhir:Questionnaire.item.answerValueSet :_e21 ;
+    fhir:Questionnaire.item.code :_e9 ;
+    fhir:Questionnaire.item.linkId :_e24 ;
+    fhir:Questionnaire.item.type :_e27 ;
+    fhir:index 2 .
+
+:_e41 fhir:ValueSet.compose.include.concept.code :_e59 ;
+    fhir:ValueSet.compose.include.concept.display :_e67 .
+
+:_e44 fhir:ValueSet.compose.include.concept.code :_e56 ;
+    fhir:ValueSet.compose.include.concept.display :_e64 .
+
+:_e46 fhir:ValueSet.compose.include.concept.code :_e52 ;
+    fhir:ValueSet.compose.include.concept.display :_e60 ;
+    fhir:index 3 .
+
+:_e47 fhir:ValueSet.compose.include.concept.code :_e53 ;
+    fhir:ValueSet.compose.include.concept.display :_e61 ;
+    fhir:index 5 .
+
+:_e48 fhir:ValueSet.compose.include.concept.code :_e54 ;
+    fhir:ValueSet.compose.include.concept.display :_e62 ;
+    fhir:index 1 .
+
+:_e49 fhir:ValueSet.compose.include.concept.code :_e55 ;
+    fhir:ValueSet.compose.include.concept.display :_e63 ;
+    fhir:index 2 .
+
+:_e5 fhir:Questionnaire.item.answerValueSet :_e22 ;
+    fhir:Questionnaire.item.code :_e11 ;
+    fhir:Questionnaire.item.linkId :_e25 ;
+    fhir:Questionnaire.item.type :_e28 ;
+    fhir:index 0 .
+
+:_e50 fhir:ValueSet.compose.include.concept.code :_e57 ;
+    fhir:ValueSet.compose.include.concept.display :_e65 ;
+    fhir:index 4 .
+
+:_e51 fhir:ValueSet.compose.include.concept.code :_e58 ;
+    fhir:ValueSet.compose.include.concept.display :_e66 ;
+    fhir:index 0 .
+
+:_e56 fhir:value "LA6553-7" .
+
+:_e58 fhir:value "LA6562-8" .
+
+:_e59 fhir:value "LA6557-8" .
+
+:_e6 a <http://loinc.org/rdf#9268-4> ;
+    fhir:Coding.code :_e7 ;
+    fhir:Coding.system :_e13 ;
+    fhir:index 0 .
+
+:_e64 fhir:value "No eye opening" .
+
+:_e66 fhir:value "No motor response" .
+
+:_e67 fhir:value "No verbal response (>2yrs); no vocal response (<=2yrs)" .
+
+:_e7 fhir:value "9268-4" .
+
+:_e70 fhir:value "http://loinc.org" .
+
+:_e8 fhir:value "9269-2" .
+
+:_e9 a <http://loinc.org/rdf#9267-6> ;
+    fhir:Coding.code :_e10 ;
+    fhir:Coding.system :_e15 ;
+    fhir:index 0 .
+
+
+----- Added Triples  n=112 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_a31 fhir:ValueSet.compose :_a32 .
+
+:_a33 fhir:ValueSet.compose.include :_a34 .
+
+<http://hl7.org/fhir/Questionnaire/gcs> fhir:DomainResource.contained :_a1 ;
+    fhir:Questionnaire.code :_a2 ;
+    fhir:Questionnaire.item :_a3,
+        :_a4,
+        :_a5 .
+
+:_a1 a fhir:ValueSet ;
+    fhir:Resource.id :_a29 ;
+    fhir:ValueSet.compose :_a30 ;
+    fhir:ValueSet.description :_a71 ;
+    fhir:ValueSet.identifier :_a17 ;
+    fhir:ValueSet.name :_a72 ;
+    fhir:ValueSet.status :_a73 ;
+    fhir:index 2 .
+
+:_a10 fhir:Coding.code :_a11 ;
+    fhir:Coding.system :_a15 ;
+    fhir:index 0 .
+
+:_a11 fhir:value "9267-6" .
+
+:_a12 fhir:value "9269-2" .
+
+:_a13 fhir:value "http://loinc.org" .
+
+:_a14 fhir:value "http://loinc.org" .
+
+:_a15 fhir:value "http://loinc.org" .
+
+:_a16 fhir:value "http://loinc.org" .
+
+:_a17 fhir:Identifier.system :_a18 ;
+    fhir:Identifier.value :_a19 .
+
+:_a18 fhir:value "http://loinc.org" .
+
+:_a19 fhir:value "http://loinc.org/ValueSet/LL355-9" .
+
+:_a2 fhir:Coding.code :_a12 ;
+    fhir:Coding.system :_a16 ;
+    fhir:index 0 .
+
+:_a20 fhir:value "#motor" .
+
+:_a21 fhir:value "#eye" .
+
+:_a23 fhir:value "1.2" .
+
+:_a24 fhir:value "1.3" .
+
+:_a26 fhir:value "choice" .
+
+:_a27 fhir:value "choice" .
+
+:_a3 fhir:Questionnaire.item.answerValueSet :_a20 ;
+    fhir:Questionnaire.item.code :_a8 ;
+    fhir:Questionnaire.item.linkId :_a23 ;
+    fhir:Questionnaire.item.type :_a26 ;
+    fhir:index 1 .
+
+:_a30 fhir:ValueSet.compose.include :_a36 .
+
+:_a32 fhir:ValueSet.compose.include :_a35 .
+
+:_a34 fhir:ValueSet.compose.include.concept :_a41,
+        :_a42,
+        :_a43,
+        :_a44,
+        :_a45 ;
+    fhir:ValueSet.compose.include.system :_a69 ;
+    fhir:index 0 .
+
+:_a35 fhir:ValueSet.compose.include.concept :_a46,
+        :_a47,
+        :_a48,
+        :_a49,
+        :_a50,
+        :_a51 ;
+    fhir:ValueSet.compose.include.system :_a70 ;
+    fhir:index 0 .
+
+:_a36 fhir:ValueSet.compose.include.concept :_a37,
+        :_a38,
+        :_a39,
+        :_a40 ;
+    fhir:ValueSet.compose.include.system :_a68 ;
+    fhir:index 0 .
+
+:_a39 fhir:ValueSet.compose.include.concept.code :_a55 ;
+    fhir:ValueSet.compose.include.concept.display :_a63 .
+
+:_a4 fhir:Questionnaire.item.answerValueSet :_a21 ;
+    fhir:Questionnaire.item.code :_a10 ;
+    fhir:Questionnaire.item.linkId :_a24 ;
+    fhir:Questionnaire.item.type :_a27 ;
+    fhir:index 2 .
+
+:_a45 fhir:ValueSet.compose.include.concept.code :_a57 ;
+    fhir:ValueSet.compose.include.concept.display :_a65 .
+
+:_a46 fhir:ValueSet.compose.include.concept.code :_a52 ;
+    fhir:ValueSet.compose.include.concept.display :_a60 ;
+    fhir:index 3 .
+
+:_a47 fhir:ValueSet.compose.include.concept.code :_a53 ;
+    fhir:ValueSet.compose.include.concept.display :_a61 ;
+    fhir:index 5 .
+
+:_a48 fhir:ValueSet.compose.include.concept.code :_a54 ;
+    fhir:ValueSet.compose.include.concept.display :_a62 ;
+    fhir:index 1 .
+
+:_a49 fhir:ValueSet.compose.include.concept.code :_a56 ;
+    fhir:ValueSet.compose.include.concept.display :_a64 ;
+    fhir:index 2 .
+
+:_a5 fhir:Questionnaire.item.answerValueSet :_a22 ;
+    fhir:Questionnaire.item.code :_a6 ;
+    fhir:Questionnaire.item.linkId :_a25 ;
+    fhir:Questionnaire.item.type :_a28 ;
+    fhir:index 0 .
+
+:_a50 fhir:ValueSet.compose.include.concept.code :_a58 ;
+    fhir:ValueSet.compose.include.concept.display :_a66 ;
+    fhir:index 4 .
+
+:_a51 fhir:ValueSet.compose.include.concept.code :_a59 ;
+    fhir:ValueSet.compose.include.concept.display :_a67 ;
+    fhir:index 0 .
+
+:_a55 fhir:value "LA6553-7" .
+
+:_a57 fhir:value "LA6557-8" .
+
+:_a59 fhir:value "LA6562-8" .
+
+:_a6 fhir:Coding.code :_a7 ;
+    fhir:Coding.system :_a13 ;
+    fhir:index 0 .
+
+:_a63 fhir:value "No eye opening" .
+
+:_a65 fhir:value "No verbal response (>2yrs); no vocal response (<=2yrs)" .
+
+:_a67 fhir:value "No motor response" .
+
+:_a7 fhir:value "9270-0" .
+
+:_a70 fhir:value "http://loinc.org" .
+
+:_a8 fhir:Coding.code :_a9 ;
+    fhir:Coding.system :_a14 ;
+    fhir:index 0 .
+
+:_a9 fhir:value "9268-4" .
+
+
+----- Changes to Actual Graph -----
+ADD: Original RDF has a bnode (1) _:1 fhir:Resource.id _:2
+ADD: Original RDF has a bnode (1) _:1 fhir:ValueSet.compose _:3
+ADD: Original RDF has a bnode (1) _:1 fhir:ValueSet.description _:4
+ADD: Original RDF has a bnode (1) _:1 fhir:ValueSet.identifier _:5
+ADD: Original RDF has a bnode (1) _:1 fhir:ValueSet.name _:6
+ADD: Original RDF has a bnode (1) _:1 fhir:ValueSet.status _:7
+ADD: Original RDF has a bnode (1) _:1 fhir:index 0
+ADD: Original RDF has a bnode (1) _:1 rdf:type fhir:ValueSet
+ADD: Original RDF has a bnode (1) _:8 fhir:Resource.id _:9
+ADD: Original RDF has a bnode (1) _:8 fhir:ValueSet.compose _:10
+ADD: Original RDF has a bnode (1) _:8 fhir:ValueSet.description _:11
+ADD: Original RDF has a bnode (1) _:8 fhir:ValueSet.identifier _:12
+ADD: Original RDF has a bnode (1) _:8 fhir:ValueSet.name _:13
+ADD: Original RDF has a bnode (1) _:8 fhir:ValueSet.status _:14
+ADD: Original RDF has a bnode (1) _:8 fhir:index 1
+ADD: Original RDF has a bnode (1) _:8 rdf:type fhir:ValueSet
+ADD: Original RDF has a bnode (1) _:15 fhir:Resource.id _:16
+ADD: Original RDF has a bnode (1) _:15 fhir:ValueSet.compose _:17
+ADD: Original RDF has a bnode (1) _:15 fhir:ValueSet.description _:18
+ADD: Original RDF has a bnode (1) _:15 fhir:ValueSet.identifier _:19
+ADD: Original RDF has a bnode (1) _:15 fhir:ValueSet.name _:20
+ADD: Original RDF has a bnode (1) _:15 fhir:ValueSet.status _:21
+ADD: Original RDF has a bnode (1) _:15 fhir:index 2
+ADD: Original RDF has a bnode (1) _:15 rdf:type fhir:ValueSet
+ADD: Original RDF has a bnode (3) fhir:Questionnaire/gcs fhir:DomainResource.contained _:1
+ADD: Original RDF has a bnode (3) fhir:Questionnaire/gcs fhir:DomainResource.contained _:8
+ADD: Original RDF has a bnode (3) fhir:Questionnaire/gcs fhir:DomainResource.contained _:15
+REMOVE: Original RDF has a bnode (4) _:22 fhir:link fhir:Questionnaire/gcs#eye
+REMOVE: Original RDF has a bnode (4) _:23 fhir:link fhir:Questionnaire/gcs#motor
+REMOVE: Original RDF has a bnode (4) _:24 fhir:link fhir:Questionnaire/gcs#verbal
+REMOVE: Original RDF has a bnode (4) fhir:Questionnaire/gcs fhir:DomainResource.contained fhir:Questionnaire/gcs#eye
+REMOVE: Original RDF has a bnode (4) fhir:Questionnaire/gcs fhir:DomainResource.contained fhir:Questionnaire/gcs#motor
+REMOVE: Original RDF has a bnode (4) fhir:Questionnaire/gcs fhir:DomainResource.contained fhir:Questionnaire/gcs#verbal
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#eye fhir:Resource.id _:16
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#eye fhir:ValueSet.compose _:17
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#eye fhir:ValueSet.description _:18
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#eye fhir:ValueSet.identifier _:19
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#eye fhir:ValueSet.name _:20
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#eye fhir:ValueSet.status _:21
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#eye fhir:index 2
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#eye rdf:type fhir:ValueSet
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#motor fhir:Resource.id _:2
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#motor fhir:ValueSet.compose _:3
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#motor fhir:ValueSet.description _:4
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#motor fhir:ValueSet.identifier _:5
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#motor fhir:ValueSet.name _:6
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#motor fhir:ValueSet.status _:7
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#motor fhir:index 0
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#motor rdf:type fhir:ValueSet
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#verbal fhir:Resource.id _:9
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#verbal fhir:ValueSet.compose _:10
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#verbal fhir:ValueSet.description _:11
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#verbal fhir:ValueSet.identifier _:12
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#verbal fhir:ValueSet.name _:13
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#verbal fhir:ValueSet.status _:14
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#verbal fhir:index 1
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/gcs#verbal rdf:type fhir:ValueSet

@@ -1,0 +1,534 @@
+----- Missing Triples n=189 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/ExampleScenario/example> fhir:ExampleScenario.instance :_e1,
+        :_e10,
+        :_e11,
+        :_e12,
+        :_e2,
+        :_e3,
+        :_e4,
+        :_e5,
+        :_e6,
+        :_e7,
+        :_e8,
+        :_e9 ;
+    fhir:ExampleScenario.process :_e13 .
+
+:_e1 fhir:ExampleScenario.instance.description :_e30 ;
+    fhir:ExampleScenario.instance.name :_e42 ;
+    fhir:ExampleScenario.instance.resourceId :_e54 ;
+    fhir:ExampleScenario.instance.resourceType :_e66 ;
+    fhir:index 6 .
+
+:_e10 fhir:ExampleScenario.instance.description :_e39 ;
+    fhir:ExampleScenario.instance.name :_e51 ;
+    fhir:ExampleScenario.instance.resourceId :_e63 ;
+    fhir:ExampleScenario.instance.resourceType :_e75 ;
+    fhir:index 3 .
+
+:_e105 fhir:ExampleScenario.process.step.operation.initiator :_e106 ;
+    fhir:ExampleScenario.process.step.operation.name :_e107 ;
+    fhir:ExampleScenario.process.step.operation.number :_e108 ;
+    fhir:ExampleScenario.process.step.operation.receiver :_e109 ;
+    fhir:ExampleScenario.process.step.operation.request :_e20 ;
+    fhir:ExampleScenario.process.step.operation.response :_e28 .
+
+:_e106 fhir:value "MAP" .
+
+:_e107 fhir:value "2.Query for medication administration orders,\\n- For today's shifts\\n- For today's patients" .
+
+:_e108 fhir:value "2" .
+
+:_e109 fhir:value "OP" .
+
+:_e11 fhir:ExampleScenario.instance.description :_e40 ;
+    fhir:ExampleScenario.instance.name :_e52 ;
+    fhir:ExampleScenario.instance.resourceId :_e64 ;
+    fhir:ExampleScenario.instance.resourceType :_e76 ;
+    fhir:ExampleScenario.instance.version :_e78,
+        :_e79 ;
+    fhir:index 10 .
+
+:_e110 fhir:value "P1. Query Administration Requests" .
+
+:_e12 fhir:ExampleScenario.instance.containedInstance :_e14,
+        :_e15,
+        :_e16,
+        :_e17,
+        :_e18,
+        :_e19 ;
+    fhir:ExampleScenario.instance.description :_e41 ;
+    fhir:ExampleScenario.instance.name :_e53 ;
+    fhir:ExampleScenario.instance.resourceId :_e65 ;
+    fhir:ExampleScenario.instance.resourceType :_e77 ;
+    fhir:index 9 .
+
+:_e13 fhir:ExampleScenario.process.description :_e86 ;
+    fhir:ExampleScenario.process.postConditions :_e87 ;
+    fhir:ExampleScenario.process.preConditions :_e88 ;
+    fhir:ExampleScenario.process.step :_e100,
+        :_e101,
+        :_e102,
+        :_e103,
+        :_e104,
+        :_e90,
+        :_e91,
+        :_e92,
+        :_e93,
+        :_e94,
+        :_e95,
+        :_e96,
+        :_e97,
+        :_e98,
+        :_e99 ;
+    fhir:ExampleScenario.process.title :_e111 ;
+    fhir:index 0 .
+
+:_e14 fhir:ExampleScenario.instance.containedInstance.resourceId :_e22 ;
+    fhir:index 4 .
+
+:_e15 fhir:ExampleScenario.instance.containedInstance.resourceId :_e23 ;
+    fhir:index 1 .
+
+:_e16 fhir:ExampleScenario.instance.containedInstance.resourceId :_e24 ;
+    fhir:index 5 .
+
+:_e17 fhir:ExampleScenario.instance.containedInstance.resourceId :_e25 ;
+    fhir:index 3 .
+
+:_e18 fhir:ExampleScenario.instance.containedInstance.resourceId :_e26 ;
+    fhir:index 0 .
+
+:_e19 fhir:ExampleScenario.instance.containedInstance.resourceId :_e27 ;
+    fhir:index 2 .
+
+:_e2 fhir:ExampleScenario.instance.description :_e31 ;
+    fhir:ExampleScenario.instance.name :_e43 ;
+    fhir:ExampleScenario.instance.resourceId :_e55 ;
+    fhir:ExampleScenario.instance.resourceType :_e67 ;
+    fhir:index 8 .
+
+:_e20 fhir:ExampleScenario.instance.containedInstance.resourceId :_e21 .
+
+:_e28 fhir:ExampleScenario.instance.containedInstance.resourceId :_e29 .
+
+:_e3 fhir:ExampleScenario.instance.description :_e32 ;
+    fhir:ExampleScenario.instance.name :_e44 ;
+    fhir:ExampleScenario.instance.resourceId :_e56 ;
+    fhir:ExampleScenario.instance.resourceType :_e68 ;
+    fhir:index 0 .
+
+:_e30 fhir:value "The administration request for day 2, evening" .
+
+:_e31 fhir:value "Administration report for day 1, morning: NOT Taken" .
+
+:_e32 fhir:value "The initial prescription which describes \"medication X, 3 times per day\" - the exact scheduling is not   in the initial prescription (it is left for the care teams to decide on the schedule)." .
+
+:_e33 fhir:value "The administration request for day 1, morning" .
+
+:_e34 fhir:value "The administration request for day 2, morning" .
+
+:_e35 fhir:value "The administration request for day 1, lunch" .
+
+:_e36 fhir:value "The search administration request for day 1, morning" .
+
+:_e37 fhir:value "The administration request for day 2, lunch" .
+
+:_e38 fhir:value "Administration report for day 1, morning: Taken" .
+
+:_e39 fhir:value "The administration request for day 1, evening" .
+
+:_e4 fhir:ExampleScenario.instance.description :_e33 ;
+    fhir:ExampleScenario.instance.name :_e45 ;
+    fhir:ExampleScenario.instance.resourceId :_e57 ;
+    fhir:ExampleScenario.instance.resourceType :_e69 ;
+    fhir:index 1 .
+
+:_e40 fhir:value "Administration report for day 1, lunch: Taken" .
+
+:_e41 fhir:value "All the medication Requests for Day 1" .
+
+:_e42 fhir:value "Request for day 2, evening" .
+
+:_e43 fhir:value "Morning meds - not taken" .
+
+:_e44 fhir:value "Initial Prescription" .
+
+:_e45 fhir:value "Request for day 1, morning" .
+
+:_e46 fhir:value "Request for day 2, morning" .
+
+:_e47 fhir:value "Request for day 1, lunch" .
+
+:_e48 fhir:value "Search query1" .
+
+:_e49 fhir:value "Request for day 2, lunch" .
+
+:_e5 fhir:ExampleScenario.instance.description :_e34 ;
+    fhir:ExampleScenario.instance.name :_e46 ;
+    fhir:ExampleScenario.instance.resourceId :_e58 ;
+    fhir:ExampleScenario.instance.resourceType :_e70 ;
+    fhir:index 4 .
+
+:_e50 fhir:value "Morning meds - taken" .
+
+:_e51 fhir:value "Request for day 1, evening" .
+
+:_e52 fhir:value "Lunch meds - taken" .
+
+:_e53 fhir:value "Bundle of Medication Requests" .
+
+:_e54 fhir:value "iherx001.006" .
+
+:_e55 fhir:value "iheadm001b" .
+
+:_e56 fhir:value "iherx001" .
+
+:_e57 fhir:value "iherx001.001" .
+
+:_e58 fhir:value "iherx001.004" .
+
+:_e59 fhir:value "iherx001.002" .
+
+:_e6 fhir:ExampleScenario.instance.description :_e35 ;
+    fhir:ExampleScenario.instance.name :_e47 ;
+    fhir:ExampleScenario.instance.resourceId :_e59 ;
+    fhir:ExampleScenario.instance.resourceType :_e71 ;
+    fhir:index 2 .
+
+:_e60 fhir:value "iherxqry" .
+
+:_e61 fhir:value "iherx001.005" .
+
+:_e62 fhir:value "iheadm001a" .
+
+:_e63 fhir:value "iherx001.003" .
+
+:_e64 fhir:value "iheadm002" .
+
+:_e65 fhir:value "iherx001bundle" .
+
+:_e66 fhir:value "MedicationRequest" .
+
+:_e67 fhir:value "MedicationAdministration" .
+
+:_e68 fhir:value "MedicationRequest" .
+
+:_e69 fhir:value "MedicationRequest" .
+
+:_e7 fhir:ExampleScenario.instance.description :_e36 ;
+    fhir:ExampleScenario.instance.name :_e48 ;
+    fhir:ExampleScenario.instance.resourceId :_e60 ;
+    fhir:ExampleScenario.instance.resourceType :_e72 ;
+    fhir:index 11 .
+
+:_e70 fhir:value "MedicationRequest" .
+
+:_e71 fhir:value "MedicationRequest" .
+
+:_e72 fhir:value "SearchParameter" .
+
+:_e73 fhir:value "MedicationRequest" .
+
+:_e74 fhir:value "MedicationAdministration" .
+
+:_e75 fhir:value "MedicationRequest" .
+
+:_e76 fhir:value "MedicationAdministration" .
+
+:_e77 fhir:value "MedicationRequest" .
+
+:_e78 fhir:ExampleScenario.instance.version.description :_e80 ;
+    fhir:ExampleScenario.instance.version.versionId :_e82 ;
+    fhir:index 1 .
+
+:_e79 fhir:ExampleScenario.instance.version.description :_e81 ;
+    fhir:ExampleScenario.instance.version.versionId :_e83 ;
+    fhir:index 0 .
+
+:_e8 fhir:ExampleScenario.instance.description :_e37 ;
+    fhir:ExampleScenario.instance.name :_e49 ;
+    fhir:ExampleScenario.instance.resourceId :_e61 ;
+    fhir:ExampleScenario.instance.resourceType :_e73 ;
+    fhir:index 5 .
+
+:_e84 fhir:ExampleScenario.process.description :_e85 ;
+    fhir:ExampleScenario.process.step :_e89 ;
+    fhir:ExampleScenario.process.title :_e110 ;
+    fhir:index 0 .
+
+:_e85 fhir:value "Query for medication administration orders,\\n- For today's shifts\\n- For today's patients" .
+
+:_e89 fhir:ExampleScenario.process.step.operation :_e105 ;
+    fhir:index 0 .
+
+:_e9 fhir:ExampleScenario.instance.description :_e38 ;
+    fhir:ExampleScenario.instance.name :_e50 ;
+    fhir:ExampleScenario.instance.resourceId :_e62 ;
+    fhir:ExampleScenario.instance.resourceType :_e74 ;
+    fhir:index 7 .
+
+:_e95 fhir:ExampleScenario.process.step.process :_e84 ;
+    fhir:index 1 .
+
+
+----- Added Triples  n=177 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/ExampleScenario/example> fhir:ExampleScenario.instance :_a1,
+        :_a10,
+        :_a11,
+        :_a12,
+        :_a2,
+        :_a3,
+        :_a4,
+        :_a5,
+        :_a6,
+        :_a7,
+        :_a8,
+        :_a9 ;
+    fhir:ExampleScenario.process :_a13 .
+
+:_a1 a fhir:MedicationRequest ;
+    fhir:ExampleScenario.instance.description :_a30 ;
+    fhir:ExampleScenario.instance.name :_a41 ;
+    fhir:ExampleScenario.instance.resourceId :_a52 ;
+    fhir:index 5 .
+
+:_a10 a fhir:SearchParameter ;
+    fhir:ExampleScenario.instance.resourceId :_a61 ;
+    fhir:SearchParameter.description :_a98 ;
+    fhir:SearchParameter.name :_a99 ;
+    fhir:index 11 .
+
+:_a11 a fhir:MedicationAdministration ;
+    fhir:ExampleScenario.instance.description :_a39 ;
+    fhir:ExampleScenario.instance.name :_a50 ;
+    fhir:ExampleScenario.instance.resourceId :_a62 ;
+    fhir:ExampleScenario.instance.version :_a64,
+        :_a65 ;
+    fhir:index 10 .
+
+:_a12 a fhir:MedicationRequest ;
+    fhir:ExampleScenario.instance.containedInstance :_a14,
+        :_a15,
+        :_a16,
+        :_a17,
+        :_a18,
+        :_a19 ;
+    fhir:ExampleScenario.instance.description :_a40 ;
+    fhir:ExampleScenario.instance.name :_a51 ;
+    fhir:ExampleScenario.instance.resourceId :_a63 ;
+    fhir:index 9 .
+
+:_a13 fhir:ExampleScenario.process.description :_a72 ;
+    fhir:ExampleScenario.process.postConditions :_a73 ;
+    fhir:ExampleScenario.process.preConditions :_a74 ;
+    fhir:ExampleScenario.process.step :_a76,
+        :_a77,
+        :_a78,
+        :_a79,
+        :_a80,
+        :_a81,
+        :_a82,
+        :_a83,
+        :_a84,
+        :_a85,
+        :_a86,
+        :_a87,
+        :_a88,
+        :_a89,
+        :_a90 ;
+    fhir:ExampleScenario.process.title :_a97 ;
+    fhir:index 0 .
+
+:_a14 fhir:ExampleScenario.instance.containedInstance.resourceId :_a20 ;
+    fhir:index 3 .
+
+:_a15 fhir:ExampleScenario.instance.containedInstance.resourceId :_a21 ;
+    fhir:index 0 .
+
+:_a16 fhir:ExampleScenario.instance.containedInstance.resourceId :_a22 ;
+    fhir:index 2 .
+
+:_a17 fhir:ExampleScenario.instance.containedInstance.resourceId :_a27 ;
+    fhir:index 4 .
+
+:_a18 fhir:ExampleScenario.instance.containedInstance.resourceId :_a28 ;
+    fhir:index 1 .
+
+:_a19 fhir:ExampleScenario.instance.containedInstance.resourceId :_a29 ;
+    fhir:index 5 .
+
+:_a2 a fhir:MedicationRequest ;
+    fhir:ExampleScenario.instance.description :_a31 ;
+    fhir:ExampleScenario.instance.name :_a42 ;
+    fhir:ExampleScenario.instance.resourceId :_a53 ;
+    fhir:index 1 .
+
+:_a23 fhir:ExampleScenario.instance.containedInstance.resourceId :_a24 .
+
+:_a25 fhir:ExampleScenario.instance.containedInstance.resourceId :_a26 .
+
+:_a3 a fhir:MedicationRequest ;
+    fhir:ExampleScenario.instance.description :_a32 ;
+    fhir:ExampleScenario.instance.name :_a43 ;
+    fhir:ExampleScenario.instance.resourceId :_a54 ;
+    fhir:index 2 .
+
+:_a30 fhir:value "The administration request for day 2, lunch" .
+
+:_a31 fhir:value "The administration request for day 1, morning" .
+
+:_a32 fhir:value "The administration request for day 1, lunch" .
+
+:_a33 fhir:value "The administration request for day 2, morning" .
+
+:_a34 fhir:value "The administration request for day 1, evening" .
+
+:_a35 fhir:value "Administration report for day 1, morning: Taken" .
+
+:_a36 fhir:value "The administration request for day 2, evening" .
+
+:_a37 fhir:value "The initial prescription which describes \"medication X, 3 times per day\" - the exact scheduling is not   in the initial prescription (it is left for the care teams to decide on the schedule)." .
+
+:_a38 fhir:value "Administration report for day 1, morning: NOT Taken" .
+
+:_a39 fhir:value "Administration report for day 1, lunch: Taken" .
+
+:_a4 a fhir:MedicationRequest ;
+    fhir:ExampleScenario.instance.description :_a33 ;
+    fhir:ExampleScenario.instance.name :_a44 ;
+    fhir:ExampleScenario.instance.resourceId :_a55 ;
+    fhir:index 4 .
+
+:_a40 fhir:value "All the medication Requests for Day 1" .
+
+:_a41 fhir:value "Request for day 2, lunch" .
+
+:_a42 fhir:value "Request for day 1, morning" .
+
+:_a43 fhir:value "Request for day 1, lunch" .
+
+:_a44 fhir:value "Request for day 2, morning" .
+
+:_a45 fhir:value "Request for day 1, evening" .
+
+:_a46 fhir:value "Morning meds - taken" .
+
+:_a47 fhir:value "Request for day 2, evening" .
+
+:_a48 fhir:value "Initial Prescription" .
+
+:_a49 fhir:value "Morning meds - not taken" .
+
+:_a5 a fhir:MedicationRequest ;
+    fhir:ExampleScenario.instance.description :_a34 ;
+    fhir:ExampleScenario.instance.name :_a45 ;
+    fhir:ExampleScenario.instance.resourceId :_a56 ;
+    fhir:index 3 .
+
+:_a50 fhir:value "Lunch meds - taken" .
+
+:_a51 fhir:value "Bundle of Medication Requests" .
+
+:_a52 fhir:value "iherx001.005" .
+
+:_a53 fhir:value "iherx001.001" .
+
+:_a54 fhir:value "iherx001.002" .
+
+:_a55 fhir:value "iherx001.004" .
+
+:_a56 fhir:value "iherx001.003" .
+
+:_a57 fhir:value "iheadm001a" .
+
+:_a58 fhir:value "iherx001.006" .
+
+:_a59 fhir:value "iherx001" .
+
+:_a6 a fhir:MedicationAdministration ;
+    fhir:ExampleScenario.instance.description :_a35 ;
+    fhir:ExampleScenario.instance.name :_a46 ;
+    fhir:ExampleScenario.instance.resourceId :_a57 ;
+    fhir:index 7 .
+
+:_a60 fhir:value "iheadm001b" .
+
+:_a61 fhir:value "iherxqry" .
+
+:_a62 fhir:value "iheadm002" .
+
+:_a63 fhir:value "iherx001bundle" .
+
+:_a64 fhir:ExampleScenario.instance.version.description :_a66 ;
+    fhir:ExampleScenario.instance.version.versionId :_a68 ;
+    fhir:index 1 .
+
+:_a65 fhir:ExampleScenario.instance.version.description :_a67 ;
+    fhir:ExampleScenario.instance.version.versionId :_a69 ;
+    fhir:index 0 .
+
+:_a7 a fhir:MedicationRequest ;
+    fhir:ExampleScenario.instance.description :_a36 ;
+    fhir:ExampleScenario.instance.name :_a47 ;
+    fhir:ExampleScenario.instance.resourceId :_a58 ;
+    fhir:index 6 .
+
+:_a70 fhir:ExampleScenario.process.description :_a71 ;
+    fhir:ExampleScenario.process.step :_a75 ;
+    fhir:ExampleScenario.process.title :_a96 ;
+    fhir:index 0 .
+
+:_a71 fhir:value """Query for medication administration orders,\\
+- For today's shifts\\
+- For today's patients""" .
+
+:_a75 fhir:ExampleScenario.process.step.operation :_a91 ;
+    fhir:index 0 .
+
+:_a78 fhir:ExampleScenario.process.step.process :_a70 ;
+    fhir:index 1 .
+
+:_a8 a fhir:MedicationRequest ;
+    fhir:ExampleScenario.instance.description :_a37 ;
+    fhir:ExampleScenario.instance.name :_a48 ;
+    fhir:ExampleScenario.instance.resourceId :_a59 ;
+    fhir:index 0 .
+
+:_a9 a fhir:MedicationAdministration ;
+    fhir:ExampleScenario.instance.description :_a38 ;
+    fhir:ExampleScenario.instance.name :_a49 ;
+    fhir:ExampleScenario.instance.resourceId :_a60 ;
+    fhir:index 8 .
+
+:_a91 fhir:ExampleScenario.process.step.operation.initiator :_a92 ;
+    fhir:ExampleScenario.process.step.operation.name :_a93 ;
+    fhir:ExampleScenario.process.step.operation.number :_a94 ;
+    fhir:ExampleScenario.process.step.operation.receiver :_a95 ;
+    fhir:ExampleScenario.process.step.operation.request :_a23 ;
+    fhir:ExampleScenario.process.step.operation.response :_a25 .
+
+:_a92 fhir:value "MAP" .
+
+:_a93 fhir:value """2.Query for medication administration orders,\\
+- For today's shifts\\
+- For today's patients""" .
+
+:_a94 fhir:value "2" .
+
+:_a95 fhir:value "OP" .
+
+:_a96 fhir:value "P1. Query Administration Requests" .
+
+:_a98 fhir:value "The search administration request for day 1, morning" .
+
+:_a99 fhir:value "Search query1" .
+
+

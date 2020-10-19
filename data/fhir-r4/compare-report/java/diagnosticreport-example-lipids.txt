@@ -1,0 +1,165 @@
+----- Missing Triples n=28 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.com/base/DiagnosticReport/lipids> fhir:DiagnosticReport.result :_e1,
+        :_e2,
+        :_e3,
+        :_e4 .
+
+:_e1 fhir:Element.id :_e5 ;
+    fhir:Reference.reference :_e9 ;
+    fhir:index 3 ;
+    fhir:link <http://hl7.org/fhir/Observation/ldlcholesterol> .
+
+:_e10 fhir:value "Observation/triglyceride" .
+
+:_e11 fhir:value "Observation/cholesterol" .
+
+:_e12 fhir:value "Observation/hdlcholesterol" .
+
+:_e2 fhir:Element.id :_e6 ;
+    fhir:Reference.reference :_e10 ;
+    fhir:index 1 ;
+    fhir:link <http://hl7.org/fhir/Observation/triglyceride> .
+
+:_e3 fhir:Element.id :_e7 ;
+    fhir:Reference.reference :_e11 ;
+    fhir:index 0 ;
+    fhir:link <http://hl7.org/fhir/Observation/cholesterol> .
+
+:_e4 fhir:Element.id :_e8 ;
+    fhir:Reference.reference :_e12 ;
+    fhir:index 2 ;
+    fhir:link <http://hl7.org/fhir/Observation/hdlcholesterol> .
+
+:_e5 fhir:value "4" .
+
+:_e6 fhir:value "2" .
+
+:_e7 fhir:value "1" .
+
+:_e8 fhir:value "3" .
+
+:_e9 fhir:value "Observation/ldlcholesterol" .
+
+
+----- Added Triples  n=24 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.com/base/DiagnosticReport/lipids> fhir:DiagnosticReport.result :_a1,
+        :_a2,
+        :_a3,
+        :_a4 .
+
+:_a1 fhir:Element.id :_a5 ;
+    fhir:Reference.reference :_a9 ;
+    fhir:index 1 .
+
+:_a10 fhir:value "Observation/hdlcholesterol" .
+
+:_a11 fhir:value "Observation/ldlcholesterol" .
+
+:_a12 fhir:value "Observation/cholesterol" .
+
+:_a2 fhir:Element.id :_a6 ;
+    fhir:Reference.reference :_a10 ;
+    fhir:index 2 .
+
+:_a3 fhir:Element.id :_a7 ;
+    fhir:Reference.reference :_a11 ;
+    fhir:index 3 .
+
+:_a4 fhir:Element.id :_a8 ;
+    fhir:Reference.reference :_a12 ;
+    fhir:index 0 .
+
+:_a5 fhir:value "2" .
+
+:_a6 fhir:value "3" .
+
+:_a7 fhir:value "4" .
+
+:_a8 fhir:value "1" .
+
+:_a9 fhir:value "Observation/triglyceride" .
+
+
+----- Changes to Expected Graph -----
+ADD: Normalizing decimals _:1 fhir:value 6.3
+ADD: Normalizing decimals _:2 fhir:value 4.5
+ADD: Normalizing decimals _:3 fhir:value 1.3
+ADD: Normalizing decimals _:4 fhir:value 2.0
+ADD: Normalizing decimals _:5 fhir:value 1.3
+ADD: Normalizing decimals _:6 fhir:value 1.5
+ADD: Normalizing decimals _:7 fhir:value 4.6
+ADD: Normalizing decimals _:8 fhir:value 3.0
+REMOVE: Normalizing decimals _:1 fhir:value 6.3
+REMOVE: Normalizing decimals _:2 fhir:value 4.5
+REMOVE: Normalizing decimals _:3 fhir:value 1.3
+REMOVE: Normalizing decimals _:4 fhir:value 2.0
+REMOVE: Normalizing decimals _:5 fhir:value 1.3
+REMOVE: Normalizing decimals _:6 fhir:value 1.5
+REMOVE: Normalizing decimals _:7 fhir:value 4.6
+REMOVE: Normalizing decimals _:8 fhir:value 3.0
+REMOVE: Remove subjects that should have been fullURIs fhir:Observation/cholesterol rdf:type fhir:Observation
+REMOVE: Remove subjects that should have been fullURIs fhir:Observation/hdlcholesterol rdf:type fhir:Observation
+REMOVE: Remove subjects that should have been fullURIs fhir:Observation/ldlcholesterol rdf:type fhir:Observation
+REMOVE: Remove subjects that should have been fullURIs fhir:Observation/triglyceride rdf:type fhir:Observation
+----- Changes to Actual Graph -----
+ADD: Original RDF has a bnode (1) _:1 fhir:Element.id _:2
+ADD: Original RDF has a bnode (1) _:1 fhir:Reference.reference _:3
+ADD: Original RDF has a bnode (1) _:1 fhir:index 0
+ADD: Original RDF has a bnode (1) _:4 fhir:Element.id _:5
+ADD: Original RDF has a bnode (1) _:4 fhir:Reference.reference _:6
+ADD: Original RDF has a bnode (1) _:4 fhir:index 1
+ADD: Normalizing decimals _:7 fhir:value 1.3
+ADD: Normalizing decimals _:8 fhir:value 3.0
+ADD: Normalizing decimals _:9 fhir:value 2.0
+ADD: Normalizing decimals _:10 fhir:value 1.5
+ADD: Original RDF has a bnode (1) _:11 fhir:Element.id _:12
+ADD: Original RDF has a bnode (1) _:11 fhir:Reference.reference _:13
+ADD: Original RDF has a bnode (1) _:11 fhir:index 2
+ADD: Normalizing decimals _:14 fhir:value 4.5
+ADD: Normalizing decimals _:15 fhir:value 1.3
+ADD: Original RDF has a bnode (1) _:16 fhir:Element.id _:17
+ADD: Original RDF has a bnode (1) _:16 fhir:Reference.reference _:18
+ADD: Original RDF has a bnode (1) _:16 fhir:index 3
+ADD: Normalizing decimals _:19 fhir:value 6.3
+ADD: Normalizing decimals _:20 fhir:value 4.6
+ADD: Original RDF has a bnode (3) https://example.com/base/DiagnosticReport/lipids fhir:DiagnosticReport.result _:1
+ADD: Original RDF has a bnode (3) https://example.com/base/DiagnosticReport/lipids fhir:DiagnosticReport.result _:4
+ADD: Original RDF has a bnode (3) https://example.com/base/DiagnosticReport/lipids fhir:DiagnosticReport.result _:11
+ADD: Original RDF has a bnode (3) https://example.com/base/DiagnosticReport/lipids fhir:DiagnosticReport.result _:16
+REMOVE: Normalizing decimals _:7 fhir:value 1.3
+REMOVE: Normalizing decimals _:8 fhir:value 3
+REMOVE: Concept URI not mapped in expected _:21 rdf:type http://terminology.hl7.org/CodeSystem/v2-0074/HM
+REMOVE: Normalizing decimals _:9 fhir:value 2
+REMOVE: Normalizing decimals _:10 fhir:value 1.5
+REMOVE: Normalizing decimals _:14 fhir:value 4.5
+REMOVE: Normalizing decimals _:15 fhir:value 1.3
+REMOVE: Normalizing decimals _:19 fhir:value 6.3
+REMOVE: Normalizing decimals _:20 fhir:value 4.6
+REMOVE: Original RDF has a bnode (4) https://example.com/base/DiagnosticReport/lipids fhir:DiagnosticReport.result https://example.com/base/DiagnosticReport/lipids#1
+REMOVE: Original RDF has a bnode (4) https://example.com/base/DiagnosticReport/lipids fhir:DiagnosticReport.result https://example.com/base/DiagnosticReport/lipids#2
+REMOVE: Original RDF has a bnode (4) https://example.com/base/DiagnosticReport/lipids fhir:DiagnosticReport.result https://example.com/base/DiagnosticReport/lipids#3
+REMOVE: Original RDF has a bnode (4) https://example.com/base/DiagnosticReport/lipids fhir:DiagnosticReport.result https://example.com/base/DiagnosticReport/lipids#4
+REMOVE: Original RDF has a bnode (2) https://example.com/base/DiagnosticReport/lipids#1 fhir:Element.id _:2
+REMOVE: Original RDF has a bnode (2) https://example.com/base/DiagnosticReport/lipids#1 fhir:Reference.reference _:3
+REMOVE: Original RDF has a bnode (2) https://example.com/base/DiagnosticReport/lipids#1 fhir:index 0
+REMOVE: Embedded BNode instead of link https://example.com/base/DiagnosticReport/lipids#1 fhir:link https://example.com/base/Observation/cholesterol
+REMOVE: Original RDF has a bnode (2) https://example.com/base/DiagnosticReport/lipids#2 fhir:Element.id _:5
+REMOVE: Original RDF has a bnode (2) https://example.com/base/DiagnosticReport/lipids#2 fhir:Reference.reference _:6
+REMOVE: Original RDF has a bnode (2) https://example.com/base/DiagnosticReport/lipids#2 fhir:index 1
+REMOVE: Embedded BNode instead of link https://example.com/base/DiagnosticReport/lipids#2 fhir:link https://example.com/base/Observation/triglyceride
+REMOVE: Original RDF has a bnode (2) https://example.com/base/DiagnosticReport/lipids#3 fhir:Element.id _:12
+REMOVE: Original RDF has a bnode (2) https://example.com/base/DiagnosticReport/lipids#3 fhir:Reference.reference _:13
+REMOVE: Original RDF has a bnode (2) https://example.com/base/DiagnosticReport/lipids#3 fhir:index 2
+REMOVE: Embedded BNode instead of link https://example.com/base/DiagnosticReport/lipids#3 fhir:link https://example.com/base/Observation/hdlcholesterol
+REMOVE: Original RDF has a bnode (2) https://example.com/base/DiagnosticReport/lipids#4 fhir:Element.id _:17
+REMOVE: Original RDF has a bnode (2) https://example.com/base/DiagnosticReport/lipids#4 fhir:Reference.reference _:18
+REMOVE: Original RDF has a bnode (2) https://example.com/base/DiagnosticReport/lipids#4 fhir:index 3
+REMOVE: Embedded BNode instead of link https://example.com/base/DiagnosticReport/lipids#4 fhir:link https://example.com/base/Observation/ldlcholesterol

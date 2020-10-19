@@ -1,0 +1,55 @@
+----- Missing Triples n=6 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+<http://hl7.org/fhir/MedicinalProductInteraction/example> fhir:DomainResource.text :_e1 ;
+    fhir:MedicinalProductInteraction.description :_e2 .
+
+:_e1 fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>description</b>: Inhibitors of CYP3A4 and P-gp\\nCoadministration of equixaban with ketoconazole (400 mg once a day), a strong inhibitor of both\\nCYP3A4 and P-gp, led to a 2-fold increase in mean equixaban AUC and a 1.6-fold increase in mean\\nequixaban Cmax.\\nThe use of Eliquis is not recommended in patients receiving concomitant systemic treatment with\\nstrong inhibitors of both CYP3A4 and P-gp, such as azole-antimycotics (e.g., ketoconazole,\\nitraconazole, voriconazole and posaconazole) and HIV protease inhibitors (e.g., ritonavir) (see\\nsection 4.4).\\nActive substances which are not considered strong inhibitors of both CYP3A4 and P-gp,\\n(e.g., diltiazem, naproxen, amiodarone, verapamil, quinidine) are expected to increase equixaban\\nplasma concentration to a lesser extent. Diltiazem (360 mg once a day), for instance, considered a moderate CYP3A4 and a weak P-gp inhibitor, led to a 1.4-fold increase in mean equixaban AUC and a 1.3-fold increase in Cmax. Naproxen (500 mg, single dose) an inhibitor of P-gp but not an inhibitor of CYP3A4, led to a 1.5-fold and 1.6-fold increase in mean equixaban AUC and Cmax, respectively. No dose adjustment for equixaban is required when coadministered with less potent inhibitors of CYP3A4 and/or P-gp.</p><blockquote><p><b>interactant</b></p><p><b>item</b>: ketoconazole <span>(Details : {http://ema.europa.eu/example/interactant code 'ketoconazole' = 'ketoconazole)</span></p></blockquote><blockquote><p><b>interactant</b></p><p><b>item</b>: itraconazole <span>(Details : {http://ema.europa.eu/example/interactant code 'itraconazole' = 'itraconazole)</span></p></blockquote><p><b>type</b>: StrongInhibitorofCYP3A4 <span>(Details : {http://ema.europa.eu/example/interactionsType code 'StrongInhibitorofCYP3A4' = 'StrongInhibitorofCYP3A4)</span></p><p><b>effect</b>: Increasedplasmaconcentrations <span>(Details : {http://ema.europa.eu/example/interactionseffect code 'Increasedplasmaconcentrations' = 'Increasedplasmaconcentrations)</span></p><p><b>management</b>: Coadministration not recommended in patients receiving concomitant systemic treatment strong inhibitors of both CYP3A4 and P-gp <span>(Details )</span></p></div>" ;
+    fhir:Narrative.status :_e3 .
+
+:_e2 fhir:value "Inhibitors of CYP3A4 and P-gp\\nCoadministration of equixaban with ketoconazole (400 mg once a day), a strong inhibitor of both\\nCYP3A4 and P-gp, led to a 2-fold increase in mean equixaban AUC and a 1.6-fold increase in mean\\nequixaban Cmax.\\nThe use of Eliquis is not recommended in patients receiving concomitant systemic treatment with\\nstrong inhibitors of both CYP3A4 and P-gp, such as azole-antimycotics (e.g., ketoconazole,\\nitraconazole, voriconazole and posaconazole) and HIV protease inhibitors (e.g., ritonavir) (see\\nsection 4.4).\\nActive substances which are not considered strong inhibitors of both CYP3A4 and P-gp,\\n(e.g., diltiazem, naproxen, amiodarone, verapamil, quinidine) are expected to increase equixaban\\nplasma concentration to a lesser extent. Diltiazem (360 mg once a day), for instance, considered a moderate CYP3A4 and a weak P-gp inhibitor, led to a 1.4-fold increase in mean equixaban AUC and a 1.3-fold increase in Cmax. Naproxen (500 mg, single dose) an inhibitor of P-gp but not an inhibitor of CYP3A4, led to a 1.5-fold and 1.6-fold increase in mean equixaban AUC and Cmax, respectively. No dose adjustment for equixaban is required when coadministered with less potent inhibitors of CYP3A4 and/or P-gp." .
+
+:_e3 fhir:value "generated" .
+
+
+----- Added Triples  n=6 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+<http://hl7.org/fhir/MedicinalProductInteraction/example> fhir:DomainResource.text :_a1 ;
+    fhir:MedicinalProductInteraction.description :_a2 .
+
+:_a1 fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>description</b>: Inhibitors of CYP3A4 and P-gp\\
+Coadministration of equixaban with ketoconazole (400 mg once a day), a strong inhibitor of both\\
+CYP3A4 and P-gp, led to a 2-fold increase in mean equixaban AUC and a 1.6-fold increase in mean\\
+equixaban Cmax.\\
+The use of Eliquis is not recommended in patients receiving concomitant systemic treatment with\\
+strong inhibitors of both CYP3A4 and P-gp, such as azole-antimycotics (e.g., ketoconazole,\\
+itraconazole, voriconazole and posaconazole) and HIV protease inhibitors (e.g., ritonavir) (see\\
+section 4.4).\\
+Active substances which are not considered strong inhibitors of both CYP3A4 and P-gp,\\
+(e.g., diltiazem, naproxen, amiodarone, verapamil, quinidine) are expected to increase equixaban\\
+plasma concentration to a lesser extent. Diltiazem (360 mg once a day), for instance, considered a moderate CYP3A4 and a weak P-gp inhibitor, led to a 1.4-fold increase in mean equixaban AUC and a 1.3-fold increase in Cmax. Naproxen (500 mg, single dose) an inhibitor of P-gp but not an inhibitor of CYP3A4, led to a 1.5-fold and 1.6-fold increase in mean equixaban AUC and Cmax, respectively. No dose adjustment for equixaban is required when coadministered with less potent inhibitors of CYP3A4 and/or P-gp.</p><blockquote><p><b>interactant</b></p><p><b>item</b>: ketoconazole <span>(Details : {http://ema.europa.eu/example/interactant code 'ketoconazole' = 'ketoconazole)</span></p></blockquote><blockquote><p><b>interactant</b></p><p><b>item</b>: itraconazole <span>(Details : {http://ema.europa.eu/example/interactant code 'itraconazole' = 'itraconazole)</span></p></blockquote><p><b>type</b>: StrongInhibitorofCYP3A4 <span>(Details : {http://ema.europa.eu/example/interactionsType code 'StrongInhibitorofCYP3A4' = 'StrongInhibitorofCYP3A4)</span></p><p><b>effect</b>: Increasedplasmaconcentrations <span>(Details : {http://ema.europa.eu/example/interactionseffect code 'Increasedplasmaconcentrations' = 'Increasedplasmaconcentrations)</span></p><p><b>management</b>: Coadministration not recommended in patients receiving concomitant systemic treatment strong inhibitors of both CYP3A4 and P-gp <span>(Details )</span></p></div>""" ;
+    fhir:Narrative.status :_a3 .
+
+:_a2 fhir:value """Inhibitors of CYP3A4 and P-gp\\
+Coadministration of equixaban with ketoconazole (400 mg once a day), a strong inhibitor of both\\
+CYP3A4 and P-gp, led to a 2-fold increase in mean equixaban AUC and a 1.6-fold increase in mean\\
+equixaban Cmax.\\
+The use of Eliquis is not recommended in patients receiving concomitant systemic treatment with\\
+strong inhibitors of both CYP3A4 and P-gp, such as azole-antimycotics (e.g., ketoconazole,\\
+itraconazole, voriconazole and posaconazole) and HIV protease inhibitors (e.g., ritonavir) (see\\
+section 4.4).\\
+Active substances which are not considered strong inhibitors of both CYP3A4 and P-gp,\\
+(e.g., diltiazem, naproxen, amiodarone, verapamil, quinidine) are expected to increase equixaban\\
+plasma concentration to a lesser extent. Diltiazem (360 mg once a day), for instance, considered a moderate CYP3A4 and a weak P-gp inhibitor, led to a 1.4-fold increase in mean equixaban AUC and a 1.3-fold increase in Cmax. Naproxen (500 mg, single dose) an inhibitor of P-gp but not an inhibitor of CYP3A4, led to a 1.5-fold and 1.6-fold increase in mean equixaban AUC and Cmax, respectively. No dose adjustment for equixaban is required when coadministered with less potent inhibitors of CYP3A4 and/or P-gp.""" .
+
+:_a3 fhir:value "generated" .
+
+
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type http://ema.europa.eu/example/interactionseffect/Increasedplasmaconcentrations
+REMOVE: Concept URI not mapped in expected _:2 rdf:type http://ema.europa.eu/example/interactant/itraconazole
+REMOVE: Concept URI not mapped in expected _:3 rdf:type http://ema.europa.eu/example/interactant/ketoconazole
+REMOVE: Concept URI not mapped in expected _:4 rdf:type http://ema.europa.eu/example/interactionsType/StrongInhibitorofCYP3A4

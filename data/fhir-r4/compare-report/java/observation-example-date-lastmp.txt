@@ -1,0 +1,22 @@
+----- Missing Triples n=2 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/Observation/date-lastmp> fhir:Observation.valueDateTime :_e1 .
+
+:_e1 fhir:value "2016-12-30"^^xsd:date .
+
+
+----- Added Triples  n=2 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/Observation/date-lastmp> fhir:Observation.valueDateTime :_a1 .
+
+:_a1 fhir:value "2016-12-30"^^xsd:dateTime .
+
+
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type http://terminology.hl7.org/CodeSystem/observation-category/survey

@@ -1,0 +1,59 @@
+----- Missing Triples n=11 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/OrganizationAffiliation/orgrole1> fhir:OrganizationAffiliation.network :_e1 .
+
+<http://hl7.org/fhir/ig/vhdir/HealthcareService/independencerehab1> a fhir:ig .
+
+<http://hl7.org/fhir/ig/vhdir/HealthcareService/independencerehab2> a fhir:ig .
+
+<http://hl7.org/fhir/ig/vhdir/Location/foundingfathers1> a fhir:ig .
+
+<http://hl7.org/fhir/ig/vhdir/Organization/foundingfathers> a fhir:ig .
+
+<http://hl7.org/fhir/ig/vhdir/Organization/independencerehab> a fhir:ig .
+
+:_e1 fhir:Reference.display :_e2 ;
+    fhir:Reference.reference :_e3 ;
+    fhir:index 0 .
+
+:_e2 fhir:value "Patriot Preferred Provider Network" .
+
+:_e3 fhir:value "http://hl7.org/fhir/ig/vhdir/Network/patriotppo" .
+
+
+----- Added Triples  n=12 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/OrganizationAffiliation/orgrole1> fhir:OrganizationAffiliation.network :_a1 .
+
+<http://hl7.org/fhir/ig/vhdir/HealthcareService/independencerehab1> a fhir:HealthcareService .
+
+<http://hl7.org/fhir/ig/vhdir/HealthcareService/independencerehab2> a fhir:HealthcareService .
+
+<http://hl7.org/fhir/ig/vhdir/Location/foundingfathers1> a fhir:Location .
+
+<http://hl7.org/fhir/ig/vhdir/Organization/foundingfathers> a fhir:Organization .
+
+<http://hl7.org/fhir/ig/vhdir/Organization/independencerehab> a fhir:Organization .
+
+:_a1 fhir:Reference.display :_a2 ;
+    fhir:Reference.reference :_a3 ;
+    fhir:index 0 ;
+    fhir:link <http://hl7.org/fhir/ig/vhdir/Network/patriotppo> .
+
+:_a2 fhir:value "Patriot Preferred Provider Network" .
+
+:_a3 fhir:value "http://hl7.org/fhir/ig/vhdir/Network/patriotppo" .
+
+
+----- Changes to Expected Graph -----
+ADD: Changing reference to FullURI _:1 fhir:link fhir:ig/vhdir/Network/patriotppo
+REMOVE: Changing reference to fullURI _:1 fhir:link fhir:ig/vhdir/Network/patriotppo
+REMOVE: Remove subjects that should have been fullURIs fhir:ig/vhdir/Network/patriotppo rdf:type fhir:ig
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type fhir:organization-role/provider

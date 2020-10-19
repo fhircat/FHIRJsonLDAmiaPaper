@@ -1,0 +1,651 @@
+----- Missing Triples n=238 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_e71 fhir:Questionnaire.item.item :_e59 .
+
+:_e76 fhir:Questionnaire.item.item :_e17,
+        :_e21,
+        :_e25,
+        :_e29,
+        :_e33,
+        :_e37 .
+
+:_e77 fhir:Questionnaire.item.item :_e15,
+        :_e23,
+        :_e27,
+        :_e31,
+        :_e39,
+        :_e62,
+        :_e7,
+        :_e9 .
+
+<http://hl7.org/fhir/us/sdc/Questionnaire/54127-6> fhir:Questionnaire.code :_e1 .
+
+:_e1 a <http://loinc.org/rdf#54127-6> ;
+    fhir:Coding.code :_e2 ;
+    fhir:Coding.display :_e3 ;
+    fhir:Coding.system :_e4 ;
+    fhir:index 0 .
+
+:_e10 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL623-0> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL623-0" .
+
+:_e100 fhir:value "2.1.2.1" .
+
+:_e108 fhir:value true .
+
+:_e11 fhir:Questionnaire.item.answerValueSet :_e12 ;
+    fhir:Questionnaire.item.definition :_e46 ;
+    fhir:Questionnaire.item.linkId :_e82 ;
+    fhir:Questionnaire.item.text :_e112 ;
+    fhir:Questionnaire.item.type :_e135 ;
+    fhir:index 0 .
+
+:_e112 fhir:value "Disease or Condition" .
+
+:_e113 fhir:value "Age at Death" .
+
+:_e12 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL626-3> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL626-3" .
+
+:_e120 fhir:value "Please specify" .
+
+:_e125 fhir:value "Cause of Death" .
+
+:_e13 fhir:Questionnaire.item.answerValueSet :_e14 ;
+    fhir:Questionnaire.item.definition :_e47 ;
+    fhir:Questionnaire.item.linkId :_e83 ;
+    fhir:Questionnaire.item.text :_e113 ;
+    fhir:Questionnaire.item.type :_e136 ;
+    fhir:index 1 .
+
+:_e130 fhir:value "Disease or Condition" .
+
+:_e134 fhir:value "group" .
+
+:_e135 fhir:value "choice" .
+
+:_e136 fhir:value "choice" .
+
+:_e14 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL619-8> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL619-8" .
+
+:_e143 fhir:value "string" .
+
+:_e148 fhir:value "choice" .
+
+:_e15 fhir:Questionnaire.item.answerValueSet :_e16 ;
+    fhir:Questionnaire.item.definition :_e48 ;
+    fhir:Questionnaire.item.item :_e67,
+        :_e68 ;
+    fhir:Questionnaire.item.linkId :_e84 ;
+    fhir:Questionnaire.item.text :_e114 ;
+    fhir:Questionnaire.item.type :_e137 ;
+    fhir:index 4 .
+
+:_e153 fhir:value "choice" .
+
+:_e16 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL361-7> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL361-7" .
+
+:_e17 fhir:Questionnaire.item.answerValueSet :_e18 ;
+    fhir:Questionnaire.item.definition :_e49 ;
+    fhir:Questionnaire.item.linkId :_e85 ;
+    fhir:Questionnaire.item.text :_e115 ;
+    fhir:Questionnaire.item.type :_e138 ;
+    fhir:index 5 .
+
+:_e18 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL361-7> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL361-7" .
+
+:_e19 fhir:Questionnaire.item.answerValueSet :_e20 ;
+    fhir:Questionnaire.item.definition :_e50 ;
+    fhir:Questionnaire.item.linkId :_e86 ;
+    fhir:Questionnaire.item.text :_e116 ;
+    fhir:Questionnaire.item.type :_e139 ;
+    fhir:index 1 .
+
+:_e2 fhir:value "54127-6" .
+
+:_e20 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL619-8> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL619-8" .
+
+:_e21 fhir:Questionnaire.item.answerValueSet :_e22 ;
+    fhir:Questionnaire.item.definition :_e51 ;
+    fhir:Questionnaire.item.item :_e69 ;
+    fhir:Questionnaire.item.linkId :_e87 ;
+    fhir:Questionnaire.item.required :_e106 ;
+    fhir:Questionnaire.item.text :_e117 ;
+    fhir:Questionnaire.item.type :_e140 ;
+    fhir:index 1 .
+
+:_e22 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL1-9> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL1-9" .
+
+:_e23 fhir:Questionnaire.item.answerValueSet :_e24 ;
+    fhir:Questionnaire.item.definition :_e52 ;
+    fhir:Questionnaire.item.item :_e70 ;
+    fhir:Questionnaire.item.linkId :_e88 ;
+    fhir:Questionnaire.item.text :_e118 ;
+    fhir:Questionnaire.item.type :_e141 ;
+    fhir:index 3 .
+
+:_e24 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL1-9> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL1-9" .
+
+:_e25 fhir:Questionnaire.item.answerValueSet :_e26 ;
+    fhir:Questionnaire.item.definition :_e53 ;
+    fhir:Questionnaire.item.linkId :_e89 ;
+    fhir:Questionnaire.item.repeats :_e101 ;
+    fhir:Questionnaire.item.text :_e119 ;
+    fhir:Questionnaire.item.type :_e142 ;
+    fhir:index 10 .
+
+:_e26 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL628-9> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL628-9" .
+
+:_e27 fhir:Questionnaire.item.answerValueSet :_e28 ;
+    fhir:Questionnaire.item.definition :_e54 ;
+    fhir:Questionnaire.item.linkId :_e91 ;
+    fhir:Questionnaire.item.repeats :_e102 ;
+    fhir:Questionnaire.item.text :_e121 ;
+    fhir:Questionnaire.item.type :_e144 ;
+    fhir:index 7 .
+
+:_e28 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL629-7> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL629-7" .
+
+:_e29 fhir:Questionnaire.item.answerValueSet :_e30 ;
+    fhir:Questionnaire.item.definition :_e55 ;
+    fhir:Questionnaire.item.initial :_e66 ;
+    fhir:Questionnaire.item.linkId :_e92 ;
+    fhir:Questionnaire.item.text :_e122 ;
+    fhir:Questionnaire.item.type :_e145 ;
+    fhir:index 3 .
+
+:_e3 fhir:value "US Surgeon General family health portrait [USSG-FHT]" .
+
+:_e30 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL623-0> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL623-0" .
+
+:_e31 fhir:Questionnaire.item.answerValueSet :_e32 ;
+    fhir:Questionnaire.item.definition :_e56 ;
+    fhir:Questionnaire.item.linkId :_e93 ;
+    fhir:Questionnaire.item.text :_e123 ;
+    fhir:Questionnaire.item.type :_e146 ;
+    fhir:index 6 .
+
+:_e32 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL623-0> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL623-0" .
+
+:_e33 fhir:Questionnaire.item.answerValueSet :_e34 ;
+    fhir:Questionnaire.item.definition :_e57 ;
+    fhir:Questionnaire.item.linkId :_e94 ;
+    fhir:Questionnaire.item.text :_e124 ;
+    fhir:Questionnaire.item.type :_e147 ;
+    fhir:index 4 .
+
+:_e34 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL361-7> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL361-7" .
+
+:_e35 fhir:Questionnaire.item.answerValueSet :_e36 ;
+    fhir:Questionnaire.item.definition :_e58 ;
+    fhir:Questionnaire.item.item :_e72 ;
+    fhir:Questionnaire.item.linkId :_e95 ;
+    fhir:Questionnaire.item.text :_e125 ;
+    fhir:Questionnaire.item.type :_e148 ;
+    fhir:index 0 .
+
+:_e36 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL627-1> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL627-1" .
+
+:_e37 fhir:Questionnaire.item.answerValueSet :_e38 ;
+    fhir:Questionnaire.item.definition :_e61 ;
+    fhir:Questionnaire.item.linkId :_e97 ;
+    fhir:Questionnaire.item.required :_e107 ;
+    fhir:Questionnaire.item.text :_e127 ;
+    fhir:Questionnaire.item.type :_e150 ;
+    fhir:index 9 .
+
+:_e38 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL629-7> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL629-7" .
+
+:_e39 fhir:Questionnaire.item.answerValueSet :_e40 ;
+    fhir:Questionnaire.item.definition :_e64 ;
+    fhir:Questionnaire.item.linkId :_e99 ;
+    fhir:Questionnaire.item.repeats :_e105 ;
+    fhir:Questionnaire.item.text :_e129 ;
+    fhir:Questionnaire.item.type :_e152 ;
+    fhir:index 8 .
+
+:_e4 fhir:value "http://loinc.org" .
+
+:_e40 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL628-9> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL628-9" .
+
+:_e41 fhir:Questionnaire.item.answerValueSet :_e42 ;
+    fhir:Questionnaire.item.definition :_e65 ;
+    fhir:Questionnaire.item.linkId :_e100 ;
+    fhir:Questionnaire.item.required :_e108 ;
+    fhir:Questionnaire.item.text :_e130 ;
+    fhir:Questionnaire.item.type :_e153 ;
+    fhir:index 0 .
+
+:_e42 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL626-3> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL626-3" .
+
+:_e46 fhir:value "http://loinc.org/rdf#54140-9" .
+
+:_e47 fhir:value "http://loinc.org/rdf#54113-6" .
+
+:_e5 fhir:Questionnaire.item.answerValueSet :_e6 ;
+    fhir:Questionnaire.item.definition :_e43 ;
+    fhir:Questionnaire.item.linkId :_e78 ;
+    fhir:Questionnaire.item.text :_e109 ;
+    fhir:Questionnaire.item.type :_e131 ;
+    fhir:index 1 .
+
+:_e58 fhir:value "http://loinc.org/rdf#54112-8" .
+
+:_e59 fhir:Questionnaire.item.definition :_e60 ;
+    fhir:Questionnaire.item.item :_e11,
+        :_e5 ;
+    fhir:Questionnaire.item.linkId :_e96 ;
+    fhir:Questionnaire.item.repeats :_e103 ;
+    fhir:Questionnaire.item.text :_e126 ;
+    fhir:Questionnaire.item.type :_e149 ;
+    fhir:index 1 .
+
+:_e6 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL619-8> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL619-8" .
+
+:_e62 fhir:Questionnaire.item.definition :_e63 ;
+    fhir:Questionnaire.item.item :_e19,
+        :_e41,
+        :_e73,
+        :_e74,
+        :_e75 ;
+    fhir:Questionnaire.item.linkId :_e98 ;
+    fhir:Questionnaire.item.repeats :_e104 ;
+    fhir:Questionnaire.item.text :_e128 ;
+    fhir:Questionnaire.item.type :_e151 ;
+    fhir:index 9 .
+
+:_e65 fhir:value "http://loinc.org/rdf#54116-9" .
+
+:_e67 fhir:Questionnaire.item.item :_e13,
+        :_e35 ;
+    fhir:Questionnaire.item.linkId :_e81 ;
+    fhir:Questionnaire.item.type :_e134 ;
+    fhir:index 0 .
+
+:_e7 fhir:Questionnaire.item.answerValueSet :_e8 ;
+    fhir:Questionnaire.item.definition :_e44 ;
+    fhir:Questionnaire.item.linkId :_e79 ;
+    fhir:Questionnaire.item.text :_e110 ;
+    fhir:Questionnaire.item.type :_e132 ;
+    fhir:index 1 .
+
+:_e72 fhir:Questionnaire.item.linkId :_e90 ;
+    fhir:Questionnaire.item.text :_e120 ;
+    fhir:Questionnaire.item.type :_e143 ;
+    fhir:index 0 .
+
+:_e8 fhir:link <http://hl7.org/fhir/us/sdc/ValueSet/LL621-4> ;
+    fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL621-4" .
+
+:_e81 fhir:value "2.1.1.4.1" .
+
+:_e82 fhir:value "1.2.1" .
+
+:_e83 fhir:value "2.1.1.4.1.2" .
+
+:_e9 fhir:Questionnaire.item.answerValueSet :_e10 ;
+    fhir:Questionnaire.item.definition :_e45 ;
+    fhir:Questionnaire.item.linkId :_e80 ;
+    fhir:Questionnaire.item.text :_e111 ;
+    fhir:Questionnaire.item.type :_e133 ;
+    fhir:index 5 .
+
+:_e90 fhir:value "2.1.1.4.1.1.1" .
+
+:_e95 fhir:value "2.1.1.4.1.1" .
+
+
+----- Added Triples  n=218 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_a71 fhir:Questionnaire.item.item :_a58 .
+
+:_a76 fhir:Questionnaire.item.item :_a13,
+        :_a17,
+        :_a25,
+        :_a27,
+        :_a29,
+        :_a31 .
+
+:_a77 fhir:Questionnaire.item.item :_a11,
+        :_a15,
+        :_a19,
+        :_a33,
+        :_a35,
+        :_a37,
+        :_a5,
+        :_a63 .
+
+<http://hl7.org/fhir/us/sdc/Questionnaire/54127-6> fhir:Questionnaire.code :_a1 .
+
+:_a1 fhir:Coding.code :_a2 ;
+    fhir:Coding.display :_a3 ;
+    fhir:Coding.system :_a4 ;
+    fhir:index 0 .
+
+:_a10 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL626-3" .
+
+:_a100 fhir:value "2.1.2.1" .
+
+:_a108 fhir:value true .
+
+:_a11 fhir:Questionnaire.item.answerValueSet :_a12 ;
+    fhir:Questionnaire.item.definition :_a46 ;
+    fhir:Questionnaire.item.item :_a67,
+        :_a68 ;
+    fhir:Questionnaire.item.linkId :_a81 ;
+    fhir:Questionnaire.item.text :_a112 ;
+    fhir:Questionnaire.item.type :_a134 ;
+    fhir:index 4 .
+
+:_a111 fhir:value "Disease or Condition" .
+
+:_a118 fhir:value "Age at Death" .
+
+:_a12 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL361-7" .
+
+:_a123 fhir:value "Please specify" .
+
+:_a128 fhir:value "Cause of Death" .
+
+:_a13 fhir:Questionnaire.item.answerValueSet :_a14 ;
+    fhir:Questionnaire.item.definition :_a47 ;
+    fhir:Questionnaire.item.linkId :_a82 ;
+    fhir:Questionnaire.item.text :_a113 ;
+    fhir:Questionnaire.item.type :_a135 ;
+    fhir:index 5 .
+
+:_a130 fhir:value "Disease or Condition" .
+
+:_a133 fhir:value "choice" .
+
+:_a136 fhir:value "group" .
+
+:_a14 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL361-7" .
+
+:_a141 fhir:value "choice" .
+
+:_a146 fhir:value "string" .
+
+:_a15 fhir:Questionnaire.item.answerValueSet :_a16 ;
+    fhir:Questionnaire.item.definition :_a48 ;
+    fhir:Questionnaire.item.linkId :_a84 ;
+    fhir:Questionnaire.item.text :_a114 ;
+    fhir:Questionnaire.item.type :_a137 ;
+    fhir:index 5 .
+
+:_a151 fhir:value "choice" .
+
+:_a153 fhir:value "choice" .
+
+:_a16 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL623-0" .
+
+:_a17 fhir:Questionnaire.item.answerValueSet :_a18 ;
+    fhir:Questionnaire.item.definition :_a49 ;
+    fhir:Questionnaire.item.linkId :_a85 ;
+    fhir:Questionnaire.item.repeats :_a101 ;
+    fhir:Questionnaire.item.text :_a115 ;
+    fhir:Questionnaire.item.type :_a138 ;
+    fhir:index 10 .
+
+:_a18 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL628-9" .
+
+:_a19 fhir:Questionnaire.item.answerValueSet :_a20 ;
+    fhir:Questionnaire.item.definition :_a50 ;
+    fhir:Questionnaire.item.item :_a69 ;
+    fhir:Questionnaire.item.linkId :_a86 ;
+    fhir:Questionnaire.item.text :_a116 ;
+    fhir:Questionnaire.item.type :_a139 ;
+    fhir:index 3 .
+
+:_a2 fhir:value "54127-6" .
+
+:_a20 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL1-9" .
+
+:_a21 fhir:Questionnaire.item.answerValueSet :_a22 ;
+    fhir:Questionnaire.item.definition :_a51 ;
+    fhir:Questionnaire.item.linkId :_a87 ;
+    fhir:Questionnaire.item.text :_a117 ;
+    fhir:Questionnaire.item.type :_a140 ;
+    fhir:index 1 .
+
+:_a22 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL619-8" .
+
+:_a23 fhir:Questionnaire.item.answerValueSet :_a24 ;
+    fhir:Questionnaire.item.definition :_a52 ;
+    fhir:Questionnaire.item.linkId :_a88 ;
+    fhir:Questionnaire.item.text :_a118 ;
+    fhir:Questionnaire.item.type :_a141 ;
+    fhir:index 1 .
+
+:_a24 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL619-8" .
+
+:_a25 fhir:Questionnaire.item.answerValueSet :_a26 ;
+    fhir:Questionnaire.item.definition :_a53 ;
+    fhir:Questionnaire.item.initial :_a66 ;
+    fhir:Questionnaire.item.linkId :_a89 ;
+    fhir:Questionnaire.item.text :_a119 ;
+    fhir:Questionnaire.item.type :_a142 ;
+    fhir:index 3 .
+
+:_a26 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL623-0" .
+
+:_a27 fhir:Questionnaire.item.answerValueSet :_a28 ;
+    fhir:Questionnaire.item.definition :_a54 ;
+    fhir:Questionnaire.item.item :_a70 ;
+    fhir:Questionnaire.item.linkId :_a90 ;
+    fhir:Questionnaire.item.required :_a106 ;
+    fhir:Questionnaire.item.text :_a120 ;
+    fhir:Questionnaire.item.type :_a143 ;
+    fhir:index 1 .
+
+:_a28 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL1-9" .
+
+:_a29 fhir:Questionnaire.item.answerValueSet :_a30 ;
+    fhir:Questionnaire.item.definition :_a55 ;
+    fhir:Questionnaire.item.linkId :_a91 ;
+    fhir:Questionnaire.item.text :_a121 ;
+    fhir:Questionnaire.item.type :_a144 ;
+    fhir:index 4 .
+
+:_a3 fhir:value "US Surgeon General family health portrait [USSG-FHT]" .
+
+:_a30 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL361-7" .
+
+:_a31 fhir:Questionnaire.item.answerValueSet :_a32 ;
+    fhir:Questionnaire.item.definition :_a56 ;
+    fhir:Questionnaire.item.linkId :_a92 ;
+    fhir:Questionnaire.item.required :_a107 ;
+    fhir:Questionnaire.item.text :_a122 ;
+    fhir:Questionnaire.item.type :_a145 ;
+    fhir:index 9 .
+
+:_a32 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL629-7" .
+
+:_a33 fhir:Questionnaire.item.answerValueSet :_a34 ;
+    fhir:Questionnaire.item.definition :_a57 ;
+    fhir:Questionnaire.item.linkId :_a94 ;
+    fhir:Questionnaire.item.repeats :_a102 ;
+    fhir:Questionnaire.item.text :_a124 ;
+    fhir:Questionnaire.item.type :_a147 ;
+    fhir:index 7 .
+
+:_a34 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL629-7" .
+
+:_a35 fhir:Questionnaire.item.answerValueSet :_a36 ;
+    fhir:Questionnaire.item.definition :_a60 ;
+    fhir:Questionnaire.item.linkId :_a96 ;
+    fhir:Questionnaire.item.text :_a126 ;
+    fhir:Questionnaire.item.type :_a149 ;
+    fhir:index 6 .
+
+:_a36 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL623-0" .
+
+:_a37 fhir:Questionnaire.item.answerValueSet :_a38 ;
+    fhir:Questionnaire.item.definition :_a61 ;
+    fhir:Questionnaire.item.linkId :_a97 ;
+    fhir:Questionnaire.item.repeats :_a104 ;
+    fhir:Questionnaire.item.text :_a127 ;
+    fhir:Questionnaire.item.type :_a150 ;
+    fhir:index 8 .
+
+:_a38 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL628-9" .
+
+:_a39 fhir:Questionnaire.item.answerValueSet :_a40 ;
+    fhir:Questionnaire.item.definition :_a62 ;
+    fhir:Questionnaire.item.item :_a72 ;
+    fhir:Questionnaire.item.linkId :_a98 ;
+    fhir:Questionnaire.item.text :_a128 ;
+    fhir:Questionnaire.item.type :_a151 ;
+    fhir:index 0 .
+
+:_a4 fhir:value "http://loinc.org" .
+
+:_a40 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL627-1" .
+
+:_a41 fhir:Questionnaire.item.answerValueSet :_a42 ;
+    fhir:Questionnaire.item.definition :_a65 ;
+    fhir:Questionnaire.item.linkId :_a100 ;
+    fhir:Questionnaire.item.required :_a108 ;
+    fhir:Questionnaire.item.text :_a130 ;
+    fhir:Questionnaire.item.type :_a153 ;
+    fhir:index 0 .
+
+:_a42 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL626-3" .
+
+:_a45 fhir:value "http://loinc.org/rdf#54140-9" .
+
+:_a5 fhir:Questionnaire.item.answerValueSet :_a6 ;
+    fhir:Questionnaire.item.definition :_a43 ;
+    fhir:Questionnaire.item.linkId :_a78 ;
+    fhir:Questionnaire.item.text :_a109 ;
+    fhir:Questionnaire.item.type :_a131 ;
+    fhir:index 1 .
+
+:_a52 fhir:value "http://loinc.org/rdf#54113-6" .
+
+:_a58 fhir:Questionnaire.item.definition :_a59 ;
+    fhir:Questionnaire.item.item :_a7,
+        :_a9 ;
+    fhir:Questionnaire.item.linkId :_a95 ;
+    fhir:Questionnaire.item.repeats :_a103 ;
+    fhir:Questionnaire.item.text :_a125 ;
+    fhir:Questionnaire.item.type :_a148 ;
+    fhir:index 1 .
+
+:_a6 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL621-4" .
+
+:_a62 fhir:value "http://loinc.org/rdf#54112-8" .
+
+:_a63 fhir:Questionnaire.item.definition :_a64 ;
+    fhir:Questionnaire.item.item :_a21,
+        :_a41,
+        :_a73,
+        :_a74,
+        :_a75 ;
+    fhir:Questionnaire.item.linkId :_a99 ;
+    fhir:Questionnaire.item.repeats :_a105 ;
+    fhir:Questionnaire.item.text :_a129 ;
+    fhir:Questionnaire.item.type :_a152 ;
+    fhir:index 9 .
+
+:_a65 fhir:value "http://loinc.org/rdf#54116-9" .
+
+:_a68 fhir:Questionnaire.item.item :_a23,
+        :_a39 ;
+    fhir:Questionnaire.item.linkId :_a83 ;
+    fhir:Questionnaire.item.type :_a136 ;
+    fhir:index 0 .
+
+:_a7 fhir:Questionnaire.item.answerValueSet :_a8 ;
+    fhir:Questionnaire.item.definition :_a44 ;
+    fhir:Questionnaire.item.linkId :_a79 ;
+    fhir:Questionnaire.item.text :_a110 ;
+    fhir:Questionnaire.item.type :_a132 ;
+    fhir:index 1 .
+
+:_a72 fhir:Questionnaire.item.linkId :_a93 ;
+    fhir:Questionnaire.item.text :_a123 ;
+    fhir:Questionnaire.item.type :_a146 ;
+    fhir:index 0 .
+
+:_a8 fhir:value "http://hl7.org/fhir/us/sdc/ValueSet/LL619-8" .
+
+:_a80 fhir:value "1.2.1" .
+
+:_a83 fhir:value "2.1.1.4.1" .
+
+:_a88 fhir:value "2.1.1.4.1.2" .
+
+:_a9 fhir:Questionnaire.item.answerValueSet :_a10 ;
+    fhir:Questionnaire.item.definition :_a45 ;
+    fhir:Questionnaire.item.linkId :_a80 ;
+    fhir:Questionnaire.item.text :_a111 ;
+    fhir:Questionnaire.item.type :_a133 ;
+    fhir:index 0 .
+
+:_a93 fhir:value "2.1.1.4.1.1.1" .
+
+:_a98 fhir:value "2.1.1.4.1.1" .
+
+
+----- Changes to Actual Graph -----
+ADD: Original RDF has a bnode (1) _:1 fhir:Resource.id _:2
+ADD: Original RDF has a bnode (1) _:1 fhir:ValueSet.compose _:3
+ADD: Original RDF has a bnode (1) _:1 fhir:ValueSet.description _:4
+ADD: Original RDF has a bnode (1) _:1 fhir:ValueSet.immutable _:5
+ADD: Original RDF has a bnode (1) _:1 fhir:ValueSet.name _:6
+ADD: Original RDF has a bnode (1) _:1 fhir:ValueSet.status _:7
+ADD: Original RDF has a bnode (1) _:1 fhir:index 1
+ADD: Original RDF has a bnode (1) _:1 rdf:type fhir:ValueSet
+ADD: Original RDF has a bnode (1) _:8 fhir:Resource.id _:9
+ADD: Original RDF has a bnode (1) _:8 fhir:ValueSet.compose _:10
+ADD: Original RDF has a bnode (1) _:8 fhir:ValueSet.description _:11
+ADD: Original RDF has a bnode (1) _:8 fhir:ValueSet.immutable _:12
+ADD: Original RDF has a bnode (1) _:8 fhir:ValueSet.name _:13
+ADD: Original RDF has a bnode (1) _:8 fhir:ValueSet.status _:14
+ADD: Original RDF has a bnode (1) _:8 fhir:index 0
+ADD: Original RDF has a bnode (1) _:8 rdf:type fhir:ValueSet
+ADD: Original RDF has a bnode (3) fhir:us/sdc/Questionnaire/54127-6 fhir:DomainResource.contained _:1
+ADD: Original RDF has a bnode (3) fhir:us/sdc/Questionnaire/54127-6 fhir:DomainResource.contained _:8
+REMOVE: Concept URI not mapped in expected _:15 rdf:type http://terminology.hl7.org/CodeSystem/usage-context-type/species
+REMOVE: Concept URI not mapped in expected _:16 rdf:type urn:iso:std:iso:3166/US
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#length fhir:Resource.id _:9
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#length fhir:ValueSet.compose _:10
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#length fhir:ValueSet.description _:11
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#length fhir:ValueSet.immutable _:12
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#length fhir:ValueSet.name _:13
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#length fhir:ValueSet.status _:14
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#length fhir:index 0
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#length rdf:type fhir:ValueSet
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#weight fhir:Resource.id _:2
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#weight fhir:ValueSet.compose _:3
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#weight fhir:ValueSet.description _:4
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#weight fhir:ValueSet.immutable _:5
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#weight fhir:ValueSet.name _:6
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#weight fhir:ValueSet.status _:7
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#weight fhir:index 1
+REMOVE: Original RDF has a bnode (2) fhir:Questionnaire/54127-6#weight rdf:type fhir:ValueSet
+REMOVE: Original RDF has a bnode (4) fhir:us/sdc/Questionnaire/54127-6 fhir:DomainResource.contained fhir:Questionnaire/54127-6#length
+REMOVE: Original RDF has a bnode (4) fhir:us/sdc/Questionnaire/54127-6 fhir:DomainResource.contained fhir:Questionnaire/54127-6#weight

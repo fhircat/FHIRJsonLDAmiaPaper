@@ -1,0 +1,33 @@
+----- Missing Triples n=3 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+<http://example.org/fhir/Observation/12> fhir:Observation.subject :_e1 .
+
+:_e1 fhir:Reference.reference :_e2 .
+
+:_e2 fhir:value "urn:uuid:04121321-4af5-424c-a0e1-ed3aab1c349d" .
+
+
+----- Added Triples  n=4 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+<http://example.org/fhir/Observation/12> fhir:Observation.subject :_a1 .
+
+:_a1 fhir:Reference.reference :_a2 ;
+    fhir:link <urn:uuid:04121321-4af5-424c-a0e1-ed3aab1c349d> .
+
+:_a2 fhir:value "urn:uuid:04121321-4af5-424c-a0e1-ed3aab1c349d" .
+
+
+----- Changes to Expected Graph -----
+ADD: Changing reference to FullURI _:1 fhir:link http://example.org/fhir/Patient/23
+ADD: Changing reference to FullURI _:1 fhir:link http://example.org/fhir/Patient/23
+ADD: Changing reference to FullURI _:2 fhir:link http://example.org/fhir/Patient/23
+ADD: Changing reference to FullURI _:2 fhir:link http://example.org/fhir/Patient/23
+REMOVE: Changing reference to fullURI _:1 fhir:link fhir:Patient/23
+REMOVE: Changing reference to fullURI _:2 fhir:link fhir:Patient/23
+REMOVE: Remove subjects that should have been fullURIs fhir:Patient/23 rdf:type fhir:Patient
+----- Changes to Actual Graph -----
+REMOVE:  http://example.org/fhir-2/Patient/1 rdf:type fhir:Patient

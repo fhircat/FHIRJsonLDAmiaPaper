@@ -1,0 +1,40 @@
+----- Missing Triples n=6 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/DetectedIssue/ddi> fhir:DetectedIssue.implicated :_e1 .
+
+:_e1 fhir:Reference.display :_e2 ;
+    fhir:Reference.reference :_e3 ;
+    fhir:index 0 .
+
+:_e2 fhir:value "500 mg Acetaminophen tablet 1/day, PRN since 2010" .
+
+:_e3 fhir:value "MedicationStatement/example001" .
+
+
+----- Added Triples  n=7 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/DetectedIssue/ddi> fhir:DetectedIssue.implicated :_a1 .
+
+:_a1 fhir:Reference.display :_a2 ;
+    fhir:Reference.reference :_a3 ;
+    fhir:index 0 ;
+    fhir:link <http://hl7.org/fhir/MedicationStatement/example001> .
+
+:_a2 fhir:value "500 mg Acetaminophen tablet 1/day, PRN since 2010" .
+
+:_a3 fhir:value "MedicationStatement/example001" .
+
+
+----- Changes to Expected Graph -----
+ADD: Changing reference to FullURI _:1 fhir:link fhir:MedicationStatement/example001
+REMOVE: Changing reference to fullURI _:1 fhir:link fhir:MedicationStatement/example001
+REMOVE: Remove subjects that should have been fullURIs fhir:MedicationStatement/example001 rdf:type fhir:MedicationStatement
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type http://terminology.hl7.org/CodeSystem/v3-ActCode/13
+REMOVE: Concept URI not mapped in expected _:2 rdf:type http://terminology.hl7.org/CodeSystem/v3-ActCode/DRG

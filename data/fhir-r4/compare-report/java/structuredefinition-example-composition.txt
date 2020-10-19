@@ -1,0 +1,314 @@
+----- Missing Triples n=84 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/StructureDefinition/example-composition> fhir:StructureDefinition.differential :_e1 .
+
+:_e1 fhir:StructureDefinition.differential.element :_e10,
+        :_e12,
+        :_e14,
+        :_e16,
+        :_e8 .
+
+:_e10 fhir:Element.id :_e11 ;
+    fhir:ElementDefinition.path :_e22 ;
+    fhir:ElementDefinition.slicing :_e29 ;
+    fhir:index 1 .
+
+:_e12 fhir:Element.id :_e13 ;
+    fhir:ElementDefinition.min :_e18 ;
+    fhir:ElementDefinition.path :_e23 ;
+    fhir:ElementDefinition.sliceName :_e26 ;
+    fhir:ElementDefinition.type :_e30 ;
+    fhir:index 2 .
+
+:_e13 fhir:value "Composition.section:procedure" .
+
+:_e14 fhir:Element.id :_e15 ;
+    fhir:ElementDefinition.min :_e19 ;
+    fhir:ElementDefinition.path :_e24 ;
+    fhir:ElementDefinition.sliceName :_e27 ;
+    fhir:ElementDefinition.type :_e31 ;
+    fhir:index 3 .
+
+:_e15 fhir:value "Composition.section:medications" .
+
+:_e16 fhir:Element.id :_e17 ;
+    fhir:ElementDefinition.min :_e20 ;
+    fhir:ElementDefinition.path :_e25 ;
+    fhir:ElementDefinition.sliceName :_e28 ;
+    fhir:ElementDefinition.type :_e32 ;
+    fhir:index 4 .
+
+:_e17 fhir:value "Composition.section:plan" .
+
+:_e18 fhir:value "1"^^xsd:nonNegativeInteger .
+
+:_e19 fhir:value "1"^^xsd:nonNegativeInteger .
+
+:_e2 fhir:Element.extension :_e3 ;
+    fhir:index 0 ;
+    fhir:link <http://hl7.org/fhir/StructureDefinition/document-section-library> ;
+    fhir:value "http://hl7.org/fhir/StructureDefinition/document-section-library" .
+
+:_e20 fhir:value "0"^^xsd:nonNegativeInteger .
+
+:_e21 fhir:value "Composition" .
+
+:_e23 fhir:value "Composition.section" .
+
+:_e24 fhir:value "Composition.section" .
+
+:_e25 fhir:value "Composition.section" .
+
+:_e26 fhir:value "procedure" .
+
+:_e27 fhir:value "medications" .
+
+:_e28 fhir:value "plan" .
+
+:_e3 fhir:Extension.url :_e37 ;
+    fhir:Extension.valueString :_e40 ;
+    fhir:index 0 .
+
+:_e30 fhir:ElementDefinition.type.code :_e34 ;
+    fhir:ElementDefinition.type.profile :_e6 ;
+    fhir:index 0 .
+
+:_e31 fhir:ElementDefinition.type.code :_e33 ;
+    fhir:ElementDefinition.type.profile :_e2 ;
+    fhir:index 0 .
+
+:_e32 fhir:ElementDefinition.type.code :_e35 ;
+    fhir:ElementDefinition.type.profile :_e4 ;
+    fhir:index 0 .
+
+:_e33 fhir:value "BackboneElement" .
+
+:_e34 fhir:value "BackboneElement" .
+
+:_e35 fhir:value "BackboneElement" .
+
+:_e36 fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-profile-element" .
+
+:_e37 fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-profile-element" .
+
+:_e38 fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-profile-element" .
+
+:_e39 fhir:value "Composition.section:procedure" .
+
+:_e4 fhir:Element.extension :_e5 ;
+    fhir:index 0 ;
+    fhir:link <http://hl7.org/fhir/StructureDefinition/document-section-library> ;
+    fhir:value "http://hl7.org/fhir/StructureDefinition/document-section-library" .
+
+:_e40 fhir:value "Composition.section:medications" .
+
+:_e41 fhir:value "Composition.section:plan" .
+
+:_e5 fhir:Extension.url :_e38 ;
+    fhir:Extension.valueString :_e41 ;
+    fhir:index 0 .
+
+:_e6 fhir:Element.extension :_e7 ;
+    fhir:index 0 ;
+    fhir:link <http://hl7.org/fhir/StructureDefinition/document-section-library> ;
+    fhir:value "http://hl7.org/fhir/StructureDefinition/document-section-library" .
+
+:_e7 fhir:Extension.url :_e36 ;
+    fhir:Extension.valueString :_e39 ;
+    fhir:index 0 .
+
+:_e8 fhir:Element.id :_e9 ;
+    fhir:ElementDefinition.path :_e21 ;
+    fhir:index 0 .
+
+:_e9 fhir:value "Composition" .
+
+
+----- Added Triples  n=78 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/StructureDefinition/example-composition> fhir:StructureDefinition.differential :_a1 .
+
+:_a1 fhir:StructureDefinition.differential.element :_a10,
+        :_a12,
+        :_a14,
+        :_a16,
+        :_a8 .
+
+:_a10 fhir:Element.id :_a11 ;
+    fhir:ElementDefinition.path :_a22 ;
+    fhir:ElementDefinition.slicing :_a29 ;
+    fhir:index 1 .
+
+:_a12 fhir:Element.id :_a13 ;
+    fhir:ElementDefinition.min :_a18 ;
+    fhir:ElementDefinition.path :_a23 ;
+    fhir:ElementDefinition.sliceName :_a26 ;
+    fhir:ElementDefinition.type :_a30 ;
+    fhir:index 3 .
+
+:_a13 fhir:value "Composition.section:medications" .
+
+:_a14 fhir:Element.id :_a15 ;
+    fhir:ElementDefinition.min :_a19 ;
+    fhir:ElementDefinition.path :_a24 ;
+    fhir:ElementDefinition.sliceName :_a27 ;
+    fhir:ElementDefinition.type :_a31 ;
+    fhir:index 2 .
+
+:_a15 fhir:value "Composition.section:procedure" .
+
+:_a16 fhir:Element.id :_a17 ;
+    fhir:ElementDefinition.min :_a20 ;
+    fhir:ElementDefinition.path :_a25 ;
+    fhir:ElementDefinition.sliceName :_a28 ;
+    fhir:ElementDefinition.type :_a32 ;
+    fhir:index 4 .
+
+:_a17 fhir:value "Composition.section:plan" .
+
+:_a18 fhir:value "1"^^xsd:nonNegativeInteger .
+
+:_a19 fhir:value "1"^^xsd:nonNegativeInteger .
+
+:_a2 fhir:Element.extension :_a3 ;
+    fhir:index 0 .
+
+:_a20 fhir:value "0"^^xsd:nonNegativeInteger .
+
+:_a21 fhir:value "Composition" .
+
+:_a23 fhir:value "Composition.section" .
+
+:_a24 fhir:value "Composition.section" .
+
+:_a25 fhir:value "Composition.section" .
+
+:_a26 fhir:value "medications" .
+
+:_a27 fhir:value "procedure" .
+
+:_a28 fhir:value "plan" .
+
+:_a3 fhir:Extension.url :_a36 ;
+    fhir:Extension.valueString :_a39 ;
+    fhir:index 0 .
+
+:_a30 fhir:ElementDefinition.type.code :_a34 ;
+    fhir:ElementDefinition.type.profile :_a2 ;
+    fhir:index 0 .
+
+:_a31 fhir:ElementDefinition.type.code :_a33 ;
+    fhir:ElementDefinition.type.profile :_a6 ;
+    fhir:index 0 .
+
+:_a32 fhir:ElementDefinition.type.code :_a35 ;
+    fhir:ElementDefinition.type.profile :_a4 ;
+    fhir:index 0 .
+
+:_a33 fhir:value "BackboneElement" .
+
+:_a34 fhir:value "BackboneElement" .
+
+:_a35 fhir:value "BackboneElement" .
+
+:_a36 fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-profile-element" .
+
+:_a37 fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-profile-element" .
+
+:_a38 fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-profile-element" .
+
+:_a39 fhir:value "Composition.section:medications" .
+
+:_a4 fhir:Element.extension :_a5 ;
+    fhir:index 0 .
+
+:_a40 fhir:value "Composition.section:procedure" .
+
+:_a41 fhir:value "Composition.section:plan" .
+
+:_a5 fhir:Extension.url :_a38 ;
+    fhir:Extension.valueString :_a41 ;
+    fhir:index 0 .
+
+:_a6 fhir:Element.extension :_a7 ;
+    fhir:index 0 .
+
+:_a7 fhir:Extension.url :_a37 ;
+    fhir:Extension.valueString :_a40 ;
+    fhir:index 0 .
+
+:_a8 fhir:Element.id :_a9 ;
+    fhir:ElementDefinition.path :_a21 ;
+    fhir:index 0 .
+
+:_a9 fhir:value "Composition" .
+
+
+----- Changes to Actual Graph -----
+ADD: Original RDF has a bnode (1) _:1 fhir:Element.id _:2
+ADD: Original RDF has a bnode (1) _:1 fhir:ElementDefinition.min _:3
+ADD: Original RDF has a bnode (1) _:1 fhir:ElementDefinition.path _:4
+ADD: Original RDF has a bnode (1) _:1 fhir:ElementDefinition.sliceName _:5
+ADD: Original RDF has a bnode (1) _:1 fhir:ElementDefinition.type _:6
+ADD: Original RDF has a bnode (1) _:1 fhir:index 2
+ADD: Original RDF has a bnode (1) _:7 fhir:Element.id _:8
+ADD: Original RDF has a bnode (1) _:7 fhir:ElementDefinition.min _:9
+ADD: Original RDF has a bnode (1) _:7 fhir:ElementDefinition.path _:10
+ADD: Original RDF has a bnode (1) _:7 fhir:ElementDefinition.sliceName _:11
+ADD: Original RDF has a bnode (1) _:7 fhir:ElementDefinition.type _:12
+ADD: Original RDF has a bnode (1) _:7 fhir:index 3
+ADD: Original RDF has a bnode (1) _:13 fhir:Element.id _:14
+ADD: Original RDF has a bnode (1) _:13 fhir:ElementDefinition.path _:15
+ADD: Original RDF has a bnode (1) _:13 fhir:ElementDefinition.slicing _:16
+ADD: Original RDF has a bnode (1) _:13 fhir:index 1
+ADD: Original RDF has a bnode (3) _:17 fhir:StructureDefinition.differential.element _:1
+ADD: Original RDF has a bnode (3) _:17 fhir:StructureDefinition.differential.element _:7
+ADD: Original RDF has a bnode (3) _:17 fhir:StructureDefinition.differential.element _:13
+ADD: Original RDF has a bnode (3) _:17 fhir:StructureDefinition.differential.element _:18
+ADD: Original RDF has a bnode (3) _:17 fhir:StructureDefinition.differential.element _:19
+ADD: Original RDF has a bnode (1) _:18 fhir:Element.id _:20
+ADD: Original RDF has a bnode (1) _:18 fhir:ElementDefinition.min _:21
+ADD: Original RDF has a bnode (1) _:18 fhir:ElementDefinition.path _:22
+ADD: Original RDF has a bnode (1) _:18 fhir:ElementDefinition.sliceName _:23
+ADD: Original RDF has a bnode (1) _:18 fhir:ElementDefinition.type _:24
+ADD: Original RDF has a bnode (1) _:18 fhir:index 4
+ADD: Original RDF has a bnode (1) _:19 fhir:Element.id _:25
+ADD: Original RDF has a bnode (1) _:19 fhir:ElementDefinition.path _:26
+ADD: Original RDF has a bnode (1) _:19 fhir:index 0
+REMOVE: Original RDF has a bnode (4) _:17 fhir:StructureDefinition.differential.element fhir:StructureDefinition/example-composition#Composition
+REMOVE: Original RDF has a bnode (4) _:17 fhir:StructureDefinition.differential.element fhir:StructureDefinition/example-composition#Composition.section
+REMOVE: Original RDF has a bnode (4) _:17 fhir:StructureDefinition.differential.element fhir:StructureDefinition/example-composition#Composition.section:medications
+REMOVE: Original RDF has a bnode (4) _:17 fhir:StructureDefinition.differential.element fhir:StructureDefinition/example-composition#Composition.section:plan
+REMOVE: Original RDF has a bnode (4) _:17 fhir:StructureDefinition.differential.element fhir:StructureDefinition/example-composition#Composition.section:procedure
+REMOVE:  fhir:StructureDefinition/Composition rdf:type fhir:StructureDefinition
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition fhir:Element.id _:25
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition fhir:ElementDefinition.path _:26
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition fhir:index 0
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section fhir:Element.id _:14
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section fhir:ElementDefinition.path _:15
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section fhir:ElementDefinition.slicing _:16
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section fhir:index 1
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:medications fhir:Element.id _:8
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:medications fhir:ElementDefinition.min _:9
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:medications fhir:ElementDefinition.path _:10
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:medications fhir:ElementDefinition.sliceName _:11
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:medications fhir:ElementDefinition.type _:12
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:medications fhir:index 3
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:plan fhir:Element.id _:20
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:plan fhir:ElementDefinition.min _:21
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:plan fhir:ElementDefinition.path _:22
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:plan fhir:ElementDefinition.sliceName _:23
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:plan fhir:ElementDefinition.type _:24
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:plan fhir:index 4
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:procedure fhir:Element.id _:2
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:procedure fhir:ElementDefinition.min _:3
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:procedure fhir:ElementDefinition.path _:4
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:procedure fhir:ElementDefinition.sliceName _:5
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:procedure fhir:ElementDefinition.type _:6
+REMOVE: Original RDF has a bnode (2) fhir:StructureDefinition/example-composition#Composition.section:procedure fhir:index 2

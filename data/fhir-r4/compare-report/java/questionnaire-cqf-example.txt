@@ -1,0 +1,640 @@
+----- Missing Triples n=222 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/Questionnaire/phq-9-questionnaire> fhir:DomainResource.extension :_e1 ;
+    fhir:DomainResource.text :_e2 ;
+    fhir:Questionnaire.code :_e3 ;
+    fhir:Questionnaire.identifier :_e4 ;
+    fhir:Questionnaire.item :_e10,
+        :_e11,
+        :_e12,
+        :_e13,
+        :_e14,
+        :_e5,
+        :_e6,
+        :_e7,
+        :_e8,
+        :_e9 .
+
+:_e1 fhir:Extension.url :_e52 ;
+    fhir:Extension.valueCanonical :_e54 ;
+    fhir:index 0 .
+
+:_e10 fhir:Questionnaire.item.answerValueSet :_e63 ;
+    fhir:Questionnaire.item.code :_e15 ;
+    fhir:Questionnaire.item.linkId :_e72 ;
+    fhir:Questionnaire.item.required :_e82 ;
+    fhir:Questionnaire.item.text :_e92 ;
+    fhir:Questionnaire.item.type :_e102 ;
+    fhir:index 2 .
+
+:_e100 fhir:value "choice" .
+
+:_e101 fhir:value "choice" .
+
+:_e102 fhir:value "choice" .
+
+:_e103 fhir:value "choice" .
+
+:_e105 fhir:value "integer" .
+
+:_e106 fhir:value "choice" .
+
+:_e11 fhir:Questionnaire.item.answerValueSet :_e64 ;
+    fhir:Questionnaire.item.code :_e17 ;
+    fhir:Questionnaire.item.linkId :_e73 ;
+    fhir:Questionnaire.item.required :_e83 ;
+    fhir:Questionnaire.item.text :_e93 ;
+    fhir:Questionnaire.item.type :_e103 ;
+    fhir:index 3 .
+
+:_e12 fhir:Questionnaire.item.answerValueSet :_e65 ;
+    fhir:Questionnaire.item.code :_e29 ;
+    fhir:Questionnaire.item.linkId :_e74 ;
+    fhir:Questionnaire.item.required :_e84 ;
+    fhir:Questionnaire.item.text :_e94 ;
+    fhir:Questionnaire.item.type :_e104 ;
+    fhir:index 0 .
+
+:_e13 fhir:Element.extension :_e48 ;
+    fhir:Questionnaire.item.code :_e25 ;
+    fhir:Questionnaire.item.linkId :_e75 ;
+    fhir:Questionnaire.item.required :_e85 ;
+    fhir:Questionnaire.item.text :_e95 ;
+    fhir:Questionnaire.item.type :_e105 ;
+    fhir:index 8 .
+
+:_e14 fhir:Questionnaire.item.answerValueSet :_e66 ;
+    fhir:Questionnaire.item.code :_e23 ;
+    fhir:Questionnaire.item.linkId :_e76 ;
+    fhir:Questionnaire.item.required :_e86 ;
+    fhir:Questionnaire.item.text :_e96 ;
+    fhir:Questionnaire.item.type :_e106 ;
+    fhir:index 9 .
+
+:_e15 a <http://loinc.org/rdf#44259-0> ;
+    fhir:Coding.code :_e16 ;
+    fhir:Coding.system :_e37 ;
+    fhir:index 0 .
+
+:_e16 fhir:value "44259-0" .
+
+:_e17 a <http://loinc.org/rdf#44254-1> ;
+    fhir:Coding.code :_e18 ;
+    fhir:Coding.system :_e38 ;
+    fhir:index 0 .
+
+:_e18 fhir:value "44254-1" .
+
+:_e19 a <http://loinc.org/rdf#44253-3> ;
+    fhir:Coding.code :_e20 ;
+    fhir:Coding.system :_e39 ;
+    fhir:index 0 .
+
+:_e2 fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">PHQ-9 Questionnaire with dynamic logic</div>" ;
+    fhir:Narrative.status :_e57 .
+
+:_e20 fhir:value "44253-3" .
+
+:_e21 a <http://loinc.org/rdf#44252-5> ;
+    fhir:Coding.code :_e22 ;
+    fhir:Coding.system :_e40 ;
+    fhir:index 0 .
+
+:_e22 fhir:value "44252-5" .
+
+:_e23 a <http://loinc.org/rdf#44256-6> ;
+    fhir:Coding.code :_e24 ;
+    fhir:Coding.system :_e41 ;
+    fhir:index 0 .
+
+:_e24 fhir:value "44256-6" .
+
+:_e25 a <http://loinc.org/rdf#44261-6> ;
+    fhir:Coding.code :_e26 ;
+    fhir:Coding.system :_e42 ;
+    fhir:index 0 .
+
+:_e26 fhir:value "44261-6" .
+
+:_e27 a <http://loinc.org/rdf#44255-8> ;
+    fhir:Coding.code :_e28 ;
+    fhir:Coding.system :_e43 ;
+    fhir:index 0 .
+
+:_e28 fhir:value "44255-8" .
+
+:_e29 a <http://loinc.org/rdf#44250-9> ;
+    fhir:Coding.code :_e30 ;
+    fhir:Coding.system :_e44 ;
+    fhir:index 0 .
+
+:_e3 a <http://loinc.org/rdf#44249-1> ;
+    fhir:Coding.code :_e31 ;
+    fhir:Coding.display :_e36 ;
+    fhir:Coding.system :_e45 ;
+    fhir:index 0 .
+
+:_e30 fhir:value "44250-9" .
+
+:_e31 fhir:value "44249-1" .
+
+:_e32 a <http://loinc.org/rdf#44251-7> ;
+    fhir:Coding.code :_e33 ;
+    fhir:Coding.system :_e46 ;
+    fhir:index 0 .
+
+:_e33 fhir:value "44251-7" .
+
+:_e34 a <http://loinc.org/rdf#44258-2> ;
+    fhir:Coding.code :_e35 ;
+    fhir:Coding.system :_e47 ;
+    fhir:index 0 .
+
+:_e35 fhir:value "44258-2" .
+
+:_e36 fhir:value "PHQ-9 quick depression assessment panel:-:Pt:^Patient:-:Report.PHQ-9" .
+
+:_e37 fhir:value "http://loinc.org" .
+
+:_e38 fhir:value "http://loinc.org" .
+
+:_e39 fhir:value "http://loinc.org" .
+
+:_e4 fhir:Identifier.use :_e55 ;
+    fhir:Identifier.value :_e56 ;
+    fhir:index 0 .
+
+:_e40 fhir:value "http://loinc.org" .
+
+:_e41 fhir:value "http://loinc.org" .
+
+:_e42 fhir:value "http://loinc.org" .
+
+:_e43 fhir:value "http://loinc.org" .
+
+:_e44 fhir:value "http://loinc.org" .
+
+:_e45 fhir:value "http://loinc.org" .
+
+:_e46 fhir:value "http://loinc.org" .
+
+:_e47 fhir:value "http://loinc.org" .
+
+:_e48 fhir:Extension.url :_e53 ;
+    fhir:Extension.valueExpression :_e49 ;
+    fhir:index 0 .
+
+:_e49 fhir:Expression.expression :_e50 ;
+    fhir:Expression.language :_e51 .
+
+:_e5 fhir:Questionnaire.item.answerValueSet :_e58 ;
+    fhir:Questionnaire.item.code :_e34 ;
+    fhir:Questionnaire.item.linkId :_e67 ;
+    fhir:Questionnaire.item.required :_e77 ;
+    fhir:Questionnaire.item.text :_e87 ;
+    fhir:Questionnaire.item.type :_e97 ;
+    fhir:index 5 .
+
+:_e50 fhir:value "CalculateTotalScore" .
+
+:_e51 fhir:value "text/cql" .
+
+:_e54 fhir:link <http://hl7.org/fhir/Library/phq-9-logic> ;
+    fhir:value "Library/phq-9-logic" .
+
+:_e57 fhir:value "generated" .
+
+:_e58 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_e59 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_e6 fhir:Questionnaire.item.answerValueSet :_e59 ;
+    fhir:Questionnaire.item.code :_e27 ;
+    fhir:Questionnaire.item.linkId :_e68 ;
+    fhir:Questionnaire.item.required :_e78 ;
+    fhir:Questionnaire.item.text :_e88 ;
+    fhir:Questionnaire.item.type :_e98 ;
+    fhir:index 1 .
+
+:_e60 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_e61 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_e62 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_e63 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_e64 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_e66 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_e67 fhir:value "FeelingBadAboutSelf" .
+
+:_e68 fhir:value "FeelingDown" .
+
+:_e69 fhir:value "BadAppetite" .
+
+:_e7 fhir:Questionnaire.item.answerValueSet :_e60 ;
+    fhir:Questionnaire.item.code :_e32 ;
+    fhir:Questionnaire.item.linkId :_e69 ;
+    fhir:Questionnaire.item.required :_e79 ;
+    fhir:Questionnaire.item.text :_e89 ;
+    fhir:Questionnaire.item.type :_e99 ;
+    fhir:index 4 .
+
+:_e70 fhir:value "TroubleConcentrating" .
+
+:_e71 fhir:value "MovingSpeaking" .
+
+:_e72 fhir:value "TroubleSleeping" .
+
+:_e73 fhir:value "FeelingTired" .
+
+:_e75 fhir:value "TotalScore" .
+
+:_e76 fhir:value "Difficulty" .
+
+:_e77 fhir:value true .
+
+:_e78 fhir:value true .
+
+:_e79 fhir:value true .
+
+:_e8 fhir:Questionnaire.item.answerValueSet :_e61 ;
+    fhir:Questionnaire.item.code :_e21 ;
+    fhir:Questionnaire.item.linkId :_e70 ;
+    fhir:Questionnaire.item.required :_e80 ;
+    fhir:Questionnaire.item.text :_e90 ;
+    fhir:Questionnaire.item.type :_e100 ;
+    fhir:index 6 .
+
+:_e80 fhir:value true .
+
+:_e81 fhir:value true .
+
+:_e82 fhir:value true .
+
+:_e83 fhir:value true .
+
+:_e85 fhir:value true .
+
+:_e86 fhir:value true .
+
+:_e87 fhir:value "Feeling bad about yourself - or that you are a failure or have let yourself or your family down" .
+
+:_e88 fhir:value "Feeling down, depressed, or hopeless" .
+
+:_e89 fhir:value "Poor appetite or overeating" .
+
+:_e9 fhir:Questionnaire.item.answerValueSet :_e62 ;
+    fhir:Questionnaire.item.code :_e19 ;
+    fhir:Questionnaire.item.linkId :_e71 ;
+    fhir:Questionnaire.item.required :_e81 ;
+    fhir:Questionnaire.item.text :_e91 ;
+    fhir:Questionnaire.item.type :_e101 ;
+    fhir:index 7 .
+
+:_e90 fhir:value "Trouble concentrating on things, such as reading the newspaper or watching television" .
+
+:_e91 fhir:value "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual" .
+
+:_e92 fhir:value "Trouble falling or staying asleep" .
+
+:_e93 fhir:value "Feeling tired or having little energy" .
+
+:_e95 fhir:value "Total score" .
+
+:_e96 fhir:value "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people" .
+
+:_e97 fhir:value "choice" .
+
+:_e98 fhir:value "choice" .
+
+:_e99 fhir:value "choice" .
+
+
+----- Added Triples  n=210 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/Questionnaire/phq-9-questionnaire> fhir:DomainResource.extension :_a1 ;
+    fhir:DomainResource.text :_a2 ;
+    fhir:Questionnaire.code :_a3 ;
+    fhir:Questionnaire.identifier :_a4 ;
+    fhir:Questionnaire.item :_a10,
+        :_a11,
+        :_a12,
+        :_a13,
+        :_a14,
+        :_a5,
+        :_a6,
+        :_a7,
+        :_a8,
+        :_a9 .
+
+:_a1 fhir:Extension.url :_a52 ;
+    fhir:Extension.valueCanonical :_a54 ;
+    fhir:index 0 .
+
+:_a10 fhir:Questionnaire.item.answerValueSet :_a62 ;
+    fhir:Questionnaire.item.code :_a17 ;
+    fhir:Questionnaire.item.linkId :_a72 ;
+    fhir:Questionnaire.item.required :_a82 ;
+    fhir:Questionnaire.item.text :_a92 ;
+    fhir:Questionnaire.item.type :_a102 ;
+    fhir:index 1 .
+
+:_a100 fhir:value "choice" .
+
+:_a102 fhir:value "choice" .
+
+:_a103 fhir:value "choice" .
+
+:_a104 fhir:value "choice" .
+
+:_a105 fhir:value "choice" .
+
+:_a106 fhir:value "choice" .
+
+:_a11 fhir:Questionnaire.item.answerValueSet :_a63 ;
+    fhir:Questionnaire.item.code :_a27 ;
+    fhir:Questionnaire.item.linkId :_a73 ;
+    fhir:Questionnaire.item.required :_a83 ;
+    fhir:Questionnaire.item.text :_a93 ;
+    fhir:Questionnaire.item.type :_a103 ;
+    fhir:index 4 .
+
+:_a12 fhir:Questionnaire.item.answerValueSet :_a64 ;
+    fhir:Questionnaire.item.code :_a34 ;
+    fhir:Questionnaire.item.linkId :_a74 ;
+    fhir:Questionnaire.item.required :_a84 ;
+    fhir:Questionnaire.item.text :_a94 ;
+    fhir:Questionnaire.item.type :_a104 ;
+    fhir:index 7 .
+
+:_a13 fhir:Questionnaire.item.answerValueSet :_a65 ;
+    fhir:Questionnaire.item.code :_a19 ;
+    fhir:Questionnaire.item.linkId :_a75 ;
+    fhir:Questionnaire.item.required :_a85 ;
+    fhir:Questionnaire.item.text :_a95 ;
+    fhir:Questionnaire.item.type :_a105 ;
+    fhir:index 3 .
+
+:_a14 fhir:Questionnaire.item.answerValueSet :_a66 ;
+    fhir:Questionnaire.item.code :_a21 ;
+    fhir:Questionnaire.item.linkId :_a76 ;
+    fhir:Questionnaire.item.required :_a86 ;
+    fhir:Questionnaire.item.text :_a96 ;
+    fhir:Questionnaire.item.type :_a106 ;
+    fhir:index 9 .
+
+:_a15 fhir:Coding.code :_a16 ;
+    fhir:Coding.system :_a37 ;
+    fhir:index 0 .
+
+:_a16 fhir:value "44261-6" .
+
+:_a17 fhir:Coding.code :_a18 ;
+    fhir:Coding.system :_a38 ;
+    fhir:index 0 .
+
+:_a18 fhir:value "44255-8" .
+
+:_a19 fhir:Coding.code :_a20 ;
+    fhir:Coding.system :_a39 ;
+    fhir:index 0 .
+
+:_a2 fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">PHQ-9 Questionnaire with dynamic logic</div>" ;
+    fhir:Narrative.status :_a57 .
+
+:_a20 fhir:value "44254-1" .
+
+:_a21 fhir:Coding.code :_a22 ;
+    fhir:Coding.system :_a40 ;
+    fhir:index 0 .
+
+:_a22 fhir:value "44256-6" .
+
+:_a23 fhir:Coding.code :_a24 ;
+    fhir:Coding.system :_a41 ;
+    fhir:index 0 .
+
+:_a24 fhir:value "44259-0" .
+
+:_a25 fhir:Coding.code :_a26 ;
+    fhir:Coding.system :_a42 ;
+    fhir:index 0 .
+
+:_a26 fhir:value "44250-9" .
+
+:_a27 fhir:Coding.code :_a28 ;
+    fhir:Coding.system :_a43 ;
+    fhir:index 0 .
+
+:_a28 fhir:value "44251-7" .
+
+:_a29 fhir:Coding.code :_a30 ;
+    fhir:Coding.system :_a44 ;
+    fhir:index 0 .
+
+:_a3 fhir:Coding.code :_a33 ;
+    fhir:Coding.display :_a36 ;
+    fhir:Coding.system :_a46 ;
+    fhir:index 0 .
+
+:_a30 fhir:value "44258-2" .
+
+:_a31 fhir:Coding.code :_a32 ;
+    fhir:Coding.system :_a45 ;
+    fhir:index 0 .
+
+:_a32 fhir:value "44252-5" .
+
+:_a33 fhir:value "44249-1" .
+
+:_a34 fhir:Coding.code :_a35 ;
+    fhir:Coding.system :_a47 ;
+    fhir:index 0 .
+
+:_a35 fhir:value "44253-3" .
+
+:_a36 fhir:value "PHQ-9 quick depression assessment panel:-:Pt:^Patient:-:Report.PHQ-9" .
+
+:_a37 fhir:value "http://loinc.org" .
+
+:_a38 fhir:value "http://loinc.org" .
+
+:_a39 fhir:value "http://loinc.org" .
+
+:_a4 fhir:Identifier.use :_a55 ;
+    fhir:Identifier.value :_a56 ;
+    fhir:index 0 .
+
+:_a40 fhir:value "http://loinc.org" .
+
+:_a41 fhir:value "http://loinc.org" .
+
+:_a42 fhir:value "http://loinc.org" .
+
+:_a43 fhir:value "http://loinc.org" .
+
+:_a44 fhir:value "http://loinc.org" .
+
+:_a45 fhir:value "http://loinc.org" .
+
+:_a46 fhir:value "http://loinc.org" .
+
+:_a47 fhir:value "http://loinc.org" .
+
+:_a48 fhir:Extension.url :_a53 ;
+    fhir:Extension.valueExpression :_a49 ;
+    fhir:index 0 .
+
+:_a49 fhir:Expression.expression :_a50 ;
+    fhir:Expression.language :_a51 .
+
+:_a5 fhir:Questionnaire.item.answerValueSet :_a58 ;
+    fhir:Questionnaire.item.code :_a23 ;
+    fhir:Questionnaire.item.linkId :_a67 ;
+    fhir:Questionnaire.item.required :_a77 ;
+    fhir:Questionnaire.item.text :_a87 ;
+    fhir:Questionnaire.item.type :_a97 ;
+    fhir:index 2 .
+
+:_a50 fhir:value "CalculateTotalScore" .
+
+:_a51 fhir:value "text/cql" .
+
+:_a54 fhir:value "Library/phq-9-logic" .
+
+:_a57 fhir:value "generated" .
+
+:_a58 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_a59 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_a6 fhir:Questionnaire.item.answerValueSet :_a59 ;
+    fhir:Questionnaire.item.code :_a31 ;
+    fhir:Questionnaire.item.linkId :_a68 ;
+    fhir:Questionnaire.item.required :_a78 ;
+    fhir:Questionnaire.item.text :_a88 ;
+    fhir:Questionnaire.item.type :_a98 ;
+    fhir:index 6 .
+
+:_a60 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_a62 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_a63 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_a64 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_a65 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_a66 fhir:link <http://loinc.org/vs/LL358-3> ;
+    fhir:value "http://loinc.org/vs/LL358-3" .
+
+:_a67 fhir:value "TroubleSleeping" .
+
+:_a68 fhir:value "TroubleConcentrating" .
+
+:_a69 fhir:value "TotalScore" .
+
+:_a7 fhir:Element.extension :_a48 ;
+    fhir:Questionnaire.item.code :_a15 ;
+    fhir:Questionnaire.item.linkId :_a69 ;
+    fhir:Questionnaire.item.required :_a79 ;
+    fhir:Questionnaire.item.text :_a89 ;
+    fhir:Questionnaire.item.type :_a99 ;
+    fhir:index 8 .
+
+:_a70 fhir:value "FeelingBadAboutSelf" .
+
+:_a72 fhir:value "FeelingDown" .
+
+:_a73 fhir:value "BadAppetite" .
+
+:_a74 fhir:value "MovingSpeaking" .
+
+:_a75 fhir:value "FeelingTired" .
+
+:_a76 fhir:value "Difficulty" .
+
+:_a77 fhir:value true .
+
+:_a78 fhir:value true .
+
+:_a79 fhir:value true .
+
+:_a8 fhir:Questionnaire.item.answerValueSet :_a60 ;
+    fhir:Questionnaire.item.code :_a29 ;
+    fhir:Questionnaire.item.linkId :_a70 ;
+    fhir:Questionnaire.item.required :_a80 ;
+    fhir:Questionnaire.item.text :_a90 ;
+    fhir:Questionnaire.item.type :_a100 ;
+    fhir:index 5 .
+
+:_a80 fhir:value true .
+
+:_a82 fhir:value true .
+
+:_a83 fhir:value true .
+
+:_a84 fhir:value true .
+
+:_a85 fhir:value true .
+
+:_a86 fhir:value true .
+
+:_a87 fhir:value "Trouble falling or staying asleep" .
+
+:_a88 fhir:value "Trouble concentrating on things, such as reading the newspaper or watching television" .
+
+:_a89 fhir:value "Total score" .
+
+:_a9 fhir:Questionnaire.item.answerValueSet :_a61 ;
+    fhir:Questionnaire.item.code :_a25 ;
+    fhir:Questionnaire.item.linkId :_a71 ;
+    fhir:Questionnaire.item.required :_a81 ;
+    fhir:Questionnaire.item.text :_a91 ;
+    fhir:Questionnaire.item.type :_a101 ;
+    fhir:index 0 .
+
+:_a90 fhir:value "Feeling bad about yourself - or that you are a failure or have let yourself or your family down" .
+
+:_a92 fhir:value "Feeling down, depressed, or hopeless" .
+
+:_a93 fhir:value "Poor appetite or overeating" .
+
+:_a94 fhir:value "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual" .
+
+:_a95 fhir:value "Feeling tired or having little energy" .
+
+:_a96 fhir:value "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people" .
+
+:_a97 fhir:value "choice" .
+
+:_a98 fhir:value "choice" .
+
+:_a99 fhir:value "integer" .
+
+

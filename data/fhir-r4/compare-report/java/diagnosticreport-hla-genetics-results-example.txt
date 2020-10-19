@@ -1,0 +1,455 @@
+----- Missing Triples n=126 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e0a780e-4486-4cd0-bfae-7243c579f208> fhir:Observation.derivedFrom :_e1,
+        :_e2 .
+
+<urn:uuid:49a86246-4004-42eb-9bdc-f542f93f9228> fhir:Observation.derivedFrom :_e3,
+        :_e4 .
+
+<urn:uuid:60613a43-c4cb-4502-b3e2-cf9215feaa70> fhir:Observation.derivedFrom :_e5,
+        :_e6 .
+
+<urn:uuid:709c5315-9403-4867-9d82-0b953836665f> fhir:Observation.derivedFrom :_e7,
+        :_e8 .
+
+<urn:uuid:792be53e-d4fb-4887-a367-815ef6c706e5> fhir:Observation.derivedFrom :_e10,
+        :_e9 .
+
+<urn:uuid:8b2aa21c-1426-4717-8ab0-a84d83df7d47> fhir:Observation.derivedFrom :_e11,
+        :_e12 .
+
+<urn:uuid:b0a4b18e-94e7-4b1b-8031-c7ae4bdd8db9> fhir:DiagnosticReport.result :_e13,
+        :_e14,
+        :_e15 .
+
+<urn:uuid:b7765bbf-df40-486a-9f2f-404309643de6> fhir:Observation.derivedFrom :_e16,
+        :_e17 .
+
+<urn:uuid:d98d92a7-0e86-4ae5-b036-b7e1bba6ec32> fhir:Observation.derivedFrom :_e18,
+        :_e19 .
+
+<urn:uuid:e2092243-2970-49d2-a90f-b90d1d49715a> fhir:Observation.derivedFrom :_e20,
+        :_e21 .
+
+:_e1 fhir:Reference.display :_e22 ;
+    fhir:Reference.reference :_e43 ;
+    fhir:index 1 .
+
+:_e10 fhir:Reference.display :_e31 ;
+    fhir:Reference.reference :_e52 ;
+    fhir:index 0 .
+
+:_e11 fhir:Reference.display :_e28 ;
+    fhir:Reference.reference :_e49 ;
+    fhir:index 1 .
+
+:_e12 fhir:Reference.display :_e38 ;
+    fhir:Reference.reference :_e59 ;
+    fhir:index 0 .
+
+:_e13 fhir:Reference.display :_e27 ;
+    fhir:Reference.reference :_e48 ;
+    fhir:index 2 .
+
+:_e14 fhir:Reference.display :_e36 ;
+    fhir:Reference.reference :_e57 ;
+    fhir:index 0 .
+
+:_e15 fhir:Reference.display :_e40 ;
+    fhir:Reference.reference :_e61 ;
+    fhir:index 1 .
+
+:_e16 fhir:Reference.display :_e33 ;
+    fhir:Reference.reference :_e54 ;
+    fhir:index 0 .
+
+:_e17 fhir:Reference.display :_e41 ;
+    fhir:Reference.reference :_e62 ;
+    fhir:index 1 .
+
+:_e18 fhir:Reference.display :_e25 ;
+    fhir:Reference.reference :_e46 ;
+    fhir:index 1 .
+
+:_e19 fhir:Reference.display :_e39 ;
+    fhir:Reference.reference :_e60 ;
+    fhir:index 0 .
+
+:_e2 fhir:Reference.display :_e24 ;
+    fhir:Reference.reference :_e45 ;
+    fhir:index 0 .
+
+:_e20 fhir:Reference.display :_e29 ;
+    fhir:Reference.reference :_e50 ;
+    fhir:index 1 .
+
+:_e21 fhir:Reference.display :_e30 ;
+    fhir:Reference.reference :_e51 ;
+    fhir:index 0 .
+
+:_e22 fhir:value "HLA-C*03:04:01G, exons 2 and 3" .
+
+:_e23 fhir:value "HLA-B*57:01:01, exon 3" .
+
+:_e24 fhir:value "HLA-C*01:02:01G, exons 2 and 3" .
+
+:_e25 fhir:value "HLA-A*01:02, exon 3" .
+
+:_e26 fhir:value "HLA-C*01:02:01, exon 3" .
+
+:_e27 fhir:value "HLA-C: HLA-C*01:02:01G+HLA-C*03:04:01G" .
+
+:_e28 fhir:value "HLA-C*03:04:01:01, exon 3" .
+
+:_e29 fhir:value "HLA-B*15:01:01:01, exon 3" .
+
+:_e3 fhir:Reference.display :_e32 ;
+    fhir:Reference.reference :_e53 ;
+    fhir:index 0 .
+
+:_e30 fhir:value "HLA-B*15:01:01:01, exon 2" .
+
+:_e31 fhir:value "HLA-B*57:01:01, exon 2" .
+
+:_e32 fhir:value "HLA-A*01:01:01G, exons 2 and 3" .
+
+:_e33 fhir:value "HLA-A*01:01:01:01, exon 2" .
+
+:_e34 fhir:value "HLA-C*01:02:01, exon 2" .
+
+:_e35 fhir:value "HLA-B*15:01:01G, exons 2 and 3" .
+
+:_e36 fhir:value "HLA-A: HLA-A:01:01G+HLA-A*01:02" .
+
+:_e37 fhir:value "HLA-B*57:01:01G, exons 2 and 3" .
+
+:_e38 fhir:value "HLA-C*03:04:01:01, exon 2" .
+
+:_e39 fhir:value "HLA-A*01:02, exon 2" .
+
+:_e4 fhir:Reference.display :_e42 ;
+    fhir:Reference.reference :_e63 ;
+    fhir:index 1 .
+
+:_e40 fhir:value "HLA-B: HLA-B*15:01:01G+HLA-B*57:01:01G" .
+
+:_e41 fhir:value "HLA-A*01:01:01:01, exon 3" .
+
+:_e42 fhir:value "HLA-A*01:02, exons 2 and 3" .
+
+:_e43 fhir:value "urn:uuid:8b2aa21c-1426-4717-8ab0-a84d83df7d47" .
+
+:_e44 fhir:value "urn:uuid:db69e549-6267-4777-b4b9-8813f3329309" .
+
+:_e45 fhir:value "urn:uuid:709c5315-9403-4867-9d82-0b953836665f" .
+
+:_e46 fhir:value "urn:uuid:fbba9fe7-0ece-4ec1-9233-a437a8d242a0" .
+
+:_e47 fhir:value "urn:uuid:46938bb2-0486-4e87-bfd3-89aab2d5e22f" .
+
+:_e48 fhir:value "urn:uuid:0e0a780e-4486-4cd0-bfae-7243c579f208" .
+
+:_e49 fhir:value "urn:uuid:19153ef1-68c6-47a2-9676-c4eefbd39af9" .
+
+:_e5 fhir:Reference.display :_e35 ;
+    fhir:Reference.reference :_e56 ;
+    fhir:index 0 .
+
+:_e50 fhir:value "urn:uuid:c233ad3d-1572-48d6-93da-0a583535e138" .
+
+:_e51 fhir:value "urn:uuid:cbabf93e-1b4b-46f2-ba1e-d84862670670" .
+
+:_e52 fhir:value "urn:uuid:05fa52d7-5c67-460a-8722-d3460b24d6fe" .
+
+:_e53 fhir:value "urn:uuid:b7765bbf-df40-486a-9f2f-404309643de6" .
+
+:_e54 fhir:value "urn:uuid:8200dab6-18a2-4550-b913-a7db480c0804" .
+
+:_e55 fhir:value "urn:uuid:bb55c2bc-5ad2-4bc1-8ff3-c407d06b12d0" .
+
+:_e56 fhir:value "urn:uuid:e2092243-2970-49d2-a90f-b90d1d49715a" .
+
+:_e57 fhir:value "urn:uuid:49a86246-4004-42eb-9bdc-f542f93f9228" .
+
+:_e58 fhir:value "urn:uuid:792be53e-d4fb-4887-a367-815ef6c706e5" .
+
+:_e59 fhir:value "urn:uuid:2ae2ff34-279e-43c2-9018-b054fd3fc1ce" .
+
+:_e6 fhir:Reference.display :_e37 ;
+    fhir:Reference.reference :_e58 ;
+    fhir:index 1 .
+
+:_e60 fhir:value "urn:uuid:65c85f14-c3a0-4b72-818f-820e04fcc621" .
+
+:_e61 fhir:value "urn:uuid:60613a43-c4cb-4502-b3e2-cf9215feaa70" .
+
+:_e62 fhir:value "urn:uuid:7c393185-f15c-45bc-a714-c0fdbea32675" .
+
+:_e63 fhir:value "urn:uuid:d98d92a7-0e86-4ae5-b036-b7e1bba6ec32" .
+
+:_e7 fhir:Reference.display :_e26 ;
+    fhir:Reference.reference :_e47 ;
+    fhir:index 1 .
+
+:_e8 fhir:Reference.display :_e34 ;
+    fhir:Reference.reference :_e55 ;
+    fhir:index 0 .
+
+:_e9 fhir:Reference.display :_e23 ;
+    fhir:Reference.reference :_e44 ;
+    fhir:index 1 .
+
+
+----- Added Triples  n=147 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:b0a4b18e-94e7-4b1b-8031-c7ae4bdd8db9> fhir:DiagnosticReport.result :_a13,
+        :_a14,
+        :_a15 .
+
+:_a1 fhir:Reference.display :_a29 ;
+    fhir:Reference.reference :_a50 ;
+    fhir:index 0 ;
+    fhir:link <urn:uuid:709c5315-9403-4867-9d82-0b953836665f> .
+
+:_a10 fhir:Reference.display :_a39 ;
+    fhir:Reference.reference :_a60 ;
+    fhir:index 0 ;
+    fhir:link <urn:uuid:05fa52d7-5c67-460a-8722-d3460b24d6fe> .
+
+:_a11 fhir:Reference.display :_a27 ;
+    fhir:Reference.reference :_a48 ;
+    fhir:index 1 ;
+    fhir:link <urn:uuid:19153ef1-68c6-47a2-9676-c4eefbd39af9> .
+
+:_a12 fhir:Reference.display :_a36 ;
+    fhir:Reference.reference :_a57 ;
+    fhir:index 0 ;
+    fhir:link <urn:uuid:2ae2ff34-279e-43c2-9018-b054fd3fc1ce> .
+
+:_a13 fhir:Reference.display :_a24 ;
+    fhir:Reference.reference :_a45 ;
+    fhir:index 1 ;
+    fhir:link <urn:uuid:60613a43-c4cb-4502-b3e2-cf9215feaa70> .
+
+:_a14 fhir:Reference.display :_a26 ;
+    fhir:Reference.reference :_a47 ;
+    fhir:index 2 ;
+    fhir:link <urn:uuid:0e0a780e-4486-4cd0-bfae-7243c579f208> .
+
+:_a15 fhir:Reference.display :_a40 ;
+    fhir:Reference.reference :_a61 ;
+    fhir:index 0 ;
+    fhir:link <urn:uuid:49a86246-4004-42eb-9bdc-f542f93f9228> .
+
+:_a16 fhir:Reference.display :_a30 ;
+    fhir:Reference.reference :_a51 ;
+    fhir:index 1 ;
+    fhir:link <urn:uuid:7c393185-f15c-45bc-a714-c0fdbea32675> .
+
+:_a17 fhir:Reference.display :_a38 ;
+    fhir:Reference.reference :_a59 ;
+    fhir:index 0 ;
+    fhir:link <urn:uuid:8200dab6-18a2-4550-b913-a7db480c0804> .
+
+:_a18 fhir:Reference.display :_a33 ;
+    fhir:Reference.reference :_a54 ;
+    fhir:index 1 ;
+    fhir:link <urn:uuid:fbba9fe7-0ece-4ec1-9233-a437a8d242a0> .
+
+:_a19 fhir:Reference.display :_a41 ;
+    fhir:Reference.reference :_a62 ;
+    fhir:index 0 ;
+    fhir:link <urn:uuid:65c85f14-c3a0-4b72-818f-820e04fcc621> .
+
+:_a2 fhir:Reference.display :_a42 ;
+    fhir:Reference.reference :_a63 ;
+    fhir:index 1 ;
+    fhir:link <urn:uuid:8b2aa21c-1426-4717-8ab0-a84d83df7d47> .
+
+:_a20 fhir:Reference.display :_a31 ;
+    fhir:Reference.reference :_a52 ;
+    fhir:index 1 ;
+    fhir:link <urn:uuid:c233ad3d-1572-48d6-93da-0a583535e138> .
+
+:_a21 fhir:Reference.display :_a32 ;
+    fhir:Reference.reference :_a53 ;
+    fhir:index 0 ;
+    fhir:link <urn:uuid:cbabf93e-1b4b-46f2-ba1e-d84862670670> .
+
+:_a22 fhir:value "HLA-C*01:02:01, exon 3" .
+
+:_a23 fhir:value "HLA-C*01:02:01, exon 2" .
+
+:_a24 fhir:value "HLA-B: HLA-B*15:01:01G+HLA-B*57:01:01G" .
+
+:_a25 fhir:value "HLA-B*57:01:01G, exons 2 and 3" .
+
+:_a26 fhir:value "HLA-C: HLA-C*01:02:01G+HLA-C*03:04:01G" .
+
+:_a27 fhir:value "HLA-C*03:04:01:01, exon 3" .
+
+:_a28 fhir:value "HLA-B*57:01:01, exon 3" .
+
+:_a29 fhir:value "HLA-C*01:02:01G, exons 2 and 3" .
+
+:_a3 fhir:Reference.display :_a35 ;
+    fhir:Reference.reference :_a56 ;
+    fhir:index 1 ;
+    fhir:link <urn:uuid:d98d92a7-0e86-4ae5-b036-b7e1bba6ec32> .
+
+:_a30 fhir:value "HLA-A*01:01:01:01, exon 3" .
+
+:_a31 fhir:value "HLA-B*15:01:01:01, exon 3" .
+
+:_a32 fhir:value "HLA-B*15:01:01:01, exon 2" .
+
+:_a33 fhir:value "HLA-A*01:02, exon 3" .
+
+:_a34 fhir:value "HLA-B*15:01:01G, exons 2 and 3" .
+
+:_a35 fhir:value "HLA-A*01:02, exons 2 and 3" .
+
+:_a36 fhir:value "HLA-C*03:04:01:01, exon 2" .
+
+:_a37 fhir:value "HLA-A*01:01:01G, exons 2 and 3" .
+
+:_a38 fhir:value "HLA-A*01:01:01:01, exon 2" .
+
+:_a39 fhir:value "HLA-B*57:01:01, exon 2" .
+
+:_a4 fhir:Reference.display :_a37 ;
+    fhir:Reference.reference :_a58 ;
+    fhir:index 0 ;
+    fhir:link <urn:uuid:b7765bbf-df40-486a-9f2f-404309643de6> .
+
+:_a40 fhir:value "HLA-A: HLA-A:01:01G+HLA-A*01:02" .
+
+:_a41 fhir:value "HLA-A*01:02, exon 2" .
+
+:_a42 fhir:value "HLA-C*03:04:01G, exons 2 and 3" .
+
+:_a43 fhir:value "urn:uuid:46938bb2-0486-4e87-bfd3-89aab2d5e22f" .
+
+:_a44 fhir:value "urn:uuid:bb55c2bc-5ad2-4bc1-8ff3-c407d06b12d0" .
+
+:_a45 fhir:value "urn:uuid:60613a43-c4cb-4502-b3e2-cf9215feaa70" .
+
+:_a46 fhir:value "urn:uuid:792be53e-d4fb-4887-a367-815ef6c706e5" .
+
+:_a47 fhir:value "urn:uuid:0e0a780e-4486-4cd0-bfae-7243c579f208" .
+
+:_a48 fhir:value "urn:uuid:19153ef1-68c6-47a2-9676-c4eefbd39af9" .
+
+:_a49 fhir:value "urn:uuid:db69e549-6267-4777-b4b9-8813f3329309" .
+
+:_a5 fhir:Reference.display :_a25 ;
+    fhir:Reference.reference :_a46 ;
+    fhir:index 1 ;
+    fhir:link <urn:uuid:792be53e-d4fb-4887-a367-815ef6c706e5> .
+
+:_a50 fhir:value "urn:uuid:709c5315-9403-4867-9d82-0b953836665f" .
+
+:_a51 fhir:value "urn:uuid:7c393185-f15c-45bc-a714-c0fdbea32675" .
+
+:_a52 fhir:value "urn:uuid:c233ad3d-1572-48d6-93da-0a583535e138" .
+
+:_a53 fhir:value "urn:uuid:cbabf93e-1b4b-46f2-ba1e-d84862670670" .
+
+:_a54 fhir:value "urn:uuid:fbba9fe7-0ece-4ec1-9233-a437a8d242a0" .
+
+:_a55 fhir:value "urn:uuid:e2092243-2970-49d2-a90f-b90d1d49715a" .
+
+:_a56 fhir:value "urn:uuid:d98d92a7-0e86-4ae5-b036-b7e1bba6ec32" .
+
+:_a57 fhir:value "urn:uuid:2ae2ff34-279e-43c2-9018-b054fd3fc1ce" .
+
+:_a58 fhir:value "urn:uuid:b7765bbf-df40-486a-9f2f-404309643de6" .
+
+:_a59 fhir:value "urn:uuid:8200dab6-18a2-4550-b913-a7db480c0804" .
+
+:_a6 fhir:Reference.display :_a34 ;
+    fhir:Reference.reference :_a55 ;
+    fhir:index 0 ;
+    fhir:link <urn:uuid:e2092243-2970-49d2-a90f-b90d1d49715a> .
+
+:_a60 fhir:value "urn:uuid:05fa52d7-5c67-460a-8722-d3460b24d6fe" .
+
+:_a61 fhir:value "urn:uuid:49a86246-4004-42eb-9bdc-f542f93f9228" .
+
+:_a62 fhir:value "urn:uuid:65c85f14-c3a0-4b72-818f-820e04fcc621" .
+
+:_a63 fhir:value "urn:uuid:8b2aa21c-1426-4717-8ab0-a84d83df7d47" .
+
+:_a7 fhir:Reference.display :_a22 ;
+    fhir:Reference.reference :_a43 ;
+    fhir:index 1 ;
+    fhir:link <urn:uuid:46938bb2-0486-4e87-bfd3-89aab2d5e22f> .
+
+:_a8 fhir:Reference.display :_a23 ;
+    fhir:Reference.reference :_a44 ;
+    fhir:index 0 ;
+    fhir:link <urn:uuid:bb55c2bc-5ad2-4bc1-8ff3-c407d06b12d0> .
+
+:_a9 fhir:Reference.display :_a28 ;
+    fhir:Reference.reference :_a49 ;
+    fhir:index 1 ;
+    fhir:link <urn:uuid:db69e549-6267-4777-b4b9-8813f3329309> .
+
+<urn:uuid:0e0a780e-4486-4cd0-bfae-7243c579f208> fhir:Observation.derivedFrom :_a1,
+        :_a2 .
+
+<urn:uuid:49a86246-4004-42eb-9bdc-f542f93f9228> fhir:Observation.derivedFrom :_a3,
+        :_a4 .
+
+<urn:uuid:60613a43-c4cb-4502-b3e2-cf9215feaa70> fhir:Observation.derivedFrom :_a5,
+        :_a6 .
+
+<urn:uuid:709c5315-9403-4867-9d82-0b953836665f> fhir:Observation.derivedFrom :_a7,
+        :_a8 .
+
+<urn:uuid:792be53e-d4fb-4887-a367-815ef6c706e5> fhir:Observation.derivedFrom :_a10,
+        :_a9 .
+
+<urn:uuid:8b2aa21c-1426-4717-8ab0-a84d83df7d47> fhir:Observation.derivedFrom :_a11,
+        :_a12 .
+
+<urn:uuid:b7765bbf-df40-486a-9f2f-404309643de6> fhir:Observation.derivedFrom :_a16,
+        :_a17 .
+
+<urn:uuid:d98d92a7-0e86-4ae5-b036-b7e1bba6ec32> fhir:Observation.derivedFrom :_a18,
+        :_a19 .
+
+<urn:uuid:e2092243-2970-49d2-a90f-b90d1d49715a> fhir:Observation.derivedFrom :_a20,
+        :_a21 .
+
+
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type http://www.genenames.org/HGNC%253A4933
+REMOVE: Concept URI not mapped in expected _:2 rdf:type http://www.ebi.ac.uk/ipd/imgt/hla/HLA00381
+REMOVE: Concept URI not mapped in expected _:3 rdf:type http://www.genenames.org/HGNC%253A4931
+REMOVE: Concept URI not mapped in expected _:4 rdf:type http://www.ebi.ac.uk/ipd/imgt/hla/HLA00002
+REMOVE: Concept URI not mapped in expected _:5 rdf:type http://www.ncbi.nlm.nih.gov/gtr/GTR000000000.0
+REMOVE: Concept URI not mapped in expected _:6 rdf:type http://www.genenames.org/HGNC%253A4932
+REMOVE: Concept URI not mapped in expected _:7 rdf:type http://terminology.hl7.org/CodeSystem/v2-0074/GE
+REMOVE: Concept URI not mapped in expected _:8 rdf:type http://www.genenames.org/HGNC%253A4933
+REMOVE: Concept URI not mapped in expected _:9 rdf:type http://www.genenames.org/HGNC%253A4933
+REMOVE: Concept URI not mapped in expected _:10 rdf:type http://www.ebi.ac.uk/ipd/imgt/hla/HLA00001
+REMOVE: Concept URI not mapped in expected _:11 rdf:type http://www.genenames.org/HGNC%253A4931
+REMOVE: Concept URI not mapped in expected _:12 rdf:type http://www.ebi.ac.uk/ipd/imgt/hla/HLA00162
+REMOVE: Concept URI not mapped in expected _:13 rdf:type http://www.ebi.ac.uk/ipd/imgt/hla/HLA00162
+REMOVE: Concept URI not mapped in expected _:14 rdf:type http://www.genenames.org/HGNC%253A4931
+REMOVE: Concept URI not mapped in expected _:15 rdf:type http://www.ebi.ac.uk/ipd/imgt/hla/HLA00002
+REMOVE: Concept URI not mapped in expected _:16 rdf:type http://www.ebi.ac.uk/ipd/imgt/hla/HLA00401
+REMOVE: Concept URI not mapped in expected _:17 rdf:type http://www.genenames.org/HGNC%253A4932
+REMOVE: Concept URI not mapped in expected _:18 rdf:type http://www.ebi.ac.uk/ipd/imgt/hla/HLA00413
+REMOVE: Concept URI not mapped in expected _:19 rdf:type http://www.ebi.ac.uk/ipd/imgt/hla/HLA00381
+REMOVE: Concept URI not mapped in expected _:20 rdf:type http://www.ebi.ac.uk/ipd/imgt/hla/HLA00001
+REMOVE: Concept URI not mapped in expected _:21 rdf:type http://www.ebi.ac.uk/ipd/imgt/hla/HLA00401
+REMOVE: Concept URI not mapped in expected _:22 rdf:type http://www.ebi.ac.uk/ipd/imgt/hla/HLA00413
+REMOVE: Concept URI not mapped in expected _:23 rdf:type http://www.genenames.org/HGNC%253A4932

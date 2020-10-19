@@ -1,0 +1,252 @@
+----- Missing Triples n=87 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_e35 fhir:Questionnaire.item.item :_e25,
+        :_e29 .
+
+<http://hl7.org/fhir/Questionnaire/3141> fhir:Questionnaire.item :_e1 .
+
+:_e1 fhir:Questionnaire.item.code :_e8 ;
+    fhir:Questionnaire.item.item :_e32 ;
+    fhir:Questionnaire.item.linkId :_e39 ;
+    fhir:Questionnaire.item.type :_e50 ;
+    fhir:index 1 .
+
+:_e10 fhir:Coding.code :_e11 ;
+    fhir:Coding.display :_e15 ;
+    fhir:Coding.system :_e21 .
+
+:_e11 fhir:value "STADPT" .
+
+:_e12 a <http://snomed.info/id/22298006> ;
+    fhir:Coding.code :_e13 ;
+    fhir:Coding.display :_e16 ;
+    fhir:Coding.system :_e22 ;
+    fhir:index 0 .
+
+:_e13 fhir:value "22298006" .
+
+:_e14 fhir:value "Angina (disorder)" .
+
+:_e15 fhir:value "pT category" .
+
+:_e16 fhir:value "Myocardial infarction (disorder)" .
+
+:_e18 fhir:value "http://example.org/system/code/questions" .
+
+:_e19 fhir:value "http://snomed.info/sct" .
+
+:_e2 fhir:Coding.code :_e3 ;
+    fhir:Coding.system :_e17 .
+
+:_e20 fhir:value "http://example.org/system/code/sections" .
+
+:_e22 fhir:value "http://snomed.info/sct" .
+
+:_e23 fhir:Questionnaire.item.answerValueSet :_e24 ;
+    fhir:Questionnaire.item.code :_e12 ;
+    fhir:Questionnaire.item.linkId :_e38 ;
+    fhir:Questionnaire.item.prefix :_e43 ;
+    fhir:Questionnaire.item.type :_e49 ;
+    fhir:index 1 .
+
+:_e24 fhir:link <http://hl7.org/fhir/ValueSet/yesnodontknow> ;
+    fhir:value "http://hl7.org/fhir/ValueSet/yesnodontknow" .
+
+:_e25 fhir:Questionnaire.item.answerValueSet :_e26 ;
+    fhir:Questionnaire.item.code :_e33 ;
+    fhir:Questionnaire.item.item :_e23,
+        :_e27 ;
+    fhir:Questionnaire.item.linkId :_e40 ;
+    fhir:Questionnaire.item.prefix :_e44 ;
+    fhir:Questionnaire.item.type :_e51 ;
+    fhir:index 0 .
+
+:_e26 fhir:link <http://hl7.org/fhir/ValueSet/yesnodontknow> ;
+    fhir:value "http://hl7.org/fhir/ValueSet/yesnodontknow" .
+
+:_e27 fhir:Questionnaire.item.answerValueSet :_e28 ;
+    fhir:Questionnaire.item.code :_e34,
+        :_e6 ;
+    fhir:Questionnaire.item.linkId :_e41 ;
+    fhir:Questionnaire.item.prefix :_e45 ;
+    fhir:Questionnaire.item.type :_e52 ;
+    fhir:index 0 .
+
+:_e28 fhir:link <http://hl7.org/fhir/ValueSet/yesnodontknow> ;
+    fhir:value "http://hl7.org/fhir/ValueSet/yesnodontknow" .
+
+:_e29 fhir:Questionnaire.item.answerValueSet :_e30 ;
+    fhir:Questionnaire.item.code :_e4 ;
+    fhir:Questionnaire.item.linkId :_e42 ;
+    fhir:Questionnaire.item.prefix :_e46 ;
+    fhir:Questionnaire.item.type :_e53 ;
+    fhir:index 1 .
+
+:_e3 fhir:value "ABDOMINAL" .
+
+:_e30 fhir:link <http://hl7.org/fhir/ValueSet/yesnodontknow> ;
+    fhir:value "http://hl7.org/fhir/ValueSet/yesnodontknow" .
+
+:_e31 fhir:Questionnaire.item.code :_e10 ;
+    fhir:Questionnaire.item.linkId :_e36 ;
+    fhir:Questionnaire.item.type :_e47 ;
+    fhir:index 0 .
+
+:_e32 fhir:Questionnaire.item.code :_e2 ;
+    fhir:Questionnaire.item.item :_e31 ;
+    fhir:Questionnaire.item.linkId :_e37 ;
+    fhir:Questionnaire.item.type :_e48 ;
+    fhir:index 0 .
+
+:_e38 fhir:value "1.1.1.1.2" .
+
+:_e4 fhir:Coding.code :_e5 ;
+    fhir:Coding.system :_e18 .
+
+:_e43 fhir:value "1.1.2" .
+
+:_e49 fhir:value "choice" .
+
+:_e5 fhir:value "COMORBVAS" .
+
+:_e6 a <http://snomed.info/id/194828000> ;
+    fhir:Coding.code :_e7 ;
+    fhir:Coding.display :_e14 ;
+    fhir:Coding.system :_e19 ;
+    fhir:index 1 .
+
+:_e7 fhir:value "194828000" .
+
+:_e8 fhir:Coding.code :_e9 ;
+    fhir:Coding.system :_e20 .
+
+:_e9 fhir:value "HISTOPATHOLOGY" .
+
+
+----- Added Triples  n=81 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_a35 fhir:Questionnaire.item.item :_a23,
+        :_a27 .
+
+<http://hl7.org/fhir/Questionnaire/3141> fhir:Questionnaire.item :_a1 .
+
+:_a1 fhir:Questionnaire.item.code :_a8 ;
+    fhir:Questionnaire.item.item :_a31 ;
+    fhir:Questionnaire.item.linkId :_a36 ;
+    fhir:Questionnaire.item.type :_a47 ;
+    fhir:index 1 .
+
+:_a10 fhir:Coding.code :_a11 ;
+    fhir:Coding.display :_a15 ;
+    fhir:Coding.system :_a21 .
+
+:_a11 fhir:value "STADPT" .
+
+:_a12 fhir:Coding.code :_a13 ;
+    fhir:Coding.display :_a16 ;
+    fhir:Coding.system :_a22 ;
+    fhir:index 0 .
+
+:_a13 fhir:value "22298006" .
+
+:_a14 fhir:value "Angina (disorder)" .
+
+:_a15 fhir:value "pT category" .
+
+:_a16 fhir:value "Myocardial infarction (disorder)" .
+
+:_a17 fhir:value "http://snomed.info/sct" .
+
+:_a18 fhir:value "http://example.org/system/code/sections" .
+
+:_a2 fhir:Coding.code :_a3 ;
+    fhir:Coding.display :_a14 ;
+    fhir:Coding.system :_a17 ;
+    fhir:index 1 .
+
+:_a21 fhir:value "http://example.org/system/code/questions" .
+
+:_a22 fhir:value "http://snomed.info/sct" .
+
+:_a23 fhir:Questionnaire.item.answerValueSet :_a24 ;
+    fhir:Questionnaire.item.code :_a33 ;
+    fhir:Questionnaire.item.item :_a25,
+        :_a29 ;
+    fhir:Questionnaire.item.linkId :_a39 ;
+    fhir:Questionnaire.item.prefix :_a43 ;
+    fhir:Questionnaire.item.type :_a50 ;
+    fhir:index 0 .
+
+:_a24 fhir:value "http://hl7.org/fhir/ValueSet/yesnodontknow" .
+
+:_a25 fhir:Questionnaire.item.answerValueSet :_a26 ;
+    fhir:Questionnaire.item.code :_a2,
+        :_a34 ;
+    fhir:Questionnaire.item.linkId :_a40 ;
+    fhir:Questionnaire.item.prefix :_a44 ;
+    fhir:Questionnaire.item.type :_a51 ;
+    fhir:index 0 .
+
+:_a26 fhir:value "http://hl7.org/fhir/ValueSet/yesnodontknow" .
+
+:_a27 fhir:Questionnaire.item.answerValueSet :_a28 ;
+    fhir:Questionnaire.item.code :_a6 ;
+    fhir:Questionnaire.item.linkId :_a41 ;
+    fhir:Questionnaire.item.prefix :_a45 ;
+    fhir:Questionnaire.item.type :_a52 ;
+    fhir:index 1 .
+
+:_a28 fhir:value "http://hl7.org/fhir/ValueSet/yesnodontknow" .
+
+:_a29 fhir:Questionnaire.item.answerValueSet :_a30 ;
+    fhir:Questionnaire.item.code :_a12 ;
+    fhir:Questionnaire.item.linkId :_a42 ;
+    fhir:Questionnaire.item.prefix :_a46 ;
+    fhir:Questionnaire.item.type :_a53 ;
+    fhir:index 1 .
+
+:_a3 fhir:value "194828000" .
+
+:_a30 fhir:value "http://hl7.org/fhir/ValueSet/yesnodontknow" .
+
+:_a31 fhir:Questionnaire.item.code :_a4 ;
+    fhir:Questionnaire.item.item :_a32 ;
+    fhir:Questionnaire.item.linkId :_a37 ;
+    fhir:Questionnaire.item.type :_a48 ;
+    fhir:index 0 .
+
+:_a32 fhir:Questionnaire.item.code :_a10 ;
+    fhir:Questionnaire.item.linkId :_a38 ;
+    fhir:Questionnaire.item.type :_a49 ;
+    fhir:index 0 .
+
+:_a4 fhir:Coding.code :_a5 ;
+    fhir:Coding.system :_a18 .
+
+:_a42 fhir:value "1.1.1.1.2" .
+
+:_a46 fhir:value "1.1.2" .
+
+:_a5 fhir:value "ABDOMINAL" .
+
+:_a53 fhir:value "choice" .
+
+:_a6 fhir:Coding.code :_a7 ;
+    fhir:Coding.system :_a19 .
+
+:_a7 fhir:value "COMORBVAS" .
+
+:_a8 fhir:Coding.code :_a9 ;
+    fhir:Coding.system :_a20 .
+
+:_a9 fhir:value "HISTOPATHOLOGY" .
+
+
+----- Changes to Actual Graph -----
+REMOVE: Type arc not declared in expected fhir:ValueSet/yesnodontknow rdf:type fhir:ValueSet

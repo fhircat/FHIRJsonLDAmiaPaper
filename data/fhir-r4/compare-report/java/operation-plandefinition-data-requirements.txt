@@ -1,0 +1,7 @@
+----- Added Subjects -----
+http://hl7.org/fhir/OperationDefinition/PlanDefinition-data-requirements:
+	http://hl7.org/fhir/nodeRole  http://hl7.org/fhir/treeRoot
+
+http://hl7.org/fhir/OperationDefinition/PlanDefinition-data-requirements.ttl:
+	http://www.w3.org/2002/07/owl#versionIRI  http://build.fhir.org/OperationDefinition/PlanDefinition-data-requirements.ttl
+	http://www.w3.org/2002/07/owl#imports  http://hl7.org/fhir/fhir.ttl

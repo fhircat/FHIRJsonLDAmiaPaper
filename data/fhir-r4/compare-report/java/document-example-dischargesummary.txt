@@ -1,0 +1,320 @@
+----- Missing Triples n=51 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://fhir.healthintersections.com.au/open/Composition/180f219f-97a8-486d-99d9-ed631fe4fc57> fhir:Composition.section :_e1,
+        :_e2,
+        :_e3 .
+
+:_e1 fhir:Composition.section.code :_e6 ;
+    fhir:Composition.section.entry :_e15 ;
+    fhir:Composition.section.text :_e20 ;
+    fhir:Composition.section.title :_e23 ;
+    fhir:index 2 .
+
+:_e15 fhir:Reference.reference :_e29 ;
+    fhir:index 0 .
+
+:_e16 fhir:Reference.reference :_e28 ;
+    fhir:index 1 .
+
+:_e17 fhir:Reference.reference :_e31 ;
+    fhir:index 0 .
+
+:_e18 fhir:Reference.reference :_e30 ;
+    fhir:index 0 .
+
+:_e19 fhir:value "working" .
+
+:_e2 fhir:Composition.section.code :_e4 ;
+    fhir:Composition.section.entry :_e16,
+        :_e17 ;
+    fhir:Composition.section.mode :_e19 ;
+    fhir:Composition.section.text :_e21 ;
+    fhir:Composition.section.title :_e24 ;
+    fhir:index 1 .
+
+:_e20 fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml">
+
+              <table>
+
+                <thead>
+
+                  <tr>
+
+                    <td>Allergen</td>
+
+                    <td>Reaction</td>
+
+                  </tr>
+
+                </thead>
+
+                <tbody>
+
+                  <tr>
+
+                    <td>Doxycycline</td>
+
+                    <td>Hives</td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>""" ;
+    fhir:Narrative.status :_e27 .
+
+:_e21 fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml">
+
+              <table>
+
+                <thead>
+
+                  <tr>
+
+                    <td>Medication</td>
+
+                    <td>Last Change</td>
+
+                    <td>Last ChangeReason</td>
+
+                  </tr>
+
+                </thead>
+
+                <tbody>
+
+                  <tr>
+
+                    <td>Theophylline 200mg BD after meals</td>
+
+                    <td>continued</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td>Ventolin Inhaler</td>
+
+                    <td>stopped</td>
+
+                    <td>Getting side effect of tremor</td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>""" ;
+    fhir:Narrative.status :_e26 .
+
+:_e23 fhir:value "Known allergies" .
+
+:_e24 fhir:value "Medications on Discharge" .
+
+:_e28 fhir:value "urn:uuid:673f8db5-0ffd-4395-9657-6da00420bbc1" .
+
+:_e29 fhir:value "urn:uuid:47600e0f-b6b5-4308-84b5-5dec157f7637" .
+
+:_e3 fhir:Composition.section.code :_e14 ;
+    fhir:Composition.section.entry :_e18 ;
+    fhir:Composition.section.text :_e22 ;
+    fhir:Composition.section.title :_e25 ;
+    fhir:index 0 .
+
+:_e30 fhir:value "urn:uuid:541a72a8-df75-4484-ac89-ac4923f03b81" .
+
+:_e31 fhir:value "urn:uuid:124a6916-5d84-4b8c-b250-10cefb8e6e86" .
+
+:_e4 fhir:CodeableConcept.coding :_e5 .
+
+:_e5 a <http://loinc.org/rdf#10183-2> ;
+    fhir:Coding.code :_e8 ;
+    fhir:Coding.display :_e10 ;
+    fhir:Coding.system :_e12 ;
+    fhir:index 0 .
+
+:_e6 fhir:CodeableConcept.coding :_e7 .
+
+:_e7 a <http://loinc.org/rdf#48765-2> ;
+    fhir:Coding.code :_e9 ;
+    fhir:Coding.display :_e11 ;
+    fhir:Coding.system :_e13 ;
+    fhir:index 0 .
+
+
+----- Added Triples  n=55 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://fhir.healthintersections.com.au/open/Composition/180f219f-97a8-486d-99d9-ed631fe4fc57> fhir:Composition.section :_a1,
+        :_a2,
+        :_a3 .
+
+:_a1 fhir:Composition.section.code :_a6 ;
+    fhir:Composition.section.entry :_a15 ;
+    fhir:Composition.section.text :_a20 ;
+    fhir:Composition.section.title :_a23 ;
+    fhir:index 2 .
+
+:_a15 fhir:Reference.reference :_a30 ;
+    fhir:index 0 ;
+    fhir:link <urn:uuid:47600e0f-b6b5-4308-84b5-5dec157f7637> .
+
+:_a16 fhir:Reference.reference :_a31 ;
+    fhir:index 0 ;
+    fhir:link <urn:uuid:541a72a8-df75-4484-ac89-ac4923f03b81> .
+
+:_a17 fhir:Reference.reference :_a28 ;
+    fhir:index 1 ;
+    fhir:link <urn:uuid:673f8db5-0ffd-4395-9657-6da00420bbc1> .
+
+:_a18 fhir:Reference.reference :_a29 ;
+    fhir:index 0 ;
+    fhir:link <urn:uuid:124a6916-5d84-4b8c-b250-10cefb8e6e86> .
+
+:_a19 fhir:value "working" .
+
+:_a2 fhir:Composition.section.code :_a14 ;
+    fhir:Composition.section.entry :_a16 ;
+    fhir:Composition.section.text :_a21 ;
+    fhir:Composition.section.title :_a24 ;
+    fhir:index 0 .
+
+:_a20 fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml">
+
+              <table>
+
+                <thead>
+
+                  <tr>
+
+                    <td>Allergen</td>
+
+                    <td>Reaction</td>
+
+                  </tr>
+
+                </thead>
+
+                <tbody>
+
+                  <tr>
+
+                    <td>Doxycycline</td>
+
+                    <td>Hives</td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>""" ;
+    fhir:Narrative.status :_a26 .
+
+:_a22 fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml">
+
+              <table>
+
+                <thead>
+
+                  <tr>
+
+                    <td>Medication</td>
+
+                    <td>Last Change</td>
+
+                    <td>Last ChangeReason</td>
+
+                  </tr>
+
+                </thead>
+
+                <tbody>
+
+                  <tr>
+
+                    <td>Theophylline 200mg BD after meals</td>
+
+                    <td>continued</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td>Ventolin Inhaler</td>
+
+                    <td>stopped</td>
+
+                    <td>Getting side effect of tremor</td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>""" ;
+    fhir:Narrative.status :_a27 .
+
+:_a23 fhir:value "Known allergies" .
+
+:_a25 fhir:value "Medications on Discharge" .
+
+:_a28 fhir:value "urn:uuid:673f8db5-0ffd-4395-9657-6da00420bbc1" .
+
+:_a29 fhir:value "urn:uuid:124a6916-5d84-4b8c-b250-10cefb8e6e86" .
+
+:_a3 fhir:Composition.section.code :_a4 ;
+    fhir:Composition.section.entry :_a17,
+        :_a18 ;
+    fhir:Composition.section.mode :_a19 ;
+    fhir:Composition.section.text :_a22 ;
+    fhir:Composition.section.title :_a25 ;
+    fhir:index 1 .
+
+:_a30 fhir:value "urn:uuid:47600e0f-b6b5-4308-84b5-5dec157f7637" .
+
+:_a31 fhir:value "urn:uuid:541a72a8-df75-4484-ac89-ac4923f03b81" .
+
+:_a4 fhir:CodeableConcept.coding :_a5 .
+
+:_a5 a <http://loinc.org/rdf#10183-2> ;
+    fhir:Coding.code :_a8 ;
+    fhir:Coding.display :_a10 ;
+    fhir:Coding.system :_a12 ;
+    fhir:index 0 .
+
+:_a6 fhir:CodeableConcept.coding :_a7 .
+
+:_a7 a <http://loinc.org/rdf#48765-2> ;
+    fhir:Coding.code :_a9 ;
+    fhir:Coding.display :_a11 ;
+    fhir:Coding.system :_a13 ;
+    fhir:index 0 .
+
+
+----- Changes to Expected Graph -----
+ADD: Changing reference to FullURI _:1 fhir:link http://fhir.healthintersections.com.au/open/Practitioner/example
+ADD: Changing reference to FullURI _:1 fhir:link http://fhir.healthintersections.com.au/open/Practitioner/example
+ADD: Changing reference to FullURI _:2 fhir:link http://fhir.healthintersections.com.au/open/Patient/d1
+ADD: Changing reference to FullURI _:3 fhir:link http://fhir.healthintersections.com.au/open/Practitioner/example
+ADD: Changing reference to FullURI _:3 fhir:link http://fhir.healthintersections.com.au/open/Practitioner/example
+REMOVE: Changing reference to fullURI _:1 fhir:link fhir:Practitioner/example
+REMOVE: Changing reference to fullURI _:2 fhir:link fhir:Patient/d1
+REMOVE: Changing reference to fullURI _:3 fhir:link fhir:Practitioner/example
+REMOVE: Remove subjects that should have been fullURIs fhir:Patient/d1 rdf:type fhir:Patient
+REMOVE: Remove subjects that should have been fullURIs fhir:Practitioner/example rdf:type fhir:Practitioner
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type http://example.org/system/xxx
+REMOVE: Concept URI not mapped in expected _:2 rdf:type http://terminology.hl7.org/CodeSystem/allergyintolerance-verification/confirmed
+REMOVE: Concept URI not mapped in expected _:3 rdf:type http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical/active
+REMOVE: Concept URI not mapped in expected _:4 rdf:type http://terminology.hl7.org/CodeSystem/dose-rate-type/ordered

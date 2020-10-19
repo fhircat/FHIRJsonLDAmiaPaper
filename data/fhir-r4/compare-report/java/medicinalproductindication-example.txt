@@ -1,0 +1,52 @@
+----- Missing Triples n=8 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+<http://hl7.org/fhir/MedicinalProductIndication/example> fhir:DomainResource.text :_e1 ;
+    fhir:MedicinalProductIndication.diseaseSymptomProcedure :_e2 .
+
+:_e1 fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>diseaseSymptomProcedure</b>: Prevention of venous thromboembolic events (VTE) in adult patients who have undergone elective hip\\nor knee replacement surgery.\\nPrevention of stroke and systemic embolism in adult patients with non-valvular atrial fibrillation\\n(NVAF), with one or more risk factors, such as prior stroke or transient ischaemic attack (TIA); age\\n≥ 75 years; hypertension; diabetes mellitus; symptomatic heart failure (NYHA Class ≥ II).\\nTreatment of deep vein thrombosis (DVT) and pulmonary embolism (PE), and prevention of recurrent\\nDVT and PE in adults (see section 4.4 for haemodynamically unstable PE patients). <span>(Details : {http://ema.europa.eu/example/indicationasdisease-symptom-procedure code 'Venousthromboembolismprophylaxis' = 'Venousthromboembolismprophylaxis)</span></p><p><b>comorbidity</b>: Hipsurgery <span>(Details : {http://ema.europa.eu/example/comorbidity code 'Hipsurgery' = 'Hipsurgery)</span></p><p><b>intendedEffect</b>: PRYLX <span>(Details : {http://ema.europa.eu/example/intendedeffect code 'PRYLX' = 'PRYLX)</span></p><p><b>population</b>: </p></div>" ;
+    fhir:Narrative.status :_e5 .
+
+:_e2 fhir:CodeableConcept.coding :_e3 ;
+    fhir:CodeableConcept.text :_e4 .
+
+:_e4 fhir:value "Prevention of venous thromboembolic events (VTE) in adult patients who have undergone elective hip\\nor knee replacement surgery.\\nPrevention of stroke and systemic embolism in adult patients with non-valvular atrial fibrillation\\n(NVAF), with one or more risk factors, such as prior stroke or transient ischaemic attack (TIA); age\\n≥ 75 years; hypertension; diabetes mellitus; symptomatic heart failure (NYHA Class ≥ II).\\nTreatment of deep vein thrombosis (DVT) and pulmonary embolism (PE), and prevention of recurrent\\nDVT and PE in adults (see section 4.4 for haemodynamically unstable PE patients)." .
+
+:_e5 fhir:value "generated" .
+
+
+----- Added Triples  n=8 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+<http://hl7.org/fhir/MedicinalProductIndication/example> fhir:DomainResource.text :_a1 ;
+    fhir:MedicinalProductIndication.diseaseSymptomProcedure :_a2 .
+
+:_a1 fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>diseaseSymptomProcedure</b>: Prevention of venous thromboembolic events (VTE) in adult patients who have undergone elective hip\\
+or knee replacement surgery.\\
+Prevention of stroke and systemic embolism in adult patients with non-valvular atrial fibrillation\\
+(NVAF), with one or more risk factors, such as prior stroke or transient ischaemic attack (TIA); age\\
+≥ 75 years; hypertension; diabetes mellitus; symptomatic heart failure (NYHA Class ≥ II).\\
+Treatment of deep vein thrombosis (DVT) and pulmonary embolism (PE), and prevention of recurrent\\
+DVT and PE in adults (see section 4.4 for haemodynamically unstable PE patients). <span>(Details : {http://ema.europa.eu/example/indicationasdisease-symptom-procedure code 'Venousthromboembolismprophylaxis' = 'Venousthromboembolismprophylaxis)</span></p><p><b>comorbidity</b>: Hipsurgery <span>(Details : {http://ema.europa.eu/example/comorbidity code 'Hipsurgery' = 'Hipsurgery)</span></p><p><b>intendedEffect</b>: PRYLX <span>(Details : {http://ema.europa.eu/example/intendedeffect code 'PRYLX' = 'PRYLX)</span></p><p><b>population</b>: </p></div>""" ;
+    fhir:Narrative.status :_a5 .
+
+:_a2 fhir:CodeableConcept.coding :_a3 ;
+    fhir:CodeableConcept.text :_a4 .
+
+:_a4 fhir:value """Prevention of venous thromboembolic events (VTE) in adult patients who have undergone elective hip\\
+or knee replacement surgery.\\
+Prevention of stroke and systemic embolism in adult patients with non-valvular atrial fibrillation\\
+(NVAF), with one or more risk factors, such as prior stroke or transient ischaemic attack (TIA); age\\
+≥ 75 years; hypertension; diabetes mellitus; symptomatic heart failure (NYHA Class ≥ II).\\
+Treatment of deep vein thrombosis (DVT) and pulmonary embolism (PE), and prevention of recurrent\\
+DVT and PE in adults (see section 4.4 for haemodynamically unstable PE patients).""" .
+
+:_a5 fhir:value "generated" .
+
+
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type http://ema.europa.eu/example/intendedeffect/PRYLX
+REMOVE: Concept URI not mapped in expected _:2 rdf:type http://ema.europa.eu/example/comorbidity/Hipsurgery
+REMOVE: Concept URI not mapped in expected _:3 rdf:type http://ema.europa.eu/example/indicationasdisease-symptom-procedure/Venousthromboembolismprophylaxis

@@ -1,0 +1,49 @@
+----- Missing Triples n=10 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_e1 fhir:PlanDefinition.action.action :_e2,
+        :_e3 .
+
+:_e2 fhir:PlanDefinition.action.definitionCanonical :_e4 ;
+    fhir:index 0 .
+
+:_e3 fhir:PlanDefinition.action.definitionCanonical :_e5 ;
+    fhir:index 1 .
+
+:_e4 fhir:link <http://hl7.org/fhir/ActivityDefinition/provide-mosquito-prevention-advice> ;
+    fhir:value "ActivityDefinition/provide-mosquito-prevention-advice" .
+
+:_e5 fhir:link <http://hl7.org/fhir/ActivityDefinition/provide-contraception-advice> ;
+    fhir:value "ActivityDefinition/provide-contraception-advice" .
+
+
+----- Added Triples  n=8 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_a1 fhir:PlanDefinition.action.action :_a2,
+        :_a3 .
+
+:_a2 fhir:PlanDefinition.action.definitionCanonical :_a4 ;
+    fhir:index 0 .
+
+:_a3 fhir:PlanDefinition.action.definitionCanonical :_a5 ;
+    fhir:index 1 .
+
+:_a4 fhir:value "ActivityDefinition/provide-mosquito-prevention-advice" .
+
+:_a5 fhir:value "ActivityDefinition/provide-contraception-advice" .
+
+
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type http://terminology.hl7.org/CodeSystem/usage-context-type/age
+REMOVE: Concept URI not mapped in expected _:2 rdf:type http://terminology.hl7.org/CodeSystem/usage-context-type/user
+REMOVE: Type arc not declared in expected fhir:ActivityDefinition/administer-zika-virus-exposure-assessment rdf:type fhir:ActivityDefinition
+REMOVE: Type arc not declared in expected fhir:ActivityDefinition/consider-igm-antibody-testing rdf:type fhir:ActivityDefinition
+REMOVE: Type arc not declared in expected fhir:ActivityDefinition/order-serum-urine-rrt-pcr-test rdf:type fhir:ActivityDefinition
+REMOVE: Type arc not declared in expected fhir:ActivityDefinition/order-serum-zika-dengue-virus-igm rdf:type fhir:ActivityDefinition
+REMOVE: Type arc not declared in expected fhir:Library/zika-virus-intervention-logic rdf:type fhir:Library
+REMOVE:  fhir:PlanDefinition/zika-virus-intervention-initial rdf:type fhir:PlanDefinition

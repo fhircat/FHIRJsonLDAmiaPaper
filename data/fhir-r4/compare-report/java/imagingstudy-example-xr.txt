@@ -1,0 +1,90 @@
+----- Missing Triples n=28 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/ImagingStudy/example-xr> fhir:ImagingStudy.series :_e1 .
+
+:_e1 fhir:ImagingStudy.series.bodySite :_e2 ;
+    fhir:ImagingStudy.series.description :_e10 ;
+    fhir:ImagingStudy.series.endpoint :_e11 ;
+    fhir:ImagingStudy.series.instance :_e12,
+        :_e13 ;
+    fhir:ImagingStudy.series.laterality :_e4 ;
+    fhir:ImagingStudy.series.modality :_e14 ;
+    fhir:ImagingStudy.series.number :_e15 ;
+    fhir:ImagingStudy.series.numberOfInstances :_e16 ;
+    fhir:ImagingStudy.series.performer :_e17 ;
+    fhir:ImagingStudy.series.started :_e18 ;
+    fhir:ImagingStudy.series.uid :_e19 ;
+    fhir:index 0 .
+
+:_e2 a <http://snomed.info/id/T-15460> ;
+    fhir:Coding.code :_e3 ;
+    fhir:Coding.display :_e6 ;
+    fhir:Coding.system :_e8 .
+
+:_e3 fhir:value "T-15460" .
+
+:_e4 a <http://snomed.info/id/419161000> ;
+    fhir:Coding.code :_e5 ;
+    fhir:Coding.display :_e7 ;
+    fhir:Coding.system :_e9 .
+
+:_e5 fhir:value "419161000" .
+
+:_e6 fhir:value "Wrist Joint" .
+
+:_e7 fhir:value "Unilateral left" .
+
+:_e8 fhir:value "http://snomed.info/sct" .
+
+:_e9 fhir:value "http://snomed.info/sct" .
+
+
+----- Added Triples  n=26 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/ImagingStudy/example-xr> fhir:ImagingStudy.series :_a1 .
+
+:_a1 fhir:ImagingStudy.series.bodySite :_a2 ;
+    fhir:ImagingStudy.series.description :_a10 ;
+    fhir:ImagingStudy.series.endpoint :_a11 ;
+    fhir:ImagingStudy.series.instance :_a12,
+        :_a13 ;
+    fhir:ImagingStudy.series.laterality :_a4 ;
+    fhir:ImagingStudy.series.modality :_a14 ;
+    fhir:ImagingStudy.series.number :_a15 ;
+    fhir:ImagingStudy.series.numberOfInstances :_a16 ;
+    fhir:ImagingStudy.series.performer :_a17 ;
+    fhir:ImagingStudy.series.started :_a18 ;
+    fhir:ImagingStudy.series.uid :_a19 ;
+    fhir:index 0 .
+
+:_a2 fhir:Coding.code :_a3 ;
+    fhir:Coding.display :_a6 ;
+    fhir:Coding.system :_a8 .
+
+:_a3 fhir:value "T-15460" .
+
+:_a4 fhir:Coding.code :_a5 ;
+    fhir:Coding.display :_a7 ;
+    fhir:Coding.system :_a9 .
+
+:_a5 fhir:value "419161000" .
+
+:_a6 fhir:value "Wrist Joint" .
+
+:_a7 fhir:value "Unilateral left" .
+
+:_a8 fhir:value "http://snomed.info/sct" .
+
+:_a9 fhir:value "http://snomed.info/sct" .
+
+
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type http://www.radlex.org/RPID2589
+REMOVE: Concept URI not mapped in expected _:2 rdf:type http://terminology.hl7.org/CodeSystem/v3-ParticipationType/PRF
+REMOVE: Concept URI not mapped in expected _:3 rdf:type http://terminology.hl7.org/CodeSystem/v2-0203/ACSN

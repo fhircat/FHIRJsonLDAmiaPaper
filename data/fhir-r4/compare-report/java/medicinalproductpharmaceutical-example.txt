@@ -1,0 +1,35 @@
+----- Missing Triples n=4 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/MedicinalProductPharmaceutical/example> fhir:MedicinalProductPharmaceutical.ingredient :_e1 .
+
+:_e1 fhir:Reference.reference :_e2 ;
+    fhir:index 0 .
+
+:_e2 fhir:value "MedicinalProductIngredient/example" .
+
+
+----- Added Triples  n=5 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/MedicinalProductPharmaceutical/example> fhir:MedicinalProductPharmaceutical.ingredient :_a1 .
+
+:_a1 fhir:Reference.reference :_a2 ;
+    fhir:index 0 ;
+    fhir:link <http://hl7.org/fhir/MedicinalProductIngredient/example> .
+
+:_a2 fhir:value "MedicinalProductIngredient/example" .
+
+
+----- Changes to Expected Graph -----
+ADD: Changing reference to FullURI _:1 fhir:link fhir:MedicinalProductIngredient/example
+REMOVE: Changing reference to fullURI _:1 fhir:link fhir:MedicinalProductIngredient/example
+REMOVE: Remove subjects that should have been fullURIs fhir:MedicinalProductIngredient/example rdf:type fhir:MedicinalProductIngredient
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type http://ema.europa.eu/example/administrabledoseform/Film-coatedtablet
+REMOVE: Concept URI not mapped in expected _:2 rdf:type http://ema.europa.eu/example/routeofadministration/OralUse
+REMOVE: Concept URI not mapped in expected _:3 rdf:type http://ema.europa.eu/example/unitofpresentation/Tablet

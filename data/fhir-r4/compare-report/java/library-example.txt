@@ -1,0 +1,21 @@
+----- Missing Triples n=2 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+:_e1 fhir:DataRequirement.codeFilter.valueSet :_e2 .
+
+:_e2 fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.111.12.1006" .
+
+
+----- Added Triples  n=3 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+:_a1 fhir:DataRequirement.codeFilter.valueSet :_a2 .
+
+:_a2 fhir:link <urn:oid:2.16.840.1.113883.3.464.1003.111.12.1006> ;
+    fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.111.12.1006" .
+
+
+----- Changes to Actual Graph -----
+REMOVE:  fhir:Library/library-quick-model-definition rdf:type fhir:Library

@@ -1,0 +1,52 @@
+----- Missing Triples n=8 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+<http://hl7.org/fhir/MedicinalProductUndesirableEffect/example> fhir:DomainResource.text :_e1 ;
+    fhir:MedicinalProductUndesirableEffect.symptomConditionEffect :_e2 .
+
+:_e1 fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>symptomConditionEffect</b>: Prevention of\\nVTE in adult\\npatients who have\\nundergone\\nelective hip or\\nknee replacement\\nsurgery (VTEp) <span>(Details : {http://ema.europa.eu/example/undesirableeffectassymptom-condition-effect code 'Anaemia' = 'Anaemia)</span></p><p><b>classification</b>: Bloodandlymphaticsystemdisorders <span>(Details : {http://ema.europa.eu/example/symptom-condition-effectclassification code 'Bloodandlymphaticsystemdisorders' = 'Bloodandlymphaticsystemdisorders)</span></p><p><b>frequencyOfOccurrence</b>: Common <span>(Details : {http://ema.europa.eu/example/frequencyofoccurrence code 'Common' = 'Common)</span></p></div>" ;
+    fhir:Narrative.status :_e5 .
+
+:_e2 fhir:CodeableConcept.coding :_e3 ;
+    fhir:CodeableConcept.text :_e4 .
+
+:_e4 fhir:value "Prevention of\\nVTE in adult\\npatients who have\\nundergone\\nelective hip or\\nknee replacement\\nsurgery (VTEp)" .
+
+:_e5 fhir:value "generated" .
+
+
+----- Added Triples  n=8 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+<http://hl7.org/fhir/MedicinalProductUndesirableEffect/example> fhir:DomainResource.text :_a1 ;
+    fhir:MedicinalProductUndesirableEffect.symptomConditionEffect :_a2 .
+
+:_a1 fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>symptomConditionEffect</b>: Prevention of\\
+VTE in adult\\
+patients who have\\
+undergone\\
+elective hip or\\
+knee replacement\\
+surgery (VTEp) <span>(Details : {http://ema.europa.eu/example/undesirableeffectassymptom-condition-effect code 'Anaemia' = 'Anaemia)</span></p><p><b>classification</b>: Bloodandlymphaticsystemdisorders <span>(Details : {http://ema.europa.eu/example/symptom-condition-effectclassification code 'Bloodandlymphaticsystemdisorders' = 'Bloodandlymphaticsystemdisorders)</span></p><p><b>frequencyOfOccurrence</b>: Common <span>(Details : {http://ema.europa.eu/example/frequencyofoccurrence code 'Common' = 'Common)</span></p></div>""" ;
+    fhir:Narrative.status :_a5 .
+
+:_a2 fhir:CodeableConcept.coding :_a3 ;
+    fhir:CodeableConcept.text :_a4 .
+
+:_a4 fhir:value """Prevention of\\
+VTE in adult\\
+patients who have\\
+undergone\\
+elective hip or\\
+knee replacement\\
+surgery (VTEp)""" .
+
+:_a5 fhir:value "generated" .
+
+
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type http://ema.europa.eu/example/frequencyofoccurrence/Common
+REMOVE: Concept URI not mapped in expected _:2 rdf:type http://ema.europa.eu/example/undesirableeffectassymptom-condition-effect/Anaemia
+REMOVE: Concept URI not mapped in expected _:3 rdf:type http://ema.europa.eu/example/symptom-condition-effectclassification/Bloodandlymphaticsystemdisorders

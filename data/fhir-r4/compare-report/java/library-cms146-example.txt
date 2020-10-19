@@ -1,0 +1,167 @@
+----- Missing Triples n=48 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_e10 fhir:DataRequirement.codeFilter :_e11 .
+
+:_e14 fhir:DataRequirement.codeFilter :_e15 .
+
+:_e6 fhir:DataRequirement.codeFilter :_e7 .
+
+:_e8 fhir:DataRequirement.codeFilter :_e9 .
+
+<http://hl7.org/fhir/Library/library-cms146-example> fhir:Library.dataRequirement :_e1,
+        :_e2,
+        :_e3 .
+
+:_e1 fhir:DataRequirement.codeFilter :_e4 ;
+    fhir:DataRequirement.type :_e30 ;
+    fhir:index 4 .
+
+:_e11 fhir:DataRequirement.codeFilter.path :_e16 ;
+    fhir:DataRequirement.codeFilter.valueSet :_e23 ;
+    fhir:index 2 .
+
+:_e12 fhir:DataRequirement.codeFilter.path :_e17 ;
+    fhir:DataRequirement.codeFilter.valueSet :_e24 ;
+    fhir:index 1 .
+
+:_e15 fhir:DataRequirement.codeFilter.path :_e20 ;
+    fhir:DataRequirement.codeFilter.valueSet :_e27 ;
+    fhir:index 2 .
+
+:_e17 fhir:value "medication.code" .
+
+:_e19 fhir:value "diagnosis" .
+
+:_e2 fhir:DataRequirement.codeFilter :_e5 ;
+    fhir:DataRequirement.type :_e31 ;
+    fhir:index 5 .
+
+:_e22 fhir:value "code" .
+
+:_e23 fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.102.12.1012" .
+
+:_e24 fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.196.12.1001" .
+
+:_e25 fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.196.12.1001" .
+
+:_e26 fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.198.12.1012" .
+
+:_e27 fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.101.12.1061" .
+
+:_e28 fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.102.12.1011" .
+
+:_e29 fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.196.12.1001" .
+
+:_e3 fhir:DataRequirement.codeFilter :_e12,
+        :_e13 ;
+    fhir:DataRequirement.type :_e32 ;
+    fhir:index 7 .
+
+:_e4 fhir:DataRequirement.codeFilter.path :_e19 ;
+    fhir:DataRequirement.codeFilter.valueSet :_e26 ;
+    fhir:index 0 .
+
+:_e5 fhir:DataRequirement.codeFilter.path :_e22 ;
+    fhir:DataRequirement.codeFilter.valueSet :_e29 ;
+    fhir:index 0 .
+
+:_e7 fhir:DataRequirement.codeFilter.path :_e18 ;
+    fhir:DataRequirement.codeFilter.valueSet :_e25 ;
+    fhir:index 1 .
+
+:_e9 fhir:DataRequirement.codeFilter.path :_e21 ;
+    fhir:DataRequirement.codeFilter.valueSet :_e28 ;
+    fhir:index 2 .
+
+
+----- Added Triples  n=55 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_a10 fhir:DataRequirement.codeFilter :_a11 .
+
+:_a14 fhir:DataRequirement.codeFilter :_a15 .
+
+:_a5 fhir:DataRequirement.codeFilter :_a6 .
+
+:_a8 fhir:DataRequirement.codeFilter :_a9 .
+
+<http://hl7.org/fhir/Library/library-cms146-example> fhir:Library.dataRequirement :_a1,
+        :_a2,
+        :_a3 .
+
+:_a1 fhir:DataRequirement.codeFilter :_a4 ;
+    fhir:DataRequirement.type :_a30 ;
+    fhir:index 5 .
+
+:_a11 fhir:DataRequirement.codeFilter.path :_a16 ;
+    fhir:DataRequirement.codeFilter.valueSet :_a23 ;
+    fhir:index 2 .
+
+:_a12 fhir:DataRequirement.codeFilter.path :_a17 ;
+    fhir:DataRequirement.codeFilter.valueSet :_a24 ;
+    fhir:index 1 .
+
+:_a15 fhir:DataRequirement.codeFilter.path :_a19 ;
+    fhir:DataRequirement.codeFilter.valueSet :_a26 ;
+    fhir:index 2 .
+
+:_a17 fhir:value "medication.code" .
+
+:_a2 fhir:DataRequirement.codeFilter :_a7 ;
+    fhir:DataRequirement.type :_a31 ;
+    fhir:index 4 .
+
+:_a20 fhir:value "diagnosis" .
+
+:_a22 fhir:value "code" .
+
+:_a23 fhir:link <urn:oid:2.16.840.1.113883.3.464.1003.102.12.1012> ;
+    fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.102.12.1012" .
+
+:_a24 fhir:link <urn:oid:2.16.840.1.113883.3.464.1003.196.12.1001> ;
+    fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.196.12.1001" .
+
+:_a25 fhir:link <urn:oid:2.16.840.1.113883.3.464.1003.196.12.1001> ;
+    fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.196.12.1001" .
+
+:_a26 fhir:link <urn:oid:2.16.840.1.113883.3.464.1003.101.12.1061> ;
+    fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.101.12.1061" .
+
+:_a27 fhir:link <urn:oid:2.16.840.1.113883.3.464.1003.198.12.1012> ;
+    fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.198.12.1012" .
+
+:_a28 fhir:link <urn:oid:2.16.840.1.113883.3.464.1003.102.12.1011> ;
+    fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.102.12.1011" .
+
+:_a29 fhir:link <urn:oid:2.16.840.1.113883.3.464.1003.196.12.1001> ;
+    fhir:value "urn:oid:2.16.840.1.113883.3.464.1003.196.12.1001" .
+
+:_a3 fhir:DataRequirement.codeFilter :_a12,
+        :_a13 ;
+    fhir:DataRequirement.type :_a32 ;
+    fhir:index 7 .
+
+:_a4 fhir:DataRequirement.codeFilter.path :_a22 ;
+    fhir:DataRequirement.codeFilter.valueSet :_a29 ;
+    fhir:index 0 .
+
+:_a6 fhir:DataRequirement.codeFilter.path :_a18 ;
+    fhir:DataRequirement.codeFilter.valueSet :_a25 ;
+    fhir:index 1 .
+
+:_a7 fhir:DataRequirement.codeFilter.path :_a20 ;
+    fhir:DataRequirement.codeFilter.valueSet :_a27 ;
+    fhir:index 0 .
+
+:_a9 fhir:DataRequirement.codeFilter.path :_a21 ;
+    fhir:DataRequirement.codeFilter.valueSet :_a28 ;
+    fhir:index 2 .
+
+
+----- Changes to Actual Graph -----
+REMOVE:  fhir:Library/library-quick-model-definition rdf:type fhir:Library

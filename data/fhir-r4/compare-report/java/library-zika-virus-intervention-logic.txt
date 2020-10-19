@@ -1,0 +1,80 @@
+----- Missing Triples n=19 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_e2 fhir:DataRequirement.codeFilter :_e3 .
+
+:_e5 fhir:DataRequirement.codeFilter :_e6 .
+
+<http://hl7.org/fhir/Library/zika-virus-intervention-logic> fhir:Library.dataRequirement :_e1 .
+
+:_e1 fhir:DataRequirement.codeFilter :_e4 ;
+    fhir:DataRequirement.type :_e13 ;
+    fhir:index 1 .
+
+:_e10 fhir:value "urn:oid:X.Y.Z" .
+
+:_e11 fhir:value "urn:oid:X.Y.Z" .
+
+:_e12 fhir:value "urn:oid:2.16.840.1.114222.4.11.7459" .
+
+:_e3 fhir:DataRequirement.codeFilter.path :_e9 ;
+    fhir:DataRequirement.codeFilter.valueSet :_e12 ;
+    fhir:index 0 .
+
+:_e4 fhir:DataRequirement.codeFilter.path :_e7 ;
+    fhir:DataRequirement.codeFilter.valueSet :_e10 ;
+    fhir:index 0 .
+
+:_e6 fhir:DataRequirement.codeFilter.path :_e8 ;
+    fhir:DataRequirement.codeFilter.valueSet :_e11 ;
+    fhir:index 0 .
+
+:_e7 fhir:value "code" .
+
+
+----- Added Triples  n=22 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_a2 fhir:DataRequirement.codeFilter :_a3 .
+
+:_a4 fhir:DataRequirement.codeFilter :_a5 .
+
+<http://hl7.org/fhir/Library/zika-virus-intervention-logic> fhir:Library.dataRequirement :_a1 .
+
+:_a1 fhir:DataRequirement.codeFilter :_a6 ;
+    fhir:DataRequirement.type :_a13 ;
+    fhir:index 1 .
+
+:_a10 fhir:link <urn:oid:X.Y.Z> ;
+    fhir:value "urn:oid:X.Y.Z" .
+
+:_a11 fhir:link <urn:oid:2.16.840.1.114222.4.11.7459> ;
+    fhir:value "urn:oid:2.16.840.1.114222.4.11.7459" .
+
+:_a12 fhir:link <urn:oid:X.Y.Z> ;
+    fhir:value "urn:oid:X.Y.Z" .
+
+:_a3 fhir:DataRequirement.codeFilter.path :_a8 ;
+    fhir:DataRequirement.codeFilter.valueSet :_a11 ;
+    fhir:index 0 .
+
+:_a5 fhir:DataRequirement.codeFilter.path :_a9 ;
+    fhir:DataRequirement.codeFilter.valueSet :_a12 ;
+    fhir:index 0 .
+
+:_a6 fhir:DataRequirement.codeFilter.path :_a7 ;
+    fhir:DataRequirement.codeFilter.valueSet :_a10 ;
+    fhir:index 0 .
+
+:_a7 fhir:value "code" .
+
+
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type http://terminology.hl7.org/CodeSystem/usage-context-type/user
+REMOVE: Concept URI not mapped in expected _:2 rdf:type http://terminology.hl7.org/CodeSystem/usage-context-type/age
+REMOVE:  fhir:Library/fhir-model-definition rdf:type fhir:Library
+REMOVE: Type arc not declared in expected fhir:ValueSet/zika-affected-area rdf:type fhir:ValueSet

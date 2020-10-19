@@ -136,5 +136,7 @@ dmypy.json
 .DS_Store
 
 data/fhir-r5/
-data/fhir-r4/
-!data/fhir-r4/compare-report
+data/fhir-r4/examples-json
+data/fhir-r4/examples-ttl
+data/fhir-r4/jsonld-pre
+data/fhir-r4/original

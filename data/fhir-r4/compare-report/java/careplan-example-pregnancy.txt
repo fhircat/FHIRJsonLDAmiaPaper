@@ -1,0 +1,106 @@
+----- Missing Triples n=5 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/CarePlan/preg> fhir:DomainResource.extension :_e1 .
+
+:_e1 fhir:Extension.url :_e2 ;
+    fhir:Extension.valueDateTime :_e3 ;
+    fhir:index 0 .
+
+:_e3 fhir:value "2013-01-01"^^xsd:date .
+
+
+----- Added Triples  n=5 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/CarePlan/preg> fhir:DomainResource.extension :_a1 .
+
+:_a1 fhir:Extension.url :_a2 ;
+    fhir:Extension.valueDateTime :_a3 ;
+    fhir:index 0 .
+
+:_a3 fhir:value "2013-01-01"^^xsd:dateTime .
+
+
+----- Changes to Actual Graph -----
+ADD: Original RDF has a bnode (1) _:1 fhir:Condition.clinicalStatus _:2
+ADD: Original RDF has a bnode (1) _:1 fhir:Condition.code _:3
+ADD: Original RDF has a bnode (1) _:1 fhir:Condition.subject _:4
+ADD: Original RDF has a bnode (1) _:1 fhir:Condition.verificationStatus _:5
+ADD: Original RDF has a bnode (1) _:1 fhir:Resource.id _:6
+ADD: Original RDF has a bnode (1) _:1 fhir:index 0
+ADD: Original RDF has a bnode (1) _:1 rdf:type fhir:Condition
+ADD: Original RDF has a bnode (1) _:7 fhir:Practitioner.name _:8
+ADD: Original RDF has a bnode (1) _:7 fhir:Resource.id _:9
+ADD: Original RDF has a bnode (1) _:7 fhir:index 2
+ADD: Original RDF has a bnode (1) _:7 rdf:type fhir:Practitioner
+ADD: Original RDF has a bnode (1) _:10 fhir:CareTeam.participant _:11
+ADD: Original RDF has a bnode (1) _:10 fhir:CareTeam.participant _:12
+ADD: Original RDF has a bnode (1) _:10 fhir:Resource.id _:13
+ADD: Original RDF has a bnode (1) _:10 fhir:index 3
+ADD: Original RDF has a bnode (1) _:10 rdf:type fhir:CareTeam
+ADD: Original RDF has a bnode (1) _:14 fhir:Practitioner.name _:15
+ADD: Original RDF has a bnode (1) _:14 fhir:Resource.id _:16
+ADD: Original RDF has a bnode (1) _:14 fhir:index 1
+ADD: Original RDF has a bnode (1) _:14 rdf:type fhir:Practitioner
+ADD: Original RDF has a bnode (1) _:17 fhir:Goal.description _:18
+ADD: Original RDF has a bnode (1) _:17 fhir:Goal.lifecycleStatus _:19
+ADD: Original RDF has a bnode (1) _:17 fhir:Goal.subject _:20
+ADD: Original RDF has a bnode (1) _:17 fhir:Resource.id _:21
+ADD: Original RDF has a bnode (1) _:17 fhir:index 4
+ADD: Original RDF has a bnode (1) _:17 rdf:type fhir:Goal
+ADD: Original RDF has a bnode (3) fhir:CarePlan/preg fhir:DomainResource.contained _:1
+ADD: Original RDF has a bnode (3) fhir:CarePlan/preg fhir:DomainResource.contained _:7
+ADD: Original RDF has a bnode (3) fhir:CarePlan/preg fhir:DomainResource.contained _:10
+ADD: Original RDF has a bnode (3) fhir:CarePlan/preg fhir:DomainResource.contained _:14
+ADD: Original RDF has a bnode (3) fhir:CarePlan/preg fhir:DomainResource.contained _:17
+REMOVE: Original RDF has a bnode (4) _:22 fhir:link fhir:CarePlan/preg#pr1
+REMOVE: Concept URI not mapped in expected _:23 rdf:type http://example.org/mySystem/del
+REMOVE: Original RDF has a bnode (4) _:24 fhir:link fhir:CarePlan/preg#p1
+REMOVE: Concept URI not mapped in expected _:25 rdf:type http://example.org/mySystem/an
+REMOVE: Original RDF has a bnode (4) _:26 fhir:link fhir:CarePlan/preg#pr2
+REMOVE: Concept URI not mapped in expected _:27 rdf:type http://example.org/mysys/obs
+REMOVE: Original RDF has a bnode (4) _:28 fhir:link fhir:CarePlan/preg#pr1
+REMOVE: Original RDF has a bnode (4) _:29 fhir:link fhir:CarePlan/preg#goal
+REMOVE: Original RDF has a bnode (4) _:30 fhir:link fhir:CarePlan/preg#careteam
+REMOVE: Original RDF has a bnode (4) _:31 fhir:link fhir:CarePlan/preg#pr1
+REMOVE: Concept URI not mapped in expected _:32 rdf:type http://example.org/mySystem/1an
+REMOVE: Concept URI not mapped in expected _:33 rdf:type http://example.org/mysys/lmc
+REMOVE: Original RDF has a bnode (4) _:34 fhir:link fhir:CarePlan/preg#pr1
+REMOVE: Concept URI not mapped in expected _:35 rdf:type http://terminology.hl7.org/CodeSystem/condition-ver-status/confirmed
+REMOVE: Concept URI not mapped in expected _:36 rdf:type http://terminology.hl7.org/CodeSystem/condition-clinical/active
+REMOVE: Original RDF has a bnode (4) fhir:CarePlan/preg fhir:DomainResource.contained fhir:CarePlan/preg#careteam
+REMOVE: Original RDF has a bnode (4) fhir:CarePlan/preg fhir:DomainResource.contained fhir:CarePlan/preg#goal
+REMOVE: Original RDF has a bnode (4) fhir:CarePlan/preg fhir:DomainResource.contained fhir:CarePlan/preg#p1
+REMOVE: Original RDF has a bnode (4) fhir:CarePlan/preg fhir:DomainResource.contained fhir:CarePlan/preg#pr1
+REMOVE: Original RDF has a bnode (4) fhir:CarePlan/preg fhir:DomainResource.contained fhir:CarePlan/preg#pr2
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#careteam fhir:CareTeam.participant _:11
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#careteam fhir:CareTeam.participant _:12
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#careteam fhir:Resource.id _:13
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#careteam fhir:index 3
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#careteam rdf:type fhir:CareTeam
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#goal fhir:Goal.description _:18
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#goal fhir:Goal.lifecycleStatus _:19
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#goal fhir:Goal.subject _:20
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#goal fhir:Resource.id _:21
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#goal fhir:index 4
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#goal rdf:type fhir:Goal
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#p1 fhir:Condition.clinicalStatus _:2
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#p1 fhir:Condition.code _:3
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#p1 fhir:Condition.subject _:4
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#p1 fhir:Condition.verificationStatus _:5
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#p1 fhir:Resource.id _:6
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#p1 fhir:index 0
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#p1 rdf:type fhir:Condition
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#pr1 fhir:Practitioner.name _:15
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#pr1 fhir:Resource.id _:16
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#pr1 fhir:index 1
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#pr1 rdf:type fhir:Practitioner
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#pr2 fhir:Practitioner.name _:8
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#pr2 fhir:Resource.id _:9
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#pr2 fhir:index 2
+REMOVE: Original RDF has a bnode (2) fhir:CarePlan/preg#pr2 rdf:type fhir:Practitioner

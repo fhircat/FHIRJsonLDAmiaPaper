@@ -1,0 +1,21 @@
+----- Missing Triples n=2 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+:_e1 fhir:RelatedArtifact.resource :_e2 .
+
+:_e2 fhir:value "library-fhir-helpers-predecessor" .
+
+
+----- Added Triples  n=3 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+
+:_a1 fhir:RelatedArtifact.resource :_a2 .
+
+:_a2 fhir:link fhir:library-fhir-helpers-predecessor ;
+    fhir:value "library-fhir-helpers-predecessor" .
+
+
+----- Changes to Actual Graph -----
+REMOVE:  fhir:Library/fhir-model-definition rdf:type fhir:Library

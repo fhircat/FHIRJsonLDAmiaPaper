@@ -1,0 +1,67 @@
+----- Missing Triples n=16 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_e11 fhir:RiskAssessment.prediction.outcome :_e3 ;
+    fhir:RiskAssessment.prediction.qualitativeRisk :_e1 .
+
+:_e1 fhir:CodeableConcept.coding :_e2 .
+
+:_e10 fhir:value "http://terminology.hl7.org/CodeSystem/risk-probability" .
+
+:_e2 fhir:Coding.code :_e7 ;
+    fhir:Coding.display :_e8 ;
+    fhir:Coding.system :_e10 .
+
+:_e3 fhir:CodeableConcept.coding :_e4 ;
+    fhir:CodeableConcept.text :_e5 .
+
+:_e4 fhir:Coding.code :_e6 ;
+    fhir:Coding.system :_e9 ;
+    fhir:index 0 .
+
+:_e6 fhir:value "249943000:363698007=72098002,260868000=6934004" .
+
+:_e7 fhir:value "moderate" .
+
+:_e8 fhir:value "moderate likelihood" .
+
+:_e9 fhir:value "http://snomed.info/sct" .
+
+
+----- Added Triples  n=17 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:_a11 fhir:RiskAssessment.prediction.outcome :_a1 ;
+    fhir:RiskAssessment.prediction.qualitativeRisk :_a3 .
+
+:_a1 fhir:CodeableConcept.coding :_a2 ;
+    fhir:CodeableConcept.text :_a5 .
+
+:_a10 fhir:value "http://terminology.hl7.org/CodeSystem/risk-probability" .
+
+:_a2 a <http://snomed.info/id/249943000%253A363698007%253D72098002%252C260868000%253D6934004> ;
+    fhir:Coding.code :_a6 ;
+    fhir:Coding.system :_a9 ;
+    fhir:index 0 .
+
+:_a3 fhir:CodeableConcept.coding :_a4 .
+
+:_a4 fhir:Coding.code :_a7 ;
+    fhir:Coding.display :_a8 ;
+    fhir:Coding.system :_a10 .
+
+:_a6 fhir:value "249943000:363698007=72098002,260868000=6934004" .
+
+:_a7 fhir:value "moderate" .
+
+:_a8 fhir:value "moderate likelihood" .
+
+:_a9 fhir:value "http://snomed.info/sct" .
+
+
+----- Changes to Actual Graph -----
+REMOVE: Concept URI not mapped in expected _:1 rdf:type http://terminology.hl7.org/CodeSystem/risk-probability/moderate
