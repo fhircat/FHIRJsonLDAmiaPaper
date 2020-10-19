@@ -1,171 +1,438 @@
 Processing FHIR release
-Vals: p1= p2= p3=T js= java=T dir=fhir-r4 CONTEXT_SERVER=
+Vals: p1= p2= p3=T js= java=T dir=fhir-r4 CONTEXT_SERVER=/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/
 Generating data/fhir-r4/compare-report/java from  data/fhir-r4/original/java and data/fhir-r4/examples-ttl
-data/fhir-r4/original/java/communication-example-fm-solicited-attachment.nq: expected files with incorrect contained mapping (total: 1)
-data/fhir-r4/original/java/medicationdispense0319.nq: expected files with incorrect contained mapping (total: 2)
-data/fhir-r4/original/java/plandefinition-example-kdn5-simplified.nq: expected files with incorrect contained mapping (total: 3)
-data/fhir-r4/original/java/task-example1.nq: expected files with incorrect contained mapping (total: 4)
-data/fhir-r4/original/java/riskassessment-example-population.nq: expected files with incorrect contained mapping (total: 5)
-data/fhir-r4/original/java/medicationexample0311.nq: expected files with incorrect contained mapping (total: 6)
-structuremap-questionnaire.nq: file exceeds max triples (total: 1)
-data/fhir-r4/original/java/medicationrequest0310.nq: expected files with incorrect contained mapping (total: 7)
-namingsystem-terminologies.nq: file exceeds max triples (total: 2)
-data/fhir-r4/original/java/claim-example-vision-glasses-3tier.nq: expected files with incorrect contained mapping (total: 8)
-data/fhir-r4/original/java/careplan-example-f202-malignancy.nq: expected files with incorrect contained mapping (total: 9)
-elementdefinition-de-questionnaire.nq: file exceeds max triples (total: 3)
-data/fhir-r4/original/java/medicationexample0301.nq: expected files with incorrect contained mapping (total: 10)
-data/fhir-r4/original/java/encounter-example-home.nq: expected files with incorrect contained mapping (total: 11)
-data/fhir-r4/original/java/questionnaire-profile-example-ussg-fht.nq: expected files with incorrect contained mapping (total: 12)
-data/fhir-r4/original/java/medicationdispense0309.nq: expected files with incorrect contained mapping (total: 13)
-parameters-questionnaire.nq: file exceeds max triples (total: 4)
-data/fhir-r4/original/java/guidanceresponse-example.nq: expected files with incorrect contained mapping (total: 14)
-data/fhir-r4/original/java/medicationdispense0329.nq: expected files with incorrect contained mapping (total: 15)
-evidencevariable-questionnaire.nq: file exceeds max triples (total: 5)
-data/fhir-r4/original/java/testscript-example-history.nq: incomplete transforms (UNKNOWN in output) (total: 1)
-data/fhir-r4/original/java/questionnaire-example-gcs.nq: expected files with incorrect contained mapping (total: 16)
-data/fhir-r4/original/java/careplan-example-pregnancy.nq: expected files with incorrect contained mapping (total: 17)
-data/fhir-r4/original/java/testscript-example-readtest.nq: incomplete transforms (UNKNOWN in output) (total: 2)
-data/fhir-r4/original/java/coverageeligibilityresponse-example-benefits-2.nq: expected files with incorrect contained mapping (total: 18)
-data/fhir-r4/original/java/communicationrequest-example-fm-solicit-attachment.nq: expected files with incorrect contained mapping (total: 19)
-data/fhir-r4/original/java/medicationexample0321.nq: expected files with incorrect contained mapping (total: 20)
-data/fhir-r4/original/java/medicationrequest0304.nq: expected files with incorrect contained mapping (total: 21)
-data/fhir-r4/original/java/medicationrequest0330.nq: expected files with incorrect contained mapping (total: 22)
-data/fhir-r4/original/java/medicationexample0305.nq: expected files with incorrect contained mapping (total: 23)
-data/fhir-r4/original/java/observation-example-10minute-apgar-score.nq: expected files with incorrect contained mapping (total: 24)
-conceptmap.profile.nq: file exceeds max triples (total: 6)
-auditevent.profile.nq: file exceeds max triples (total: 7)
-elementdefinition-de.profile.nq: file exceeds max triples (total: 8)
-data/fhir-r4/original/java/careplan-example-integrated.nq: expected files with incorrect contained mapping (total: 25)
-data/fhir-r4/original/java/medicationexample0320.nq: expected files with incorrect contained mapping (total: 26)
-data/fhir-r4/original/java/list-example-familyhistory-f201-roel.nq: expected files with incorrect contained mapping (total: 27)
-data/fhir-r4/original/java/medicationrequest0305.nq: expected files with incorrect contained mapping (total: 28)
-data/fhir-r4/original/java/medicationrequest0331.nq: expected files with incorrect contained mapping (total: 29)
-data/fhir-r4/original/java/medicationstatementexample1.nq: expected files with incorrect contained mapping (total: 30)
-data/fhir-r4/original/java/medicationexample0304.nq: expected files with incorrect contained mapping (total: 31)
-data/fhir-r4/original/java/medicationrequest0321.nq: expected files with incorrect contained mapping (total: 32)
-bmi.profile.nq: file exceeds max triples (total: 9)
-substancespecification.profile.nq: file exceeds max triples (total: 10)
-data/fhir-r4/original/java/medicationrequest0315.nq: expected files with incorrect contained mapping (total: 33)
-data/fhir-r4/original/java/observation-example-5minute-apgar-score.nq: expected files with incorrect contained mapping (total: 34)
-testscript.profile.nq: file exceeds max triples (total: 11)
-data/fhir-r4/original/java/specimen-example-isolate.nq: expected files with incorrect contained mapping (total: 35)
-cdshooksserviceplandefinition.profile.nq: file exceeds max triples (total: 12)
-data/fhir-r4/original/java/testscript-example.nq: incomplete transforms (UNKNOWN in output) (total: 3)
-bp.profile.nq: file exceeds max triples (total: 13)
-researchelementdefinition-questionnaire.nq: file exceeds max triples (total: 14)
-data/fhir-r4/original/java/claim-example-cms1500-medical.nq: expected files with incorrect contained mapping (total: 36)
-data/fhir-r4/original/java/medicationexample15.nq: expected files with incorrect contained mapping (total: 37)
-headcircum.profile.nq: file exceeds max triples (total: 15)
-data/fhir-r4/original/java/medicationexample0310.nq: expected files with incorrect contained mapping (total: 38)
-data/fhir-r4/original/java/medicationrequest0301.nq: expected files with incorrect contained mapping (total: 39)
-data/fhir-r4/original/java/claim-example-oral-contained.nq: expected files with incorrect contained mapping (total: 40)
-task-questionnaire.nq: file exceeds max triples (total: 16)
-data/fhir-r4/original/java/measurereport-cms146-cat2-example.nq: expected files with incorrect contained mapping (total: 41)
-data/fhir-r4/original/java/medicationrequestexample1.nq: expected files with incorrect contained mapping (total: 42)
-observation.profile.nq: file exceeds max triples (total: 17)
-data/fhir-r4/original/java/medicationdispense0308.nq: expected files with incorrect contained mapping (total: 43)
-device.profile.nq: file exceeds max triples (total: 18)
-data/fhir-r4/original/java/operation-codesystem-lookup.nq: incomplete transforms (UNKNOWN in output) (total: 4)
-patient-examples-cypress-template.nq: file exceeds max triples (total: 19)
-data/fhir-r4/original/java/medicationdispense0313.nq: expected files with incorrect contained mapping (total: 44)
-computableplandefinition.profile.nq: file exceeds max triples (total: 20)
-data/fhir-r4/original/java/careplan-example-f001-heart.nq: expected files with incorrect contained mapping (total: 45)
-shareablevalueset.profile.nq: file exceeds max triples (total: 21)
-insuranceplan.profile.nq: file exceeds max triples (total: 22)
-vitalspanel.profile.nq: file exceeds max triples (total: 23)
-data/fhir-r4/original/java/medicationdispense0303.nq: expected files with incorrect contained mapping (total: 46)
-data/fhir-r4/original/java/careplan-example-GPVisit.nq: expected files with incorrect contained mapping (total: 47)
-extension-definitions.nq: file exceeds max triples (total: 24)
-data/fhir-r4/original/java/medicationadministration0304.nq: expected files with incorrect contained mapping (total: 48)
-data/fhir-r4/original/java/careplan-example-f002-lung.nq: expected files with incorrect contained mapping (total: 49)
-data/fhir-r4/original/java/medicationadministration0310.nq: expected files with incorrect contained mapping (total: 50)
-data/fhir-r4/original/java/testreport-example.nq: incomplete transforms (UNKNOWN in output) (total: 5)
-data/fhir-r4/original/java/medicationdispense0317.nq: expected files with incorrect contained mapping (total: 51)
-data/fhir-r4/original/java/conceptmap-example-specimen-type.nq: incomplete transforms (UNKNOWN in output) (total: 6)
-shareableplandefinition.profile.nq: file exceeds max triples (total: 25)
-valueset.profile.nq: file exceeds max triples (total: 26)
-bodyweight.profile.nq: file exceeds max triples (total: 27)
-cdshooksserviceplandefinition-questionnaire.nq: file exceeds max triples (total: 28)
-data/fhir-r4/original/java/testscript-example-multisystem.nq: incomplete transforms (UNKNOWN in output) (total: 7)
-bodytemp.profile.nq: file exceeds max triples (total: 29)
-data/fhir-r4/original/java/parameters-example.nq: incomplete transforms (UNKNOWN in output) (total: 8)
-v2-tables.nq: file exceeds max triples (total: 30)
-data/fhir-r4/original/java/capabilitystatement-terminology-server.nq: incomplete transforms (UNKNOWN in output) (total: 9)
-plandefinition.profile.nq: file exceeds max triples (total: 31)
-data/fhir-r4/original/java/requestgroup-kdn5-example.nq: expected files with incorrect contained mapping (total: 52)
-data/fhir-r4/original/java/list-example-familyhistory-genetics-profile.nq: expected files with incorrect contained mapping (total: 53)
-data/fhir-r4/original/java/plandefinition-example.nq: expected files with incorrect contained mapping (total: 54)
-data/fhir-r4/original/java/medicationadministration0311.nq: expected files with incorrect contained mapping (total: 55)
-data/fhir-r4/original/java/medicationknowledge-example.nq: expected files with incorrect contained mapping (total: 56)
-data/fhir-r4/original/java/healthcareservice-example.nq: expected files with incorrect contained mapping (total: 57)
-medicationknowledge.profile.nq: file exceeds max triples (total: 32)
-task.profile.nq: file exceeds max triples (total: 33)
-claim-questionnaire.nq: file exceeds max triples (total: 34)
-data/fhir-r4/original/java/medicationdispense0306.nq: expected files with incorrect contained mapping (total: 58)
-data/fhir-r4/original/java/list-example-familyhistory-genetics-profile-annie.nq: expected files with incorrect contained mapping (total: 59)
-data/fhir-r4/original/java/medicinalproductauthorization-example.nq: incomplete transforms (UNKNOWN in output) (total: 10)
-claimresponse-questionnaire.nq: file exceeds max triples (total: 35)
-oxygensat.profile.nq: file exceeds max triples (total: 36)
-data/fhir-r4/original/java/medicationadministration0301.nq: expected files with incorrect contained mapping (total: 60)
-molecularsequence.profile.nq: file exceeds max triples (total: 37)
-search-parameters.nq: file exceeds max triples (total: 38)
-implementationguide.profile.nq: file exceeds max triples (total: 39)
-data/fhir-r4/original/java/careplan-example-f003-pharynx.nq: expected files with incorrect contained mapping (total: 61)
-data/fhir-r4/original/java/observation-example-1minute-apgar-score.nq: expected files with incorrect contained mapping (total: 62)
-conceptmaps.nq: file exceeds max triples (total: 40)
-questionnaire.profile.nq: file exceeds max triples (total: 41)
-data/fhir-r4/original/java/medicationdispense0312.nq: expected files with incorrect contained mapping (total: 63)
-capabilitystatement-base.nq: file exceeds max triples (total: 42)
-data/fhir-r4/original/java/medicinalproductingredient-example.nq: incomplete transforms (UNKNOWN in output) (total: 11)
-data/fhir-r4/original/java/list-example-double-cousin-relationship-pedigree.nq: expected files with incorrect contained mapping (total: 64)
-data/fhir-r4/original/java/medicationadministrationexample3.nq: expected files with incorrect contained mapping (total: 65)
-data/fhir-r4/original/java/medicationdispense0302.nq: expected files with incorrect contained mapping (total: 66)
-profiles-resources.nq: file exceeds max triples (total: 43)
-data/fhir-r4/original/java/testscript-example-search.nq: incomplete transforms (UNKNOWN in output) (total: 12)
-elementdefinition.profile.nq: file exceeds max triples (total: 44)
-picoelement-questionnaire.nq: file exceeds max triples (total: 45)
-data/fhir-r4/original/java/claim-example-oral-bridge.nq: expected files with incorrect contained mapping (total: 67)
-immunization.profile.nq: file exceeds max triples (total: 46)
-data/fhir-r4/original/java/medicationadministration0305.nq: expected files with incorrect contained mapping (total: 68)
-data/fhir-r4/original/java/medicationrequest0338.nq: expected files with incorrect contained mapping (total: 69)
-testscript-questionnaire.nq: file exceeds max triples (total: 47)
-data/fhir-r4/original/java/careteam-example.nq: expected files with incorrect contained mapping (total: 70)
-data/fhir-r4/original/java/medicationdispense0315.nq: expected files with incorrect contained mapping (total: 71)
-data/fhir-r4/original/java/medicationdispense0305.nq: expected files with incorrect contained mapping (total: 72)
-data/fhir-r4/original/java/observation-example-2minute-apgar-score.nq: expected files with incorrect contained mapping (total: 73)
-data/fhir-r4/original/java/medicationdispense0331.nq: expected files with incorrect contained mapping (total: 74)
-data/fhir-r4/original/java/medicationadministration0302.nq: expected files with incorrect contained mapping (total: 75)
-data/fhir-r4/original/java/medicationrequest0328.nq: expected files with incorrect contained mapping (total: 76)
-imagingstudy.profile.nq: file exceeds max triples (total: 48)
-shareableplandefinition-questionnaire.nq: file exceeds max triples (total: 49)
-contract.profile.nq: file exceeds max triples (total: 50)
-encounter.profile.nq: file exceeds max triples (total: 51)
-substancespecification-questionnaire.nq: file exceeds max triples (total: 52)
-vitalsigns.profile.nq: file exceeds max triples (total: 53)
-nutritionorder.profile.nq: file exceeds max triples (total: 54)
-activitydefinition.profile.nq: file exceeds max triples (total: 55)
-data/fhir-r4/original/java/activitydefinition-medicationorder-example.nq: expected files with incorrect contained mapping (total: 77)
-data/fhir-r4/original/java/medicationdispense0301.nq: expected files with incorrect contained mapping (total: 78)
-data/fhir-r4/original/java/medicationrequest0318.nq: expected files with incorrect contained mapping (total: 79)
-data/fhir-r4/original/java/medicationexample0309.nq: expected files with incorrect contained mapping (total: 80)
-data/fhir-r4/original/java/medicationadministration0306.nq: expected files with incorrect contained mapping (total: 81)
-data/fhir-r4/original/java/measurereport-cms146-cat3-example.nq: expected files with incorrect contained mapping (total: 82)
-structuredefinition.profile.nq: file exceeds max triples (total: 56)
-contract-questionnaire.nq: file exceeds max triples (total: 57)
-data/fhir-r4/original/java/medicationrequest0309.nq: expected files with incorrect contained mapping (total: 83)
-data/fhir-r4/original/java/medicationdispense0310.nq: expected files with incorrect contained mapping (total: 84)
-data/fhir-r4/original/java/observation-example-20minute-apgar-score.nq: expected files with incorrect contained mapping (total: 85)
-effectevidencesynthesis.profile.nq: file exceeds max triples (total: 58)
-capabilitystatement.profile.nq: file exceeds max triples (total: 59)
-data/fhir-r4/original/java/medicationrequest0319.nq: expected files with incorrect contained mapping (total: 86)
-terminologycapabilities.profile.nq: file exceeds max triples (total: 60)
-medicationrequest.profile.nq: file exceeds max triples (total: 61)
-explanationofbenefit.profile.nq: file exceeds max triples (total: 62)
-data/fhir-r4/original/java/medicationexample0308.nq: expected files with incorrect contained mapping (total: 87)
-data/fhir-r4/original/java/medicationadministration0307.nq: expected files with incorrect contained mapping (total: 88)
-structuremap.profile.nq: file exceeds max triples (total: 63)
-data/fhir-r4/original/java/documentmanifest-fm-attachment.nq: expected files with incorrect contained mapping (total: 89)
-data/fhir-r4/original/java/medicationrequest0339.nq: expected files with incorrect contained mapping (total: 90)
-data/fhir-r4/original/java/medicationdispense0320.nq: expected files with incorrect contained mapping (total: 91)
-data/fhir-r4/original/java/auditevent-example-error.nq: expected files with incorrect contained mapping (total: 92)
-data/fhir-r4/original/java/plandefinition-options-example.nq: expected files with incorrect contained mapping (total: 93)
+Processing data/fhir-r4/original/java/communication-example-fm-solicited-attachment.nq
+Processing data/fhir-r4/original/java/patient-example-f201-roel.nq
+Processing data/fhir-r4/original/java/sequence-graphic-example-5.nq
+Processing data/fhir-r4/original/java/devicemetric.profile.nq
+Processing data/fhir-r4/original/java/medicinalproductindication-questionnaire.nq
+Processing data/fhir-r4/original/java/medicationdispense0319.nq
+Processing data/fhir-r4/original/java/devicemetric-example.nq
+Processing data/fhir-r4/original/java/operation-conceptmap-closure.nq
+Processing data/fhir-r4/original/java/substanceamount.profile.nq
+Processing data/fhir-r4/original/java/allergyintolerance-example.nq
+Processing data/fhir-r4/original/java/extension-device-implantstatus.nq
+Processing data/fhir-r4/original/java/endpoint-example-wadors.nq
+Processing data/fhir-r4/original/java/cm-contact-point-use-v2.nq
+Processing data/fhir-r4/original/java/coverageeligibilityresponse-example-benefits.nq
+Processing data/fhir-r4/original/java/money.profile.nq
+Processing data/fhir-r4/original/java/parameterdefinition.profile.nq
+Processing data/fhir-r4/original/java/allergyintolerance.profile.nq
+Processing data/fhir-r4/original/java/task-example1.nq
+Processing data/fhir-r4/original/java/positiveint.profile.nq
+Processing data/fhir-r4/original/java/claim-example-pharmacy-medication.nq
+Processing data/fhir-r4/original/java/extension-observation-geneticsvariant.nq
+Processing data/fhir-r4/original/java/medicationrequest0334.nq
+Processing data/fhir-r4/original/java/riskassessment-example-population.nq
+Processing data/fhir-r4/original/java/claim-example-institutional.nq
+Processing data/fhir-r4/original/java/medicationexample0311.nq
+Processing data/fhir-r4/original/java/library-predecessor-example.nq
+Processing data/fhir-r4/original/java/extension-tz-offset.nq
+Processing data/fhir-r4/original/java/substancesourcematerial-questionnaire.nq
+Processing data/fhir-r4/original/java/visionprescription-questionnaire.nq
+Processing data/fhir-r4/original/java/condition-example-stroke.nq
+Processing data/fhir-r4/original/java/coverage.profile.nq
+Processing data/fhir-r4/original/java/extension-humanname-assembly-order.nq
+Processing data/fhir-r4/original/java/signature.profile.nq
+Processing data/fhir-r4/original/java/graphdefinition-example.nq
+Processing data/fhir-r4/original/java/extension-iso21090-adxp-deliveryinstallationqualifier.nq
+Processing data/fhir-r4/original/java/observation-genetic-Observation-amino-acid-change.nq
+Processing data/fhir-r4/original/java/organization-example-f203-bumc.nq
+Processing data/fhir-r4/original/java/coverageeligibilityrequest-example-2.nq
+Processing data/fhir-r4/original/java/coverage-example.nq
+Processing data/fhir-r4/original/java/extension-iso21090-adxp-additionallocator.nq
+Processing data/fhir-r4/original/java/extension-composition-section-subject.nq
+Processing data/fhir-r4/original/java/graphdefinition.profile.nq
+Processing data/fhir-r4/original/java/patient-example.nq
+Processing data/fhir-r4/original/java/medicationrequest0310.nq
+Processing data/fhir-r4/original/java/researchsubject-example.nq
+Processing data/fhir-r4/original/java/extension-diagnosticreport-summaryof.nq
+Processing data/fhir-r4/original/java/claim-example-vision.nq
+Processing data/fhir-r4/original/java/specimen-questionnaire.nq
+Processing data/fhir-r4/original/java/patient-example-infant-fetal.nq
+Processing data/fhir-r4/original/java/extension-patient-preferencetype.nq
+Processing data/fhir-r4/original/java/devicedefinition-questionnaire.nq
+Processing data/fhir-r4/original/java/patient.profile.nq
+Processing data/fhir-r4/original/java/researchsubject.profile.nq
+Processing data/fhir-r4/original/java/expression.profile.nq
+Processing data/fhir-r4/original/java/claim-example-vision-glasses-3tier.nq
+Processing data/fhir-r4/original/java/careplan-example-f202-malignancy.nq
+Processing data/fhir-r4/original/java/deviceusestatement-example.nq
+Processing data/fhir-r4/original/java/medicationstatementexample4.nq
+Processing data/fhir-r4/original/java/medicationexample0301.nq
+Processing data/fhir-r4/original/java/medicationrequest0324.nq
+Processing data/fhir-r4/original/java/encounter-example-home.nq
+Processing data/fhir-r4/original/java/deviceusestatement.profile.nq
+Processing data/fhir-r4/original/java/bodyheight-questionnaire.nq
+Processing data/fhir-r4/original/java/extension-nutritionorder-adaptivefeedingdevice.nq
+Processing data/fhir-r4/original/java/library-zika-virus-intervention-logic.nq
+Processing data/fhir-r4/original/java/immunizationrecommendation.profile.nq
+Processing data/fhir-r4/original/java/extension-capabilitystatement-websocket.nq
+Processing data/fhir-r4/original/java/reference.profile.nq
+Processing data/fhir-r4/original/java/list-example.nq
+Processing data/fhir-r4/original/java/binary-questionnaire.nq
+Processing data/fhir-r4/original/java/extension-minvalue.nq
+Processing data/fhir-r4/original/java/canonical.profile.nq
+Processing data/fhir-r4/original/java/cqllibrary-questionnaire.nq
+Processing data/fhir-r4/original/java/identifier.profile.nq
+Processing data/fhir-r4/original/java/message-response-link.nq
+Processing data/fhir-r4/original/java/questionnaire-profile-example-ussg-fht.nq
+Processing data/fhir-r4/original/java/immunizationrecommendation-example.nq
+Processing data/fhir-r4/original/java/list.profile.nq
+Processing data/fhir-r4/original/java/extension-questionnaire-minoccurs.nq
+Processing data/fhir-r4/original/java/observation-genetic-Observation-gene-dnavariant.nq
+Processing data/fhir-r4/original/java/element.profile.nq
+Processing data/fhir-r4/original/java/medicationdispense0309.nq
+Processing data/fhir-r4/original/java/observation-example-mbp.nq
+Processing data/fhir-r4/original/java/patient-example-b.nq
+Processing data/fhir-r4/original/java/claim-example-institutional-rich.nq
+Processing data/fhir-r4/original/java/observation-example-unsat.nq
+Processing data/fhir-r4/original/java/guidanceresponse-example.nq
+Processing data/fhir-r4/original/java/medicationdispense0329.nq
+Processing data/fhir-r4/original/java/observation-example-glasgow-qa.nq
+Processing data/fhir-r4/original/java/communication-example.nq
+Processing data/fhir-r4/original/java/extension-resource-lastreviewdate.nq
+Processing data/fhir-r4/original/java/extension-rendering-xhtml.nq
+Processing data/fhir-r4/original/java/medicinalproductmanufactured-example.nq
+Processing data/fhir-r4/original/java/extension-codesystem-usage.nq
+Processing data/fhir-r4/original/java/guidanceresponse.profile.nq
+Processing data/fhir-r4/original/java/observation-example-abdo-tender.nq
+Processing data/fhir-r4/original/java/encounter-example-f202-20130128.nq
+Processing data/fhir-r4/original/java/testscript-example-history.nq
+Processing data/fhir-r4/original/java/medicinalproductmanufactured.profile.nq
+Processing data/fhir-r4/original/java/extension-identifier-validdate.nq
+Processing data/fhir-r4/original/java/extension-flag-priority.nq
+Processing data/fhir-r4/original/java/extension-condition-outcome.nq
+Processing data/fhir-r4/original/java/operation-resource-meta-delete.nq
+Processing data/fhir-r4/original/java/extension-composition-clinicaldocument-versionnumber.nq
+Processing data/fhir-r4/original/java/task-example5.nq
+Processing data/fhir-r4/original/java/extension-operationdefinition-allowed-type.nq
+Processing data/fhir-r4/original/java/communication.profile.nq
+Processing data/fhir-r4/original/java/questionnaire-example-gcs.nq
+Processing data/fhir-r4/original/java/sequence-graphic-example-1.nq
+Processing data/fhir-r4/original/java/careplan-example-pregnancy.nq
+Processing data/fhir-r4/original/java/external-resources.nq
+Processing data/fhir-r4/original/java/observation-example-haplotype1.nq
+Processing data/fhir-r4/original/java/extension-hla-genotyping-results-method.nq
+Processing data/fhir-r4/original/java/testscript-example-readtest.nq
+Processing data/fhir-r4/original/java/coverageeligibilityresponse-example-benefits-2.nq
+Processing data/fhir-r4/original/java/communicationrequest-example-fm-solicit-attachment.nq
+Processing data/fhir-r4/original/java/extension-openehr-management.nq
+Processing data/fhir-r4/original/java/observation-example-diplotype1.nq
+Processing data/fhir-r4/original/java/coverageeligibilityresponse.profile.nq
+Processing data/fhir-r4/original/java/consent-example-signature.nq
+Processing data/fhir-r4/original/java/questionnaireresponse-questionnaire.nq
+Processing data/fhir-r4/original/java/extension-cqf-receivingorganization.nq
+Processing data/fhir-r4/original/java/operation-library-data-requirements.nq
+Processing data/fhir-r4/original/java/medicationexample0321.nq
+Processing data/fhir-r4/original/java/claimresponse-example-2.nq
+Processing data/fhir-r4/original/java/extension-11179-permitted-value-conceptmap.nq
+Processing data/fhir-r4/original/java/medicationrequest0304.nq
+Processing data/fhir-r4/original/java/observation-example-secondsmoke.nq
+Processing data/fhir-r4/original/java/careteam-questionnaire.nq
+Processing data/fhir-r4/original/java/extension-patient-congregation.nq
+Processing data/fhir-r4/original/java/extension-auditevent-mpps.nq
+Processing data/fhir-r4/original/java/coverageeligibilityresponse-example.nq
+Processing data/fhir-r4/original/java/imagingstudy-questionnaire.nq
+Processing data/fhir-r4/original/java/nutritionorder-example-fiberrestricteddiet.nq
+Processing data/fhir-r4/original/java/claim-example-oral-orthoplan.nq
+Processing data/fhir-r4/original/java/coverage-example-2.nq
+Processing data/fhir-r4/original/java/extension-operationoutcome-detectedissue.nq
+Processing data/fhir-r4/original/java/servicerequest-genetics-example-1.nq
+Processing data/fhir-r4/original/java/relatedperson-example-newborn-mom.nq
+Processing data/fhir-r4/original/java/medicationrequest0330.nq
+Processing data/fhir-r4/original/java/medicationexample0315.nq
+Processing data/fhir-r4/original/java/medicationexample0305.nq
+Processing data/fhir-r4/original/java/appointmentresponse.profile.nq
+Processing data/fhir-r4/original/java/ldlcholesterol-questionnaire.nq
+Processing data/fhir-r4/original/java/patient-questionnaire.nq
+Processing data/fhir-r4/original/java/medicationrequest0320.nq
+Processing data/fhir-r4/original/java/cqf-questionnaire-questionnaire.nq
+Processing data/fhir-r4/original/java/observation-example-f204-creatinine.nq
+Processing data/fhir-r4/original/java/extension-procedure-causedby.nq
+Processing data/fhir-r4/original/java/questionnaire-questionnaire.nq
+Processing data/fhir-r4/original/java/bundle-response-medsallergies.nq
+Processing data/fhir-r4/original/java/appointmentresponse-example.nq
+Processing data/fhir-r4/original/java/questionnaireresponse-example-bluebook.nq
+Processing data/fhir-r4/original/java/procedure-example-colon-biopsy.nq
+Processing data/fhir-r4/original/java/goal-questionnaire.nq
+Processing data/fhir-r4/original/java/narrative.profile.nq
+Processing data/fhir-r4/original/java/boolean.profile.nq
+Processing data/fhir-r4/original/java/extension-patient-citizenship.nq
+Processing data/fhir-r4/original/java/location-example-ukpharmacy.nq
+Processing data/fhir-r4/original/java/extension-capabilitystatement-search-parameter-combination.nq
+Processing data/fhir-r4/original/java/encounter-example-f001-heart.nq
+Processing data/fhir-r4/original/java/bundle-questionnaire.nq
+Processing data/fhir-r4/original/java/consent-example-notAuthor.nq
+Processing data/fhir-r4/original/java/extension-rendering-markdown.nq
+Processing data/fhir-r4/original/java/organization.profile.nq
+Processing data/fhir-r4/original/java/medicationrequest0314.nq
+Processing data/fhir-r4/original/java/observation-example-sample-data.nq
+Processing data/fhir-r4/original/java/observation-example-10minute-apgar-score.nq
+Processing data/fhir-r4/original/java/organization-example-gastro.nq
+Processing data/fhir-r4/original/java/shareablemeasure.profile.nq
+Processing data/fhir-r4/original/java/organization-example.nq
+Processing data/fhir-r4/original/java/chargeitemdefinition-ebm-example.nq
+Processing data/fhir-r4/original/java/extension-family-member-history-genetics-sibling.nq
+Processing data/fhir-r4/original/java/extension-procedure-progressstatus.nq
+Processing data/fhir-r4/original/java/library-quick-model-definition.nq
+Processing data/fhir-r4/original/java/extension-specimen-collectionpriority.nq
+Processing data/fhir-r4/original/java/specimen-example-pooled-serum.nq
+Processing data/fhir-r4/original/java/extension-coding-sctdescid.nq
+Processing data/fhir-r4/original/java/nutritionorder-example-pureeddiet-simple.nq
+Processing data/fhir-r4/original/java/conceptmap-example.nq
+Processing data/fhir-r4/original/java/consent-example-notThis.nq
+Processing data/fhir-r4/original/java/riskassessment-example-breastcancer.nq
+Processing data/fhir-r4/original/java/consent-example-smartonfhir.nq
+Processing data/fhir-r4/original/java/flag-example.nq
+Processing data/fhir-r4/original/java/supplydelivery.profile.nq
+Processing data/fhir-r4/original/java/definition.nq
+Processing data/fhir-r4/original/java/nutritionorder-example-diabeticsupplement.nq
+Processing data/fhir-r4/original/java/substance-example-f203-potassium.nq
+Processing data/fhir-r4/original/java/auditevent-example.nq
+Processing data/fhir-r4/original/java/extension-display.nq
+Processing data/fhir-r4/original/java/flag.profile.nq
+Processing data/fhir-r4/original/java/terminologycapabilities-questionnaire.nq
+Processing data/fhir-r4/original/java/supplydelivery-example.nq
+Processing data/fhir-r4/original/java/detectedissue-example-lab.nq
+Processing data/fhir-r4/original/java/diagnosticreport-genetic-DiagnosticReport-assessed-condition.nq
+Processing data/fhir-r4/original/java/diagnosticreport-genetics-example-2-familyhistory.nq
+Processing data/fhir-r4/original/java/extension-servicerequest-geneticsitem.nq
+Processing data/fhir-r4/original/java/condition-example-f201-fever.nq
+Processing data/fhir-r4/original/java/observation-example-date-lastmp.nq
+Processing data/fhir-r4/original/java/implementationguide-questionnaire.nq
+Processing data/fhir-r4/original/java/extension-rendering-style.nq
+Processing data/fhir-r4/original/java/coverageeligibilityresponse-questionnaire.nq
+Processing data/fhir-r4/original/java/paymentreconciliation-example.nq
+Processing data/fhir-r4/original/java/medicationdispense0328.nq
+Processing data/fhir-r4/original/java/backboneelement.profile.nq
+Processing data/fhir-r4/original/java/person-provider-directory.nq
+Processing data/fhir-r4/original/java/bundle-search-warning.nq
+Processing data/fhir-r4/original/java/explanationofbenefit-example-2.nq
+Processing data/fhir-r4/original/java/operation-resource-graphql.nq
+Processing data/fhir-r4/original/java/practitioner-example-f202-lm.nq
+Processing data/fhir-r4/original/java/devicemetric-questionnaire.nq
+Processing data/fhir-r4/original/java/task-example4.nq
+Processing data/fhir-r4/original/java/paymentreconciliation.profile.nq
+Processing data/fhir-r4/original/java/diagnosticreport-example-ultrasound.nq
+Processing data/fhir-r4/original/java/encounter-questionnaire.nq
+Processing data/fhir-r4/original/java/servicerequest-example-implant.nq
+Processing data/fhir-r4/original/java/nutritionorder-example-infantenteral.nq
+Processing data/fhir-r4/original/java/careplan-example-integrated.nq
+Processing data/fhir-r4/original/java/consent-example-notThem.nq
+Processing data/fhir-r4/original/java/extension-structuredefinition-dependencies.nq
+Processing data/fhir-r4/original/java/riskassessment-riskexample.nq
+Processing data/fhir-r4/original/java/binary-example.nq
+Processing data/fhir-r4/original/java/healthcareservice-questionnaire.nq
+Processing data/fhir-r4/original/java/medicinalproduct-example.nq
+Processing data/fhir-r4/original/java/searchparameter-questionnaire.nq
+Processing data/fhir-r4/original/java/extension-codesystem-sourcereference.nq
+Processing data/fhir-r4/original/java/extension-bodysite.nq
+Processing data/fhir-r4/original/java/binary.profile.nq
+Processing data/fhir-r4/original/java/extension-careplan-activity-title.nq
+Processing data/fhir-r4/original/java/servicerequest-example4.nq
+Processing data/fhir-r4/original/java/medicinalproduct.profile.nq
+Processing data/fhir-r4/original/java/operation-plandefinition-apply.nq
+Processing data/fhir-r4/original/java/extension-workflow-supportinginfo.nq
+Processing data/fhir-r4/original/java/operation-activitydefinition-apply.nq
+Processing data/fhir-r4/original/java/extension-auditevent-accession.nq
+Processing data/fhir-r4/original/java/bp-questionnaire.nq
+Processing data/fhir-r4/original/java/organization-example-f003-burgers-ENT.nq
+Processing data/fhir-r4/original/java/allergyintolerance-nka.nq
+Processing data/fhir-r4/original/java/medicationexample0320.nq
+Processing data/fhir-r4/original/java/list-example-familyhistory-f201-roel.nq
+Processing data/fhir-r4/original/java/medicationrequest0305.nq
+Processing data/fhir-r4/original/java/claim-example-oral-average.nq
+Processing data/fhir-r4/original/java/extension-goal-relationship.nq
+Processing data/fhir-r4/original/java/observation-example-alcohol-type.nq
+Processing data/fhir-r4/original/java/extension-structuredefinition-standards-status.nq
+Processing data/fhir-r4/original/java/condition-example-family-history.nq
+Processing data/fhir-r4/original/java/familymemberhistory.profile.nq
+Processing data/fhir-r4/original/java/subscription-example.nq
+Processing data/fhir-r4/original/java/list-example-medlist.nq
+Processing data/fhir-r4/original/java/basic-example.nq
+Processing data/fhir-r4/original/java/observation-genetics.profile.nq
+Processing data/fhir-r4/original/java/extension-list-changebase.nq
+Processing data/fhir-r4/original/java/practitioner-examples-general.nq
+Processing data/fhir-r4/original/java/familymemberhistory-example.nq
+Processing data/fhir-r4/original/java/subscription.profile.nq
+Processing data/fhir-r4/original/java/extension-iso21090-adxp-unittype.nq
+Processing data/fhir-r4/original/java/catalogentry-questionnaire.nq
+Processing data/fhir-r4/original/java/medicationrequest0331.nq
+Processing data/fhir-r4/original/java/basic.profile.nq
+Processing data/fhir-r4/original/java/observation-example-TPMT-diplotype.nq
+Processing data/fhir-r4/original/java/medicinalproductpharmaceutical-questionnaire.nq
+Processing data/fhir-r4/original/java/medicationexample0314.nq
+Processing data/fhir-r4/original/java/sequence-example-fda.nq
+Processing data/fhir-r4/original/java/extension-diagnosticreport-addendumof.nq
+Processing data/fhir-r4/original/java/riskevidencesynthesis-questionnaire.nq
+Processing data/fhir-r4/original/java/observation-example-herd1.nq
+Processing data/fhir-r4/original/java/observation-example-body-height.nq
+Processing data/fhir-r4/original/java/medicationstatementexample1.nq
+Processing data/fhir-r4/original/java/medicationexample0304.nq
+Processing data/fhir-r4/original/java/substancespecification-example.nq
+Processing data/fhir-r4/original/java/medicationrequest0321.nq
+Processing data/fhir-r4/original/java/coverage-example-ehic.nq
+Processing data/fhir-r4/original/java/relatedperson-example.nq
+Processing data/fhir-r4/original/java/library-fhir-model-definition.nq
+Processing data/fhir-r4/original/java/extension-codesystem-replacedby.nq
+Processing data/fhir-r4/original/java/extension-elementdefinition-minvalueset.nq
+Processing data/fhir-r4/original/java/extension-iso21090-adxp-streetnametype.nq
+Processing data/fhir-r4/original/java/organization-example-f201-aumc.nq
+Processing data/fhir-r4/original/java/sequence-complex-variant.nq
+Processing data/fhir-r4/original/java/extension-codesystem-keyword.nq
+Processing data/fhir-r4/original/java/library-opioidcds-recommendation-07.nq
+Processing data/fhir-r4/original/java/relatedperson.profile.nq
+Processing data/fhir-r4/original/java/extension-questionnaire-supportlink.nq
+Processing data/fhir-r4/original/java/location-example-room.nq
+Processing data/fhir-r4/original/java/groupdefinition.profile.nq
+Processing data/fhir-r4/original/java/messageheader-questionnaire.nq
+Processing data/fhir-r4/original/java/enrollmentrequest-example.nq
+Processing data/fhir-r4/original/java/medicinalproductpackaged-example.nq
+Processing data/fhir-r4/original/java/list-example-empty.nq
+Processing data/fhir-r4/original/java/composition-questionnaire.nq
+Processing data/fhir-r4/original/java/medicationrequest0315.nq
+Processing data/fhir-r4/original/java/condition-example-f204-renal.nq
+Processing data/fhir-r4/original/java/medicinalproductpackaged.profile.nq
+Processing data/fhir-r4/original/java/extension-specimen-processingtime.nq
+Processing data/fhir-r4/original/java/extension-questionnaire-optionexclusive.nq
+Processing data/fhir-r4/original/java/enrollmentrequest.profile.nq
+Processing data/fhir-r4/original/java/observation-example-bloodpressure.nq
+Processing data/fhir-r4/original/java/conceptmap-example-2.nq
+Processing data/fhir-r4/original/java/hlaresult-questionnaire.nq
+Processing data/fhir-r4/original/java/observation-example-5minute-apgar-score.nq
+Processing data/fhir-r4/original/java/adverseevent-questionnaire.nq
+Processing data/fhir-r4/original/java/extension-allergyintolerance-reasonrefuted.nq
+Processing data/fhir-r4/original/java/extension-communicationrequest-initiatinglocation.nq
+Processing data/fhir-r4/original/java/messagedefinition-patient-link-response.nq
+Processing data/fhir-r4/original/java/specimen-example-isolate.nq
+Processing data/fhir-r4/original/java/testscript-example.nq
+Processing data/fhir-r4/original/java/resprate-questionnaire.nq
+Processing data/fhir-r4/original/java/observation-example-spirometry.nq
+Processing data/fhir-r4/original/java/diagnosticreport-genetics-comprehensive-bone-marrow-report.nq
+Processing data/fhir-r4/original/java/provenance-consent-signature.nq
+Processing data/fhir-r4/original/java/procedure-example-biopsy.nq
+Processing data/fhir-r4/original/java/observation-example-bgpanel.nq
+Processing data/fhir-r4/original/java/quantity.profile.nq
+Processing data/fhir-r4/original/java/extension-structuredefinition-xml-no-order.nq
+Processing data/fhir-r4/original/java/compartmentdefinition-patient.nq
+Processing data/fhir-r4/original/java/usagecontext.profile.nq
+Processing data/fhir-r4/original/java/sequence-graphic-example-4.nq
+Processing data/fhir-r4/original/java/plandefinition-opioidcds-07.nq
+Processing data/fhir-r4/original/java/medicationdispense0318.nq
+Processing data/fhir-r4/original/java/extension-cqf-expression.nq
+Processing data/fhir-r4/original/java/observation-example-bmi.nq
+Processing data/fhir-r4/original/java/servicerequest-example-colonoscopy.nq
+Processing data/fhir-r4/original/java/extension-hla-genotyping-results-allele-database.nq
+Processing data/fhir-r4/original/java/organization-example-mmanu.nq
+Processing data/fhir-r4/original/java/cm-contact-point-use-v3.nq
+Processing data/fhir-r4/original/java/claim-example-cms1500-medical.nq
+Processing data/fhir-r4/original/java/extension-hla-genotyping-results-glstring.nq
+Processing data/fhir-r4/original/java/extension-procedure-method.nq
+Processing data/fhir-r4/original/java/extension-iso21090-adxp-deliveryaddressline.nq
+Processing data/fhir-r4/original/java/decimal.profile.nq
+Processing data/fhir-r4/original/java/extension-elementdefinition-bestpractice.nq
+Processing data/fhir-r4/original/java/extension-diagnosticreport-risk.nq
+Processing data/fhir-r4/original/java/humanname.profile.nq
+Processing data/fhir-r4/original/java/compartmentdefinition-questionnaire.nq
+Processing data/fhir-r4/original/java/insuranceplan-questionnaire.nq
+Processing data/fhir-r4/original/java/medicationexample15.nq
+Processing data/fhir-r4/original/java/library-fhir-helpers.nq
+Processing data/fhir-r4/original/java/list-example-long.nq
+Processing data/fhir-r4/original/java/extension-observation-reagent.nq
+Processing data/fhir-r4/original/java/appointment-example.nq
+Processing data/fhir-r4/original/java/medicinalproduct-questionnaire.nq
+Processing data/fhir-r4/original/java/medicationrequest0335.nq
+Processing data/fhir-r4/original/java/medicationexample0310.nq
+Processing data/fhir-r4/original/java/extension-consent-transcriber.nq
+Processing data/fhir-r4/original/java/appointment.profile.nq
+Processing data/fhir-r4/original/java/shareableactivitydefinition-questionnaire.nq
+Processing data/fhir-r4/original/java/extension-cqf-recipienttype.nq
+Processing data/fhir-r4/original/java/extension-openehr-careplan.nq
+Processing data/fhir-r4/original/java/extension-iso21090-uncertaintytype.nq
+Processing data/fhir-r4/original/java/annotation.profile.nq
+Processing data/fhir-r4/original/java/medicinalproductingredient-questionnaire.nq
+Processing data/fhir-r4/original/java/contactdetail.profile.nq
+Processing data/fhir-r4/original/java/library-omtk-modelinfo.nq
+Processing data/fhir-r4/original/java/structuredefinition-questionnaire.nq
+Processing data/fhir-r4/original/java/task-example-fm-poll.nq
+Processing data/fhir-r4/original/java/medicationrequest0301.nq
+Processing data/fhir-r4/original/java/shareablecodesystem.profile.nq
+Processing data/fhir-r4/original/java/claim-example-oral-contained.nq
+Processing data/fhir-r4/original/java/observation-genetic-Observation-dna-variant.nq
+Processing data/fhir-r4/original/java/person.profile.nq
+Processing data/fhir-r4/original/java/patient-extensions-Patient-age.nq
+Processing data/fhir-r4/original/java/extension-family-member-history-genetics-parent.nq
+Processing data/fhir-r4/original/java/age.profile.nq
+Processing data/fhir-r4/original/java/group.profile.nq
+Processing data/fhir-r4/original/java/ratio.profile.nq
+Processing data/fhir-r4/original/java/familymemberhistory-genetic.profile.nq
+Processing data/fhir-r4/original/java/person-example.nq
+Processing data/fhir-r4/original/java/list-questionnaire.nq
+Processing data/fhir-r4/original/java/extension-auditevent-anonymized.nq
+Processing data/fhir-r4/original/java/group-example.nq
+Processing data/fhir-r4/original/java/extension-elementdefinition-namespace.nq
+Processing data/fhir-r4/original/java/subscription-example-error.nq
+Processing data/fhir-r4/original/java/domainresource.profile.nq
+Processing data/fhir-r4/original/java/medicinalproductcontraindication-questionnaire.nq
+Processing data/fhir-r4/original/java/operation-measure-care-gaps.nq
+Processing data/fhir-r4/original/java/medicationstatementexample5.nq
+Processing data/fhir-r4/original/java/person-grahame.nq
+Processing data/fhir-r4/original/java/medicationrequest0325.nq
+Processing data/fhir-r4/original/java/extension-workflow-instantiatescanonical.nq
+Processing data/fhir-r4/original/java/extension-usagecontext-group.nq
+Processing data/fhir-r4/original/java/measurereport-cms146-cat2-example.nq
+Processing data/fhir-r4/original/java/extension-procedure-incisiondatetime.nq
+Processing data/fhir-r4/original/java/extension-encounter-reasoncancelled.nq
+Processing data/fhir-r4/original/java/medicationrequestexample1.nq
+Processing data/fhir-r4/original/java/patient-example-infant-twin-1.nq
+Processing data/fhir-r4/original/java/observation-example.nq
+Processing data/fhir-r4/original/java/detectedissue-questionnaire.nq
+Processing data/fhir-r4/original/java/flag-questionnaire.nq
+Processing data/fhir-r4/original/java/extension-humanname-mothers-family.nq
+Processing data/fhir-r4/original/java/extension-resource-approvaldate.nq
+Processing data/fhir-r4/original/java/extension-cqf-systemusertype.nq
+Processing data/fhir-r4/original/java/diagnosticreport-example-gingival-mass.nq
+Processing data/fhir-r4/original/java/questionnaire-example-f201-lifelines.nq
+Processing data/fhir-r4/original/java/extension-questionnaireresponse-signature.nq
+Processing data/fhir-r4/original/java/devicerequest-example-insulinpump.nq
+Processing data/fhir-r4/original/java/extension-observation-gatewaydevice.nq
+Processing data/fhir-r4/original/java/extension-humanname-partner-name.nq
+Processing data/fhir-r4/original/java/extension-iso21090-adxp-deliverymodeidentifier.nq
+Processing data/fhir-r4/original/java/medicationadministration.profile.nq
+Processing data/fhir-r4/original/java/questionnaireresponse-example-gcs.nq
+Processing data/fhir-r4/original/java/nutritionorder-example-renaldiet.nq
+Processing data/fhir-r4/original/java/medicationdispense0308.nq
+Processing data/fhir-r4/original/java/extension-patient-religion.nq
+Processing data/fhir-r4/original/java/patient-example-c.nq
+Processing data/fhir-r4/original/java/count.profile.nq
+Processing data/fhir-r4/original/java/device-example.nq
+Processing data/fhir-r4/original/java/servicerequest-example-pt.nq
+Processing data/fhir-r4/original/java/extension-workflow-researchstudy.nq
+Processing data/fhir-r4/original/java/bmi-questionnaire.nq
+Processing data/fhir-r4/original/java/coverageeligibilityresponse-example-error.nq
+Processing data/fhir-r4/original/java/compartmentdefinition-practitioner.nq
+Processing data/fhir-r4/original/java/medicinalproductauthorization-questionnaire.nq
+Processing data/fhir-r4/original/java/operation-codesystem-lookup.nq
+Processing data/fhir-r4/original/java/substancenucleicacid.profile.nq
+Processing data/fhir-r4/original/java/medicinalproductinteraction.profile.nq
+Processing data/fhir-r4/original/java/communication-example-fm-attachment.nq
+Processing data/fhir-r4/original/java/shareablelibrary.profile.nq
+Processing data/fhir-r4/original/java/range.profile.nq
+Processing data/fhir-r4/original/java/medicinalproductinteraction-example.nq
+Processing data/fhir-r4/original/java/contributor.profile.nq
+Processing data/fhir-r4/original/java/relatedperson-questionnaire.nq
+Processing data/fhir-r4/original/java/extension-rendering-stylesensitive.nq
+Processing data/fhir-r4/original/java/diagnosticreport-example-pgx.nq
+Processing data/fhir-r4/original/java/operation-resource-graph.nq
+Processing data/fhir-r4/original/java/substancenucleicacid-example.nq
+Processing data/fhir-r4/original/java/shareableactivitydefinition.profile.nq
+Processing data/fhir-r4/original/java/extension-questionnaire-unitoption.nq
+Processing data/fhir-r4/original/java/extension-event-performerfunction.nq
+Processing data/fhir-r4/original/java/capabilitystatement-base2.nq
+Processing data/fhir-r4/original/java/medicationdispense0313.nq
+Processing data/fhir-r4/original/java/consent-example-notTime.nq
+Processing data/fhir-r4/original/java/careplan-example-f001-heart.nq
+Processing data/fhir-r4/original/java/extension-workflow-relatedartifact.nq
+Processing data/fhir-r4/original/java/extension-iso21090-uncertainty.nq
+Processing data/fhir-r4/original/java/namingsystem-registry.nq

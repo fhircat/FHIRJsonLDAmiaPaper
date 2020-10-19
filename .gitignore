@@ -132,9 +132,6 @@ dmypy.json
 */node_modules
 *.iml
 
-examples-json/
-examples-ttl/
-compare-report/
-jsonld-pre/
-original/
-/data/fhir-r5/original-java/
+
+data/fhir-r5/
+data/fhir-r4/

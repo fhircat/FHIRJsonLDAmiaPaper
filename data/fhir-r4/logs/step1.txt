@@ -2347,7 +2347,6 @@ Processing data/fhir-r4/examples-json/observation-example-bloodpressure.json
 Processing data/fhir-r4/examples-json/extension-cqf-initialvalue.json
 Processing data/fhir-r4/examples-json/valueset-goal-status-reason.json
 Processing data/fhir-r4/examples-json/json-edge-cases.json
-data/fhir-r4/examples-json/json-edge-cases.json does not have an identifier
 Processing data/fhir-r4/examples-json/valueset-subscription-channel-type.json
 Processing data/fhir-r4/examples-json/bodyweight-questionnaire.json
 Processing data/fhir-r4/examples-json/linkage.profile.json

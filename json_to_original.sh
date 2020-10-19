@@ -2,7 +2,7 @@
 
 usage="Usage: json_to_original-sh [-1, -2, -3 or -a] [-v]  [-java, -js or -all] [-cs contextsource] [-co compareopts] [directory]"
 examples_dir="fhir-r4"
-COMPAREOPTS="-sta -maxtc 2000 -dec -maxt 5000 -mb -tc"
+COMPAREOPTS="-sta -maxtc 3000 -dec -maxt 5000 -mb -tc -v"
 VERBOSE=""
 
 echo Processing FHIR release $dir
@@ -38,26 +38,26 @@ fi
 echo Vals: p1=$P1 p2=$P2 p3=$P3 js=$PROC_JS java=$PROC_JAVA dir=$dir CONTEXT_SERVER=$CONTEXT_SERVER
 
 if [ $P1 ]; then
-        echo "Preprocessing data/$dir/examples-json to data/$dir/jsonld-pre"
+        echo "Preprocessing data/$dir/examples-json to data/$dir/jsonld-pre/"
         if [ $CONTEXT_SERVER ]; then
           csparam="-cs $CONTEXT_SERVER"
         else
           csparam=""
         fi
- 	rm -f data/$dir/jsonld-pre/*
-        pipenv run python fhir_jsonld_amia/json_preprocessor.py -id data/$dir/examples-json -od data/$dir/jsonld-pre -c -fs http://hl7.org/fhir/ -vb http://build.fhir.org/ -s $csparam 
+ 	rm -f data/$dir/jsonld-pre/python/*
+        pipenv run python fhir_jsonld_amia/json_preprocessor.py -id data/$dir/examples-json -od data/$dir/jsonld-pre/python -c -fs http://hl7.org/fhir/ -vb http://build.fhir.org/ -s $csparam 
 fi
 if [ $P2 ]; then
         if [ $PROC_JAVA ]; then
-            echo "Converting data/$dir/jsonld-pre to data/$dir/original/java"
+            echo "Converting data/$dir/jsonld-pre/python to data/$dir/original/java"
             rm -f data/$dir/original/java/*
-            java -jar fhir_jsonld_java/jsonld-cli-1.0-SNAPSHOT-jar-with-dependencies.jar -f ttl --input data/$dir/jsonld-pre --output data/$dir/original/java 
+            java -jar fhir_jsonld_java/jsonld-cli-1.0-SNAPSHOT-jar-with-dependencies.jar -f ttl --input data/$dir/jsonld-pre/python --output data/$dir/original/java 
          fi
          if [ $PROC_JS ]; then
             echo "Converting data/$dir/jsonld-pre to data/$dir/original/js"
             rm -f data/$dir/original/js/*
             pushd fhir_jsonld_js
-            yarn jsonld -c toRDF -n ../data/$dir/jsonld-pre -m ../data/$dir/original/js 
+            yarn jsonld -c toRDF -n ../data/$dir/jsonld-pre/python -m ../data/$dir/original/js 
   	    popd
          fi
 fi

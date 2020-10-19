@@ -1,0 +1,460 @@
+{
+   "resourceType": "fhir:Patient",
+   "id": {
+      "value": "edgyPatient"
+   },
+   "identifier": [
+      {
+         "period": {
+            "start": {
+               "value": {
+                  "@value": "2001-05-06",
+                  "@type": "http://www.w3.org/2001/XMLSchema#date"
+               }
+            }
+         },
+         "assigner": {
+            "display": {
+               "value": "Acme\u202fHealthcare"
+            }
+         },
+         "use": {
+            "value": "usual"
+         },
+         "system": {
+            "value": "urn:oid:1.2.36.146.595.217.0.1"
+         },
+         "value": {
+            "value": "12345"
+         },
+         "index": 0
+      }
+   ],
+   "managingOrganization": {
+      "reference": {
+         "value": "Organization/1"
+      },
+      "fhir:link": {
+         "@id": "Organization/1",
+         "@type": "fhir:Organization"
+      }
+   },
+   "name": [
+      {
+         "given": [
+            {
+               "value": "Peter",
+               "index": 0
+            },
+            {
+               "value": "James",
+               "index": 1
+            }
+         ],
+         "use": {
+            "value": "official"
+         },
+         "family": {
+            "value": "Chalmers"
+         },
+         "index": 0
+      },
+      {
+         "given": [
+            {
+               "value": "Jim",
+               "index": 0
+            }
+         ],
+         "use": {
+            "value": "usual"
+         },
+         "index": 1
+      }
+   ],
+   "extension": [
+      {
+         "url": {
+            "value": "http://example.org/fhir/StructureDefinition/patientAvatar"
+         },
+         "valueReference": {
+            "reference": {
+               "value": "#pic1"
+            },
+            "display": {
+               "value": "Duck image"
+            },
+            "fhir:link": {
+               "@id": "Patient/edgyPatient#pic1"
+            }
+         },
+         "index": 0
+      },
+      {
+         "url": {
+            "value": "http://example.org/fhir/StructureDefinition/complexExtensionExample"
+         },
+         "extension": [
+            {
+               "url": {
+                  "value": "nestedA"
+               },
+               "valueCoding": {
+                  "system": {
+                     "value": "http://demo.org/id/4"
+                  },
+                  "code": {
+                     "value": "AB45"
+                  },
+                  "extension": [
+                     {
+                        "url": {
+                           "value": "http://example.org/fhir/StructureDefinition/extraforcodingWithExt"
+                        },
+                        "extension": [
+                           {
+                              "url": {
+                                 "value": "extra1"
+                              },
+                              "valueString": {
+                                 "value": "extra info"
+                              },
+                              "index": 0
+                           }
+                        ],
+                        "index": 0
+                     },
+                     {
+                        "url": {
+                           "value": "http://example.org/fhir/StructureDefinition/extraforcodingWithValue"
+                        },
+                        "valueInteger": {
+                           "value": 45
+                        },
+                        "index": 1
+                     }
+                  ],
+                  "@type": "http://demo.org/id/4/AB45"
+               },
+               "index": 0
+            },
+            {
+               "url": {
+                  "value": "nestedB"
+               },
+               "id": {
+                  "value": "q4"
+               },
+               "extension": [
+                  {
+                     "url": {
+                        "value": "nestedB1"
+                     },
+                     "valueString": {
+                        "value": "hello"
+                     },
+                     "index": 0
+                  }
+               ],
+               "@id": "Patient/edgyPatient#q4",
+               "index": 1
+            }
+         ],
+         "index": 1
+      }
+   ],
+   "modifierExtension": [
+      {
+         "url": {
+            "value": "http://example.org/fhir/StructureDefinition/pi"
+         },
+         "valueDecimal": {
+            "value": 3.141592653589793
+         },
+         "index": 0
+      },
+      {
+         "url": {
+            "value": "http://example.org/fhir/StructureDefinition/max-decimal-precision"
+         },
+         "valueDecimal": {
+            "value": 1.0006502214162465
+         },
+         "index": 1
+      }
+   ],
+   "gender": {
+      "value": "male"
+   },
+   "birthDate": {
+      "value": {
+         "@value": "1974-12",
+         "@type": "http://www.w3.org/2001/XMLSchema#gYearMonth"
+      }
+   },
+   "deceasedBoolean": {
+      "value": true
+   },
+   "address": [
+      {
+         "use": {
+            "value": "home"
+         },
+         "line": [
+            {
+               "value": "534 Erewhon St",
+               "index": 0
+            }
+         ],
+         "city": {
+            "value": "PleasantVille"
+         },
+         "state": {
+            "value": "Vic"
+         },
+         "postalCode": {
+            "value": "3999"
+         },
+         "index": 0
+      }
+   ],
+   "maritalStatus": {
+      "extension": [
+         {
+            "url": {
+               "value": "http://example.org/fhir/StructureDefinition/nullFlavor"
+            },
+            "valueCode": {
+               "value": "ASKU"
+            },
+            "index": 0
+         }
+      ]
+   },
+   "multipleBirthInteger": {
+      "value": 3
+   },
+   "text": {
+      "status": {
+         "value": "generated"
+      },
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <table>\n        <tbody>\n          <tr>\n            <td>Name</td>\n            <td>Peter James <b>Chalmers</b> (&quot;Jim&quot;)</td>\n          </tr>\n          <tr>\n            <td>Address</td>\n            <td>534 Erewhon, Pleasantville, Vic, 3999</td>\n          </tr>\n          <tr>\n            <td>Contacts</td>\n            <td>Home: unknown. Work: (03) 5555 6473</td>\n          </tr>\n          <tr>\n            <td>Id</td>\n            <td>MRN: 12345 (Acme Healthcare)</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>"
+   },
+   "contained": [
+      {
+         "resourceType": "fhir:Binary",
+         "id": {
+            "value": "pic1"
+         },
+         "contentType": {
+            "value": "image/gif"
+         },
+         "data": {
+            "value": "R0lGODlhEwARAPcAAAAAAAAA/+9aAO+1AP/WAP/eAP/eCP/eEP/eGP/nAP/nCP/nEP/nIf/nKf/nUv/nWv/vAP/vCP/vEP/vGP/vIf/vKf/vMf/vOf/vWv/vY//va//vjP/3c//3lP/3nP//tf//vf///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAAEALAAAAAATABEAAAi+AAMIDDCgYMGBCBMSvMCQ4QCFCQcwDBGCA4cLDyEGECDxAoAQHjxwyKhQAMeGIUOSJJjRpIAGDS5wCDly4AALFlYOgHlBwwOSNydM0AmzwYGjBi8IHWoTgQYORg8QIGDAwAKhESI8HIDgwQaRDI1WXXAhK9MBBzZ8/XDxQoUFZC9IiCBh6wEHGz6IbNuwQoSpWxEgyLCXL8O/gAnylNlW6AUEBRIL7Og3KwQIiCXb9HsZQoIEUzUjNEiaNMKAAAA7"
+         },
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/binary.context.jsonld",
+         "@id": "Patient/edgyPatient#pic1",
+         "index": 0
+      },
+      {
+         "resourceType": "fhir:Organization",
+         "id": {
+            "value": "org3141"
+         },
+         "text": {
+            "status": {
+               "value": "generated"
+            },
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Good Health Clinic</p>\n    </div>"
+         },
+         "identifier": [
+            {
+               "system": {
+                  "value": "urn:ietf:rfc:3986"
+               },
+               "value": {
+                  "value": "2.16.840.1.113883.19.5"
+               },
+               "index": 0
+            }
+         ],
+         "name": {
+            "value": "Good Health Clinic"
+         },
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/organization.context.jsonld",
+         "@id": "Patient/edgyPatient#org3141",
+         "index": 1
+      }
+   ],
+   "contact": [
+      {
+         "name": {
+            "family": {
+               "value": "du March\u00e9",
+               "extension": [
+                  {
+                     "url": {
+                        "value": "http://example.org/fhir/StructureDefinition/qualifier"
+                     },
+                     "valueString": {
+                        "value": "VV"
+                     },
+                     "index": 0
+                  },
+                  {
+                     "url": {
+                        "value": "http://hl7.org/fhir/StructureDefinitioniso-21090#nullFlavor"
+                     },
+                     "valueCode": {
+                        "value": "ASKU"
+                     },
+                     "index": 1
+                  }
+               ]
+            },
+            "given": [
+               {
+                  "value": null,
+                  "index": 0
+               },
+               {
+                  "id": {
+                     "value": "a3"
+                  },
+                  "extension": [
+                     {
+                        "url": {
+                           "value": "http://hl7.org/fhir/StructureDefinition/qualifier"
+                        },
+                        "valueCode": {
+                           "value": "MID"
+                        },
+                        "index": 0
+                     }
+                  ],
+                  "@id": "Patient/edgyPatient#a3",
+                  "index": 1
+               },
+               {
+                  "value": null,
+                  "index": 2
+               }
+            ]
+         },
+         "relationship": [
+            {
+               "coding": [
+                  {
+                     "system": {
+                        "value": "http://example.org/fhir/CodeSystem/patient-contact-relationship"
+                     },
+                     "code": {
+                        "value": "partner"
+                     },
+                     "index": 0,
+                     "@type": "http://example.org/fhir/CodeSystem/patient-contact-relationship/partner"
+                  }
+               ],
+               "index": 0
+            }
+         ],
+         "telecom": [
+            {
+               "system": {
+                  "value": "phone"
+               },
+               "value": {
+                  "value": "+33 (237) 998327"
+               },
+               "index": 0
+            }
+         ],
+         "index": 0
+      }
+   ],
+   "generalPractitioner": [
+      {
+         "reference": {
+            "value": "#org3141"
+         },
+         "fhir:link": {
+            "@id": "Patient/edgyPatient#org3141"
+         },
+         "index": 0
+      }
+   ],
+   "telecom": [
+      {
+         "use": {
+            "value": "home"
+         },
+         "index": 0
+      },
+      {
+         "system": {
+            "value": "phone"
+         },
+         "value": {
+            "value": "(03) 5555 6473"
+         },
+         "use": {
+            "value": "work"
+         },
+         "index": 1
+      }
+   ],
+   "meta": {
+      "tag": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            },
+            "code": {
+               "value": "HTEST"
+            },
+            "display": {
+               "value": "test health data"
+            },
+            "index": 0
+         }
+      ]
+   },
+   "@context": [
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/patient.context.jsonld",
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/root.context.jsonld",
+      {
+         "nodeRole": {
+            "@type": "@id",
+            "@id": "fhir:nodeRole"
+         },
+         "@base": "http://hl7.org/fhir/",
+         "owl:imports": {
+            "@type": "@id"
+         },
+         "owl:versionIRI": {
+            "@type": "@id"
+         }
+      }
+   ],
+   "@id": "Patient/edgyPatient",
+   "active": {
+      "extension": [
+         {
+            "url": {
+               "value": "http://example.org/fhir/StructureDefinition/recordStatus"
+            },
+            "valueCode": {
+               "value": "archived"
+            },
+            "index": 0
+         }
+      ]
+   },
+   "nodeRole": "fhir:treeRoot",
+   "@included": {
+      "@id": "Patient/edgyPatient.ttl",
+      "owl:versionIRI": "http://build.fhir.org/Patient/edgyPatient.ttl",
+      "owl:imports": "fhir:fhir.ttl",
+      "@type": "owl:Ontology"
+   }
+}
