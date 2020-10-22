@@ -71,9 +71,4 @@ if __name__ == '__main__':
     fsv = FSVProcessor('../data/fhir-r4/fhir.ttl')
     assert fsv.is_canonical(['CapabilityStatement', 'rest', 'searchParam', 'definition'])
     assert not fsv.is_canonical(['CapabilityStatement', 'rest'])
-    # check_worked = False
-    # try:
-    #     fsv.is_canonical(['foo'])
-    # except AssertionError as e:
-    #     check_worked = True
-    # assert check_worked, "Check valid isn't working"
+    assert fsv.is_date(['DocumentReference', 'context', 'period', 'start'])
