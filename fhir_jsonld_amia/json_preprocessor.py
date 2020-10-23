@@ -158,7 +158,7 @@ def add_type_arcs(element_key: str, container: JsonObj, parent_container: JsonOb
         add_type_arc(container)
 
 
-def gen_reference(ref: str, refobject: JsonObj, server: Optional[str], id_map: Optional[Dict[str, Tuple[str, str]]])\
+def gen_reference(ref: str, refobject: JsonObj, server: Optional[str], id_map: Optional[Dict[str, str]])\
         -> Optional[JsonObj]:
     """
     Return the object of a fhir:link based on the reference in refObject
@@ -184,7 +184,7 @@ def gen_reference(ref: str, refobject: JsonObj, server: Optional[str], id_map: O
         rval = JsonObj()
 
         if link in id_map:
-            rval['@id'] = id_map[link][0]
+            rval['@id'] = id_map[link]
         else:
             rval['@id'] = link
             if typ:
@@ -193,7 +193,7 @@ def gen_reference(ref: str, refobject: JsonObj, server: Optional[str], id_map: O
     return None
 
 
-def add_contained_urls(resource: JsonObj, id_map: Dict[str, Tuple[str, str]]) -> None:
+def add_contained_urls(resource: JsonObj, id_map: Dict[str, str]) -> None:
     """
     Return a map of contained resources to absolute URL's
 
@@ -206,7 +206,7 @@ def add_contained_urls(resource: JsonObj, id_map: Dict[str, Tuple[str, str]]) ->
     for container in containers:
         contained_id = '#' + getattr(container, ID_KEY)
         contained_type = getattr(resource, RESOURCETYPE_KEY)
-        id_map[contained_id] = (contained_type + '/' + getattr(resource, ID_KEY) + contained_id, contained_type)
+        id_map[contained_id] = contained_type + '/' + getattr(resource, ID_KEY) + contained_id
 
 
 def bundle_urls(resource: JsonObj) -> Optional[Dict[str, Tuple[str, str]]]:
@@ -231,7 +231,7 @@ def bundle_urls(resource: JsonObj) -> Optional[Dict[str, Tuple[str, str]]]:
                     resource_id = getattr(resource, ID_KEY, None)
                     resource_type = getattr(resource, RESOURCETYPE_KEY, None)
                     if resource_id:
-                        rval[resource_type + '/' + resource_id] = (fullUrl, resource_type)
+                        rval[resource_type + '/' + resource_id] = fullUrl
     return rval
 
 
@@ -312,7 +312,7 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
             else:
                 relative_id = element_value if element_value.startswith('#') else \
                             ((inner_type or container_type) + '/' + element_value)
-            container_id = id_map.get(relative_id, (relative_id, None))[0] if id_map else relative_id
+            container_id = id_map.get(relative_id, relative_id) if id_map else relative_id
             if not hasattr(container, '@id'):
                 # Bundle ids have already been added elsewhere
                 container['@id'] = container_id
