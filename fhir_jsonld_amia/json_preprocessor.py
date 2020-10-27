@@ -5,7 +5,6 @@ import sys
 import urllib
 from argparse import Namespace, ArgumentParser
 from typing import Any, List, Optional, Union, Dict, Tuple
-from urllib.parse import quote
 
 import dirlistproc
 import requests
@@ -116,13 +115,13 @@ def add_type_arc(codedobject: JsonObj) -> None:
     """
     if hasattr(codedobject, SYSTEM_KEY) and hasattr(codedobject, CODE_KEY):
         system = from_value(codedobject[SYSTEM_KEY])
-        code = quote(from_value(codedobject[CODE_KEY]), safe='')
+        code = urllib.parse.quote(from_value(codedobject[CODE_KEY]), safe='')
         system_root = system[:-1] if system[-1] in '/#' else system
         if system_root in CODE_SYSTEM_MAP:
             base = CODE_SYSTEM_MAP[system_root] + ':'
         else:
             base = system + ('' if system[-1] in '/#' else '/')
-        codedobject['@type'] = base + urllib.parse.quote(code, safe='')
+        codedobject['@type'] = base + code
 
 
 def add_type_arcs(element_key: str, container: JsonObj, parent_container: JsonObj, path: List[str], opts: Namespace,

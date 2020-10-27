@@ -1,0 +1,1532 @@
+{
+   "resourceType": "fhir:PlanDefinition",
+   "id": {
+      "value": "example-cardiology-os"
+   },
+   "text": {
+      "status": {
+         "value": "generated"
+      },
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example-cardiology-os</p><p><b>contained</b>: , , , , , , , , , , , , </p><p><b>url</b>: <b>http://va.gov/kas/orderset/B5-Cardiology-ChestPainCAD-OS</b></p><p><b>identifier</b>: bb7ccea6-9744-4743-854a-bcffd87191f6 (OFFICIAL), CLIN0004AG, KP-914</p><p><b>version</b>: 0.1</p><p><b>name</b>: ChestPainCoronaryArteryDiseaseOrderSetKNART</p><p><b>title</b>: Chest Pain (CP) - Coronary Artery Disease (CAD) Order Set KNART</p><p><b>type</b>: Order Set <span>(Details : {http://terminology.hl7.org/CodeSystem/plan-definition-type code 'order-set' = 'Order Set', given as 'Order Set'})</span></p><p><b>status</b>: active</p><p><b>date</b>: 29/08/2017</p><p><b>publisher</b>: Department of Veterans Affairs</p><p><b>description</b>: The Cardiology chest pain (CP) and coronary artery disease (CAD) group of KNARTs are     intended to assist primary care providers in the management of adult patients with stable     chest pain (with or without known CAD); aid in determining when a cardiology consultation is     appropriate; provide guidance for initial noninvasive diagnostic orders (stress testing) and     provide a structured documentation template for the process. Stable patients with cardiac     chest pain require risk stratification, office-based workup, initiation of disease-specific     medications, and subspecialty referral to a cardiologist.</p><p><b>useContext</b>: </p><p><b>usage</b>: The Cardiology chest pain (CP) and coronary artery disease (CAD) group of KNARTs are intended to assist primary care providers in the management of adult patients with stable chest pain (with or without known CAD); aid in determining when a cardiology consultation is appropriate; provide guidance for initial noninvasive diagnostic orders (stress testing) and provide a structured documentation template for the process. Stable patients with cardiac chest pain require risk stratification, office-based workup, initiation of disease-specific medications, and subspecialty referral to a cardiologist. This context excludes emergent patients (new/ongoing/unstable pattern CP). Included are those patients with stable CP with or without known CAD, to be considered for evaluation by cardiology.</p><p><b>copyright</b>: \u00a9 Copyright Cognitive Medical Systems, Inc. 9444 Waples Street Suite 300 San Diego, CA 92121</p><p><b>author</b>: , , </p><p><b>relatedArtifact</b>: , , , , , , , , , , , </p><p><b>library</b>: <a>#cardiology-chestPain-logic</a></p><blockquote><p><b>action</b></p><h3>Actions</h3><table><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote></div>"
+   },
+   "contained": [
+      {
+         "resourceType": "fhir:Library",
+         "id": {
+            "value": "cardiology-chestPain-logic"
+         },
+         "status": {
+            "value": "active"
+         },
+         "type": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://terminology.hl7.org/CodeSystem/library-type"
+                  },
+                  "code": {
+                     "value": "logic-library"
+                  },
+                  "display": {
+                     "value": "Logic Library"
+                  },
+                  "index": 0,
+                  "@type": "http://terminology.hl7.org/CodeSystem/library-type/logic-library"
+               }
+            ]
+         },
+         "description": {
+            "value": "Placeholder library"
+         },
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/library.context.jsonld",
+         "@id": "PlanDefinition/example-cardiology-os#cardiology-chestPain-logic",
+         "index": 0
+      },
+      {
+         "resourceType": "fhir:ActivityDefinition",
+         "id": {
+            "value": "referralToCardiologyConsult"
+         },
+         "status": {
+            "value": "draft"
+         },
+         "description": {
+            "value": "Consider other consult modalities which might be available (e.g., e-consult or other rapidly iterative consult method. A simple consult is included here as the overarching clinical intent."
+         },
+         "kind": {
+            "value": "ServiceRequest"
+         },
+         "timingTiming": {
+            "event": [
+               {
+                  "extension": [
+                     {
+                        "url": {
+                           "value": "http://hl7.org/fhir/StructureDefinition/cqf-expression"
+                        },
+                        "valueExpression": {
+                           "language": {
+                              "value": "text/cql"
+                           },
+                           "expression": {
+                              "value": "Now()"
+                           }
+                        },
+                        "index": 0
+                     }
+                  ],
+                  "index": 0
+               }
+            ]
+         },
+         "participant": [
+            {
+               "type": {
+                  "value": "practitioner"
+               },
+               "index": 0
+            }
+         ],
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/activitydefinition.context.jsonld",
+         "@id": "PlanDefinition/example-cardiology-os#referralToCardiologyConsult",
+         "index": 1
+      },
+      {
+         "resourceType": "fhir:ActivityDefinition",
+         "id": {
+            "value": "metoprololTartrate25Prescription"
+         },
+         "status": {
+            "value": "draft"
+         },
+         "kind": {
+            "value": "MedicationRequest"
+         },
+         "productReference": {
+            "reference": {
+               "value": "#metoprololTartrate25Medication"
+            },
+            "fhir:link": {
+               "@id": "PlanDefinition/example-cardiology-os#metoprololTartrate25Medication"
+            }
+         },
+         "dosage": [
+            {
+               "text": {
+                  "value": "1 tablet oral 2 time daily"
+               },
+               "timing": {
+                  "repeat": {
+                     "frequency": {
+                        "value": 2
+                     },
+                     "period": {
+                        "value": 1
+                     },
+                     "periodUnit": {
+                        "value": "d"
+                     }
+                  }
+               },
+               "route": {
+                  "coding": [
+                     {
+                        "code": {
+                           "value": "26643006"
+                        },
+                        "display": {
+                           "value": "Oral route (qualifier value)"
+                        },
+                        "index": 0
+                     }
+                  ],
+                  "text": {
+                     "value": "Oral route (qualifier value)"
+                  }
+               },
+               "doseAndRate": [
+                  {
+                     "type": {
+                        "coding": [
+                           {
+                              "system": {
+                                 "value": "http://terminology.hl7.org/CodeSystem/dose-rate-type"
+                              },
+                              "code": {
+                                 "value": "ordered"
+                              },
+                              "display": {
+                                 "value": "Ordered"
+                              },
+                              "index": 0,
+                              "@type": "http://terminology.hl7.org/CodeSystem/dose-rate-type/ordered"
+                           }
+                        ]
+                     },
+                     "doseQuantity": {
+                        "value": {
+                           "value": 1
+                        },
+                        "unit": {
+                           "value": "{tbl}"
+                        }
+                     },
+                     "index": 0
+                  }
+               ],
+               "index": 0
+            }
+         ],
+         "dynamicValue": [
+            {
+               "path": {
+                  "value": "medicationRequest.priority"
+               },
+               "expression": {
+                  "language": {
+                     "value": "text/cql"
+                  },
+                  "expression": {
+                     "value": "routine"
+                  }
+               },
+               "index": 0
+            }
+         ],
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/activitydefinition.context.jsonld",
+         "@id": "PlanDefinition/example-cardiology-os#metoprololTartrate25Prescription",
+         "index": 2
+      },
+      {
+         "resourceType": "fhir:Medication",
+         "id": {
+            "value": "metoprololTartrate25Medication"
+         },
+         "code": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+                  },
+                  "code": {
+                     "value": "866426"
+                  },
+                  "index": 0,
+                  "@type": "http://www.nlm.nih.gov/research/umls/rxnorm/866426"
+               }
+            ],
+            "text": {
+               "value": "Metoprolol Tartrate 25 MG"
+            }
+         },
+         "form": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://snomed.info/sct"
+                  },
+                  "code": {
+                     "value": "385055001"
+                  },
+                  "display": {
+                     "value": "Tablet dose form"
+                  },
+                  "index": 0,
+                  "@type": "sct:385055001"
+               }
+            ],
+            "text": {
+               "value": "Tablet dose form"
+            }
+         },
+         "ingredient": [
+            {
+               "itemReference": {
+                  "reference": {
+                     "value": "#metoprololTartrate25Substance"
+                  },
+                  "fhir:link": {
+                     "@id": "PlanDefinition/example-cardiology-os#metoprololTartrate25Substance"
+                  }
+               },
+               "strength": {
+                  "numerator": {
+                     "value": {
+                        "value": 25
+                     },
+                     "unit": {
+                        "value": "mg"
+                     }
+                  },
+                  "denominator": {
+                     "value": {
+                        "value": 1
+                     },
+                     "unit": {
+                        "value": "{tbl}"
+                     }
+                  }
+               },
+               "index": 0
+            }
+         ],
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/medication.context.jsonld",
+         "@id": "PlanDefinition/example-cardiology-os#metoprololTartrate25Medication",
+         "index": 3
+      },
+      {
+         "resourceType": "fhir:Substance",
+         "id": {
+            "value": "metoprololTartrate25Substance"
+         },
+         "code": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+                  },
+                  "code": {
+                     "value": "6918"
+                  },
+                  "index": 0,
+                  "@type": "http://www.nlm.nih.gov/research/umls/rxnorm/6918"
+               }
+            ],
+            "text": {
+               "value": "Metoprolol"
+            }
+         },
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/substance.context.jsonld",
+         "@id": "PlanDefinition/example-cardiology-os#metoprololTartrate25Substance",
+         "index": 4
+      },
+      {
+         "resourceType": "fhir:ActivityDefinition",
+         "id": {
+            "value": "metoprololTartrate50Prescription"
+         },
+         "status": {
+            "value": "draft"
+         },
+         "kind": {
+            "value": "MedicationRequest"
+         },
+         "productReference": {
+            "reference": {
+               "value": "#metoprololTartrate50Medication"
+            },
+            "fhir:link": {
+               "@id": "PlanDefinition/example-cardiology-os#metoprololTartrate50Medication"
+            }
+         },
+         "dosage": [
+            {
+               "text": {
+                  "value": "1 tablet oral 2 time daily"
+               },
+               "timing": {
+                  "repeat": {
+                     "frequency": {
+                        "value": 2
+                     },
+                     "period": {
+                        "value": 1
+                     },
+                     "periodUnit": {
+                        "value": "d"
+                     }
+                  }
+               },
+               "route": {
+                  "coding": [
+                     {
+                        "code": {
+                           "value": "26643006"
+                        },
+                        "display": {
+                           "value": "Oral route (qualifier value)"
+                        },
+                        "index": 0
+                     }
+                  ],
+                  "text": {
+                     "value": "Oral route (qualifier value)"
+                  }
+               },
+               "doseAndRate": [
+                  {
+                     "type": {
+                        "coding": [
+                           {
+                              "system": {
+                                 "value": "http://terminology.hl7.org/CodeSystem/dose-rate-type"
+                              },
+                              "code": {
+                                 "value": "ordered"
+                              },
+                              "display": {
+                                 "value": "Ordered"
+                              },
+                              "index": 0,
+                              "@type": "http://terminology.hl7.org/CodeSystem/dose-rate-type/ordered"
+                           }
+                        ]
+                     },
+                     "doseQuantity": {
+                        "value": {
+                           "value": 1
+                        },
+                        "unit": {
+                           "value": "{tbl}"
+                        }
+                     },
+                     "index": 0
+                  }
+               ],
+               "index": 0
+            }
+         ],
+         "dynamicValue": [
+            {
+               "path": {
+                  "value": "medicationRequest.priority"
+               },
+               "expression": {
+                  "language": {
+                     "value": "text/cql"
+                  },
+                  "expression": {
+                     "value": "routine"
+                  }
+               },
+               "index": 0
+            }
+         ],
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/activitydefinition.context.jsonld",
+         "@id": "PlanDefinition/example-cardiology-os#metoprololTartrate50Prescription",
+         "index": 5
+      },
+      {
+         "resourceType": "fhir:Medication",
+         "id": {
+            "value": "metoprololTartrate50Medication"
+         },
+         "code": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+                  },
+                  "code": {
+                     "value": "866435"
+                  },
+                  "index": 0,
+                  "@type": "http://www.nlm.nih.gov/research/umls/rxnorm/866435"
+               }
+            ],
+            "text": {
+               "value": "Metoprolol Tartrate 50 MG"
+            }
+         },
+         "form": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://snomed.info/sct"
+                  },
+                  "code": {
+                     "value": "385055001"
+                  },
+                  "display": {
+                     "value": "Tablet dose form"
+                  },
+                  "index": 0,
+                  "@type": "sct:385055001"
+               }
+            ],
+            "text": {
+               "value": "Tablet dose form"
+            }
+         },
+         "ingredient": [
+            {
+               "itemReference": {
+                  "reference": {
+                     "value": "#metoprololTartrate50Substance"
+                  },
+                  "fhir:link": {
+                     "@id": "PlanDefinition/example-cardiology-os#metoprololTartrate50Substance"
+                  }
+               },
+               "strength": {
+                  "numerator": {
+                     "value": {
+                        "value": 50
+                     },
+                     "unit": {
+                        "value": "mg"
+                     }
+                  },
+                  "denominator": {
+                     "value": {
+                        "value": 1
+                     },
+                     "unit": {
+                        "value": "{tbl}"
+                     }
+                  }
+               },
+               "index": 0
+            }
+         ],
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/medication.context.jsonld",
+         "@id": "PlanDefinition/example-cardiology-os#metoprololTartrate50Medication",
+         "index": 6
+      },
+      {
+         "resourceType": "fhir:Substance",
+         "id": {
+            "value": "metoprololTartrate50Substance"
+         },
+         "code": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+                  },
+                  "code": {
+                     "value": "6918"
+                  },
+                  "index": 0,
+                  "@type": "http://www.nlm.nih.gov/research/umls/rxnorm/6918"
+               }
+            ],
+            "text": {
+               "value": "Metoprolol"
+            }
+         },
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/substance.context.jsonld",
+         "@id": "PlanDefinition/example-cardiology-os#metoprololTartrate50Substance",
+         "index": 7
+      },
+      {
+         "resourceType": "fhir:ActivityDefinition",
+         "id": {
+            "value": "nitroglycerinPrescription"
+         },
+         "status": {
+            "value": "draft"
+         },
+         "kind": {
+            "value": "MedicationRequest"
+         },
+         "productReference": {
+            "reference": {
+               "value": "#nitroglycerinMedication"
+            },
+            "fhir:link": {
+               "@id": "PlanDefinition/example-cardiology-os#nitroglycerinMedication"
+            }
+         },
+         "dosage": [
+            {
+               "text": {
+                  "value": "nitroglycerin 0.4 mg tablet sub-lingual every 5 minutes as needed for chest pain; maximum 3 tablets"
+               },
+               "timing": {
+                  "repeat": {
+                     "frequency": {
+                        "value": 1
+                     },
+                     "period": {
+                        "value": 5
+                     },
+                     "periodUnit": {
+                        "value": "min"
+                     }
+                  }
+               },
+               "doseAndRate": [
+                  {
+                     "type": {
+                        "coding": [
+                           {
+                              "system": {
+                                 "value": "http://terminology.hl7.org/CodeSystem/dose-rate-type"
+                              },
+                              "code": {
+                                 "value": "ordered"
+                              },
+                              "display": {
+                                 "value": "Ordered"
+                              },
+                              "index": 0,
+                              "@type": "http://terminology.hl7.org/CodeSystem/dose-rate-type/ordered"
+                           }
+                        ]
+                     },
+                     "doseQuantity": {
+                        "value": {
+                           "value": 1
+                        },
+                        "unit": {
+                           "value": "{tbl}"
+                        }
+                     },
+                     "index": 0
+                  }
+               ],
+               "maxDosePerAdministration": {
+                  "value": {
+                     "value": 3
+                  },
+                  "unit": {
+                     "value": "{tbl}"
+                  }
+               },
+               "index": 0
+            }
+         ],
+         "dynamicValue": [
+            {
+               "path": {
+                  "value": "medicationRequest.priority"
+               },
+               "expression": {
+                  "language": {
+                     "value": "text/cql"
+                  },
+                  "expression": {
+                     "value": "routine"
+                  }
+               },
+               "index": 0
+            }
+         ],
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/activitydefinition.context.jsonld",
+         "@id": "PlanDefinition/example-cardiology-os#nitroglycerinPrescription",
+         "index": 8
+      },
+      {
+         "resourceType": "fhir:Medication",
+         "id": {
+            "value": "nitroglycerinMedication"
+         },
+         "code": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+                  },
+                  "code": {
+                     "value": "316365"
+                  },
+                  "index": 0,
+                  "@type": "http://www.nlm.nih.gov/research/umls/rxnorm/316365"
+               }
+            ],
+            "text": {
+               "value": "Nitroglycerin 0.4 MG"
+            }
+         },
+         "form": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://snomed.info/sct"
+                  },
+                  "code": {
+                     "value": "385055001"
+                  },
+                  "display": {
+                     "value": "Tablet dose form"
+                  },
+                  "index": 0,
+                  "@type": "sct:385055001"
+               }
+            ],
+            "text": {
+               "value": "Tablet dose form"
+            }
+         },
+         "ingredient": [
+            {
+               "itemReference": {
+                  "reference": {
+                     "value": "#nitroglycerinSubstance"
+                  },
+                  "fhir:link": {
+                     "@id": "PlanDefinition/example-cardiology-os#nitroglycerinSubstance"
+                  }
+               },
+               "strength": {
+                  "numerator": {
+                     "value": {
+                        "value": 0.4
+                     },
+                     "unit": {
+                        "value": "mg"
+                     }
+                  },
+                  "denominator": {
+                     "value": {
+                        "value": 1
+                     },
+                     "unit": {
+                        "value": "{tbl}"
+                     }
+                  }
+               },
+               "index": 0
+            }
+         ],
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/medication.context.jsonld",
+         "@id": "PlanDefinition/example-cardiology-os#nitroglycerinMedication",
+         "index": 9
+      },
+      {
+         "resourceType": "fhir:Substance",
+         "id": {
+            "value": "nitroglycerinSubstance"
+         },
+         "code": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+                  },
+                  "code": {
+                     "value": "4917"
+                  },
+                  "index": 0,
+                  "@type": "http://www.nlm.nih.gov/research/umls/rxnorm/4917"
+               }
+            ],
+            "text": {
+               "value": "Nitroglycerin"
+            }
+         },
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/substance.context.jsonld",
+         "@id": "PlanDefinition/example-cardiology-os#nitroglycerinSubstance",
+         "index": 10
+      },
+      {
+         "resourceType": "fhir:Questionnaire",
+         "id": {
+            "value": "CollectReferralReason"
+         },
+         "status": {
+            "value": "draft"
+         },
+         "item": [
+            {
+               "linkId": {
+                  "value": "1"
+               },
+               "text": {
+                  "value": "Reason for Cardiology Consult"
+               },
+               "type": {
+                  "value": "choice"
+               },
+               "required": {
+                  "value": true
+               },
+               "repeats": {
+                  "value": true
+               },
+               "answerValueSet": {
+                  "value": "#CardiologyReferralReasonValues",
+                  "fhir:link": {
+                     "@id": "PlanDefinition/example-cardiology-os#CollectReferralReason#CardiologyReferralReasonValues"
+                  }
+               },
+               "index": 0
+            }
+         ],
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/questionnaire.context.jsonld",
+         "@id": "PlanDefinition/example-cardiology-os#CollectReferralReason",
+         "index": 11
+      },
+      {
+         "resourceType": "fhir:Questionnaire",
+         "id": {
+            "value": "CardiologyConsultationGoal"
+         },
+         "status": {
+            "value": "draft"
+         },
+         "item": [
+            {
+               "linkId": {
+                  "value": "2"
+               },
+               "text": {
+                  "value": "Goal of cardiology consultation"
+               },
+               "type": {
+                  "value": "string"
+               },
+               "index": 0
+            }
+         ],
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/questionnaire.context.jsonld",
+         "@id": "PlanDefinition/example-cardiology-os#CardiologyConsultationGoal",
+         "index": 12
+      }
+   ],
+   "url": {
+      "value": "http://va.gov/kas/orderset/B5-Cardiology-ChestPainCAD-OS"
+   },
+   "identifier": [
+      {
+         "use": {
+            "value": "official"
+         },
+         "system": {
+            "value": "urn:va.gov:kbs:knart:artifact:r1"
+         },
+         "value": {
+            "value": "bb7ccea6-9744-4743-854a-bcffd87191f6"
+         },
+         "index": 0
+      },
+      {
+         "system": {
+            "value": "urn:va.gov:kbs:contract:VA118-16-D-1008:to:VA-118-16-F-1008-0007"
+         },
+         "value": {
+            "value": "CLIN0004AG"
+         },
+         "index": 1
+      },
+      {
+         "system": {
+            "value": "urn:cognitivemedicine.com:lab:jira"
+         },
+         "value": {
+            "value": "KP-914"
+         },
+         "index": 2
+      }
+   ],
+   "version": {
+      "value": "0.1"
+   },
+   "name": {
+      "value": "ChestPainCoronaryArteryDiseaseOrderSetKNART"
+   },
+   "title": {
+      "value": "Chest Pain (CP) - Coronary Artery Disease (CAD) Order Set KNART"
+   },
+   "type": {
+      "coding": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/plan-definition-type"
+            },
+            "code": {
+               "value": "order-set"
+            },
+            "display": {
+               "value": "Order Set"
+            },
+            "index": 0,
+            "@type": "http://terminology.hl7.org/CodeSystem/plan-definition-type/order-set"
+         }
+      ]
+   },
+   "status": {
+      "value": "active"
+   },
+   "date": {
+      "value": {
+         "@value": "2017-08-29",
+         "@type": "http://www.w3.org/2001/XMLSchema#date"
+      }
+   },
+   "publisher": {
+      "value": "Department of Veterans Affairs"
+   },
+   "description": {
+      "value": "The Cardiology chest pain (CP) and coronary artery disease (CAD) group of KNARTs are     intended to assist primary care providers in the management of adult patients with stable     chest pain (with or without known CAD); aid in determining when a cardiology consultation is     appropriate; provide guidance for initial noninvasive diagnostic orders (stress testing) and     provide a structured documentation template for the process. Stable patients with cardiac     chest pain require risk stratification, office-based workup, initiation of disease-specific     medications, and subspecialty referral to a cardiologist."
+   },
+   "useContext": [
+      {
+         "code": {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+            },
+            "code": {
+               "value": "focus"
+            },
+            "@type": "http://terminology.hl7.org/CodeSystem/usage-context-type/focus"
+         },
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://snomed.info/sct"
+                  },
+                  "code": {
+                     "value": "look up value"
+                  },
+                  "display": {
+                     "value": "appropriate snomed condition"
+                  },
+                  "index": 0,
+                  "@type": "sct:look%20up%20value"
+               }
+            ]
+         },
+         "index": 0
+      }
+   ],
+   "usage": {
+      "value": "The Cardiology chest pain (CP) and coronary artery disease (CAD) group of KNARTs are intended to assist primary care providers in the management of adult patients with stable chest pain (with or without known CAD); aid in determining when a cardiology consultation is appropriate; provide guidance for initial noninvasive diagnostic orders (stress testing) and provide a structured documentation template for the process. Stable patients with cardiac chest pain require risk stratification, office-based workup, initiation of disease-specific medications, and subspecialty referral to a cardiologist. This context excludes emergent patients (new/ongoing/unstable pattern CP). Included are those patients with stable CP with or without known CAD, to be considered for evaluation by cardiology."
+   },
+   "copyright": {
+      "value": "\u00a9 Copyright Cognitive Medical Systems, Inc. 9444 Waples Street Suite 300 San Diego, CA 92121"
+   },
+   "author": [
+      {
+         "name": {
+            "value": "Bruce Bray MD"
+         },
+         "index": 0
+      },
+      {
+         "name": {
+            "value": "Scott Wall MD"
+         },
+         "index": 1
+      },
+      {
+         "name": {
+            "value": "Aiden Abidov MD, PhD"
+         },
+         "index": 2
+      }
+   ],
+   "relatedArtifact": [
+      {
+         "type": {
+            "value": "derived-from"
+         },
+         "display": {
+            "value": "Cardiology: Chest Pain (CP) / Coronary Artery Disease (CAD) Clinical Content White Paper"
+         },
+         "url": {
+            "value": "NEED-A-URL-HERE"
+         },
+         "index": 0
+      },
+      {
+         "type": {
+            "value": "justification"
+         },
+         "display": {
+            "value": "Outcome CVD (coronary death, myocardial infarction, coronary insufficiency, angina, ischemic stroke, hemorrhagic stroke, transient ischemic attack, peripheral artery disease, heart failure)"
+         },
+         "citation": {
+            "value": "Cardiovascular disease          (10-year risk) [Internet].: Framingham Heart Study; cited 2017]. Available from: https://www.framinghamheartstudy.org/risk-functions/cardiovascular-disease/10-year-risk.php."
+         },
+         "url": {
+            "value": "https://www.framinghamheartstudy.org/risk-functions/cardiovascular-disease/10-year-risk.php"
+         },
+         "index": 1
+      },
+      {
+         "type": {
+            "value": "justification"
+         },
+         "display": {
+            "value": "General cardiovascular risk profile for use in primary care: the Framingham Heart Study"
+         },
+         "citation": {
+            "value": "Cardiovascular disease          (10-year risk) [Internet].: Framingham Heart Study; cited 2017]. Available from: https://www.framinghamheartstudy.org/risk-functions/cardiovascular-disease/10-year-risk.php."
+         },
+         "url": {
+            "value": "https://www.framinghamheartstudy.org/risk-functions/cardiovascular-disease/10-year-risk.php"
+         },
+         "index": 2
+      },
+      {
+         "type": {
+            "value": "justification"
+         },
+         "display": {
+            "value": "2014 ACC/AHA/AATS/PCNA/SCAI/STS focused update of the guideline for the diagnosis and management of patients with stable ischemic heart disease: a report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines, and the American Association for Thoracic Surgery, Preventive Cardiovascular Nurses Association, Society for Cardiovascular Angiography and Interventions, and Society of Thoracic Surgeons"
+         },
+         "citation": {
+            "value": "Fihn SD, Blankenship JC, Alexander KP, Bittl JA, Byrne JG, Fletcher BJ, et al. 2014 ACC/AHA/AATS/PCNA/SCAI/STS focused update of the guideline for the diagnosis and management of patients with stable ischemic heart disease: A report of the american college of cardiology/american heart association task force on practice guidelines, and the american association for thoracic surgery, preventive cardiovascular nurses association, society for cardiovascular angiography and interventions, and society of thoracic surgeons. J Thorac Cardiovasc Surg. 2015 March 01;149(3):5."
+         },
+         "url": {
+            "value": "NEED-A-URL-HERE"
+         },
+         "index": 3
+      },
+      {
+         "type": {
+            "value": "justification"
+         },
+         "display": {
+            "value": "ACC/AHA 2002 guideline update for exercise testing: summary article: A report of the American college of cardiology/American heart association task force on practice guidelines (committee to update the 1997 exercise testing guidelines)"
+         },
+         "citation": {
+            "value": "Gibbons RJ, Balady GJ, Bricker JT, Chaitman BR, Fletcher GF, Froelicher VF, et al. ACC/AHA 2002 guideline update for exercise testing: Summary article: A report of the american college of cardiology/american heart association task force on practice guidelines (committee to update the 1997 exercise testing guidelines). Circulation. 2002 October 01;106(14):1883-92."
+         },
+         "url": {
+            "value": "NEED-A-URL-HERE"
+         },
+         "index": 4
+      },
+      {
+         "type": {
+            "value": "justification"
+         },
+         "display": {
+            "value": "LABEL: ASPIRIN 81 MG- aspirin tablet, coated"
+         },
+         "citation": {
+            "value": "Label: ASPIRIN 81 MG- aspirin tablet, coated [Internet].: National Library of Medicine; 2017. Available from: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b4064039-2345-4227-b83d-54dc13a838d3."
+         },
+         "url": {
+            "value": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b4064039-2345-4227-b83d-54dc13a838d3"
+         },
+         "index": 5
+      },
+      {
+         "type": {
+            "value": "justification"
+         },
+         "display": {
+            "value": "LABEL: CLOPIDOGREL- clopidogrel bisulfate tablet, film coated"
+         },
+         "citation": {
+            "value": "LABEL: CLOPIDOGREL- clopidogrel bisulfate tablet, film coated [Internet].: National Library of Medicine; 2017. Available from: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=edae8df1-caf9-ff72-1304-5ae8b355f8e7."
+         },
+         "url": {
+            "value": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7fe85155-bc00-406b-b097-e8aece187a8a"
+         },
+         "index": 6
+      },
+      {
+         "type": {
+            "value": "justification"
+         },
+         "display": {
+            "value": "LABEL: LIPITOR- atorvastatin calcium tablet, film coated"
+         },
+         "citation": {
+            "value": "LABEL: LIPITOR- atorvastatin calcium tablet, film coated [Internet].: National Library of Medicine; 2017. Available from: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7fe85155-bc00-406b-b097-e8aece187a8a."
+         },
+         "url": {
+            "value": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7fe85155-bc00-406b-b097-e8aece187a8a"
+         },
+         "index": 7
+      },
+      {
+         "type": {
+            "value": "justification"
+         },
+         "display": {
+            "value": "LABEL: METOPROLOL SUCCINATE EXTENDED-RELEASE - metoprolol succinate tablet, film coated, extended release"
+         },
+         "citation": {
+            "value": "LABEL: LIPITOR- atorvastatin calcium tablet, film coated [Internet].: National Library of Medicine; 2017. Available from: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7fe85155-bc00-406b-b097-e8aece187a8a."
+         },
+         "url": {
+            "value": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2d948600-35d8-4490-983b-918bdce488c8"
+         },
+         "index": 8
+      },
+      {
+         "type": {
+            "value": "justification"
+         },
+         "display": {
+            "value": "LABEL: NITROGLYCERIN- nitroglycerin tablet"
+         },
+         "citation": {
+            "value": "LABEL: NITROGLYCERIN- nitroglycerin tablet [Internet].: National Library of Medicine; 2017. Available from: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=67bf2a15-b115-47ac-ae28-ce2dafd6b5c9."
+         },
+         "url": {
+            "value": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=67bf2a15-b115-47ac-ae28-ce2dafd6b5c9"
+         },
+         "index": 9
+      },
+      {
+         "type": {
+            "value": "justification"
+         },
+         "display": {
+            "value": "LABEL: SIMVASTATIN - simvastatin tablet"
+         },
+         "citation": {
+            "value": "LABEL: SIMVASTATIN - simvastatin tablet [Internet].: National Library of Medicine; 2017. Available from: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5c1c694c-4b08-469e-b538-08e69df06146."
+         },
+         "url": {
+            "value": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5c1c694c-4b08-469e-b538-08e69df06146"
+         },
+         "index": 10
+      },
+      {
+         "type": {
+            "value": "justification"
+         },
+         "display": {
+            "value": "Chest Pain Guideline Development Group. NICE guidance. Chest          pain of recent onset: assessment and diagnosis of recent onset chest pain or discomfort of suspected cardiac origin."
+         },
+         "citation": {
+            "value": "Skinner JS, Smeeth L, Kendall JM, Adams PC, Timmis A, Chest Pain Guideline Development Group. NICE guidance. chest pain of recent onset: Assessment and diagnosis of recent onset chest pain or discomfort of suspected cardiac origin. Heart. 2010 June 01;96(12):974-8."
+         },
+         "url": {
+            "value": "http://heart.bmj.com/content/96/12/974.long"
+         },
+         "index": 11
+      }
+   ],
+   "library": [
+      {
+         "value": "#cardiology-chestPain-logic",
+         "fhir:link": {
+            "@id": "PlanDefinition/example-cardiology-os#cardiology-chestPain-logic"
+         },
+         "index": 0
+      }
+   ],
+   "action": [
+      {
+         "action": [
+            {
+               "title": {
+                  "value": "Consults and Referrals"
+               },
+               "groupingBehavior": {
+                  "value": "logical-group"
+               },
+               "selectionBehavior": {
+                  "value": "any"
+               },
+               "action": [
+                  {
+                     "textEquivalent": {
+                        "value": "Referral to cardiology to evaluate chest pain (routine)"
+                     },
+                     "definitionCanonical": {
+                        "value": "#referralToCardiologyConsult"
+                     },
+                     "dynamicValue": [
+                        {
+                           "path": {
+                              "value": "timing.event"
+                           },
+                           "expression": {
+                              "language": {
+                                 "value": "text/cql"
+                              },
+                              "expression": {
+                                 "value": "Now()"
+                              }
+                           },
+                           "index": 0
+                        },
+                        {
+                           "path": {
+                              "value": "specialty"
+                           },
+                           "expression": {
+                              "language": {
+                                 "value": "text/cql"
+                              },
+                              "expression": {
+                                 "value": "Code '261QM0850X' from CardiologyChestPainLogic.\"NUCC Provider Taxonomy\" display 'Adult Mental Health'"
+                              }
+                           },
+                           "index": 1
+                        },
+                        {
+                           "path": {
+                              "value": "occurrenceDateTime"
+                           },
+                           "expression": {
+                              "language": {
+                                 "value": "text/cql"
+                              },
+                              "expression": {
+                                 "value": "CardiologyChestPainLogic.ServiceRequestFulfillmentTime"
+                              }
+                           },
+                           "index": 2
+                        },
+                        {
+                           "path": {
+                              "value": "subject"
+                           },
+                           "expression": {
+                              "language": {
+                                 "value": "text/cql"
+                              },
+                              "expression": {
+                                 "value": "CardiologyChestPainLogic.Patient"
+                              }
+                           },
+                           "index": 3
+                        },
+                        {
+                           "path": {
+                              "value": "requester.agent"
+                           },
+                           "expression": {
+                              "language": {
+                                 "value": "text/cql"
+                              },
+                              "expression": {
+                                 "value": "CardiologyChestPainLogic.Practitioner"
+                              }
+                           },
+                           "index": 4
+                        },
+                        {
+                           "path": {
+                              "value": "reasonCode"
+                           },
+                           "expression": {
+                              "language": {
+                                 "value": "text/cql"
+                              },
+                              "expression": {
+                                 "value": "CardiologyChestPainLogic.CardiologyReferralReason"
+                              }
+                           },
+                           "index": 5
+                        },
+                        {
+                           "path": {
+                              "value": "reasonReference"
+                           },
+                           "expression": {
+                              "language": {
+                                 "value": "text/cql"
+                              },
+                              "expression": {
+                                 "value": "CardiologyChestPainLogic.RiskAssessment"
+                              }
+                           },
+                           "index": 6
+                        }
+                     ],
+                     "index": 0
+                  },
+                  {
+                     "title": {
+                        "value": "Reason for cardiology consultation"
+                     },
+                     "definitionCanonical": {
+                        "value": "#CollectReferralReason"
+                     },
+                     "index": 1
+                  },
+                  {
+                     "title": {
+                        "value": "Goal of cardiology consultation"
+                     },
+                     "definitionCanonical": {
+                        "value": "#CardiologyConsultationGoal"
+                     },
+                     "index": 2
+                  }
+               ],
+               "index": 0
+            },
+            {
+               "title": {
+                  "value": "Medications"
+               },
+               "description": {
+                  "value": "Consider the following medications for stable patients to be initiated prior to the cardiology consultation."
+               },
+               "action": [
+                  {
+                     "groupingBehavior": {
+                        "value": "logical-group"
+                     },
+                     "selectionBehavior": {
+                        "value": "at-most-one"
+                     },
+                     "index": 0
+                  },
+                  {
+                     "title": {
+                        "value": "Antianginal Therapy"
+                     },
+                     "groupingBehavior": {
+                        "value": "logical-group"
+                     },
+                     "selectionBehavior": {
+                        "value": "at-most-one"
+                     },
+                     "action": [
+                        {
+                           "textEquivalent": {
+                              "value": "metoprolol tartrate 25 mg tablet 1 tablet oral 2 time daily"
+                           },
+                           "definitionCanonical": {
+                              "value": "#metoprololTartrate25Prescription"
+                           },
+                           "dynamicValue": [
+                              {
+                                 "path": {
+                                    "value": "status"
+                                 },
+                                 "expression": {
+                                    "language": {
+                                       "value": "text/cql"
+                                    },
+                                    "expression": {
+                                       "value": "'draft'"
+                                    }
+                                 },
+                                 "index": 0
+                              },
+                              {
+                                 "path": {
+                                    "value": "patient"
+                                 },
+                                 "expression": {
+                                    "language": {
+                                       "value": "text/cql"
+                                    },
+                                    "expression": {
+                                       "value": "CardiologyChestPainLogic.Patient"
+                                    }
+                                 },
+                                 "index": 1
+                              },
+                              {
+                                 "path": {
+                                    "value": "prescriber"
+                                 },
+                                 "expression": {
+                                    "language": {
+                                       "value": "text/cql"
+                                    },
+                                    "expression": {
+                                       "value": "CardiologyChestPainLogic.Practitioner"
+                                    }
+                                 },
+                                 "index": 2
+                              }
+                           ],
+                           "index": 0
+                        },
+                        {
+                           "textEquivalent": {
+                              "value": "metoprolol tartrate 50 mg tablet 1 tablet oral 2 time daily"
+                           },
+                           "definitionCanonical": {
+                              "value": "#metoprololTartrate50Prescription"
+                           },
+                           "dynamicValue": [
+                              {
+                                 "path": {
+                                    "value": "status"
+                                 },
+                                 "expression": {
+                                    "language": {
+                                       "value": "text/cql"
+                                    },
+                                    "expression": {
+                                       "value": "'draft'"
+                                    }
+                                 },
+                                 "index": 0
+                              },
+                              {
+                                 "path": {
+                                    "value": "patient"
+                                 },
+                                 "expression": {
+                                    "language": {
+                                       "value": "text/cql"
+                                    },
+                                    "expression": {
+                                       "value": "CardiologyChestPainLogic.Patient"
+                                    }
+                                 },
+                                 "index": 1
+                              },
+                              {
+                                 "path": {
+                                    "value": "prescriber"
+                                 },
+                                 "expression": {
+                                    "language": {
+                                       "value": "text/cql"
+                                    },
+                                    "expression": {
+                                       "value": "CardiologyChestPainLogic.Practitioner"
+                                    }
+                                 },
+                                 "index": 2
+                              }
+                           ],
+                           "index": 1
+                        },
+                        {
+                           "textEquivalent": {
+                              "value": "amlodipine 5  tablet 1 tablet oral  daily"
+                           },
+                           "definitionCanonical": {
+                              "value": "#amlodipinePrescription"
+                           },
+                           "dynamicValue": [
+                              {
+                                 "path": {
+                                    "value": "status"
+                                 },
+                                 "expression": {
+                                    "language": {
+                                       "value": "text/cql"
+                                    },
+                                    "expression": {
+                                       "value": "'draft'"
+                                    }
+                                 },
+                                 "index": 0
+                              },
+                              {
+                                 "path": {
+                                    "value": "patient"
+                                 },
+                                 "expression": {
+                                    "language": {
+                                       "value": "text/cql"
+                                    },
+                                    "expression": {
+                                       "value": "CardiologyChestPainLogic.Patient"
+                                    }
+                                 },
+                                 "index": 1
+                              },
+                              {
+                                 "path": {
+                                    "value": "prescriber"
+                                 },
+                                 "expression": {
+                                    "language": {
+                                       "value": "text/cql"
+                                    },
+                                    "expression": {
+                                       "value": "CardiologyChestPainLogic.Practitioner"
+                                    }
+                                 },
+                                 "index": 2
+                              }
+                           ],
+                           "index": 2
+                        }
+                     ],
+                     "index": 1
+                  },
+                  {
+                     "title": {
+                        "value": "Nitroglycerin"
+                     },
+                     "groupingBehavior": {
+                        "value": "logical-group"
+                     },
+                     "selectionBehavior": {
+                        "value": "at-most-one"
+                     },
+                     "action": [
+                        {
+                           "textEquivalent": {
+                              "value": "nitroglycerin 0.4 mg tablet sub-lingual every 5 minutes as needed for chest pain; maximum 3 tablets"
+                           },
+                           "definitionCanonical": {
+                              "value": "#nitroglycerinPrescription"
+                           },
+                           "dynamicValue": [
+                              {
+                                 "path": {
+                                    "value": "status"
+                                 },
+                                 "expression": {
+                                    "language": {
+                                       "value": "text/cql"
+                                    },
+                                    "expression": {
+                                       "value": "'draft'"
+                                    }
+                                 },
+                                 "index": 0
+                              },
+                              {
+                                 "path": {
+                                    "value": "patient"
+                                 },
+                                 "expression": {
+                                    "language": {
+                                       "value": "text/cql"
+                                    },
+                                    "expression": {
+                                       "value": "CardiologyChestPainLogic.Patient"
+                                    }
+                                 },
+                                 "index": 1
+                              },
+                              {
+                                 "path": {
+                                    "value": "prescriber"
+                                 },
+                                 "expression": {
+                                    "language": {
+                                       "value": "text/cql"
+                                    },
+                                    "expression": {
+                                       "value": "CardiologyChestPainLogic.Practitioner"
+                                    }
+                                 },
+                                 "index": 2
+                              }
+                           ],
+                           "index": 0
+                        }
+                     ],
+                     "index": 2
+                  }
+               ],
+               "index": 1
+            }
+         ],
+         "index": 0
+      }
+   ],
+   "@context": [
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/plandefinition.context.jsonld",
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/root.context.jsonld",
+      {
+         "nodeRole": {
+            "@type": "@id",
+            "@id": "fhir:nodeRole"
+         },
+         "@base": "http://hl7.org/fhir/",
+         "owl:imports": {
+            "@type": "@id"
+         },
+         "owl:versionIRI": {
+            "@type": "@id"
+         }
+      }
+   ],
+   "@id": "PlanDefinition/example-cardiology-os",
+   "nodeRole": "fhir:treeRoot",
+   "@included": {
+      "@id": "PlanDefinition/example-cardiology-os.ttl",
+      "owl:versionIRI": "http://build.fhir.org/PlanDefinition/example-cardiology-os.ttl",
+      "owl:imports": "fhir:fhir.ttl",
+      "@type": "owl:Ontology"
+   }
+}
