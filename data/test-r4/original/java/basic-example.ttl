@@ -35,13 +35,13 @@
                             fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
                             fhir:index 0 ] ] ;
             fhir:index 0 ],
-        [ fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#status"^^xsd:string ] ;
-            fhir:Extension.valueCode [ fhir:value "complete"^^xsd:string ] ;
-            fhir:index 2 ],
         [ fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#targetDate"^^xsd:string ] ;
             fhir:Extension.valuePeriod [ fhir:Period.end [ fhir:value "2013-04-15"^^xsd:date ] ;
                     fhir:Period.start [ fhir:value "2013-04-01"^^xsd:date ] ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:Extension.url [ fhir:value "http://example.org/do-not-use/fhir-extensions/referral#status"^^xsd:string ] ;
+            fhir:Extension.valueCode [ fhir:value "complete"^^xsd:string ] ;
+            fhir:index 2 ] ;
     fhir:DomainResource.text [ fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml">
       <p><b>Patient:</b>Roel</p>
       <p><b>Requestor:</b>Dokter Bronsig</p>

@@ -3,177 +3,177 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://hl7.org/fhir/Bundle/registry> a fhir:Bundle ;
-    fhir:Bundle.entry [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.28" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.28> ;
-            fhir:index 31 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.44" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.44> ;
-            fhir:index 45 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.41" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.41> ;
-            fhir:index 43 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.35" ] ;
+    fhir:Bundle.entry [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.35" ] ;
             fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.35> ;
             fhir:index 39 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.26" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.26> ;
-            fhir:index 28 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.6" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.6> ;
-            fhir:index 10 ],
         [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.5" ] ;
             fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.5> ;
             fhir:index 8 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.10" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.10> ;
-            fhir:index 14 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.51" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.51> ;
-            fhir:index 51 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.29" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.29> ;
-            fhir:index 30 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.33" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.33> ;
-            fhir:index 37 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/us-medicare" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/us-medicare> ;
-            fhir:index 2 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.11" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.11> ;
-            fhir:index 13 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.16" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.16> ;
-            fhir:index 20 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.47" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.47> ;
-            fhir:index 48 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.15" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.15> ;
-            fhir:index 17 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.8" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.8> ;
-            fhir:index 11 ],
         [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.40" ] ;
             fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.40> ;
             fhir:index 42 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.48" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.48> ;
-            fhir:index 49 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.46" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.46> ;
-            fhir:index 47 ],
         [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.42" ] ;
             fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.42> ;
             fhir:index 44 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.22" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.22> ;
-            fhir:index 24 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.45" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.45> ;
-            fhir:index 46 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.38" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.38> ;
-            fhir:index 35 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.32" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.32> ;
-            fhir:index 40 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/gtin" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/gtin> ;
-            fhir:index 5 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/us-ssn" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/us-ssn> ;
-            fhir:index 1 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.23" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.23> ;
-            fhir:index 27 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.50" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.50> ;
-            fhir:index 52 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.9" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.9> ;
-            fhir:index 12 ],
         [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.2" ] ;
             fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.2> ;
             fhir:index 6 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.36" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.36> ;
-            fhir:index 33 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/us-npi" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/us-npi> ;
-            fhir:index 4 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.54" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.54> ;
-            fhir:index 55 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.30" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.30> ;
-            fhir:index 32 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.39" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.39> ;
-            fhir:index 41 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.56" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.56> ;
-            fhir:index 56 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.37" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.37> ;
-            fhir:index 34 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.53" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.53> ;
-            fhir:index 53 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.13" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.13> ;
-            fhir:index 16 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.31" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.31> ;
-            fhir:index 36 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.24" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.24> ;
-            fhir:index 26 ],
         [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.17" ] ;
             fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.17> ;
             fhir:index 21 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.46" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.46> ;
+            fhir:index 47 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.24" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.24> ;
+            fhir:index 26 ],
         [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.20" ] ;
             fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.20> ;
             fhir:index 22 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.1" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.1> ;
-            fhir:index 7 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.19" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.19> ;
-            fhir:index 19 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.27" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.27> ;
-            fhir:index 29 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.12" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.12> ;
-            fhir:index 15 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.49" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.49> ;
-            fhir:index 50 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.25" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.25> ;
-            fhir:index 25 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.21" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.21> ;
-            fhir:index 23 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/dicom-uid" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/dicom-uid> ;
-            fhir:index 0 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.4" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.4> ;
-            fhir:index 9 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.18" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.18> ;
-            fhir:index 18 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/us-mbi" ] ;
-            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/us-mbi> ;
-            fhir:index 3 ],
         [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.34" ] ;
             fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.34> ;
             fhir:index 38 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/us-mbi" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/us-mbi> ;
+            fhir:index 3 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.56" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.56> ;
+            fhir:index 56 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.10" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.10> ;
+            fhir:index 14 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.32" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.32> ;
+            fhir:index 40 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/us-medicare" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/us-medicare> ;
+            fhir:index 2 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.22" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.22> ;
+            fhir:index 24 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.31" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.31> ;
+            fhir:index 36 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.38" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.38> ;
+            fhir:index 35 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.16" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.16> ;
+            fhir:index 20 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.9" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.9> ;
+            fhir:index 12 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.29" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.29> ;
+            fhir:index 30 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.6" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.6> ;
+            fhir:index 10 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.37" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.37> ;
+            fhir:index 34 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.4" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.4> ;
+            fhir:index 9 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.30" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.30> ;
+            fhir:index 32 ],
         [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.55" ] ;
             fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.55> ;
-            fhir:index 54 ] ;
+            fhir:index 54 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.47" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.47> ;
+            fhir:index 48 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.53" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.53> ;
+            fhir:index 53 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.39" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.39> ;
+            fhir:index 41 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.28" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.28> ;
+            fhir:index 31 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.15" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.15> ;
+            fhir:index 17 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.13" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.13> ;
+            fhir:index 16 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.36" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.36> ;
+            fhir:index 33 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.25" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.25> ;
+            fhir:index 25 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.19" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.19> ;
+            fhir:index 19 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.54" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.54> ;
+            fhir:index 55 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.48" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.48> ;
+            fhir:index 49 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/us-ssn" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/us-ssn> ;
+            fhir:index 1 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.1" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.1> ;
+            fhir:index 7 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.44" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.44> ;
+            fhir:index 45 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.18" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.18> ;
+            fhir:index 18 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.49" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.49> ;
+            fhir:index 50 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.27" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.27> ;
+            fhir:index 29 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.33" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.33> ;
+            fhir:index 37 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.8" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.8> ;
+            fhir:index 11 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.23" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.23> ;
+            fhir:index 27 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.41" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.41> ;
+            fhir:index 43 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.50" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.50> ;
+            fhir:index 52 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.45" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.45> ;
+            fhir:index 46 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.51" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.51> ;
+            fhir:index 51 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.26" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.26> ;
+            fhir:index 28 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/gtin" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/gtin> ;
+            fhir:index 5 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.21" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.21> ;
+            fhir:index 23 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.12" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.12> ;
+            fhir:index 15 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/dicom-uid" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/dicom-uid> ;
+            fhir:index 0 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/4.3.11" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/4.3.11> ;
+            fhir:index 13 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://hl7.org/fhir/NamingSystem/us-npi" ] ;
+            fhir:Bundle.entry.resource <http://hl7.org/fhir/NamingSystem/us-npi> ;
+            fhir:index 4 ] ;
     fhir:Bundle.type [ fhir:value "collection"^^xsd:string ] ;
     fhir:Resource.id [ fhir:value "registry"^^xsd:string ] ;
     fhir:Resource.meta [ fhir:Meta.tag [ fhir:Coding.code [ fhir:value "HTEST"^^xsd:string ] ;
@@ -328,12 +328,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.15"^^xsd:string ] ;
-            fhir:index 1 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.15"^^xsd:string ] ;
-            fhir:index 0 ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.15"^^xsd:string ] ;
+            fhir:index 1 ] ;
     fhir:Resource.id [ fhir:value "4.3.15"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.16> a fhir:NamingSystem ;
@@ -353,12 +353,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.16"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.16"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.16"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.16"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.17> a fhir:NamingSystem ;
@@ -428,12 +428,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.19"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.19"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.19"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.19"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.2> a fhir:NamingSystem ;
@@ -453,12 +453,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.2"^^xsd:string ] ;
-            fhir:index 1 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.2"^^xsd:string ] ;
-            fhir:index 0 ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.2"^^xsd:string ] ;
+            fhir:index 1 ] ;
     fhir:Resource.id [ fhir:value "4.3.2"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.20> a fhir:NamingSystem ;
@@ -478,12 +478,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.20"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.20"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.20"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.20"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.21> a fhir:NamingSystem ;
@@ -528,12 +528,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.22"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.22"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.22"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.22"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.23> a fhir:NamingSystem ;
@@ -578,12 +578,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.24"^^xsd:string ] ;
-            fhir:index 1 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.24"^^xsd:string ] ;
-            fhir:index 0 ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.24"^^xsd:string ] ;
+            fhir:index 1 ] ;
     fhir:Resource.id [ fhir:value "4.3.24"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.25> a fhir:NamingSystem ;
@@ -603,12 +603,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.25"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.25"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.25"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.25"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.26> a fhir:NamingSystem ;
@@ -678,12 +678,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.28"^^xsd:string ] ;
-            fhir:index 1 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.28"^^xsd:string ] ;
-            fhir:index 0 ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.28"^^xsd:string ] ;
+            fhir:index 1 ] ;
     fhir:Resource.id [ fhir:value "4.3.28"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.29> a fhir:NamingSystem ;
@@ -828,12 +828,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.34"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.34"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.34"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.34"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.35> a fhir:NamingSystem ;
@@ -853,12 +853,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.35"^^xsd:string ] ;
-            fhir:index 1 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.35"^^xsd:string ] ;
-            fhir:index 0 ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.35"^^xsd:string ] ;
+            fhir:index 1 ] ;
     fhir:Resource.id [ fhir:value "4.3.35"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.36> a fhir:NamingSystem ;
@@ -903,12 +903,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.37"^^xsd:string ] ;
-            fhir:index 1 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.37"^^xsd:string ] ;
-            fhir:index 0 ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.37"^^xsd:string ] ;
+            fhir:index 1 ] ;
     fhir:Resource.id [ fhir:value "4.3.37"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.38> a fhir:NamingSystem ;
@@ -928,12 +928,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.38"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.38"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.38"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.38"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.39> a fhir:NamingSystem ;
@@ -953,12 +953,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.39"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.39"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.39"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.39"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.4> a fhir:NamingSystem ;
@@ -978,12 +978,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.4"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.4"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.4"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.4"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.40> a fhir:NamingSystem ;
@@ -1003,12 +1003,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.40"^^xsd:string ] ;
-            fhir:index 1 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.40"^^xsd:string ] ;
-            fhir:index 0 ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.40"^^xsd:string ] ;
+            fhir:index 1 ] ;
     fhir:Resource.id [ fhir:value "4.3.40"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.41> a fhir:NamingSystem ;
@@ -1028,12 +1028,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.41"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.41"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.41"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.41"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.42> a fhir:NamingSystem ;
@@ -1153,12 +1153,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.47"^^xsd:string ] ;
-            fhir:index 1 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.47"^^xsd:string ] ;
-            fhir:index 0 ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.47"^^xsd:string ] ;
+            fhir:index 1 ] ;
     fhir:Resource.id [ fhir:value "4.3.47"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.48> a fhir:NamingSystem ;
@@ -1228,12 +1228,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.5"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.5"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.5"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.5"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.50> a fhir:NamingSystem ;
@@ -1278,12 +1278,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.51"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.51"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.51"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.51"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.53> a fhir:NamingSystem ;
@@ -1303,12 +1303,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.53"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.53"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.53"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.53"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.54> a fhir:NamingSystem ;
@@ -1328,12 +1328,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.54"^^xsd:string ] ;
-            fhir:index 1 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.54"^^xsd:string ] ;
-            fhir:index 0 ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.54"^^xsd:string ] ;
+            fhir:index 1 ] ;
     fhir:Resource.id [ fhir:value "4.3.54"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.55> a fhir:NamingSystem ;
@@ -1353,12 +1353,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.55"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.55"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.55"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.55"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.56> a fhir:NamingSystem ;
@@ -1428,12 +1428,12 @@
                     fhir:Coding.code [ fhir:value "DL"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.8"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "urn:oid:2.16.840.1.113883.4.3.8"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.3.8"^^xsd:string ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "4.3.8"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/4.3.9> a fhir:NamingSystem ;
@@ -1503,12 +1503,12 @@
     fhir:NamingSystem.name [ fhir:value "Global Trade Item Number (GTIN)"^^xsd:string ] ;
     fhir:NamingSystem.publisher [ fhir:value "GS1"^^xsd:string ] ;
     fhir:NamingSystem.status [ fhir:value "active"^^xsd:string ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "https://www.gs1.org/gtin"^^xsd:string ] ;
-            fhir:index 1 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "1.3.160"^^xsd:string ] ;
-            fhir:index 0 ] ;
+            fhir:index 0 ],
+        [ fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "https://www.gs1.org/gtin"^^xsd:string ] ;
+            fhir:index 1 ] ;
     fhir:Resource.id [ fhir:value "gtin"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/us-mbi> a fhir:NamingSystem ;
@@ -1594,13 +1594,13 @@
                     fhir:Coding.code [ fhir:value "PRN"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
                     fhir:index 0 ] ] ;
-    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.preferred [ fhir:value true ] ;
+    fhir:NamingSystem.uniqueId [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
+            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.6"^^xsd:string ] ;
+            fhir:index 1 ],
+        [ fhir:NamingSystem.uniqueId.preferred [ fhir:value true ] ;
             fhir:NamingSystem.uniqueId.type [ fhir:value "uri"^^xsd:string ] ;
             fhir:NamingSystem.uniqueId.value [ fhir:value "http://hl7.org/fhir/sid/us-npi"^^xsd:string ] ;
-            fhir:index 0 ],
-        [ fhir:NamingSystem.uniqueId.type [ fhir:value "oid"^^xsd:string ] ;
-            fhir:NamingSystem.uniqueId.value [ fhir:value "2.16.840.1.113883.4.6"^^xsd:string ] ;
-            fhir:index 1 ] ;
+            fhir:index 0 ] ;
     fhir:Resource.id [ fhir:value "us-npi"^^xsd:string ] .
 
 <http://hl7.org/fhir/NamingSystem/us-ssn> a fhir:NamingSystem ;

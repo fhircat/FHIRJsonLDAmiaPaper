@@ -5,12 +5,12 @@
 <http://hl7.org/fhir/Library/opioidcds-recommendation-08> a fhir:Library ;
     fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: opioidcds-recommendation-08</p><p><b>identifier</b>: OpioidCDS_REC_04 (OFFICIAL)</p><p><b>version</b>: 0.1.0</p><p><b>title</b>: Opioid CDS Logic for recommendation #4</p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>type</b>: Logic Library <span>(Details : {http://terminology.hl7.org/CodeSystem/library-type code 'logic-library' = 'Logic Library', given as 'Logic Library'})</span></p><p><b>date</b>: 25/03/2018 1:49:09 PM</p><p><b>publisher</b>: Centers for Disease Control and Prevention (CDC)</p><p><b>description</b>: Opioid decision support logic to consider offering Naloxone when factors that increase risk for opioid overdose are present.</p><p><b>useContext</b>: , </p><p><b>jurisdiction</b>: United States of America <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United States of America'})</span></p><p><b>purpose</b>: The purpose of this library is to determine whether increased risks for opioid overdose are present.</p><p><b>usage</b>: This library is used to recommend the prescriber/user to consider offering Naloxone when increased risks for opioid overdose are present.</p><p><b>copyright</b>: © CDC 2016+.</p><p><b>topic</b>: Opioid Prescribing <span>(Details )</span></p><p><b>author</b>: , , , </p><p><b>relatedArtifact</b>: , , </p><p><b>dataRequirement</b>: , , , </p><p><b>content</b>: </p></div>"^^xsd:string ;
             fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
-    fhir:Library.author [ fhir:ContactDetail.name [ fhir:value "Bryn Rhodes"^^xsd:string ] ;
-            fhir:index 1 ],
+    fhir:Library.author [ fhir:ContactDetail.name [ fhir:value "Kensaku Kawamoto, MD, PhD, MHS"^^xsd:string ] ;
+            fhir:index 0 ],
         [ fhir:ContactDetail.name [ fhir:value "Floyd Eisenberg, MD, MPH"^^xsd:string ] ;
             fhir:index 2 ],
-        [ fhir:ContactDetail.name [ fhir:value "Kensaku Kawamoto, MD, PhD, MHS"^^xsd:string ] ;
-            fhir:index 0 ],
+        [ fhir:ContactDetail.name [ fhir:value "Bryn Rhodes"^^xsd:string ] ;
+            fhir:index 1 ],
         [ fhir:ContactDetail.name [ fhir:value "Robert McClure, MD, MPH"^^xsd:string ] ;
             fhir:index 3 ] ;
     fhir:Library.content [ fhir:Attachment.contentType [ fhir:value "application/elm+xml"^^xsd:string ] ;
@@ -216,6 +216,12 @@
                     fhir:index 0 ] ;
             fhir:DataRequirement.type [ fhir:value "MedicationRequest"^^xsd:string ] ;
             fhir:index 0 ],
+        [ fhir:DataRequirement.codeFilter [ fhir:DataRequirement.codeFilter.path [ fhir:value "medicationCodeableConcept"^^xsd:string ] ;
+                    fhir:DataRequirement.codeFilter.valueSet [ fhir:link <http://example.org/fhir/ValueSet/benzodiazepines> ;
+                            fhir:value "http://example.org/fhir/ValueSet/benzodiazepines" ] ;
+                    fhir:index 0 ] ;
+            fhir:DataRequirement.type [ fhir:value "MedicationRequest"^^xsd:string ] ;
+            fhir:index 2 ],
         [ fhir:DataRequirement.codeFilter [ fhir:DataRequirement.codeFilter.path [ fhir:value "code"^^xsd:string ] ;
                     fhir:DataRequirement.codeFilter.valueSet [ fhir:link <http://example.org/fhir/ValueSet/substance-abuse> ;
                             fhir:value "http://example.org/fhir/ValueSet/substance-abuse" ] ;
@@ -227,13 +233,7 @@
                             fhir:value "http://example.org/fhir/ValueSet/opioids-abused-in-ambulatory-care" ] ;
                     fhir:index 0 ] ;
             fhir:DataRequirement.type [ fhir:value "MedicationRequest"^^xsd:string ] ;
-            fhir:index 1 ],
-        [ fhir:DataRequirement.codeFilter [ fhir:DataRequirement.codeFilter.path [ fhir:value "medicationCodeableConcept"^^xsd:string ] ;
-                    fhir:DataRequirement.codeFilter.valueSet [ fhir:link <http://example.org/fhir/ValueSet/benzodiazepines> ;
-                            fhir:value "http://example.org/fhir/ValueSet/benzodiazepines" ] ;
-                    fhir:index 0 ] ;
-            fhir:DataRequirement.type [ fhir:value "MedicationRequest"^^xsd:string ] ;
-            fhir:index 2 ] ;
+            fhir:index 1 ] ;
     fhir:Library.date [ fhir:value "2018-03-25T13:49:09-06:00"^^xsd:dateTime ] ;
     fhir:Library.description [ fhir:value "Opioid decision support logic to consider offering Naloxone when factors that increase risk for opioid overdose are present."^^xsd:string ] ;
     fhir:Library.experimental [ fhir:value false ] ;
@@ -248,18 +248,18 @@
             fhir:index 0 ] ;
     fhir:Library.publisher [ fhir:value "Centers for Disease Control and Prevention (CDC)"^^xsd:string ] ;
     fhir:Library.purpose [ fhir:value "The purpose of this library is to determine whether increased risks for opioid overdose are present."^^xsd:string ] ;
-    fhir:Library.relatedArtifact [ fhir:RelatedArtifact.resource [ fhir:link <http://hl7.org/fhir/Library/opioidcds-common> ;
-                    fhir:value "Library/opioidcds-common" ] ;
-            fhir:RelatedArtifact.type [ fhir:value "depends-on"^^xsd:string ] ;
-            fhir:index 1 ],
-        [ fhir:RelatedArtifact.display [ fhir:value "MME Conversion Tables"^^xsd:string ] ;
+    fhir:Library.relatedArtifact [ fhir:RelatedArtifact.display [ fhir:value "MME Conversion Tables"^^xsd:string ] ;
             fhir:RelatedArtifact.type [ fhir:value "documentation"^^xsd:string ] ;
             fhir:RelatedArtifact.url [ fhir:value "https://www.cdc.gov/drugoverdose/pdf/calculating_total_daily_dose-a.pdf" ] ;
             fhir:index 2 ],
         [ fhir:RelatedArtifact.display [ fhir:value "CDC guideline for prescribing opioids for chronic pain"^^xsd:string ] ;
             fhir:RelatedArtifact.type [ fhir:value "documentation"^^xsd:string ] ;
             fhir:RelatedArtifact.url [ fhir:value "https://guidelines.gov/summaries/summary/50153/cdc-guideline-for-prescribing-opioids-for-chronic-pain---united-states-2016#420" ] ;
-            fhir:index 0 ] ;
+            fhir:index 0 ],
+        [ fhir:RelatedArtifact.resource [ fhir:link <http://hl7.org/fhir/Library/opioidcds-common> ;
+                    fhir:value "Library/opioidcds-common" ] ;
+            fhir:RelatedArtifact.type [ fhir:value "depends-on"^^xsd:string ] ;
+            fhir:index 1 ] ;
     fhir:Library.status [ fhir:value "active"^^xsd:string ] ;
     fhir:Library.title [ fhir:value "Opioid CDS Logic for recommendation #4"^^xsd:string ] ;
     fhir:Library.topic [ fhir:CodeableConcept.text [ fhir:value "Opioid Prescribing"^^xsd:string ] ;

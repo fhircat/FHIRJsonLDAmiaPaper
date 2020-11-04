@@ -31,10 +31,10 @@
                     fhir:TestScript.metadata.capability.description [ fhir:value "Patient Update, Delete and History (Instance) Operations"^^xsd:string ] ;
                     fhir:TestScript.metadata.capability.link [ fhir:index 2 ;
                             fhir:value "http://hl7.org/fhir/http.html#history" ],
-                        [ fhir:index 0 ;
-                            fhir:value "http://hl7.org/fhir/http.html#update" ],
                         [ fhir:index 1 ;
-                            fhir:value "http://hl7.org/fhir/http.html#delete" ] ;
+                            fhir:value "http://hl7.org/fhir/http.html#delete" ],
+                        [ fhir:index 0 ;
+                            fhir:value "http://hl7.org/fhir/http.html#update" ] ;
                     fhir:TestScript.metadata.capability.required [ fhir:value true ] ;
                     fhir:TestScript.metadata.capability.validated [ fhir:value false ] ;
                     fhir:index 0 ] ;
@@ -54,17 +54,28 @@
                             fhir:TestScript.setup.action.operation.type [ fhir:Coding.code [ fhir:value "delete"^^xsd:string ] ;
                                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/testscript-operation-codes" ] ] ] ;
                     fhir:index 0 ],
+                [ fhir:TestScript.setup.action.operation [ fhir:TestScript.setup.action.operation.accept [ fhir:value "json"^^xsd:string ] ;
+                            fhir:TestScript.setup.action.operation.contentType [ fhir:value "json"^^xsd:string ] ;
+                            fhir:TestScript.setup.action.operation.description [ fhir:value "Create patient resource on test server using the contents of fixture-patient-create"^^xsd:string ] ;
+                            fhir:TestScript.setup.action.operation.encodeRequestUrl [ fhir:value true ] ;
+                            fhir:TestScript.setup.action.operation.label [ fhir:value "SetupCreatePatient"^^xsd:string ] ;
+                            fhir:TestScript.setup.action.operation.params [ fhir:value "/${createResourceId}"^^xsd:string ] ;
+                            fhir:TestScript.setup.action.operation.resource [ fhir:value "Patient"^^xsd:string ] ;
+                            fhir:TestScript.setup.action.operation.sourceId [ fhir:value "fixture-patient-create"^^xsd:string ] ;
+                            fhir:TestScript.setup.action.operation.type [ fhir:Coding.code [ fhir:value "update"^^xsd:string ] ;
+                                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/testscript-operation-codes" ] ] ] ;
+                    fhir:index 2 ],
+                [ fhir:TestScript.setup.action.assert [ fhir:TestScript.setup.action.assert.description [ fhir:value "Confirm that the returned HTTP status is 200(OK)."^^xsd:string ] ;
+                            fhir:TestScript.setup.action.assert.direction [ fhir:value "response"^^xsd:string ] ;
+                            fhir:TestScript.setup.action.assert.responseCode [ fhir:value "200"^^xsd:string ] ;
+                            fhir:TestScript.setup.action.assert.warningOnly [ fhir:value false ] ] ;
+                    fhir:index 5 ],
                 [ fhir:TestScript.setup.action.assert [ fhir:TestScript.setup.action.assert.description [ fhir:value "Confirm that the returned HTTP status is 200(OK) or 204(No Content)."^^xsd:string ] ;
                             fhir:TestScript.setup.action.assert.direction [ fhir:value "response"^^xsd:string ] ;
                             fhir:TestScript.setup.action.assert.operator [ fhir:value "in"^^xsd:string ] ;
                             fhir:TestScript.setup.action.assert.responseCode [ fhir:value "200,204"^^xsd:string ] ;
                             fhir:TestScript.setup.action.assert.warningOnly [ fhir:value false ] ] ;
                     fhir:index 1 ],
-                [ fhir:TestScript.setup.action.assert [ fhir:TestScript.setup.action.assert.description [ fhir:value "Confirm that the returned HTTP status is 200(OK)."^^xsd:string ] ;
-                            fhir:TestScript.setup.action.assert.direction [ fhir:value "response"^^xsd:string ] ;
-                            fhir:TestScript.setup.action.assert.responseCode [ fhir:value "200"^^xsd:string ] ;
-                            fhir:TestScript.setup.action.assert.warningOnly [ fhir:value false ] ] ;
-                    fhir:index 5 ],
                 [ fhir:TestScript.setup.action.assert [ fhir:TestScript.setup.action.assert.description [ fhir:value "Confirm that the returned HTTP status is 201(Created)."^^xsd:string ] ;
                             fhir:TestScript.setup.action.assert.direction [ fhir:value "response"^^xsd:string ] ;
                             fhir:TestScript.setup.action.assert.responseCode [ fhir:value "201"^^xsd:string ] ;
@@ -80,18 +91,7 @@
                             fhir:TestScript.setup.action.operation.sourceId [ fhir:value "fixture-patient-update"^^xsd:string ] ;
                             fhir:TestScript.setup.action.operation.type [ fhir:Coding.code [ fhir:value "update"^^xsd:string ] ;
                                     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/testscript-operation-codes" ] ] ] ;
-                    fhir:index 4 ],
-                [ fhir:TestScript.setup.action.operation [ fhir:TestScript.setup.action.operation.accept [ fhir:value "json"^^xsd:string ] ;
-                            fhir:TestScript.setup.action.operation.contentType [ fhir:value "json"^^xsd:string ] ;
-                            fhir:TestScript.setup.action.operation.description [ fhir:value "Create patient resource on test server using the contents of fixture-patient-create"^^xsd:string ] ;
-                            fhir:TestScript.setup.action.operation.encodeRequestUrl [ fhir:value true ] ;
-                            fhir:TestScript.setup.action.operation.label [ fhir:value "SetupCreatePatient"^^xsd:string ] ;
-                            fhir:TestScript.setup.action.operation.params [ fhir:value "/${createResourceId}"^^xsd:string ] ;
-                            fhir:TestScript.setup.action.operation.resource [ fhir:value "Patient"^^xsd:string ] ;
-                            fhir:TestScript.setup.action.operation.sourceId [ fhir:value "fixture-patient-create"^^xsd:string ] ;
-                            fhir:TestScript.setup.action.operation.type [ fhir:Coding.code [ fhir:value "update"^^xsd:string ] ;
-                                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/testscript-operation-codes" ] ] ] ;
-                    fhir:index 2 ] ] ;
+                    fhir:index 4 ] ] ;
     fhir:TestScript.status [ fhir:value "draft"^^xsd:string ] ;
     fhir:TestScript.test <http://hl7.org/fhir/TestScript/testscript-example-history#01-HistoryPatient> ;
     fhir:TestScript.url [ fhir:value "http://hl7.org/fhir/TestScript/testscript-example-history" ] ;
@@ -115,7 +115,13 @@
 <http://hl7.org/fhir/StructureDefinition/Bundle> a fhir:StructureDefinition .
 
 <http://hl7.org/fhir/TestScript/testscript-example-history#01-HistoryPatient> fhir:Element.id [ fhir:value "01-HistoryPatient"^^xsd:string ] ;
-    fhir:TestScript.test.action [ fhir:TestScript.test.action.operation [ fhir:TestScript.setup.action.operation.accept [ fhir:value "json"^^xsd:string ] ;
+    fhir:TestScript.test.action [ fhir:TestScript.test.action.assert [ fhir:TestScript.setup.action.assert.description [ fhir:value "Confirm that the returned Bundle type equals 'history'."^^xsd:string ] ;
+                    fhir:TestScript.setup.action.assert.operator [ fhir:value "equals"^^xsd:string ] ;
+                    fhir:TestScript.setup.action.assert.path [ fhir:value "fhir:Bundle/fhir:type/@value"^^xsd:string ] ;
+                    fhir:TestScript.setup.action.assert.value [ fhir:value "history"^^xsd:string ] ;
+                    fhir:TestScript.setup.action.assert.warningOnly [ fhir:value false ] ] ;
+            fhir:index 4 ],
+        [ fhir:TestScript.test.action.operation [ fhir:TestScript.setup.action.operation.accept [ fhir:value "json"^^xsd:string ] ;
                     fhir:TestScript.setup.action.operation.contentType [ fhir:value "json"^^xsd:string ] ;
                     fhir:TestScript.setup.action.operation.description [ fhir:value "Get the Patient history on the test server using the id from fixture-patient-create."^^xsd:string ] ;
                     fhir:TestScript.setup.action.operation.encodeRequestUrl [ fhir:value true ] ;
@@ -124,16 +130,6 @@
                     fhir:TestScript.setup.action.operation.type [ fhir:Coding.code [ fhir:value "history"^^xsd:string ] ;
                             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/testscript-operation-codes" ] ] ] ;
             fhir:index 0 ],
-        [ fhir:TestScript.test.action.assert [ fhir:TestScript.setup.action.assert.description [ fhir:value "Confirm that the returned resource type is Bundle."^^xsd:string ] ;
-                    fhir:TestScript.setup.action.assert.resource [ fhir:value "Bundle"^^xsd:string ] ;
-                    fhir:TestScript.setup.action.assert.warningOnly [ fhir:value false ] ] ;
-            fhir:index 2 ],
-        [ fhir:TestScript.test.action.assert [ fhir:TestScript.setup.action.assert.description [ fhir:value "Confirm that the returned Bundle type equals 'history'."^^xsd:string ] ;
-                    fhir:TestScript.setup.action.assert.operator [ fhir:value "equals"^^xsd:string ] ;
-                    fhir:TestScript.setup.action.assert.path [ fhir:value "fhir:Bundle/fhir:type/@value"^^xsd:string ] ;
-                    fhir:TestScript.setup.action.assert.value [ fhir:value "history"^^xsd:string ] ;
-                    fhir:TestScript.setup.action.assert.warningOnly [ fhir:value false ] ] ;
-            fhir:index 4 ],
         [ fhir:TestScript.test.action.assert [ fhir:TestScript.setup.action.assert.description [ fhir:value "Confirm that the returned Bundle conforms to the base FHIR specification."^^xsd:string ] ;
                     fhir:TestScript.setup.action.assert.validateProfileId [ fhir:value "bundle-profile"^^xsd:string ] ;
                     fhir:TestScript.setup.action.assert.warningOnly [ fhir:value false ] ] ;
@@ -142,7 +138,11 @@
                     fhir:TestScript.setup.action.assert.direction [ fhir:value "response"^^xsd:string ] ;
                     fhir:TestScript.setup.action.assert.response [ fhir:value "okay"^^xsd:string ] ;
                     fhir:TestScript.setup.action.assert.warningOnly [ fhir:value false ] ] ;
-            fhir:index 1 ] ;
+            fhir:index 1 ],
+        [ fhir:TestScript.test.action.assert [ fhir:TestScript.setup.action.assert.description [ fhir:value "Confirm that the returned resource type is Bundle."^^xsd:string ] ;
+                    fhir:TestScript.setup.action.assert.resource [ fhir:value "Bundle"^^xsd:string ] ;
+                    fhir:TestScript.setup.action.assert.warningOnly [ fhir:value false ] ] ;
+            fhir:index 2 ] ;
     fhir:TestScript.test.description [ fhir:value "Get the history for a known Patient and validate response."^^xsd:string ] ;
     fhir:TestScript.test.name [ fhir:value "History Patient"^^xsd:string ] ;
     fhir:index 0 .

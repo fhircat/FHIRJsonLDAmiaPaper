@@ -1,0 +1,423 @@
+{
+   "resourceType": "fhir:Bundle",
+   "id": {
+      "value": "3a0707d3-549e-4467-b8b8-5a2ab3800efe"
+   },
+   "type": {
+      "value": "message"
+   },
+   "timestamp": {
+      "value": "2015-07-14T11:15:33+10:00"
+   },
+   "entry": [
+      {
+         "fullUrl": {
+            "value": "urn:uuid:d9d296d8-5afd-42e1-a0ce-3344e0e003ed"
+         },
+         "resource": {
+            "resourceType": "fhir:MessageHeader",
+            "id": {
+               "value": "caf609cf-c3a7-4be3-a3aa-356b9bb69d4f"
+            },
+            "text": {
+               "status": {
+                  "value": "generated"
+               },
+               "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n             \n            <p>This message is a request to link Patient records 654321 (Patient Donald DUCK @ Acme Healthcare, Inc) and 123456 (Patient Donald D DUCK @ Acme Healthcare, Inc)</p>\n           \n          </div>"
+            },
+            "eventCoding": {
+               "system": {
+                  "value": "http://example.org/fhir/message-events"
+               },
+               "code": {
+                  "value": "patient-link"
+               }
+            },
+            "source": {
+               "endpoint": {
+                  "value": "http://acme.com/ehr/fhir"
+               }
+            },
+            "response": {
+               "identifier": {
+                  "value": "efdd254b-0e09-4164-883e-35cf3871715f"
+               },
+               "code": {
+                  "value": "ok"
+               },
+               "details": {
+                  "reference": {
+                     "value": "OperationOutcome/03f9aa7d-b395-47b9-84e0-053678b6e4e3"
+                  },
+                  "fhir:link": {
+                     "@id": "urn:uuid:03f9aa7d-b395-47b9-84e0-053678b6e4e3"
+                  }
+               }
+            },
+            "focus": [
+               {
+                  "reference": {
+                     "value": "http://acme.com/ehr/fhir/Patient/pat1"
+                  },
+                  "fhir:link": {
+                     "@id": "http://acme.com/ehr/fhir/Patient/pat1",
+                     "@type": "fhir:Patient"
+                  },
+                  "index": 0
+               },
+               {
+                  "reference": {
+                     "value": "http://acme.com/ehr/fhir/Patient/pat12"
+                  },
+                  "fhir:link": {
+                     "@id": "http://acme.com/ehr/fhir/Patient/pat12",
+                     "@type": "fhir:Patient"
+                  },
+                  "index": 1
+               }
+            ],
+            "@id": "urn:uuid:d9d296d8-5afd-42e1-a0ce-3344e0e003ed",
+            "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/messageheader.context.jsonld"
+         },
+         "index": 0
+      },
+      {
+         "fullUrl": {
+            "value": "urn:uuid:03f9aa7d-b395-47b9-84e0-053678b6e4e3"
+         },
+         "resource": {
+            "resourceType": "fhir:OperationOutcome",
+            "id": {
+               "value": "03f9aa7d-b395-47b9-84e0-053678b6e4e3"
+            },
+            "text": {
+               "status": {
+                  "value": "generated"
+               },
+               "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            MPI approval rating: 80%\n          </div>"
+            },
+            "issue": [
+               {
+                  "severity": {
+                     "value": "information"
+                  },
+                  "code": {
+                     "value": "informational"
+                  },
+                  "details": {
+                     "text": {
+                        "value": "MPI approval rating: 80%"
+                     }
+                  },
+                  "index": 0
+               }
+            ],
+            "@id": "urn:uuid:03f9aa7d-b395-47b9-84e0-053678b6e4e3",
+            "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/operationoutcome.context.jsonld"
+         },
+         "index": 1
+      },
+      {
+         "fullUrl": {
+            "value": "http://acme.com/ehr/fhir/Patient/pat1"
+         },
+         "resource": {
+            "resourceType": "fhir:Patient",
+            "id": {
+               "value": "pat1"
+            },
+            "text": {
+               "status": {
+                  "value": "generated"
+               },
+               "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            \n            <p>Patient Donald DUCK @ Acme Healthcare, Inc. MR = 654321</p>\n          \n          </div>"
+            },
+            "identifier": [
+               {
+                  "use": {
+                     "value": "usual"
+                  },
+                  "type": {
+                     "coding": [
+                        {
+                           "system": {
+                              "value": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                           },
+                           "code": {
+                              "value": "MR"
+                           },
+                           "index": 0,
+                           "@type": "http://terminology.hl7.org/CodeSystem/v2-0203/MR"
+                        }
+                     ]
+                  },
+                  "system": {
+                     "value": "urn:oid:0.1.2.3.4.5.6.7"
+                  },
+                  "value": {
+                     "value": "654321"
+                  },
+                  "index": 0
+               }
+            ],
+            "active": {
+               "value": true
+            },
+            "name": [
+               {
+                  "use": {
+                     "value": "official"
+                  },
+                  "family": {
+                     "value": "Donald"
+                  },
+                  "given": [
+                     {
+                        "value": "Duck",
+                        "index": 0
+                     }
+                  ],
+                  "index": 0
+               }
+            ],
+            "gender": {
+               "value": "male"
+            },
+            "contact": [
+               {
+                  "relationship": [
+                     {
+                        "coding": [
+                           {
+                              "system": {
+                                 "value": "http://example.org/fhir/CodeSystem/patient-contact-relationship"
+                              },
+                              "code": {
+                                 "value": "E"
+                              },
+                              "index": 0,
+                              "@type": "http://example.org/fhir/CodeSystem/patient-contact-relationship/E"
+                           }
+                        ],
+                        "index": 0
+                     }
+                  ],
+                  "organization": {
+                     "reference": {
+                        "value": "Organization/1"
+                     },
+                     "display": {
+                        "value": "Walt Disney Corporation"
+                     },
+                     "fhir:link": {
+                        "@id": "Organization/1",
+                        "@type": "fhir:Organization"
+                     }
+                  },
+                  "index": 0
+               }
+            ],
+            "managingOrganization": {
+               "reference": {
+                  "value": "Organization/1"
+               },
+               "display": {
+                  "value": "ACME Healthcare, Inc"
+               },
+               "fhir:link": {
+                  "@id": "Organization/1",
+                  "@type": "fhir:Organization"
+               }
+            },
+            "link": [
+               {
+                  "other": {
+                     "reference": {
+                        "value": "Patient/pat2"
+                     },
+                     "fhir:link": {
+                        "@id": "http://acme.com/ehr/fhir/Patient/pat12"
+                     }
+                  },
+                  "type": {
+                     "value": "seealso"
+                  },
+                  "index": 0
+               }
+            ],
+            "@id": "http://acme.com/ehr/fhir/Patient/pat1",
+            "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/patient.context.jsonld"
+         },
+         "index": 2
+      },
+      {
+         "fullUrl": {
+            "value": "http://acme.com/ehr/fhir/Patient/pat12"
+         },
+         "resource": {
+            "resourceType": "fhir:Patient",
+            "id": {
+               "value": "pat2"
+            },
+            "text": {
+               "status": {
+                  "value": "generated"
+               },
+               "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            \n            <p>Patient Donald D DUCK @ Acme Healthcare, Inc. MR = 123456</p>\n          \n          </div>"
+            },
+            "identifier": [
+               {
+                  "use": {
+                     "value": "usual"
+                  },
+                  "type": {
+                     "coding": [
+                        {
+                           "system": {
+                              "value": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                           },
+                           "code": {
+                              "value": "MR"
+                           },
+                           "index": 0,
+                           "@type": "http://terminology.hl7.org/CodeSystem/v2-0203/MR"
+                        }
+                     ]
+                  },
+                  "system": {
+                     "value": "urn:oid:0.1.2.3.4.5.6.7"
+                  },
+                  "value": {
+                     "value": "123456"
+                  },
+                  "index": 0
+               }
+            ],
+            "active": {
+               "value": true
+            },
+            "name": [
+               {
+                  "use": {
+                     "value": "official"
+                  },
+                  "family": {
+                     "value": "Donald"
+                  },
+                  "given": [
+                     {
+                        "value": "Duck",
+                        "index": 0
+                     },
+                     {
+                        "value": "D",
+                        "index": 1
+                     }
+                  ],
+                  "index": 0
+               }
+            ],
+            "gender": {
+               "value": "other",
+               "extension": [
+                  {
+                     "url": {
+                        "value": "http://example.org/Profile/administrative-status"
+                     },
+                     "valueCodeableConcept": {
+                        "coding": [
+                           {
+                              "system": {
+                                 "value": "http://terminology.hl7.org/CodeSystem/v2-0001"
+                              },
+                              "code": {
+                                 "value": "A"
+                              },
+                              "display": {
+                                 "value": "Ambiguous"
+                              },
+                              "index": 0,
+                              "@type": "http://terminology.hl7.org/CodeSystem/v2-0001/A"
+                           }
+                        ]
+                     },
+                     "index": 0
+                  }
+               ]
+            },
+            "managingOrganization": {
+               "reference": {
+                  "value": "Organization/1"
+               },
+               "display": {
+                  "value": "ACME Healthcare, Inc"
+               },
+               "fhir:link": {
+                  "@id": "Organization/1",
+                  "@type": "fhir:Organization"
+               }
+            },
+            "link": [
+               {
+                  "other": {
+                     "reference": {
+                        "value": "Patient/pat1"
+                     },
+                     "fhir:link": {
+                        "@id": "http://acme.com/ehr/fhir/Patient/pat1"
+                     }
+                  },
+                  "type": {
+                     "value": "seealso"
+                  },
+                  "index": 0
+               }
+            ],
+            "@id": "http://acme.com/ehr/fhir/Patient/pat12",
+            "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/patient.context.jsonld"
+         },
+         "index": 3
+      }
+   ],
+   "meta": {
+      "tag": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            },
+            "code": {
+               "value": "HTEST"
+            },
+            "display": {
+               "value": "test health data"
+            },
+            "index": 0
+         }
+      ]
+   },
+   "@context": [
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/bundle.context.jsonld",
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/root.context.jsonld",
+      {
+         "nodeRole": {
+            "@type": "@id",
+            "@id": "fhir:nodeRole"
+         },
+         "@base": "http://hl7.org/fhir/",
+         "owl:imports": {
+            "@type": "@id"
+         },
+         "owl:versionIRI": {
+            "@type": "@id"
+         }
+      }
+   ],
+   "@id": "Bundle/3a0707d3-549e-4467-b8b8-5a2ab3800efe",
+   "nodeRole": "fhir:treeRoot",
+   "@included": {
+      "@id": "Bundle/3a0707d3-549e-4467-b8b8-5a2ab3800efe.ttl",
+      "owl:versionIRI": "http://build.fhir.org/Bundle/3a0707d3-549e-4467-b8b8-5a2ab3800efe.ttl",
+      "owl:imports": "fhir:fhir.ttl",
+      "@type": "owl:Ontology"
+   }
+}

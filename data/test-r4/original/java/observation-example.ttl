@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/Observation/example> a fhir:Observation ;
+    fhir:DomainResource.text [ fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span>(Details : {http://terminology.hl7.org/CodeSystem/observation-category code 'vital-signs' = 'Vital Signs', given as 'Vital Signs'})</span></p><p><b>code</b>: Body Weight <span>(Details : {LOINC code '29463-7' = 'Body weight', given as 'Body Weight'}; {LOINC code '3141-9' = 'Body weight Measured', given as 'Body weight Measured'}; {SNOMED CT code '27113001' = 'Body weight', given as 'Body weight'}; {http://acme.org/devices/clinical-codes code 'body-weight' = 'body-weight', given as 'Body Weight'})</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>encounter</b>: <a>Encounter/example</a></p><p><b>effective</b>: 28/03/2016</p><p><b>value</b>: 185 lbs<span> (Details: UCUM code [lb_av] = 'lb_av')</span></p></div>"^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
+    fhir:Observation.category [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/observation-category/vital-signs> ;
+                    fhir:Coding.code [ fhir:value "vital-signs"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "Vital Signs"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+                    fhir:index 0 ] ;
+            fhir:index 0 ] ;
+    fhir:Observation.code [ fhir:CodeableConcept.coding [ a <http://snomed.info/id/27113001> ;
+                    fhir:Coding.code [ fhir:value "27113001"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "Body weight"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+                    fhir:index 2 ],
+                [ a <http://loinc.org/rdf#3141-9> ;
+                    fhir:Coding.code [ fhir:value "3141-9"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "Body weight Measured"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+                    fhir:index 1 ],
+                [ a <http://loinc.org/rdf#29463-7> ;
+                    fhir:Coding.code [ fhir:value "29463-7"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "Body Weight"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+                    fhir:index 0 ],
+                [ a <http://acme.org/devices/clinical-codes/body-weight> ;
+                    fhir:Coding.code [ fhir:value "body-weight"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "Body Weight"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://acme.org/devices/clinical-codes" ] ;
+                    fhir:index 3 ] ] ;
+    fhir:Observation.effectiveDateTime [ fhir:value "2016-03-28"^^xsd:date ] ;
+    fhir:Observation.encounter [ fhir:Reference.reference [ fhir:value "Encounter/example"^^xsd:string ] ;
+            fhir:link <http://hl7.org/fhir/Encounter/example> ] ;
+    fhir:Observation.status [ fhir:value "final"^^xsd:string ] ;
+    fhir:Observation.subject [ fhir:Reference.reference [ fhir:value "Patient/example"^^xsd:string ] ;
+            fhir:link <http://hl7.org/fhir/Patient/example> ] ;
+    fhir:Observation.valueQuantity [ fhir:Quantity.code [ fhir:value "[lb_av]"^^xsd:string ] ;
+            fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+            fhir:Quantity.unit [ fhir:value "lbs"^^xsd:string ] ;
+            fhir:Quantity.value [ fhir:value 185.0 ] ] ;
+    fhir:Resource.id [ fhir:value "example"^^xsd:string ] ;
+    fhir:Resource.meta [ fhir:Meta.tag [ fhir:Coding.code [ fhir:value "HTEST"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "test health data"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:nodeRole fhir:treeRoot .
+
+<http://hl7.org/fhir/Observation/example.ttl> a owl:Ontology ;
+    owl:imports fhir:fhir.ttl ;
+    owl:versionIRI <http://build.fhir.org/Observation/example.ttl> .
+
+<http://hl7.org/fhir/Encounter/example> a fhir:Encounter .
+
+<http://hl7.org/fhir/Patient/example> a fhir:Patient .
+

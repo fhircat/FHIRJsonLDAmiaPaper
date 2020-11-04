@@ -1,0 +1,629 @@
+{
+   "resourceType": "fhir:PlanDefinition",
+   "id": {
+      "value": "KDN5"
+   },
+   "text": {
+      "status": {
+         "value": "additional"
+      },
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <table style=\"width: 100%;\">\n        <tr>\n          <td>\n              <!-- link to NCCN image -->\n            <div style=\"width: 200px; height: 100px; vertical-align: top;\">National Comprehensive Cancer Network</div>\n          </td>\n          <td>\n            <h3>Chemotherapy Order Template</h3>\n            <h1>Kidney Cancer</h1>\n            <h2>Gemcitabine/CARBOplatin</h2>\n          </td>\n          <td style=\"text-align: right; vertical-align: top;\">KDN5</td>\n        </tr>\n      </table>\n      <table style=\"width: 100%; border-top: 1px solid; border-bottom: 1px solid;\">\n        <tr>\n          <td style=\"width: 33%; border-right: 1px solid; vertical-align: top\">\n            <h4>INDICATION:</h4>\n            <p>Metastatic or Relapsed \u2013 Collecting Duct/Medullary Subtypes</p>\n          </td>\n          <td style=\"width: 34%; border-right: 1px solid; vertical-align: top\">\n            <h4>REFERENCES:</h4>\n            <ol>\n              <li><a href=\"http://www.example.org/professionals/physician_gls/PDF/kidney.pdf\">NCCN Guidelines\u00ae for Kidney Cancer. V.3.2015.</a></li>\n              <li><a href=\"http://www.ncbi.nlm.nih.gov/pubmed?term=%22The+Journal+of+urology%22%5BJour%5D+AND+1698%5Bpage%5D+AND+2007%5Bpdat%5D+AND+Oudard+S%5Bauthor%5D\">Oudard S, et al. <em>J Urol</em>. 2007;177(5):1698-702.</a><sup>\n                  <a href=\"http://www.example.org/OrderTemplates/PDF/appendix_E.pdf\">a</a></sup>\n              </li>\n            </ol>\n          </td>\n          <td style=\"width: 33%; vertical-align: top\">\n            <h4>NCCN SUPPORTIVE CARE:</h4>\n            <ol>\n              <li>\n                <i>Emetic Risk:</i>\n                <table>\n                  <tr>\n                    <td>Day 1</td>\n                    <td>Moderate</td>\n                  </tr>\n                  <tr>\n                    <td>Day 8</td>\n                    <td>Low</td>\n                  </tr>\n                </table>\n              </li>\n              <li>\n                <i>Fever Neutropenia Risk:</i><br/>\n                Refer to <a href=\"http://www.example.org/professionals/physician_gls/PDF/myeloid_growth.pdf\">NCCN Guidelines for Myeloid Growth Factors. V.2.2014</a>\n              </li>\n            </ol>\n          </td>\n        </tr>\n      </table>\n        <!-- same as the regimen section of the Composition resource only this version is without the style guide notes -->\n      <h4>CHEMOTHERAPY REGIMEN</h4>\n      <p>\n        <i>21-day cycle for 6 cycles</i>\n      </p>\n      <ul>\n        <li>Gemcitabine 1250 mg/m<sup>2</sup> IV over 30 minutes on Days 1 and 8</li>\n        <li>CARBOplatin AUC 5 IV over 30 minutes on Day 1</li>\n      </ul>\n    </div>"
+   },
+   "contained": [
+      {
+         "resourceType": "fhir:ActivityDefinition",
+         "id": {
+            "value": "1111"
+         },
+         "status": {
+            "value": "draft"
+         },
+         "productCodeableConcept": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+                  },
+                  "code": {
+                     "value": "12574"
+                  },
+                  "display": {
+                     "value": "gemcitabine"
+                  },
+                  "index": 0,
+                  "@type": "http://www.nlm.nih.gov/research/umls/rxnorm/12574"
+               }
+            ],
+            "text": {
+               "value": "gemcitabine"
+            }
+         },
+         "dosage": [
+            {
+               "text": {
+                  "value": "1250 mg/m\u00b2 IV over 30 minutes"
+               },
+               "timing": {
+                  "repeat": {
+                     "duration": {
+                        "value": 30
+                     },
+                     "durationUnit": {
+                        "value": "min"
+                     }
+                  }
+               },
+               "route": {
+                  "text": {
+                     "value": "IV"
+                  }
+               },
+               "doseAndRate": [
+                  {
+                     "type": {
+                        "coding": [
+                           {
+                              "system": {
+                                 "value": "http://terminology.hl7.org/CodeSystem/dose-rate-type"
+                              },
+                              "code": {
+                                 "value": "ordered"
+                              },
+                              "display": {
+                                 "value": "Ordered"
+                              },
+                              "index": 0,
+                              "@type": "http://terminology.hl7.org/CodeSystem/dose-rate-type/ordered"
+                           }
+                        ]
+                     },
+                     "doseQuantity": {
+                        "value": {
+                           "value": 1250
+                        },
+                        "unit": {
+                           "value": "mg/m\u00b2"
+                        }
+                     },
+                     "index": 0
+                  }
+               ],
+               "index": 0
+            }
+         ],
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/activitydefinition.context.jsonld",
+         "@id": "PlanDefinition/KDN5#1111",
+         "index": 0
+      },
+      {
+         "resourceType": "fhir:ActivityDefinition",
+         "id": {
+            "value": "2222"
+         },
+         "status": {
+            "value": "draft"
+         },
+         "productCodeableConcept": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://www.nlm.nih.gov/research/umls/rxnorm"
+                  },
+                  "code": {
+                     "value": "40048"
+                  },
+                  "display": {
+                     "value": "Carboplatin"
+                  },
+                  "index": 0,
+                  "@type": "http://www.nlm.nih.gov/research/umls/rxnorm/40048"
+               }
+            ],
+            "text": {
+               "value": "CARBOplatin"
+            }
+         },
+         "dosage": [
+            {
+               "text": {
+                  "value": "AUC 5 IV over 30 minutes"
+               },
+               "timing": {
+                  "repeat": {
+                     "duration": {
+                        "value": 30
+                     },
+                     "durationUnit": {
+                        "value": "min"
+                     }
+                  }
+               },
+               "route": {
+                  "text": {
+                     "value": "IV"
+                  }
+               },
+               "doseAndRate": [
+                  {
+                     "type": {
+                        "coding": [
+                           {
+                              "system": {
+                                 "value": "http://terminology.hl7.org/CodeSystem/dose-rate-type"
+                              },
+                              "code": {
+                                 "value": "ordered"
+                              },
+                              "display": {
+                                 "value": "Ordered"
+                              },
+                              "index": 0,
+                              "@type": "http://terminology.hl7.org/CodeSystem/dose-rate-type/ordered"
+                           }
+                        ]
+                     },
+                     "doseQuantity": {
+                        "extension": [
+                           {
+                              "url": {
+                                 "value": "http://example.org/fhir/AUC-dose"
+                              },
+                              "valueInteger": {
+                                 "value": 5
+                              },
+                              "index": 0
+                           }
+                        ]
+                     },
+                     "index": 0
+                  }
+               ],
+               "index": 0
+            }
+         ],
+         "@context": "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/activitydefinition.context.jsonld",
+         "@id": "PlanDefinition/KDN5#2222",
+         "index": 1
+      }
+   ],
+   "identifier": [
+      {
+         "system": {
+            "value": "http://example.org/ordertemplates"
+         },
+         "value": {
+            "value": "KDN5"
+         },
+         "index": 0
+      }
+   ],
+   "version": {
+      "value": "1"
+   },
+   "title": {
+      "value": "Gemcitabine/CARBOplatin"
+   },
+   "type": {
+      "text": {
+         "value": "Chemotherapy Order Template"
+      }
+   },
+   "status": {
+      "value": "draft"
+   },
+   "experimental": {
+      "value": true
+   },
+   "publisher": {
+      "value": "National Comprehensive Cancer Network, Inc."
+   },
+   "useContext": [
+      {
+         "extension": [
+            {
+               "url": {
+                  "value": "http://hl7.org/fhir/StructureDefinition/usagecontext-group"
+               },
+               "valueString": {
+                  "value": "A"
+               },
+               "index": 0
+            }
+         ],
+         "code": {
+            "system": {
+               "value": "http://example.org/fhir/CodeSystem/indications"
+            },
+            "code": {
+               "value": "treamentSetting-or-diseaseStatus"
+            },
+            "@type": "http://example.org/fhir/CodeSystem/indications/treamentSetting-or-diseaseStatus"
+         },
+         "valueCodeableConcept": {
+            "text": {
+               "value": "Metastatic"
+            }
+         },
+         "index": 0
+      },
+      {
+         "extension": [
+            {
+               "url": {
+                  "value": "http://hl7.org/fhir/StructureDefinition/usagecontext-group"
+               },
+               "valueString": {
+                  "value": "A"
+               },
+               "index": 0
+            }
+         ],
+         "code": {
+            "system": {
+               "value": "http://example.org/fhir/CodeSystem/indications"
+            },
+            "code": {
+               "value": "disease-or-histology"
+            },
+            "@type": "http://example.org/fhir/CodeSystem/indications/disease-or-histology"
+         },
+         "valueCodeableConcept": {
+            "text": {
+               "value": "Collecting Duct/Medullary Subtypes"
+            }
+         },
+         "index": 1
+      },
+      {
+         "extension": [
+            {
+               "url": {
+                  "value": "http://hl7.org/fhir/StructureDefinition/usagecontext-group"
+               },
+               "valueString": {
+                  "value": "A"
+               },
+               "index": 0
+            }
+         ],
+         "code": {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+            },
+            "code": {
+               "value": "focus"
+            },
+            "@type": "http://terminology.hl7.org/CodeSystem/usage-context-type/focus"
+         },
+         "valueCodeableConcept": {
+            "text": {
+               "value": "Kidney Cancer"
+            }
+         },
+         "index": 2
+      },
+      {
+         "extension": [
+            {
+               "url": {
+                  "value": "http://hl7.org/fhir/StructureDefinition/usagecontext-group"
+               },
+               "valueString": {
+                  "value": "B"
+               },
+               "index": 0
+            }
+         ],
+         "code": {
+            "system": {
+               "value": "http://example.org/fhir/CodeSystem/indications"
+            },
+            "code": {
+               "value": "treatmentSetting-or-diseaseStatus"
+            },
+            "@type": "http://example.org/fhir/CodeSystem/indications/treatmentSetting-or-diseaseStatus"
+         },
+         "valueCodeableConcept": {
+            "text": {
+               "value": "Relapsed"
+            }
+         },
+         "index": 3
+      },
+      {
+         "extension": [
+            {
+               "url": {
+                  "value": "http://hl7.org/fhir/StructureDefinition/usagecontext-group"
+               },
+               "valueString": {
+                  "value": "B"
+               },
+               "index": 0
+            }
+         ],
+         "code": {
+            "system": {
+               "value": "http://example.org/fhir/CodeSystem/indications"
+            },
+            "code": {
+               "value": "disease-or-histology"
+            },
+            "@type": "http://example.org/fhir/CodeSystem/indications/disease-or-histology"
+         },
+         "valueCodeableConcept": {
+            "text": {
+               "value": "Collecting Duct/Medullary Subtypes"
+            }
+         },
+         "index": 4
+      },
+      {
+         "extension": [
+            {
+               "url": {
+                  "value": "http://hl7.org/fhir/StructureDefinition/usagecontext-group"
+               },
+               "valueString": {
+                  "value": "B"
+               },
+               "index": 0
+            }
+         ],
+         "code": {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+            },
+            "code": {
+               "value": "focus"
+            },
+            "@type": "http://terminology.hl7.org/CodeSystem/usage-context-type/focus"
+         },
+         "valueCodeableConcept": {
+            "text": {
+               "value": "Kidney Cancer \u2013 Collecting Duct/Medullary Subtypes - Metastatic"
+            }
+         },
+         "index": 5
+      }
+   ],
+   "copyright": {
+      "value": "All rights reserved."
+   },
+   "approvalDate": {
+      "value": {
+         "@value": "2016-07-27",
+         "@type": "http://www.w3.org/2001/XMLSchema#date"
+      }
+   },
+   "lastReviewDate": {
+      "value": {
+         "@value": "2016-07-27",
+         "@type": "http://www.w3.org/2001/XMLSchema#date"
+      }
+   },
+   "author": [
+      {
+         "name": {
+            "value": "Lee Surprenant"
+         },
+         "index": 0
+      }
+   ],
+   "relatedArtifact": [
+      {
+         "type": {
+            "value": "derived-from"
+         },
+         "display": {
+            "value": "NCCN Guidelines for Kidney Cancer. V.2.2016"
+         },
+         "url": {
+            "value": "http://www.example.org/professionals/physician_gls/PDF/kidney.pdf"
+         },
+         "index": 0
+      },
+      {
+         "type": {
+            "value": "citation",
+            "extension": [
+               {
+                  "url": {
+                     "value": "http://example.org/fhir/regimenReferenceType"
+                  },
+                  "valueCode": {
+                     "value": "a"
+                  },
+                  "index": 0
+               }
+            ]
+         },
+         "citation": {
+            "value": "Oudard S, et al. J Urol. 2007;177(5):1698-702"
+         },
+         "url": {
+            "value": "http://www.ncbi.nlm.nih.gov/pubmed/17437788"
+         },
+         "index": 1
+      }
+   ],
+   "action": [
+      {
+         "selectionBehavior": {
+            "value": "exactly-one"
+         },
+         "action": [
+            {
+               "selectionBehavior": {
+                  "value": "all"
+               },
+               "action": [
+                  {
+                     "groupingBehavior": {
+                        "value": "sentence-group"
+                     },
+                     "selectionBehavior": {
+                        "value": "exactly-one"
+                     },
+                     "action": [
+                        {
+                           "id": {
+                              "value": "cycle-definition-1"
+                           },
+                           "textEquivalent": {
+                              "value": "21-day cycle for 6 cycles"
+                           },
+                           "timingTiming": {
+                              "repeat": {
+                                 "count": {
+                                    "value": 6
+                                 },
+                                 "duration": {
+                                    "value": 21
+                                 },
+                                 "durationUnit": {
+                                    "value": "d"
+                                 }
+                              }
+                           },
+                           "action": [
+                              {
+                                 "id": {
+                                    "value": "action-1"
+                                 },
+                                 "extension": [
+                                    {
+                                       "url": {
+                                          "value": "http://hl7.org/fhir/StructureDefinition/timing-daysOfCycle"
+                                       },
+                                       "extension": [
+                                          {
+                                             "url": {
+                                                "value": "day"
+                                             },
+                                             "valueInteger": {
+                                                "value": 1
+                                             },
+                                             "index": 0
+                                          },
+                                          {
+                                             "url": {
+                                                "value": "day"
+                                             },
+                                             "valueInteger": {
+                                                "value": 8
+                                             },
+                                             "index": 1
+                                          }
+                                       ],
+                                       "index": 0
+                                    }
+                                 ],
+                                 "textEquivalent": {
+                                    "value": "Gemcitabine 1250 mg/m\u00b2 IV over 30 minutes on days 1 and 8"
+                                 },
+                                 "definitionCanonical": {
+                                    "value": "#1111"
+                                 },
+                                 "@id": "PlanDefinition/KDN5#action-1",
+                                 "index": 0
+                              },
+                              {
+                                 "id": {
+                                    "value": "action-2"
+                                 },
+                                 "extension": [
+                                    {
+                                       "url": {
+                                          "value": "http://hl7.org/fhir/StructureDefinition/timing-daysOfCycle"
+                                       },
+                                       "extension": [
+                                          {
+                                             "url": {
+                                                "value": "day"
+                                             },
+                                             "valueInteger": {
+                                                "value": 1
+                                             },
+                                             "index": 0
+                                          }
+                                       ],
+                                       "index": 0
+                                    }
+                                 ],
+                                 "textEquivalent": {
+                                    "value": "CARBOplatin AUC 5 IV over 30 minutes on Day 1"
+                                 },
+                                 "relatedAction": [
+                                    {
+                                       "actionId": {
+                                          "value": "action-1"
+                                       },
+                                       "relationship": {
+                                          "value": "concurrent-with-start"
+                                       },
+                                       "index": 0
+                                    }
+                                 ],
+                                 "definitionCanonical": {
+                                    "value": "#2222"
+                                 },
+                                 "@id": "PlanDefinition/KDN5#action-2",
+                                 "index": 1
+                              }
+                           ],
+                           "@id": "PlanDefinition/KDN5#cycle-definition-1",
+                           "index": 0
+                        }
+                     ],
+                     "index": 0
+                  }
+               ],
+               "index": 0
+            }
+         ],
+         "index": 0
+      }
+   ],
+   "meta": {
+      "tag": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            },
+            "code": {
+               "value": "HTEST"
+            },
+            "display": {
+               "value": "test health data"
+            },
+            "index": 0
+         }
+      ]
+   },
+   "@context": [
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/plandefinition.context.jsonld",
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/root.context.jsonld",
+      {
+         "nodeRole": {
+            "@type": "@id",
+            "@id": "fhir:nodeRole"
+         },
+         "@base": "http://hl7.org/fhir/",
+         "owl:imports": {
+            "@type": "@id"
+         },
+         "owl:versionIRI": {
+            "@type": "@id"
+         }
+      }
+   ],
+   "@id": "PlanDefinition/KDN5",
+   "nodeRole": "fhir:treeRoot",
+   "@included": {
+      "@id": "PlanDefinition/KDN5.ttl",
+      "owl:versionIRI": "http://build.fhir.org/PlanDefinition/KDN5.ttl",
+      "owl:imports": "fhir:fhir.ttl",
+      "@type": "owl:Ontology"
+   }
+}

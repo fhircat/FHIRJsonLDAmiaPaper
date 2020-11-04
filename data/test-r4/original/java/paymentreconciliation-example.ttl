@@ -7,16 +7,6 @@
             fhir:Narrative.status [ fhir:value "generated"^^xsd:string ] ] ;
     fhir:PaymentReconciliation.created [ fhir:value "2014-08-16"^^xsd:date ] ;
     fhir:PaymentReconciliation.detail [ fhir:PaymentReconciliation.detail.amount [ fhir:Money.currency [ fhir:value "USD"^^xsd:string ] ;
-                    fhir:Money.value [ fhir:value -1500.0 ] ] ;
-            fhir:PaymentReconciliation.detail.date [ fhir:value "2014-08-16"^^xsd:date ] ;
-            fhir:PaymentReconciliation.detail.identifier [ fhir:Identifier.system [ fhir:value "http://www.BenefitsInc.com/payment/2018/detail" ] ;
-                    fhir:Identifier.value [ fhir:value "10-12345-003"^^xsd:string ] ] ;
-            fhir:PaymentReconciliation.detail.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/payment-type/advance> ;
-                            fhir:Coding.code [ fhir:value "advance"^^xsd:string ] ;
-                            fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/payment-type" ] ;
-                            fhir:index 0 ] ] ;
-            fhir:index 2 ],
-        [ fhir:PaymentReconciliation.detail.amount [ fhir:Money.currency [ fhir:value "USD"^^xsd:string ] ;
                     fhir:Money.value [ fhir:value 3500.0 ] ] ;
             fhir:PaymentReconciliation.detail.date [ fhir:value "2014-08-16"^^xsd:date ] ;
             fhir:PaymentReconciliation.detail.identifier [ fhir:Identifier.system [ fhir:value "http://www.BenefitsInc.com/payment/2018/detail" ] ;
@@ -35,6 +25,16 @@
                             fhir:index 0 ] ] ;
             fhir:index 0 ],
         [ fhir:PaymentReconciliation.detail.amount [ fhir:Money.currency [ fhir:value "USD"^^xsd:string ] ;
+                    fhir:Money.value [ fhir:value -1500.0 ] ] ;
+            fhir:PaymentReconciliation.detail.date [ fhir:value "2014-08-16"^^xsd:date ] ;
+            fhir:PaymentReconciliation.detail.identifier [ fhir:Identifier.system [ fhir:value "http://www.BenefitsInc.com/payment/2018/detail" ] ;
+                    fhir:Identifier.value [ fhir:value "10-12345-003"^^xsd:string ] ] ;
+            fhir:PaymentReconciliation.detail.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/payment-type/advance> ;
+                            fhir:Coding.code [ fhir:value "advance"^^xsd:string ] ;
+                            fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/payment-type" ] ;
+                            fhir:index 0 ] ] ;
+            fhir:index 2 ],
+        [ fhir:PaymentReconciliation.detail.amount [ fhir:Money.currency [ fhir:value "USD"^^xsd:string ] ;
                     fhir:Money.value [ fhir:value 4000.0 ] ] ;
             fhir:PaymentReconciliation.detail.date [ fhir:value "2014-08-12"^^xsd:date ] ;
             fhir:PaymentReconciliation.detail.identifier [ fhir:Identifier.system [ fhir:value "http://www.BenefitsInc.com/payment/2018/detail" ] ;
@@ -47,7 +47,7 @@
                             fhir:index 0 ] ] ;
             fhir:index 1 ] ;
     fhir:PaymentReconciliation.disposition [ fhir:value "2014 August mid-month settlement."^^xsd:string ] ;
-    fhir:PaymentReconciliation.formCode [ fhir:CodeableConcept.coding [ a <http://ncforms.org/formid/PAYREC%252F2016%252F01B> ;
+    fhir:PaymentReconciliation.formCode [ fhir:CodeableConcept.coding [ a <http://ncforms.org/formid/PAYREC%2F2016%2F01B> ;
                     fhir:Coding.code [ fhir:value "PAYREC/2016/01B"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://ncforms.org/formid" ] ;
                     fhir:index 0 ] ] ;

@@ -1,0 +1,155 @@
+{
+   "resourceType": "fhir:Consent",
+   "id": {
+      "value": "consent-example-notThis"
+   },
+   "text": {
+      "status": {
+         "value": "generated"
+      },
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">The following scenario is based on existing jurisdictional policy and are realized in existing systems in Canada. \n\tThe default policy is one of implied consent for the provision of care, so these scenarios all deal with withdrawal or withholding consent for that purpose. \n\tIn other jurisdictions, where an express consent model is used (Opt-In), these would examples would contain the phrase &quot;consent to&quot; rather \n\tthan &quot;withhold&quot; or &quot;withdraw&quot; consent for.\n    <p>\n\tspecific to use-case 2. Withhold or withdraw consent for disclosure of a specific record (e.g. Lab Order/Result) \n\t</p><p>\n    Patient &quot;P. van de Heuvel&quot; Primary Care Provider, Dr. Philip Primary, has ordered a set of lab test which Adam \n   wishes to keep as private as possible.  At the sample collection facility, he indicates that he would \n   like withhold consent to disclose the order and all results associated with that specific order from \n   all other providers  \n   </p>\n   </div>"
+   },
+   "status": {
+      "value": "active"
+   },
+   "scope": {
+      "coding": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/consentscope"
+            },
+            "code": {
+               "value": "patient-privacy"
+            },
+            "index": 0,
+            "@type": "http://terminology.hl7.org/CodeSystem/consentscope/patient-privacy"
+         }
+      ]
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "system": {
+                  "value": "http://loinc.org"
+               },
+               "code": {
+                  "value": "59284-0"
+               },
+               "index": 0,
+               "@type": "loinc:59284-0"
+            }
+         ],
+         "index": 0
+      }
+   ],
+   "patient": {
+      "reference": {
+         "value": "Patient/f001"
+      },
+      "display": {
+         "value": "P. van de Heuvel"
+      },
+      "fhir:link": {
+         "@id": "Patient/f001",
+         "@type": "fhir:Patient"
+      }
+   },
+   "dateTime": {
+      "value": {
+         "@value": "2015-11-18",
+         "@type": "http://www.w3.org/2001/XMLSchema#date"
+      }
+   },
+   "organization": [
+      {
+         "reference": {
+            "value": "Organization/f001"
+         },
+         "fhir:link": {
+            "@id": "Organization/f001",
+            "@type": "fhir:Organization"
+         },
+         "index": 0
+      }
+   ],
+   "sourceAttachment": {
+      "title": {
+         "value": "The terms of the consent in lawyer speak."
+      }
+   },
+   "policyRule": {
+      "coding": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+            },
+            "code": {
+               "value": "OPTIN"
+            },
+            "index": 0,
+            "@type": "http://terminology.hl7.org/CodeSystem/v3-ActCode/OPTIN"
+         }
+      ]
+   },
+   "provision": {
+      "data": [
+         {
+            "meaning": {
+               "value": "related"
+            },
+            "reference": {
+               "reference": {
+                  "value": "Task/example3"
+               },
+               "fhir:link": {
+                  "@id": "Task/example3",
+                  "@type": "fhir:Task"
+               }
+            },
+            "index": 0
+         }
+      ]
+   },
+   "meta": {
+      "tag": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            },
+            "code": {
+               "value": "HTEST"
+            },
+            "display": {
+               "value": "test health data"
+            },
+            "index": 0
+         }
+      ]
+   },
+   "@context": [
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/consent.context.jsonld",
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/root.context.jsonld",
+      {
+         "nodeRole": {
+            "@type": "@id",
+            "@id": "fhir:nodeRole"
+         },
+         "@base": "http://hl7.org/fhir/",
+         "owl:imports": {
+            "@type": "@id"
+         },
+         "owl:versionIRI": {
+            "@type": "@id"
+         }
+      }
+   ],
+   "@id": "Consent/consent-example-notThis",
+   "nodeRole": "fhir:treeRoot",
+   "@included": {
+      "@id": "Consent/consent-example-notThis.ttl",
+      "owl:versionIRI": "http://build.fhir.org/Consent/consent-example-notThis.ttl",
+      "owl:imports": "fhir:fhir.ttl",
+      "@type": "owl:Ontology"
+   }
+}

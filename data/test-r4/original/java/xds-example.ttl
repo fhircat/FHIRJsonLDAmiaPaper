@@ -3,27 +3,27 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://hl7.org/fhir/Bundle/xds> a fhir:Bundle ;
-    fhir:Bundle.entry [ fhir:Bundle.entry.fullUrl [ fhir:value "http://localhost:9556/svc/fhir/Practitioner/a4" ] ;
+    fhir:Bundle.entry [ fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d" ] ;
             fhir:Bundle.entry.request [ fhir:Bundle.entry.request.method [ fhir:value "POST"^^xsd:string ] ;
-                    fhir:Bundle.entry.request.url [ fhir:value "Practitioner" ] ] ;
-            fhir:Bundle.entry.resource <http://localhost:9556/svc/fhir/Practitioner/a4> ;
-            fhir:index 3 ],
+                    fhir:Bundle.entry.request.url [ fhir:value "DocumentReference" ] ] ;
+            fhir:Bundle.entry.resource <urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d> ;
+            fhir:index 0 ],
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32" ] ;
+            fhir:Bundle.entry.request [ fhir:Bundle.entry.request.method [ fhir:value "POST"^^xsd:string ] ;
+                    fhir:Bundle.entry.request.url [ fhir:value "Binary" ] ] ;
+            fhir:Bundle.entry.resource <http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32> ;
+            fhir:index 4 ],
         [ fhir:Bundle.entry.fullUrl [ fhir:value "http://localhost:9556/svc/fhir/Patient/a2" ] ;
             fhir:Bundle.entry.request [ fhir:Bundle.entry.request.ifNoneExist [ fhir:value "Patient?identifier=http://acme.org/xds/patients!89765a87b"^^xsd:string ] ;
                     fhir:Bundle.entry.request.method [ fhir:value "POST"^^xsd:string ] ;
                     fhir:Bundle.entry.request.url [ fhir:value "Patient" ] ] ;
             fhir:Bundle.entry.resource <http://localhost:9556/svc/fhir/Patient/a2> ;
             fhir:index 1 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32" ] ;
+        [ fhir:Bundle.entry.fullUrl [ fhir:value "http://localhost:9556/svc/fhir/Practitioner/a4" ] ;
             fhir:Bundle.entry.request [ fhir:Bundle.entry.request.method [ fhir:value "POST"^^xsd:string ] ;
-                    fhir:Bundle.entry.request.url [ fhir:value "Binary" ] ] ;
-            fhir:Bundle.entry.resource <http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32> ;
-            fhir:index 4 ],
-        [ fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d" ] ;
-            fhir:Bundle.entry.request [ fhir:Bundle.entry.request.method [ fhir:value "POST"^^xsd:string ] ;
-                    fhir:Bundle.entry.request.url [ fhir:value "DocumentReference" ] ] ;
-            fhir:Bundle.entry.resource <urn:uuid:3fdc72f4-a11d-4a9d-9260-a9f745779e1d> ;
-            fhir:index 0 ],
+                    fhir:Bundle.entry.request.url [ fhir:value "Practitioner" ] ] ;
+            fhir:Bundle.entry.resource <http://localhost:9556/svc/fhir/Practitioner/a4> ;
+            fhir:index 3 ],
         [ fhir:Bundle.entry.fullUrl [ fhir:value "http://localhost:9556/svc/fhir/Practitioner/a3" ] ;
             fhir:Bundle.entry.request [ fhir:Bundle.entry.request.method [ fhir:value "POST"^^xsd:string ] ;
                     fhir:Bundle.entry.request.url [ fhir:value "Practitioner" ] ] ;
@@ -71,7 +71,7 @@
             fhir:index 0 ] ;
     fhir:DocumentReference.context [ fhir:DocumentReference.context.period [ fhir:Period.end [ fhir:value "2004-12-23T08:01:00+10:00"^^xsd:dateTime ] ;
                     fhir:Period.start [ fhir:value "2004-12-23T08:00:00+10:00"^^xsd:dateTime ] ] ;
-            fhir:DocumentReference.context.practiceSetting [ fhir:CodeableConcept.coding [ a <http://ihe.net/connectathon/practiceSettingCodes/General%2520Medicine> ;
+            fhir:DocumentReference.context.practiceSetting [ fhir:CodeableConcept.coding [ a <http://ihe.net/connectathon/practiceSettingCodes/General%20Medicine> ;
                             fhir:Coding.code [ fhir:value "General Medicine"^^xsd:string ] ;
                             fhir:Coding.display [ fhir:value "General Medicine"^^xsd:string ] ;
                             fhir:Coding.system [ fhir:value "http://ihe.net/connectathon/practiceSettingCodes" ] ;
@@ -89,7 +89,7 @@
     fhir:DocumentReference.status [ fhir:value "current"^^xsd:string ] ;
     fhir:DocumentReference.subject [ fhir:Reference.reference [ fhir:value "Patient/a2"^^xsd:string ] ;
             fhir:link <http://localhost:9556/svc/fhir/Patient/a2> ] ;
-    fhir:DocumentReference.type [ fhir:CodeableConcept.coding [ a <http://ihe.net/connectathon/classCodes/History%2520and%2520Physical> ;
+    fhir:DocumentReference.type [ fhir:CodeableConcept.coding [ a <http://ihe.net/connectathon/classCodes/History%20and%20Physical> ;
                     fhir:Coding.code [ fhir:value "History and Physical"^^xsd:string ] ;
                     fhir:Coding.display [ fhir:value "History and Physical"^^xsd:string ] ;
                     fhir:Coding.system [ fhir:value "http://ihe.net/connectathon/classCodes" ] ;

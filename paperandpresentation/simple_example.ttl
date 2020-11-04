@@ -1,0 +1,11 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix myns: <http://ontologies.r.us/person/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+myns:P117351 a myns:Person ;
+    fhir:age 42 ;
+    foaf:name [ foaf:givenName "Alex",
+                "Sam" ] .
+
+

@@ -1,0 +1,203 @@
+{
+   "resourceType": "fhir:Basic",
+   "id": {
+      "value": "referral"
+   },
+   "text": {
+      "status": {
+         "value": "generated"
+      },
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p><b>Patient:</b>Roel</p>\n      <p><b>Requestor:</b>Dokter Bronsig</p>\n      <p><b>Type:</b>Consultation</p>\n      <p><b>Target Date:</b>April 1 - April 31</p>\n      <p>COMPLETED</p>\n      <b>The patient had fever peaks over the last couple of days. He is worried about these peaks.</b>\n    </div>"
+   },
+   "extension": [
+      {
+         "url": {
+            "value": "http://example.org/do-not-use/fhir-extensions/referral#requestingPractitioner"
+         },
+         "valueReference": {
+            "reference": {
+               "value": "Practitioner/f201"
+            },
+            "display": {
+               "value": "Dokter Bronsig"
+            },
+            "fhir:link": {
+               "@id": "Practitioner/f201",
+               "@type": "fhir:Practitioner"
+            }
+         },
+         "index": 0
+      },
+      {
+         "url": {
+            "value": "http://example.org/do-not-use/fhir-extensions/referral#notes"
+         },
+         "valueString": {
+            "value": "The patient had fever peaks over the last couple of days. He is worried about these peaks."
+         },
+         "index": 1
+      },
+      {
+         "url": {
+            "value": "http://example.org/do-not-use/fhir-extensions/referral#fulfillingEncounter"
+         },
+         "valueReference": {
+            "reference": {
+               "value": "Encounter/f201"
+            },
+            "fhir:link": {
+               "@id": "Encounter/f201",
+               "@type": "fhir:Encounter"
+            }
+         },
+         "index": 2
+      }
+   ],
+   "modifierExtension": [
+      {
+         "url": {
+            "value": "http://example.org/do-not-use/fhir-extensions/referral#referredForService"
+         },
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://snomed.info/sct"
+                  },
+                  "code": {
+                     "value": "11429006"
+                  },
+                  "display": {
+                     "value": "Consultation"
+                  },
+                  "index": 0,
+                  "@type": "sct:11429006"
+               }
+            ]
+         },
+         "index": 0
+      },
+      {
+         "url": {
+            "value": "http://example.org/do-not-use/fhir-extensions/referral#targetDate"
+         },
+         "valuePeriod": {
+            "start": {
+               "value": {
+                  "@value": "2013-04-01",
+                  "@type": "http://www.w3.org/2001/XMLSchema#date"
+               }
+            },
+            "end": {
+               "value": {
+                  "@value": "2013-04-15",
+                  "@type": "http://www.w3.org/2001/XMLSchema#date"
+               }
+            }
+         },
+         "index": 1
+      },
+      {
+         "url": {
+            "value": "http://example.org/do-not-use/fhir-extensions/referral#status"
+         },
+         "valueCode": {
+            "value": "complete"
+         },
+         "index": 2
+      }
+   ],
+   "identifier": [
+      {
+         "system": {
+            "value": "http://goodhealth.org/basic/identifiers"
+         },
+         "value": {
+            "value": "19283746"
+         },
+         "index": 0
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/basic-resource-type"
+            },
+            "code": {
+               "value": "referral"
+            },
+            "index": 0,
+            "@type": "http://terminology.hl7.org/CodeSystem/basic-resource-type/referral"
+         }
+      ]
+   },
+   "subject": {
+      "reference": {
+         "value": "Patient/f201"
+      },
+      "display": {
+         "value": "Roel"
+      },
+      "fhir:link": {
+         "@id": "Patient/f201",
+         "@type": "fhir:Patient"
+      }
+   },
+   "created": {
+      "value": {
+         "@value": "2013-05-14",
+         "@type": "http://www.w3.org/2001/XMLSchema#date"
+      }
+   },
+   "author": {
+      "reference": {
+         "value": "Practitioner/example"
+      },
+      "fhir:link": {
+         "@id": "Practitioner/example",
+         "@type": "fhir:Practitioner"
+      }
+   },
+   "meta": {
+      "tag": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            },
+            "code": {
+               "value": "HTEST"
+            },
+            "display": {
+               "value": "test health data"
+            },
+            "index": 0
+         }
+      ]
+   },
+   "@context": [
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/basic.context.jsonld",
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/root.context.jsonld",
+      {
+         "nodeRole": {
+            "@type": "@id",
+            "@id": "fhir:nodeRole"
+         },
+         "@base": "http://hl7.org/fhir/",
+         "owl:imports": {
+            "@type": "@id"
+         },
+         "owl:versionIRI": {
+            "@type": "@id"
+         }
+      }
+   ],
+   "@id": "Basic/referral",
+   "nodeRole": "fhir:treeRoot",
+   "@included": {
+      "@id": "Basic/referral.ttl",
+      "owl:versionIRI": "http://build.fhir.org/Basic/referral.ttl",
+      "owl:imports": "fhir:fhir.ttl",
+      "@type": "owl:Ontology"
+   }
+}

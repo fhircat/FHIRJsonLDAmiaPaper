@@ -32,11 +32,11 @@
                                     fhir:Money.value [ fhir:value 200.0 ] ] ;
                             fhir:index 0 ] ;
                     fhir:index 0 ] ;
-            fhir:Contract.term.group [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Responsibility for Payment"^^xsd:string ] ] ;
+            fhir:Contract.term.group [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Eligible Providers"^^xsd:string ] ] ;
+                    fhir:index 0 ],
+                [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Responsibility for Payment"^^xsd:string ] ] ;
                     fhir:index 1 ],
-                [ fhir:Contract.term.group [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Out-Of-Pocket Maximum"^^xsd:string ] ] ;
-                            fhir:index 2 ],
-                        [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Calendar Year Deductible"^^xsd:string ] ] ;
+                [ fhir:Contract.term.group [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Calendar Year Deductible"^^xsd:string ] ] ;
                             fhir:index 1 ],
                         [ fhir:Contract.term.group [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Emergency Room Copay"^^xsd:string ] ] ;
                                     fhir:index 0 ],
@@ -44,10 +44,10 @@
                                     fhir:index 1 ] ;
                             fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Copays"^^xsd:string ] ] ;
                             fhir:index 0 ],
-                        [ fhir:Contract.term.group [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Emergency Room Services"^^xsd:string ] ] ;
-                                    fhir:index 3 ],
-                                [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Diagnostic Services"^^xsd:string ] ] ;
+                        [ fhir:Contract.term.group [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Diagnostic Services"^^xsd:string ] ] ;
                                     fhir:index 2 ],
+                                [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Emergency Room Services"^^xsd:string ] ] ;
+                                    fhir:index 3 ],
                                 [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Hospital Inpatient Care"^^xsd:string ] ] ;
                                     fhir:index 4 ],
                                 [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Ambulance Services"^^xsd:string ] ] ;
@@ -55,11 +55,11 @@
                                 [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Dental Services"^^xsd:string ] ] ;
                                     fhir:index 1 ] ;
                             fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Medical Services"^^xsd:string ] ] ;
-                            fhir:index 3 ] ;
+                            fhir:index 3 ],
+                        [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Out-Of-Pocket Maximum"^^xsd:string ] ] ;
+                            fhir:index 2 ] ;
                     fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "List of Benefits"^^xsd:string ] ] ;
-                    fhir:index 2 ],
-                [ fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "Eligible Providers"^^xsd:string ] ] ;
-                    fhir:index 0 ] ;
+                    fhir:index 2 ] ;
             fhir:Contract.term.offer [ fhir:Contract.term.offer.text [ fhir:value "The benefits, limitations, exclusions and other coverage provisions in this booklet are subject to the terms of our contract with the Group. This booklet is a part of that contract, which is on file in the Group's office."^^xsd:string ] ] ;
             fhir:index 0 ] ;
     fhir:Contract.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/contract-type/healthinsurance> ;

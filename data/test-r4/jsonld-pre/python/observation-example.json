@@ -1,0 +1,170 @@
+{
+   "resourceType": "fhir:Observation",
+   "id": {
+      "value": "example"
+   },
+   "text": {
+      "status": {
+         "value": "generated"
+      },
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span>(Details : {http://terminology.hl7.org/CodeSystem/observation-category code 'vital-signs' = 'Vital Signs', given as 'Vital Signs'})</span></p><p><b>code</b>: Body Weight <span>(Details : {LOINC code '29463-7' = 'Body weight', given as 'Body Weight'}; {LOINC code '3141-9' = 'Body weight Measured', given as 'Body weight Measured'}; {SNOMED CT code '27113001' = 'Body weight', given as 'Body weight'}; {http://acme.org/devices/clinical-codes code 'body-weight' = 'body-weight', given as 'Body Weight'})</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>encounter</b>: <a>Encounter/example</a></p><p><b>effective</b>: 28/03/2016</p><p><b>value</b>: 185 lbs<span> (Details: UCUM code [lb_av] = 'lb_av')</span></p></div>"
+   },
+   "status": {
+      "value": "final"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "system": {
+                  "value": "http://terminology.hl7.org/CodeSystem/observation-category"
+               },
+               "code": {
+                  "value": "vital-signs"
+               },
+               "display": {
+                  "value": "Vital Signs"
+               },
+               "index": 0,
+               "@type": "http://terminology.hl7.org/CodeSystem/observation-category/vital-signs"
+            }
+         ],
+         "index": 0
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "system": {
+               "value": "http://loinc.org"
+            },
+            "code": {
+               "value": "29463-7"
+            },
+            "display": {
+               "value": "Body Weight"
+            },
+            "index": 0,
+            "@type": "loinc:29463-7"
+         },
+         {
+            "system": {
+               "value": "http://loinc.org"
+            },
+            "code": {
+               "value": "3141-9"
+            },
+            "display": {
+               "value": "Body weight Measured"
+            },
+            "index": 1,
+            "@type": "loinc:3141-9"
+         },
+         {
+            "system": {
+               "value": "http://snomed.info/sct"
+            },
+            "code": {
+               "value": "27113001"
+            },
+            "display": {
+               "value": "Body weight"
+            },
+            "index": 2,
+            "@type": "sct:27113001"
+         },
+         {
+            "system": {
+               "value": "http://acme.org/devices/clinical-codes"
+            },
+            "code": {
+               "value": "body-weight"
+            },
+            "display": {
+               "value": "Body Weight"
+            },
+            "index": 3,
+            "@type": "http://acme.org/devices/clinical-codes/body-weight"
+         }
+      ]
+   },
+   "subject": {
+      "reference": {
+         "value": "Patient/example"
+      },
+      "fhir:link": {
+         "@id": "Patient/example",
+         "@type": "fhir:Patient"
+      }
+   },
+   "encounter": {
+      "reference": {
+         "value": "Encounter/example"
+      },
+      "fhir:link": {
+         "@id": "Encounter/example",
+         "@type": "fhir:Encounter"
+      }
+   },
+   "effectiveDateTime": {
+      "value": {
+         "@value": "2016-03-28",
+         "@type": "http://www.w3.org/2001/XMLSchema#date"
+      }
+   },
+   "valueQuantity": {
+      "value": {
+         "value": 185
+      },
+      "unit": {
+         "value": "lbs"
+      },
+      "system": {
+         "value": "http://unitsofmeasure.org"
+      },
+      "code": {
+         "value": "[lb_av]"
+      }
+   },
+   "meta": {
+      "tag": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            },
+            "code": {
+               "value": "HTEST"
+            },
+            "display": {
+               "value": "test health data"
+            },
+            "index": 0
+         }
+      ]
+   },
+   "@context": [
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/observation.context.jsonld",
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/root.context.jsonld",
+      {
+         "nodeRole": {
+            "@type": "@id",
+            "@id": "fhir:nodeRole"
+         },
+         "@base": "http://hl7.org/fhir/",
+         "owl:imports": {
+            "@type": "@id"
+         },
+         "owl:versionIRI": {
+            "@type": "@id"
+         }
+      }
+   ],
+   "@id": "Observation/example",
+   "nodeRole": "fhir:treeRoot",
+   "@included": {
+      "@id": "Observation/example.ttl",
+      "owl:versionIRI": "http://build.fhir.org/Observation/example.ttl",
+      "owl:imports": "fhir:fhir.ttl",
+      "@type": "owl:Ontology"
+   }
+}

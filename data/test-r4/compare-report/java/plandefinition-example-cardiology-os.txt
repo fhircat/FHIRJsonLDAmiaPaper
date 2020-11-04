@@ -1,0 +1,332 @@
+----- Missing Triples n=21 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os> fhir:DomainResource.contained :_e1 .
+
+:_e1 a fhir:Questionnaire ;
+    fhir:Questionnaire.item :_e2 ;
+    fhir:Questionnaire.status :_e9 ;
+    fhir:Resource.id :_e10 ;
+    fhir:index 11 .
+
+:_e10 fhir:value "CollectReferralReason" .
+
+:_e2 fhir:Questionnaire.item.answerValueSet :_e3 ;
+    fhir:Questionnaire.item.linkId :_e4 ;
+    fhir:Questionnaire.item.repeats :_e5 ;
+    fhir:Questionnaire.item.required :_e6 ;
+    fhir:Questionnaire.item.text :_e7 ;
+    fhir:Questionnaire.item.type :_e8 ;
+    fhir:index 0 .
+
+:_e3 fhir:value "#CardiologyReferralReasonValues" .
+
+:_e4 fhir:value "1" .
+
+:_e5 fhir:value true .
+
+:_e6 fhir:value true .
+
+:_e7 fhir:value "Reason for Cardiology Consult" .
+
+:_e8 fhir:value "choice" .
+
+:_e9 fhir:value "draft" .
+
+
+----- Added Triples  n=22 -----
+@prefix : <http://bnodes.r.us/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/PlanDefinition/example-cardiology-os> fhir:DomainResource.contained :_a1 .
+
+:_a1 a fhir:Questionnaire ;
+    fhir:Questionnaire.item :_a2 ;
+    fhir:Questionnaire.status :_a9 ;
+    fhir:Resource.id :_a10 ;
+    fhir:index 11 .
+
+:_a10 fhir:value "CollectReferralReason" .
+
+:_a2 fhir:Questionnaire.item.answerValueSet :_a3 ;
+    fhir:Questionnaire.item.linkId :_a4 ;
+    fhir:Questionnaire.item.repeats :_a5 ;
+    fhir:Questionnaire.item.required :_a6 ;
+    fhir:Questionnaire.item.text :_a7 ;
+    fhir:Questionnaire.item.type :_a8 ;
+    fhir:index 0 .
+
+:_a3 fhir:link <http://hl7.org/fhir/PlanDefinition/example-cardiology-os#CardiologyReferralReasonValues> ;
+    fhir:value "#CardiologyReferralReasonValues" .
+
+:_a4 fhir:value "1" .
+
+:_a5 fhir:value true .
+
+:_a6 fhir:value true .
+
+:_a7 fhir:value "Reason for Cardiology Consult" .
+
+:_a8 fhir:value "choice" .
+
+:_a9 fhir:value "draft" .
+
+
+----- Changes to Expected Graph -----
+ADD: Normalizing decimals _:1 fhir:value 25.0
+ADD: Normalizing decimals _:2 fhir:value 1.0
+ADD: Normalizing decimals _:3 fhir:value 1.0
+ADD: Normalizing decimals _:4 fhir:value 1.0
+ADD: Normalizing decimals _:5 fhir:value 50.0
+ADD: Normalizing decimals _:6 fhir:value 1.0
+ADD: Normalizing decimals _:7 fhir:value 5.0
+ADD: Normalizing decimals _:8 fhir:value 1.0
+ADD: Normalizing decimals _:9 fhir:value 3.0
+ADD: Normalizing decimals _:10 fhir:value 0.4
+ADD: Normalizing decimals _:11 fhir:value 1.0
+ADD: Normalizing decimals _:12 fhir:value 1.0
+ADD: Normalizing decimals _:13 fhir:value 1.0
+REMOVE: Normalizing decimals _:1 fhir:value 25
+REMOVE: Normalizing decimals _:2 fhir:value 1
+REMOVE: Normalizing decimals _:3 fhir:value 1
+REMOVE: Normalizing decimals _:4 fhir:value 1
+REMOVE: Normalizing decimals _:5 fhir:value 50
+REMOVE: Normalizing decimals _:6 fhir:value 1
+REMOVE: Normalizing decimals _:7 fhir:value 5
+REMOVE: Normalizing decimals _:8 fhir:value 1
+REMOVE: Normalizing decimals _:9 fhir:value 3
+REMOVE: Normalizing decimals _:10 fhir:value 0.4
+REMOVE: Normalizing decimals _:11 fhir:value 1
+REMOVE: Normalizing decimals _:12 fhir:value 1
+REMOVE: Normalizing decimals _:13 fhir:value 1
+----- Changes to Actual Graph -----
+ADD: Original RDF has a bnode (1) _:1 fhir:Questionnaire.item _:2
+ADD: Original RDF has a bnode (1) _:1 fhir:Questionnaire.status _:3
+ADD: Original RDF has a bnode (1) _:1 fhir:Resource.id _:4
+ADD: Original RDF has a bnode (1) _:1 fhir:index 11
+ADD: Original RDF has a bnode (1) _:1 rdf:type fhir:Questionnaire
+ADD: Original RDF has a bnode (1) _:5 fhir:Questionnaire.item _:6
+ADD: Original RDF has a bnode (1) _:5 fhir:Questionnaire.status _:7
+ADD: Original RDF has a bnode (1) _:5 fhir:Resource.id _:8
+ADD: Original RDF has a bnode (1) _:5 fhir:index 12
+ADD: Original RDF has a bnode (1) _:5 rdf:type fhir:Questionnaire
+ADD: Original RDF has a bnode (1) _:9 fhir:ActivityDefinition.dosage _:10
+ADD: Original RDF has a bnode (1) _:9 fhir:ActivityDefinition.dynamicValue _:11
+ADD: Original RDF has a bnode (1) _:9 fhir:ActivityDefinition.kind _:12
+ADD: Original RDF has a bnode (1) _:9 fhir:ActivityDefinition.productReference _:13
+ADD: Original RDF has a bnode (1) _:9 fhir:ActivityDefinition.status _:14
+ADD: Original RDF has a bnode (1) _:9 fhir:Resource.id _:15
+ADD: Original RDF has a bnode (1) _:9 fhir:index 8
+ADD: Original RDF has a bnode (1) _:9 rdf:type fhir:ActivityDefinition
+ADD: Original RDF has a bnode (1) _:16 fhir:Medication.code _:17
+ADD: Original RDF has a bnode (1) _:16 fhir:Medication.form _:18
+ADD: Original RDF has a bnode (1) _:16 fhir:Medication.ingredient _:19
+ADD: Original RDF has a bnode (1) _:16 fhir:Resource.id _:20
+ADD: Original RDF has a bnode (1) _:16 fhir:index 6
+ADD: Original RDF has a bnode (1) _:16 rdf:type fhir:Medication
+ADD: Normalizing decimals _:21 fhir:value 50.0
+ADD: Normalizing decimals _:22 fhir:value 0.4
+ADD: Normalizing decimals _:23 fhir:value 1.0
+ADD: Normalizing decimals _:24 fhir:value 1.0
+ADD: Original RDF has a bnode (1) _:25 fhir:Resource.id _:26
+ADD: Original RDF has a bnode (1) _:25 fhir:Substance.code _:27
+ADD: Original RDF has a bnode (1) _:25 fhir:index 4
+ADD: Original RDF has a bnode (1) _:25 rdf:type fhir:Substance
+ADD: Original RDF has a bnode (1) _:28 fhir:Resource.id _:29
+ADD: Original RDF has a bnode (1) _:28 fhir:Substance.code _:30
+ADD: Original RDF has a bnode (1) _:28 fhir:index 10
+ADD: Original RDF has a bnode (1) _:28 rdf:type fhir:Substance
+ADD: Normalizing decimals _:31 fhir:value 25.0
+ADD: Normalizing decimals _:32 fhir:value 1.0
+ADD: Normalizing decimals _:33 fhir:value 3.0
+ADD: Normalizing decimals _:34 fhir:value 1.0
+ADD: Original RDF has a bnode (1) _:35 fhir:ActivityDefinition.dosage _:36
+ADD: Original RDF has a bnode (1) _:35 fhir:ActivityDefinition.dynamicValue _:37
+ADD: Original RDF has a bnode (1) _:35 fhir:ActivityDefinition.kind _:38
+ADD: Original RDF has a bnode (1) _:35 fhir:ActivityDefinition.productReference _:39
+ADD: Original RDF has a bnode (1) _:35 fhir:ActivityDefinition.status _:40
+ADD: Original RDF has a bnode (1) _:35 fhir:Resource.id _:41
+ADD: Original RDF has a bnode (1) _:35 fhir:index 2
+ADD: Original RDF has a bnode (1) _:35 rdf:type fhir:ActivityDefinition
+ADD: Original RDF has a bnode (1) _:42 fhir:Medication.code _:43
+ADD: Original RDF has a bnode (1) _:42 fhir:Medication.form _:44
+ADD: Original RDF has a bnode (1) _:42 fhir:Medication.ingredient _:45
+ADD: Original RDF has a bnode (1) _:42 fhir:Resource.id _:46
+ADD: Original RDF has a bnode (1) _:42 fhir:index 9
+ADD: Original RDF has a bnode (1) _:42 rdf:type fhir:Medication
+ADD: Normalizing decimals _:47 fhir:value 1.0
+ADD: Normalizing decimals _:48 fhir:value 1.0
+ADD: Original RDF has a bnode (1) _:49 fhir:ActivityDefinition.dosage _:50
+ADD: Original RDF has a bnode (1) _:49 fhir:ActivityDefinition.dynamicValue _:51
+ADD: Original RDF has a bnode (1) _:49 fhir:ActivityDefinition.kind _:52
+ADD: Original RDF has a bnode (1) _:49 fhir:ActivityDefinition.productReference _:53
+ADD: Original RDF has a bnode (1) _:49 fhir:ActivityDefinition.status _:54
+ADD: Original RDF has a bnode (1) _:49 fhir:Resource.id _:55
+ADD: Original RDF has a bnode (1) _:49 fhir:index 5
+ADD: Original RDF has a bnode (1) _:49 rdf:type fhir:ActivityDefinition
+ADD: Original RDF has a bnode (1) _:56 fhir:ActivityDefinition.description _:57
+ADD: Original RDF has a bnode (1) _:56 fhir:ActivityDefinition.kind _:58
+ADD: Original RDF has a bnode (1) _:56 fhir:ActivityDefinition.participant _:59
+ADD: Original RDF has a bnode (1) _:56 fhir:ActivityDefinition.status _:60
+ADD: Original RDF has a bnode (1) _:56 fhir:ActivityDefinition.timingTiming _:61
+ADD: Original RDF has a bnode (1) _:56 fhir:Resource.id _:62
+ADD: Original RDF has a bnode (1) _:56 fhir:index 1
+ADD: Original RDF has a bnode (1) _:56 rdf:type fhir:ActivityDefinition
+ADD: Normalizing decimals _:63 fhir:value 1.0
+ADD: Original RDF has a bnode (1) _:64 fhir:Medication.code _:65
+ADD: Original RDF has a bnode (1) _:64 fhir:Medication.form _:66
+ADD: Original RDF has a bnode (1) _:64 fhir:Medication.ingredient _:67
+ADD: Original RDF has a bnode (1) _:64 fhir:Resource.id _:68
+ADD: Original RDF has a bnode (1) _:64 fhir:index 3
+ADD: Original RDF has a bnode (1) _:64 rdf:type fhir:Medication
+ADD: Normalizing decimals _:69 fhir:value 1.0
+ADD: Original RDF has a bnode (1) _:70 fhir:Library.description _:71
+ADD: Original RDF has a bnode (1) _:70 fhir:Library.status _:72
+ADD: Original RDF has a bnode (1) _:70 fhir:Library.type _:73
+ADD: Original RDF has a bnode (1) _:70 fhir:Resource.id _:74
+ADD: Original RDF has a bnode (1) _:70 fhir:index 0
+ADD: Original RDF has a bnode (1) _:70 rdf:type fhir:Library
+ADD: Normalizing decimals _:75 fhir:value 5.0
+ADD: Original RDF has a bnode (1) _:76 fhir:Resource.id _:77
+ADD: Original RDF has a bnode (1) _:76 fhir:Substance.code _:78
+ADD: Original RDF has a bnode (1) _:76 fhir:index 7
+ADD: Original RDF has a bnode (1) _:76 rdf:type fhir:Substance
+ADD: Original RDF has a bnode (3) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained _:1
+ADD: Original RDF has a bnode (3) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained _:5
+ADD: Original RDF has a bnode (3) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained _:9
+ADD: Original RDF has a bnode (3) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained _:16
+ADD: Original RDF has a bnode (3) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained _:25
+ADD: Original RDF has a bnode (3) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained _:28
+ADD: Original RDF has a bnode (3) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained _:35
+ADD: Original RDF has a bnode (3) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained _:42
+ADD: Original RDF has a bnode (3) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained _:49
+ADD: Original RDF has a bnode (3) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained _:56
+ADD: Original RDF has a bnode (3) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained _:64
+ADD: Original RDF has a bnode (3) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained _:70
+ADD: Original RDF has a bnode (3) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained _:76
+REMOVE: Concept URI not mapped in expected _:79 rdf:type http://www.nlm.nih.gov/research/umls/rxnorm/866435
+REMOVE: Original RDF has a bnode (4) _:80 fhir:link fhir:PlanDefinition/example-cardiology-os#nitroglycerinSubstance
+REMOVE: Concept URI not mapped in expected _:81 rdf:type http://terminology.hl7.org/CodeSystem/library-type/logic-library
+REMOVE: Original RDF has a bnode (4) _:82 fhir:link fhir:PlanDefinition/example-cardiology-os#cardiology-chestPain-logic
+REMOVE: Normalizing decimals _:21 fhir:value 50
+REMOVE: Normalizing decimals _:22 fhir:value 0.40
+REMOVE: Normalizing decimals _:23 fhir:value 1
+REMOVE: Normalizing decimals _:24 fhir:value 1
+REMOVE: Original RDF has a bnode (4) _:83 fhir:link fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Substance
+REMOVE: Concept URI not mapped in expected _:84 rdf:type http://terminology.hl7.org/CodeSystem/dose-rate-type/ordered
+REMOVE: Normalizing decimals _:31 fhir:value 25
+REMOVE: Normalizing decimals _:32 fhir:value 1
+REMOVE: Concept URI not mapped in expected _:85 rdf:type http://www.nlm.nih.gov/research/umls/rxnorm/866426
+REMOVE: Original RDF has a bnode (4) _:53 fhir:link fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Medication
+REMOVE: Concept URI not mapped in expected _:86 rdf:type http://www.nlm.nih.gov/research/umls/rxnorm/6918
+REMOVE: Normalizing decimals _:33 fhir:value 3
+REMOVE: Concept URI not mapped in expected _:87 rdf:type http://www.nlm.nih.gov/research/umls/rxnorm/6918
+REMOVE: Concept URI not mapped in expected _:88 rdf:type http://www.nlm.nih.gov/research/umls/rxnorm/316365
+REMOVE: Normalizing decimals _:34 fhir:value 1
+REMOVE: Normalizing decimals _:47 fhir:value 1
+REMOVE: Original RDF has a bnode (4) _:13 fhir:link fhir:PlanDefinition/example-cardiology-os#nitroglycerinMedication
+REMOVE: Normalizing decimals _:48 fhir:value 1
+REMOVE: Concept URI not mapped in expected _:89 rdf:type http://terminology.hl7.org/CodeSystem/dose-rate-type/ordered
+REMOVE: Concept URI not mapped in expected _:90 rdf:type http://terminology.hl7.org/CodeSystem/plan-definition-type/order-set
+REMOVE: Concept URI not mapped in expected _:91 rdf:type http://terminology.hl7.org/CodeSystem/usage-context-type/focus
+REMOVE: Normalizing decimals _:63 fhir:value 1
+REMOVE: Normalizing decimals _:69 fhir:value 1
+REMOVE: Concept URI not mapped in expected _:92 rdf:type http://www.nlm.nih.gov/research/umls/rxnorm/4917
+REMOVE: Concept URI not mapped in expected _:93 rdf:type http://terminology.hl7.org/CodeSystem/dose-rate-type/ordered
+REMOVE: Normalizing decimals _:75 fhir:value 5
+REMOVE: Original RDF has a bnode (4) _:39 fhir:link fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Medication
+REMOVE: Original RDF has a bnode (4) _:94 fhir:link fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Substance
+REMOVE: Original RDF has a bnode (4) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained fhir:PlanDefinition/example-cardiology-os#CardiologyConsultationGoal
+REMOVE: Original RDF has a bnode (4) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained fhir:PlanDefinition/example-cardiology-os#CollectReferralReason
+REMOVE: Original RDF has a bnode (4) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained fhir:PlanDefinition/example-cardiology-os#cardiology-chestPain-logic
+REMOVE: Original RDF has a bnode (4) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Medication
+REMOVE: Original RDF has a bnode (4) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Prescription
+REMOVE: Original RDF has a bnode (4) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Substance
+REMOVE: Original RDF has a bnode (4) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Medication
+REMOVE: Original RDF has a bnode (4) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Prescription
+REMOVE: Original RDF has a bnode (4) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Substance
+REMOVE: Original RDF has a bnode (4) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained fhir:PlanDefinition/example-cardiology-os#nitroglycerinMedication
+REMOVE: Original RDF has a bnode (4) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained fhir:PlanDefinition/example-cardiology-os#nitroglycerinPrescription
+REMOVE: Original RDF has a bnode (4) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained fhir:PlanDefinition/example-cardiology-os#nitroglycerinSubstance
+REMOVE: Original RDF has a bnode (4) fhir:PlanDefinition/example-cardiology-os fhir:DomainResource.contained fhir:PlanDefinition/example-cardiology-os#referralToCardiologyConsult
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#CardiologyConsultationGoal fhir:Questionnaire.item _:6
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#CardiologyConsultationGoal fhir:Questionnaire.status _:7
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#CardiologyConsultationGoal fhir:Resource.id _:8
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#CardiologyConsultationGoal fhir:index 12
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#CardiologyConsultationGoal rdf:type fhir:Questionnaire
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#CollectReferralReason fhir:Questionnaire.item _:2
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#CollectReferralReason fhir:Questionnaire.status _:3
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#CollectReferralReason fhir:Resource.id _:4
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#CollectReferralReason fhir:index 11
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#CollectReferralReason rdf:type fhir:Questionnaire
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#cardiology-chestPain-logic fhir:Library.description _:71
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#cardiology-chestPain-logic fhir:Library.status _:72
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#cardiology-chestPain-logic fhir:Library.type _:73
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#cardiology-chestPain-logic fhir:Resource.id _:74
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#cardiology-chestPain-logic fhir:index 0
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#cardiology-chestPain-logic rdf:type fhir:Library
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Medication fhir:Medication.code _:65
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Medication fhir:Medication.form _:66
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Medication fhir:Medication.ingredient _:67
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Medication fhir:Resource.id _:68
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Medication fhir:index 3
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Medication rdf:type fhir:Medication
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Prescription fhir:ActivityDefinition.dosage _:36
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Prescription fhir:ActivityDefinition.dynamicValue _:37
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Prescription fhir:ActivityDefinition.kind _:38
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Prescription fhir:ActivityDefinition.productReference _:39
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Prescription fhir:ActivityDefinition.status _:40
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Prescription fhir:Resource.id _:41
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Prescription fhir:index 2
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Prescription rdf:type fhir:ActivityDefinition
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Substance fhir:Resource.id _:26
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Substance fhir:Substance.code _:27
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Substance fhir:index 4
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate25Substance rdf:type fhir:Substance
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Medication fhir:Medication.code _:17
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Medication fhir:Medication.form _:18
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Medication fhir:Medication.ingredient _:19
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Medication fhir:Resource.id _:20
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Medication fhir:index 6
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Medication rdf:type fhir:Medication
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Prescription fhir:ActivityDefinition.dosage _:50
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Prescription fhir:ActivityDefinition.dynamicValue _:51
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Prescription fhir:ActivityDefinition.kind _:52
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Prescription fhir:ActivityDefinition.productReference _:53
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Prescription fhir:ActivityDefinition.status _:54
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Prescription fhir:Resource.id _:55
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Prescription fhir:index 5
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Prescription rdf:type fhir:ActivityDefinition
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Substance fhir:Resource.id _:77
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Substance fhir:Substance.code _:78
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Substance fhir:index 7
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#metoprololTartrate50Substance rdf:type fhir:Substance
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinMedication fhir:Medication.code _:43
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinMedication fhir:Medication.form _:44
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinMedication fhir:Medication.ingredient _:45
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinMedication fhir:Resource.id _:46
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinMedication fhir:index 9
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinMedication rdf:type fhir:Medication
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinPrescription fhir:ActivityDefinition.dosage _:10
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinPrescription fhir:ActivityDefinition.dynamicValue _:11
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinPrescription fhir:ActivityDefinition.kind _:12
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinPrescription fhir:ActivityDefinition.productReference _:13
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinPrescription fhir:ActivityDefinition.status _:14
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinPrescription fhir:Resource.id _:15
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinPrescription fhir:index 8
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinPrescription rdf:type fhir:ActivityDefinition
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinSubstance fhir:Resource.id _:29
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinSubstance fhir:Substance.code _:30
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinSubstance fhir:index 10
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#nitroglycerinSubstance rdf:type fhir:Substance
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#referralToCardiologyConsult fhir:ActivityDefinition.description _:57
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#referralToCardiologyConsult fhir:ActivityDefinition.kind _:58
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#referralToCardiologyConsult fhir:ActivityDefinition.participant _:59
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#referralToCardiologyConsult fhir:ActivityDefinition.status _:60
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#referralToCardiologyConsult fhir:ActivityDefinition.timingTiming _:61
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#referralToCardiologyConsult fhir:Resource.id _:62
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#referralToCardiologyConsult fhir:index 1
+REMOVE: Original RDF has a bnode (2) fhir:PlanDefinition/example-cardiology-os#referralToCardiologyConsult rdf:type fhir:ActivityDefinition

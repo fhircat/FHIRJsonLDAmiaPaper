@@ -1,0 +1,248 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://hl7.org/fhir/PlanDefinition/KDN5> a fhir:PlanDefinition ;
+    fhir:DomainResource.contained <http://hl7.org/fhir/PlanDefinition/KDN5#1111>,
+        <http://hl7.org/fhir/PlanDefinition/KDN5#2222> ;
+    fhir:DomainResource.text [ fhir:Narrative.div """<div xmlns="http://www.w3.org/1999/xhtml">
+      <table style="width: 100%;">
+        <tr>
+          <td>
+              <!-- link to NCCN image -->
+            <div style="width: 200px; height: 100px; vertical-align: top;">National Comprehensive Cancer Network</div>
+          </td>
+          <td>
+            <h3>Chemotherapy Order Template</h3>
+            <h1>Kidney Cancer</h1>
+            <h2>Gemcitabine/CARBOplatin</h2>
+          </td>
+          <td style="text-align: right; vertical-align: top;">KDN5</td>
+        </tr>
+      </table>
+      <table style="width: 100%; border-top: 1px solid; border-bottom: 1px solid;">
+        <tr>
+          <td style="width: 33%; border-right: 1px solid; vertical-align: top">
+            <h4>INDICATION:</h4>
+            <p>Metastatic or Relapsed – Collecting Duct/Medullary Subtypes</p>
+          </td>
+          <td style="width: 34%; border-right: 1px solid; vertical-align: top">
+            <h4>REFERENCES:</h4>
+            <ol>
+              <li><a href="http://www.example.org/professionals/physician_gls/PDF/kidney.pdf">NCCN Guidelines® for Kidney Cancer. V.3.2015.</a></li>
+              <li><a href="http://www.ncbi.nlm.nih.gov/pubmed?term=%22The+Journal+of+urology%22%5BJour%5D+AND+1698%5Bpage%5D+AND+2007%5Bpdat%5D+AND+Oudard+S%5Bauthor%5D">Oudard S, et al. <em>J Urol</em>. 2007;177(5):1698-702.</a><sup>
+                  <a href="http://www.example.org/OrderTemplates/PDF/appendix_E.pdf">a</a></sup>
+              </li>
+            </ol>
+          </td>
+          <td style="width: 33%; vertical-align: top">
+            <h4>NCCN SUPPORTIVE CARE:</h4>
+            <ol>
+              <li>
+                <i>Emetic Risk:</i>
+                <table>
+                  <tr>
+                    <td>Day 1</td>
+                    <td>Moderate</td>
+                  </tr>
+                  <tr>
+                    <td>Day 8</td>
+                    <td>Low</td>
+                  </tr>
+                </table>
+              </li>
+              <li>
+                <i>Fever Neutropenia Risk:</i><br/>
+                Refer to <a href="http://www.example.org/professionals/physician_gls/PDF/myeloid_growth.pdf">NCCN Guidelines for Myeloid Growth Factors. V.2.2014</a>
+              </li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+        <!-- same as the regimen section of the Composition resource only this version is without the style guide notes -->
+      <h4>CHEMOTHERAPY REGIMEN</h4>
+      <p>
+        <i>21-day cycle for 6 cycles</i>
+      </p>
+      <ul>
+        <li>Gemcitabine 1250 mg/m<sup>2</sup> IV over 30 minutes on Days 1 and 8</li>
+        <li>CARBOplatin AUC 5 IV over 30 minutes on Day 1</li>
+      </ul>
+    </div>"""^^xsd:string ;
+            fhir:Narrative.status [ fhir:value "additional"^^xsd:string ] ] ;
+    fhir:PlanDefinition.action [ fhir:PlanDefinition.action.action [ fhir:PlanDefinition.action.action [ fhir:PlanDefinition.action.action <http://hl7.org/fhir/PlanDefinition/KDN5#cycle-definition-1> ;
+                            fhir:PlanDefinition.action.groupingBehavior [ fhir:value "sentence-group"^^xsd:string ] ;
+                            fhir:PlanDefinition.action.selectionBehavior [ fhir:value "exactly-one"^^xsd:string ] ;
+                            fhir:index 0 ] ;
+                    fhir:PlanDefinition.action.selectionBehavior [ fhir:value "all"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:PlanDefinition.action.selectionBehavior [ fhir:value "exactly-one"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:PlanDefinition.approvalDate [ fhir:value "2016-07-27"^^xsd:date ] ;
+    fhir:PlanDefinition.author [ fhir:ContactDetail.name [ fhir:value "Lee Surprenant"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:PlanDefinition.copyright [ fhir:value "All rights reserved."^^xsd:string ] ;
+    fhir:PlanDefinition.experimental [ fhir:value true ] ;
+    fhir:PlanDefinition.identifier [ fhir:Identifier.system [ fhir:value "http://example.org/ordertemplates" ] ;
+            fhir:Identifier.value [ fhir:value "KDN5"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:PlanDefinition.lastReviewDate [ fhir:value "2016-07-27"^^xsd:date ] ;
+    fhir:PlanDefinition.publisher [ fhir:value "National Comprehensive Cancer Network, Inc."^^xsd:string ] ;
+    fhir:PlanDefinition.relatedArtifact [ fhir:RelatedArtifact.citation [ fhir:value "Oudard S, et al. J Urol. 2007;177(5):1698-702"^^xsd:string ] ;
+            fhir:RelatedArtifact.type [ fhir:Element.extension [ fhir:Extension.url [ fhir:value "http://example.org/fhir/regimenReferenceType"^^xsd:string ] ;
+                            fhir:Extension.valueCode [ fhir:value "a"^^xsd:string ] ;
+                            fhir:index 0 ] ;
+                    fhir:value "citation"^^xsd:string ] ;
+            fhir:RelatedArtifact.url [ fhir:value "http://www.ncbi.nlm.nih.gov/pubmed/17437788" ] ;
+            fhir:index 1 ],
+        [ fhir:RelatedArtifact.display [ fhir:value "NCCN Guidelines for Kidney Cancer. V.2.2016"^^xsd:string ] ;
+            fhir:RelatedArtifact.type [ fhir:value "derived-from"^^xsd:string ] ;
+            fhir:RelatedArtifact.url [ fhir:value "http://www.example.org/professionals/physician_gls/PDF/kidney.pdf" ] ;
+            fhir:index 0 ] ;
+    fhir:PlanDefinition.status [ fhir:value "draft"^^xsd:string ] ;
+    fhir:PlanDefinition.title [ fhir:value "Gemcitabine/CARBOplatin"^^xsd:string ] ;
+    fhir:PlanDefinition.type [ fhir:CodeableConcept.text [ fhir:value "Chemotherapy Order Template"^^xsd:string ] ] ;
+    fhir:PlanDefinition.useContext [ fhir:Element.extension [ fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/usagecontext-group"^^xsd:string ] ;
+                    fhir:Extension.valueString [ fhir:value "B"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:UsageContext.code [ a <http://example.org/fhir/CodeSystem/indications/disease-or-histology> ;
+                    fhir:Coding.code [ fhir:value "disease-or-histology"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://example.org/fhir/CodeSystem/indications" ] ] ;
+            fhir:UsageContext.valueCodeableConcept [ fhir:CodeableConcept.text [ fhir:value "Collecting Duct/Medullary Subtypes"^^xsd:string ] ] ;
+            fhir:index 4 ],
+        [ fhir:Element.extension [ fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/usagecontext-group"^^xsd:string ] ;
+                    fhir:Extension.valueString [ fhir:value "B"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:UsageContext.code [ a <http://example.org/fhir/CodeSystem/indications/treatmentSetting-or-diseaseStatus> ;
+                    fhir:Coding.code [ fhir:value "treatmentSetting-or-diseaseStatus"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://example.org/fhir/CodeSystem/indications" ] ] ;
+            fhir:UsageContext.valueCodeableConcept [ fhir:CodeableConcept.text [ fhir:value "Relapsed"^^xsd:string ] ] ;
+            fhir:index 3 ],
+        [ fhir:Element.extension [ fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/usagecontext-group"^^xsd:string ] ;
+                    fhir:Extension.valueString [ fhir:value "A"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:UsageContext.code [ a <http://example.org/fhir/CodeSystem/indications/disease-or-histology> ;
+                    fhir:Coding.code [ fhir:value "disease-or-histology"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://example.org/fhir/CodeSystem/indications" ] ] ;
+            fhir:UsageContext.valueCodeableConcept [ fhir:CodeableConcept.text [ fhir:value "Collecting Duct/Medullary Subtypes"^^xsd:string ] ] ;
+            fhir:index 1 ],
+        [ fhir:Element.extension [ fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/usagecontext-group"^^xsd:string ] ;
+                    fhir:Extension.valueString [ fhir:value "A"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:UsageContext.code [ a <http://terminology.hl7.org/CodeSystem/usage-context-type/focus> ;
+                    fhir:Coding.code [ fhir:value "focus"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/usage-context-type" ] ] ;
+            fhir:UsageContext.valueCodeableConcept [ fhir:CodeableConcept.text [ fhir:value "Kidney Cancer"^^xsd:string ] ] ;
+            fhir:index 2 ],
+        [ fhir:Element.extension [ fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/usagecontext-group"^^xsd:string ] ;
+                    fhir:Extension.valueString [ fhir:value "A"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:UsageContext.code [ a <http://example.org/fhir/CodeSystem/indications/treamentSetting-or-diseaseStatus> ;
+                    fhir:Coding.code [ fhir:value "treamentSetting-or-diseaseStatus"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://example.org/fhir/CodeSystem/indications" ] ] ;
+            fhir:UsageContext.valueCodeableConcept [ fhir:CodeableConcept.text [ fhir:value "Metastatic"^^xsd:string ] ] ;
+            fhir:index 0 ],
+        [ fhir:Element.extension [ fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/usagecontext-group"^^xsd:string ] ;
+                    fhir:Extension.valueString [ fhir:value "B"^^xsd:string ] ;
+                    fhir:index 0 ] ;
+            fhir:UsageContext.code [ a <http://terminology.hl7.org/CodeSystem/usage-context-type/focus> ;
+                    fhir:Coding.code [ fhir:value "focus"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/usage-context-type" ] ] ;
+            fhir:UsageContext.valueCodeableConcept [ fhir:CodeableConcept.text [ fhir:value "Kidney Cancer – Collecting Duct/Medullary Subtypes - Metastatic"^^xsd:string ] ] ;
+            fhir:index 5 ] ;
+    fhir:PlanDefinition.version [ fhir:value "1"^^xsd:string ] ;
+    fhir:Resource.id [ fhir:value "KDN5"^^xsd:string ] ;
+    fhir:Resource.meta [ fhir:Meta.tag [ fhir:Coding.code [ fhir:value "HTEST"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "test health data"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ] ;
+                    fhir:index 0 ] ] ;
+    fhir:nodeRole fhir:treeRoot .
+
+<http://hl7.org/fhir/PlanDefinition/KDN5.ttl> a owl:Ontology ;
+    owl:imports fhir:fhir.ttl ;
+    owl:versionIRI <http://build.fhir.org/PlanDefinition/KDN5.ttl> .
+
+<http://hl7.org/fhir/PlanDefinition/KDN5#1111> a fhir:ActivityDefinition ;
+    fhir:ActivityDefinition.dosage [ fhir:Dosage.doseAndRate [ fhir:Dosage.doseAndRate.doseQuantity [ fhir:Quantity.unit [ fhir:value "mg/m²"^^xsd:string ] ;
+                            fhir:Quantity.value [ fhir:value 1250.0 ] ] ;
+                    fhir:Dosage.doseAndRate.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/dose-rate-type/ordered> ;
+                                    fhir:Coding.code [ fhir:value "ordered"^^xsd:string ] ;
+                                    fhir:Coding.display [ fhir:value "Ordered"^^xsd:string ] ;
+                                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/dose-rate-type" ] ;
+                                    fhir:index 0 ] ] ;
+                    fhir:index 0 ] ;
+            fhir:Dosage.route [ fhir:CodeableConcept.text [ fhir:value "IV"^^xsd:string ] ] ;
+            fhir:Dosage.text [ fhir:value "1250 mg/m² IV over 30 minutes"^^xsd:string ] ;
+            fhir:Dosage.timing [ fhir:Timing.repeat [ fhir:Timing.repeat.duration [ fhir:value 30.0 ] ;
+                            fhir:Timing.repeat.durationUnit [ fhir:value "min"^^xsd:string ] ] ] ;
+            fhir:index 0 ] ;
+    fhir:ActivityDefinition.productCodeableConcept [ fhir:CodeableConcept.coding [ a <http://www.nlm.nih.gov/research/umls/rxnorm/12574> ;
+                    fhir:Coding.code [ fhir:value "12574"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "gemcitabine"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ] ;
+                    fhir:index 0 ] ;
+            fhir:CodeableConcept.text [ fhir:value "gemcitabine"^^xsd:string ] ] ;
+    fhir:ActivityDefinition.status [ fhir:value "draft"^^xsd:string ] ;
+    fhir:Resource.id [ fhir:value "1111"^^xsd:string ] ;
+    fhir:index 0 .
+
+<http://hl7.org/fhir/PlanDefinition/KDN5#2222> a fhir:ActivityDefinition ;
+    fhir:ActivityDefinition.dosage [ fhir:Dosage.doseAndRate [ fhir:Dosage.doseAndRate.doseQuantity [ fhir:Element.extension [ fhir:Extension.url [ fhir:value "http://example.org/fhir/AUC-dose"^^xsd:string ] ;
+                                    fhir:Extension.valueInteger [ fhir:value 5 ] ;
+                                    fhir:index 0 ] ] ;
+                    fhir:Dosage.doseAndRate.type [ fhir:CodeableConcept.coding [ a <http://terminology.hl7.org/CodeSystem/dose-rate-type/ordered> ;
+                                    fhir:Coding.code [ fhir:value "ordered"^^xsd:string ] ;
+                                    fhir:Coding.display [ fhir:value "Ordered"^^xsd:string ] ;
+                                    fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/dose-rate-type" ] ;
+                                    fhir:index 0 ] ] ;
+                    fhir:index 0 ] ;
+            fhir:Dosage.route [ fhir:CodeableConcept.text [ fhir:value "IV"^^xsd:string ] ] ;
+            fhir:Dosage.text [ fhir:value "AUC 5 IV over 30 minutes"^^xsd:string ] ;
+            fhir:Dosage.timing [ fhir:Timing.repeat [ fhir:Timing.repeat.duration [ fhir:value 30.0 ] ;
+                            fhir:Timing.repeat.durationUnit [ fhir:value "min"^^xsd:string ] ] ] ;
+            fhir:index 0 ] ;
+    fhir:ActivityDefinition.productCodeableConcept [ fhir:CodeableConcept.coding [ a <http://www.nlm.nih.gov/research/umls/rxnorm/40048> ;
+                    fhir:Coding.code [ fhir:value "40048"^^xsd:string ] ;
+                    fhir:Coding.display [ fhir:value "Carboplatin"^^xsd:string ] ;
+                    fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ] ;
+                    fhir:index 0 ] ;
+            fhir:CodeableConcept.text [ fhir:value "CARBOplatin"^^xsd:string ] ] ;
+    fhir:ActivityDefinition.status [ fhir:value "draft"^^xsd:string ] ;
+    fhir:Resource.id [ fhir:value "2222"^^xsd:string ] ;
+    fhir:index 1 .
+
+<http://hl7.org/fhir/PlanDefinition/KDN5#action-1> fhir:Element.extension [ fhir:Element.extension [ fhir:Extension.url [ fhir:value "day"^^xsd:string ] ;
+                    fhir:Extension.valueInteger [ fhir:value 8 ] ;
+                    fhir:index 1 ],
+                [ fhir:Extension.url [ fhir:value "day"^^xsd:string ] ;
+                    fhir:Extension.valueInteger [ fhir:value 1 ] ;
+                    fhir:index 0 ] ;
+            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/timing-daysOfCycle"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Element.id [ fhir:value "action-1"^^xsd:string ] ;
+    fhir:PlanDefinition.action.definitionCanonical [ fhir:value "#1111" ] ;
+    fhir:PlanDefinition.action.textEquivalent [ fhir:value "Gemcitabine 1250 mg/m² IV over 30 minutes on days 1 and 8"^^xsd:string ] ;
+    fhir:index 0 .
+
+<http://hl7.org/fhir/PlanDefinition/KDN5#action-2> fhir:Element.extension [ fhir:Element.extension [ fhir:Extension.url [ fhir:value "day"^^xsd:string ] ;
+                    fhir:Extension.valueInteger [ fhir:value 1 ] ;
+                    fhir:index 0 ] ;
+            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/timing-daysOfCycle"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:Element.id [ fhir:value "action-2"^^xsd:string ] ;
+    fhir:PlanDefinition.action.definitionCanonical [ fhir:value "#2222" ] ;
+    fhir:PlanDefinition.action.relatedAction [ fhir:PlanDefinition.action.relatedAction.actionId [ fhir:value "action-1"^^xsd:string ] ;
+            fhir:PlanDefinition.action.relatedAction.relationship [ fhir:value "concurrent-with-start"^^xsd:string ] ;
+            fhir:index 0 ] ;
+    fhir:PlanDefinition.action.textEquivalent [ fhir:value "CARBOplatin AUC 5 IV over 30 minutes on Day 1"^^xsd:string ] ;
+    fhir:index 1 .
+
+<http://hl7.org/fhir/PlanDefinition/KDN5#cycle-definition-1> fhir:Element.id [ fhir:value "cycle-definition-1"^^xsd:string ] ;
+    fhir:PlanDefinition.action.action <http://hl7.org/fhir/PlanDefinition/KDN5#action-1>,
+        <http://hl7.org/fhir/PlanDefinition/KDN5#action-2> ;
+    fhir:PlanDefinition.action.textEquivalent [ fhir:value "21-day cycle for 6 cycles"^^xsd:string ] ;
+    fhir:PlanDefinition.action.timingTiming [ fhir:Timing.repeat [ fhir:Timing.repeat.count [ fhir:value "6"^^xsd:positiveInteger ] ;
+                    fhir:Timing.repeat.duration [ fhir:value 21.0 ] ;
+                    fhir:Timing.repeat.durationUnit [ fhir:value "d"^^xsd:string ] ] ] ;
+    fhir:index 0 .
+

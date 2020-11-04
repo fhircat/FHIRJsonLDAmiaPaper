@@ -1,0 +1,179 @@
+{
+   "resourceType": "fhir:VisionPrescription",
+   "id": {
+      "value": "33123"
+   },
+   "text": {
+      "status": {
+         "value": "generated"
+      },
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>OD -2.00 SPH         +2.00 add    0.5 p.d. BD</p>\n\t\t\t<p>OS -1.00 -0.50 x 180 +2.00 add    0.5 p.d. BU</p>\n\t\t</div>"
+   },
+   "identifier": [
+      {
+         "system": {
+            "value": "http://www.happysight.com/prescription"
+         },
+         "value": {
+            "value": "15013"
+         },
+         "index": 0
+      }
+   ],
+   "status": {
+      "value": "active"
+   },
+   "created": {
+      "value": {
+         "@value": "2014-06-15",
+         "@type": "http://www.w3.org/2001/XMLSchema#date"
+      }
+   },
+   "patient": {
+      "reference": {
+         "value": "Patient/example"
+      },
+      "fhir:link": {
+         "@id": "Patient/example",
+         "@type": "fhir:Patient"
+      }
+   },
+   "dateWritten": {
+      "value": {
+         "@value": "2014-06-15",
+         "@type": "http://www.w3.org/2001/XMLSchema#date"
+      }
+   },
+   "prescriber": {
+      "reference": {
+         "value": "Practitioner/example"
+      },
+      "fhir:link": {
+         "@id": "Practitioner/example",
+         "@type": "fhir:Practitioner"
+      }
+   },
+   "lensSpecification": [
+      {
+         "product": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct"
+                  },
+                  "code": {
+                     "value": "lens"
+                  },
+                  "index": 0,
+                  "@type": "http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct/lens"
+               }
+            ]
+         },
+         "eye": {
+            "value": "right"
+         },
+         "sphere": {
+            "value": "-2.00"
+         },
+         "prism": [
+            {
+               "amount": {
+                  "value": 0.5
+               },
+               "base": {
+                  "value": "down"
+               },
+               "index": 0
+            }
+         ],
+         "add": {
+            "value": 2.0
+         },
+         "index": 0
+      },
+      {
+         "product": {
+            "coding": [
+               {
+                  "system": {
+                     "value": "http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct"
+                  },
+                  "code": {
+                     "value": "lens"
+                  },
+                  "index": 0,
+                  "@type": "http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct/lens"
+               }
+            ]
+         },
+         "eye": {
+            "value": "left"
+         },
+         "sphere": {
+            "value": "-1.00"
+         },
+         "cylinder": {
+            "value": "-0.50"
+         },
+         "axis": {
+            "value": 180
+         },
+         "prism": [
+            {
+               "amount": {
+                  "value": 0.5
+               },
+               "base": {
+                  "value": "up"
+               },
+               "index": 0
+            }
+         ],
+         "add": {
+            "value": 2.0
+         },
+         "index": 1
+      }
+   ],
+   "meta": {
+      "tag": [
+         {
+            "system": {
+               "value": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            },
+            "code": {
+               "value": "HTEST"
+            },
+            "display": {
+               "value": "test health data"
+            },
+            "index": 0
+         }
+      ]
+   },
+   "@context": [
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/visionprescription.context.jsonld",
+      "/Users/solbrig/git/FHIRCat/jsonld_context_files/contextFiles/r4/root.context.jsonld",
+      {
+         "nodeRole": {
+            "@type": "@id",
+            "@id": "fhir:nodeRole"
+         },
+         "@base": "http://hl7.org/fhir/",
+         "owl:imports": {
+            "@type": "@id"
+         },
+         "owl:versionIRI": {
+            "@type": "@id"
+         }
+      }
+   ],
+   "@id": "VisionPrescription/33123",
+   "nodeRole": "fhir:treeRoot",
+   "@included": {
+      "@id": "VisionPrescription/33123.ttl",
+      "owl:versionIRI": "http://build.fhir.org/VisionPrescription/33123.ttl",
+      "owl:imports": "fhir:fhir.ttl",
+      "@type": "owl:Ontology"
+   }
+}
