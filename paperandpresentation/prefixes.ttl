@@ -1,0 +1,4 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix myns: <http://ontologies.r.us/person/> .

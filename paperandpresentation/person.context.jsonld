@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "fhir": "http://hl7.org/fhir/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "@base": "http://ontologies.r.us/person/",
+    "entryType": "@type",
+    "name": {
+      "@id": "foaf:name",
+      "@context": {
+        "given": "foaf:givenName",
+        "family": "foaf:familyName"
+      }
+    },
+    "id": "@id",
+    "age": "fhir:age"
+  }
+}

@@ -1,0 +1,5 @@
+<http://ontologies.r.us/person/P117351> <http://hl7.org/fhir/age> "42"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://ontologies.r.us/person/P117351> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://ontologies.r.us/person/Person> .
+<http://ontologies.r.us/person/P117351> <http://xmlns.com/foaf/0.1/name> _:c14n0 .
+_:c14n0 <http://xmlns.com/foaf/0.1/givenName> "Alex" .
+_:c14n0 <http://xmlns.com/foaf/0.1/givenName> "Sam" .
