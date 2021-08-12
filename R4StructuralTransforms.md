@@ -26,10 +26,10 @@ to exist in both the R4 and R5 directories.
 We keep a copy of https://github.com/fhircat/jsonld_context_files on the fhircat.org server.  Whenever the repository is
 updated, you need to log onto fhircat.org:
 ```bash
-> ssh -i ~/.ssh/id_ed25519 (user)@fhircat.org```
+> ssh -i ~/.ssh/id_ed25519 (user)@fhircat.org
 $ cd /datatrive/temp/jsonld_context_files
 $ sudo git pull
-````
+```
 I'm not actually sure how the files get from the `temp` directory into `/datadrive/html_files/fhir-r4/original/` and
 `/datadrive/html_files/fhir-r5/original/` directories...
 
@@ -40,6 +40,12 @@ __Note:__ The JSON-LD Javascript implementation chokes if you have a BOM header 
 of Java and other implementations put these in by default.  Note also that the Javascript error message, which shows up in the
 [Playground](https://json-ld.org/playground/) is very misleading -- it says that you've got an invalid URL...
 
+__Note:__ Both the [Javascript](https://github.com/digitalbazaar/jsonld.js) and the [Java](https://github.com/filip26/titanium-json-ld) JSON-LD 1.1 processors
+support both file based (file://...) and relative context URI's.  One can gain several orders of magnitude performance improvement by
+cloning the jsonld_context_files into a local directory and changing the root of the JSON-LD files from `https://fhircat.org/fhir-r4/original` to 
+`file:///path to /jsonld_context_files/R4`.  Note also that, as of the time of this writing, the only JSON-LD 1.1 compliant python processor
+([pyld](https://github.com/digitalbazaar/pyld)), does not handle `file://` based URLs _or_ relative paths.  It is my understanding that
+rdflib 6.0 has rdflib-jsonld built in and has a beta 1.1 version.
 
 ## Setup
 The instructions for using this package can be found in [README.md](README.md).
