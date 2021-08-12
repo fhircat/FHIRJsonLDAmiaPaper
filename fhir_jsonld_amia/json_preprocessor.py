@@ -208,20 +208,16 @@ def add_contained_urls(resource: JsonObj, id_map: Dict[str, str]) -> None:
         id_map[contained_id] = contained_type + '/' + getattr(resource, ID_KEY) + contained_id
 
 
-def bundle_urls(resource: JsonObj) -> Optional[Dict[str, Tuple[str, str]]]:
+def bundle_urls(resource: JsonObj) -> Dict[str, Tuple[str, str]]:
     """
     Return a map of relative bundle URL's to absolute URLs, assigning full URL's to interior entries as well
     :param resource: Resource to be mapped
     :return: Map from local identifier to URL/Type tuple
     """
-    rt = getattr(resource, RESOURCETYPE_KEY, None)
-    if rt != BUNDLE_RESOURCE_TYPE:
-        return None
-
     rval = dict()
-    entries = getattr(resource, BUNDLE_ENTRY, None)
-    if entries:
-        for entry in entries:
+    rt = getattr(resource, RESOURCETYPE_KEY, None)
+    if rt == BUNDLE_RESOURCE_TYPE:
+        for entry in getattr(resource, BUNDLE_ENTRY, []):
             fullUrl = getattr(entry, BUNDLE_ENTRY_FULLURL, None)
             if fullUrl:
                 resource = getattr(entry, BUNDLE_ENTRY_RESOURCE, None)
@@ -241,6 +237,7 @@ def adjust_urls(fhir_json: Any, outer_url: Optional[str] = "") -> None:
     :param outer_url: Containing URL
     :return:
     """
+    outer_url = outer_url.rsplit('#')[0]    # Remove any fragment ids - they won't next
     if isinstance(fhir_json, JsonObj):
         if hasattr(fhir_json, '@id'):
             container_id = getattr(fhir_json, '@id')
@@ -349,11 +346,7 @@ def to_r4(fhir_json: JsonObj, opts: Namespace, ifn: str) -> JsonObj:
             path = [resource_type]
 
         # If we've got bundle, build an id map to use in the interior
-        possible_id_map = bundle_urls(container)            # Note that this will also assign ids to bundle entries
-        if possible_id_map is not None:
-            id_map = possible_id_map
-        elif id_map is None:
-            id_map = dict()
+        id_map = bundle_urls(container)            # Note that this will also assign ids to bundle entries
 
         # Add any contained resources to the contained URL map
         add_contained_urls(container, id_map)
