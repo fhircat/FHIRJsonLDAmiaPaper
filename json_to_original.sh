@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 usage="Usage: json_to_original-sh [-1, -2, -3 or -a] [-v]  [-java, -js or -all] [-cs contextsource] [-co compareopts] [directory]"
-examples_dir="fhir-r4"
+examples_dir="fhir-r5"
 COMPAREOPTS="-sta -maxtc 3000 -dec -maxt 5000 -mb -tc -v"
 VERBOSE=""
 

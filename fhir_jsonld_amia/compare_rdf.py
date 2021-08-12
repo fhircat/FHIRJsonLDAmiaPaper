@@ -23,6 +23,18 @@ KNOWN_ERRORS: Dict[str, str] = {
 INCLUDE_ONLY = []
 
 
+def ad_hoc_fixup(filename: Optional[str], turtle: str) -> str:
+    """
+    Make any ad-hoc fixes in the source RDF
+    :param filename: Name of file being converted
+    :param turtle: File value
+    :return: tweaked value
+    """
+    if filename and 'plandefinition-example-cardiology-os' in filename:
+        return turtle.replace('a sct:look up value;', 'a sct:look%20up%20value;')
+    return turtle
+
+
 def visit_graph(g: Graph, predicate: Callable[[Tuple], bool], replacement: Callable[[Tuple], Optional[Tuple]],
                 reason: Optional[str] = '') -> bool:
     """ Visit a copy of g and, for every triple that meets the predicate, replace t with replacement.
@@ -39,11 +51,12 @@ def visit_graph(g: Graph, predicate: Callable[[Tuple], bool], replacement: Calla
     return replacements_were_made
 
 
-def to_graph(inp: Union[Graph, str], fmt: Optional[str] = "turtle") -> Graph:
+def to_graph(inp: Union[Graph, str], fmt: Optional[str] = "turtle", filename: Optional[str] = None) -> Graph:
     """
     Convert inp into a graph
     :param inp: Graph, file name, url or text
     :param fmt: expected format of inp
+    :param filename: file name
     :return: Graph representing inp
     """
     if isinstance(inp, Graph):
@@ -52,7 +65,7 @@ def to_graph(inp: Union[Graph, str], fmt: Optional[str] = "turtle") -> Graph:
     if not inp.strip().startswith('{') and '\n' not in inp and '\r' not in inp:
         with open(inp) as f:
             inp = f.read()
-    g.parse(data=inp, format=fmt)
+    g.parse(data=ad_hoc_fixup(filename, inp), format=fmt)
     return g
 
 
@@ -568,7 +581,7 @@ def compare_files(actual_file_name: str, expected_file_name: str, opts: Namespac
         actual_graph.bind('owl', OWL)
         actual_graph.serialize(actual_file.replace(opts.infilesuffix, '.ttl'), format="turtle")
 
-        expected_graph = to_graph(expected_str, 'turtle')
+        expected_graph = to_graph(expected_str, 'turtle', actual_file_name)
 
         # If we've generated metadata and it isn't in the expected graph, remove it
         if (None, FHIR_META, None) in actual_graph and (None, FHIR_META, None) not in expected_graph:
