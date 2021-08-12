@@ -3,7 +3,8 @@ There are a number of structural transformations that need to be done to a FHIR 
 before it can be converted to RDF using JSON-LD.
 
 ## Setup
-1) Clone this repository
+The instructions for using this package can be found in [README.md](README.md).
+
 
 ## Transformation tools
 There are currently three software packages that implement the transformations described below:
