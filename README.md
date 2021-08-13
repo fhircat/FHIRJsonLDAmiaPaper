@@ -6,7 +6,7 @@ Source for FHIR JSON-LD AMIA submission
 
 Clone this repository
 ```
-> git@github.com:fhircat/FHIRJsonLDAmiaPaper.git
+> git clone git@github.com:fhircat/FHIRJsonLDAmiaPaper.git
 ```
 
 Install pipenv and packages
@@ -19,14 +19,24 @@ Install pipenv and packages
 The main script for generation and testing is `json_to_original.sh`
 ```
 > ./json_to_original.sh --help
-Processing FHIR release fhir-r5
-Usage: json_to_original-sh [-1, -2, -3 or -a] [-java, -js or -all] [-cs contextsource] [directory]
+Usage: json_to_original-sh [-1, -2, -3 or -a] [-v] [-java, -js or -all] [-cs contextsource] [-co compareopts] [directory]
 >
 ```
 Parameters:
-* "-1" -- this is the preprocessing step, which transforms all json files found in `data/<directory>/examples-json/` into
-their equivalents in `data/<directory>/json-pre/`
- 
+* "-1" -- run the JSON preprocessing step, which transforms all json files found in `data/<directory>/examples-json/` into
+their equivalents in `data/<directory>/json-pre/python/`
+* "-2" -- run the JSON to RDF transformation, transforming all files in `data/<directory>/json-pre/python/` into
+the RDF representation in `data/<directory>/original/java` --or-- `data/<directory>/original/js` depending on whether
+we are using the JAVA or Javascript JSON-LD processor.
+* "-3" -- compare the contents of `data/<directory>/original/java` --or-- `data/<directory>/original/js` with the contents
+in `data/<directory>examples-ttl/` and publish a compare report in `data/$dir/compare-report/java/` or `data/$dir/compare-report/js/`
+* "-a" -- do all three steps.  Same as "-1 -2 -3"
+* "-java" -- use the java JSON-LD processor
+* "-js" -- use the Javascript JSON-LD processor
+* "-all" -- use both processors. Same as "-java -js"
+* "-cs" -- The base URL for the JSON-LD contexts.
+* "-co" -- Comparison options for the 
+* directory 
 
 
 Upgrade nodejs to > 13.*

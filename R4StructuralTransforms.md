@@ -56,6 +56,8 @@ The instructions for using this package can be found in [README.md](README.md).
 
 ## Transformation tools
 There are currently three software packages that implement the transformations described below:
+
+### Python based FHIR JSON pre-processor
 1) [json_preprocessor](https://github.com/FHIRCat/FHIRJsonLDAmiaPaper/fhir_jsonld/)
 ```text
 usage: json_preprocessor.py [-h] [-i [INFILE [INFILE ...]]] [-id INDIR] [-o [OUTFILE [OUTFILE ...]]] [-od OUTDIR] [-f] [-s] [-c] [-fs FHIRSERVER] [-cs CONTEXTSERVER] [-vb VERSIONBASE]
@@ -88,6 +90,32 @@ The [json_to_original.sh](json_to_original.md) script supplies the following def
 * The default context server is https://fhircat.org/fhir-r5/original/contexts/
 
 -id data/$dir/examples-json -od data/$dir/jsonld-pre/python -c -fs http://hl7.org/fhir/ -vb http://build.fhir.org/ -s $csparam
+
+### Java based FHIR JSON-LD Preprocessor
+The [Java FHIR JSON-LD CLI](https://github.com/fhircat/jsonld-cli) is a delightfully complete package that does both 
+the preprocessing and the JSON-LD transformation phases.  It can be run by:
+```bash
+> wget https://github.com/fhircat/jsonld-cli/releases/download/v0.4.0-alpha/jsonld-cli-0.4.0-bin.tar.gz```
+> tar -xzf v0.4.0-alpha/jsonld-cli-0.4.0-bin.tar.gz
+> cd jsonld-cli-0.4.0/bin
+> ./fhircatjsonld -h 
+usage: FHIRCat JSON-LD Command Line Interface
+ -f,--outputFormat <arg>     output format (one of: RDF/XML,N3,TURTLE,N-TRIPLE,TTL)
+ -i,--input <arg>            input file path (single file or directory)
+ -o,--output <arg>           output file (single file or directory) - standard output if omitted
+ -p,--pre <arg>              output the intermediate 'pre'-JSON structures
+ -vb,--versionbase <arg>     base URI for OWL version
+ -cs,--contextserver <arg>   context server base
+ -fs,--fhirserver <arg>      FHIR server base
+ -v,--shexvalidate           apply ShEx validation
+ -si,--sheximpl <arg>        the ShEx validation implementation
+ -V,--verbose                print extra logging messages
+ -h,--help                   print the usage help
+```
+
+### Javascript based FHIR JSON-LD Preprocessor
+The Javascript Preprocessor lives in the fhir_jsonld_js directory.  You need to talk to Dazhi Jiao about where the
+command line structural transformation lives.  Note that the online version of this transformation can be found at
 
 
 ## Transformation notes
